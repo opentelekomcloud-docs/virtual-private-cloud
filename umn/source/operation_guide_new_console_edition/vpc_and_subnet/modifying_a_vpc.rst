@@ -17,12 +17,12 @@ Notes and Constraints
 
 -  When modifying the VPC CIDR block:
 
-   -  The VPC CIDR block to be modified must be in the supported CIDR blocks: 10.0.0.0 – 10.255.255.255, 172.16.0.0 – 172.31.255.255, and 192.168.0.0 – 192.168.255.255
+   -  The VPC CIDR block to be modified must be in the supported CIDR blocks: 10.0.0.0 - 10.255.255.255, 172.16.0.0 - 172.31.255.255, and 192.168.0.0 - 192.168.255.255
    -  If the VPC has subnets, the VPC CIDR block to be modified must contain all subnet CIDR blocks.
 
 When modifying the VPC CIDR block:
 
--  The VPC CIDR block to be modified must be in the supported CIDR blocks: 10.0.0.0 – 10.255.255.255, 172.16.0.0 – 172.31.255.255, and 192.168.0.0 – 192.168.255.255
+-  The VPC CIDR block to be modified must be in the supported CIDR blocks: 10.0.0.0 - 10.255.255.255, 172.16.0.0 - 172.31.255.255, and 192.168.0.0 - 192.168.255.255
 -  If the VPC has subnets, the VPC CIDR block to be modified must contain all subnet CIDR blocks.
 
 Procedure
@@ -45,7 +45,6 @@ Procedure
 
    .. figure:: /_static/images/en-us_image_0000001151300782.png
       :alt: **Figure 1** Modify CIDR Block
-
 
       **Figure 1** Modify CIDR Block
 

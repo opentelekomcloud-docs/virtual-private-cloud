@@ -16,7 +16,6 @@ After users who use IPv6 clients bind an IPv6 EIP to an ECS, the data flow is sh
 .. figure:: /_static/images/en-us_image_0118499144.png
    :alt: **Figure 1** IPv6 data flow
 
-
    **Figure 1** IPv6 data flow
 
 The IPv6 service has the following restrictions:

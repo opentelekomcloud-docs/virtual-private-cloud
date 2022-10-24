@@ -27,7 +27,6 @@ Virtual IP addresses are used for high availability and can work together with K
    .. figure:: /_static/images/en-us_image_0209608153.png
       :alt: **Figure 1** Networking diagram of the HA mode
 
-
       **Figure 1** Networking diagram of the HA mode
 
    -  In this configuration, a single virtual IP address is bound to two ECSs in the same subnet.
@@ -40,7 +39,6 @@ Virtual IP addresses are used for high availability and can work together with K
 
    .. figure:: /_static/images/en-us_image_0240332622.png
       :alt: **Figure 2** HA load balancing cluster
-
 
       **Figure 2** HA load balancing cluster
 

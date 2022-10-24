@@ -29,7 +29,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0285048674.png
       :alt: **Figure 1** Modify Rule
 
-
       **Figure 1** Modify Rule
 
    .. _vpc_acl02_0008__en-us_topic_0118498887_table59686157164549:

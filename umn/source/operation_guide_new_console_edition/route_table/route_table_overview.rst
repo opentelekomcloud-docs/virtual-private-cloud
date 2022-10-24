@@ -16,7 +16,6 @@ A route table contains a set of routes that are used to determine where network 
 .. figure:: /_static/images/en-us_image_0167573711.png
    :alt: **Figure 1** Route table
 
-
    **Figure 1** Route table
 
 Default Route Table and Custom Route Table
@@ -94,7 +93,6 @@ Custom Route Table Configuration Process
 
 .. figure:: /_static/images/en-us_image_0163203842.png
    :alt: **Figure 2** Route table configuration process
-
 
    **Figure 2** Route table configuration process
 

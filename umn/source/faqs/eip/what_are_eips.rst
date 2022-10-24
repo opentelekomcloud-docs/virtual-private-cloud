@@ -13,5 +13,4 @@ Each EIP can be used by only one cloud resource at a time.
 .. figure:: /_static/images/en-us_image_0209583952.png
    :alt: **Figure 1** Accessing the Internet using an EIP
 
-
    **Figure 1** Accessing the Internet using an EIP

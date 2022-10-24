@@ -17,7 +17,6 @@ For details, see :ref:`Figure 1 <vpc_acl02_0015__en-us_topic_0118534001_fig95821
 .. figure:: /_static/images/en-us_image_0148244691.png
    :alt: **Figure 1** Security groups and firewalls
 
-
    **Figure 1** Security groups and firewalls
 
 :ref:`Table 1 <vpc_acl02_0015__en-us_topic_0118534001_table53053071174845>` describes the differences between security groups and firewalls.

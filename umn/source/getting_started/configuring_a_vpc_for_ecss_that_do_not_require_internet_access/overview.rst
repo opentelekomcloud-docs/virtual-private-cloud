@@ -12,7 +12,6 @@ If your ECSs do not require Internet access or need to access the Internet using
 .. figure:: /_static/images/en-us_image_0162329244.png
    :alt: **Figure 1** Configuring the network
 
-
    **Figure 1** Configuring the network
 
 :ref:`Table 1 <vpc_qs_0004__en-us_topic_0118498946_t1b39acc5d1d449eabbea2aab68bfab25>` describes the different tasks in the procedure for configuring the network.

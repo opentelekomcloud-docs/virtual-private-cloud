@@ -34,7 +34,6 @@ Creating a VPC Peering Connection
    .. figure:: /_static/images/en-us_image_0167839112.png
       :alt: **Figure 1** Create VPC Peering Connection
 
-
       **Figure 1** Create VPC Peering Connection
 
    .. _en-us_topic_0046655037__en-us_topic_0118498960_table1215761020244:

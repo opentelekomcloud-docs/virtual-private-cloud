@@ -33,7 +33,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0000001197228903.png
       :alt: **Figure 1** Create Subnet
 
-
       **Figure 1** Create Subnet
 
    .. table:: **Table 1** Parameter descriptions

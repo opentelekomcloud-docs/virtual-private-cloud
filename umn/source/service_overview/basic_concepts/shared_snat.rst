@@ -14,7 +14,6 @@ The VPC service provides free SNAT function, which allows ECSs to use a limited 
 .. figure:: /_static/images/en-us_image_0118499140.png
    :alt: **Figure 1** SNAT function
 
-
    **Figure 1** SNAT function
 
 -  To enable shared SNAT using the API, set **enable_snat** to **true** by following the instructions provided in **Neutron** > **Routers** > **Update router** in the *Native OpenStack API Reference*.
@@ -40,7 +39,6 @@ To prevent an ECS from connecting to the Internet but allow the ECS to access 19
    .. figure:: /_static/images/en-us_image_0152667656.png
       :alt: **Figure 2** Deleting the default outbound rule from the security group
 
-
       **Figure 2** Deleting the default outbound rule from the security group
 
 #. Add the required outbound rule.
@@ -50,7 +48,6 @@ To prevent an ECS from connecting to the Internet but allow the ECS to access 19
 
    .. figure:: /_static/images/en-us_image_0152668782.png
       :alt: **Figure 3** Adding an outbound rule for the security group
-
 
       **Figure 3** Adding an outbound rule for the security group
 
