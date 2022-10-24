@@ -32,7 +32,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0152238989.png
       :alt: **Figure 1** Add Inbound Rule
 
-
       **Figure 1** Add Inbound Rule
 
    .. table:: **Table 1** Parameter descriptions

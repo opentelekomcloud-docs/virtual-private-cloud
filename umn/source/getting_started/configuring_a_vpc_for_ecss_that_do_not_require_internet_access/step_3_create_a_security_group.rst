@@ -29,7 +29,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0000001197426329.png
       :alt: **Figure 1** Create Security Group
 
-
       **Figure 1** Create Security Group
 
    .. _vpc_qs_0007__en-us_topic_0118646263_en-us_topic_0118534004_table65377617111335:

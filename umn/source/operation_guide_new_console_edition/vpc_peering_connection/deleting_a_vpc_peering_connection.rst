@@ -27,7 +27,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0162391187.png
       :alt: **Figure 1** VPC peering connection list
 
-
       **Figure 1** VPC peering connection list
 
 6. Locate the target VPC peering connection and click **Delete** in the **Operation** column.

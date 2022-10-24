@@ -27,7 +27,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0000001163949251.png
       :alt: **Figure 1** Assigning Shared Bandwidth
 
-
       **Figure 1** Assigning Shared Bandwidth
 
    .. table:: **Table 1** Parameter descriptions

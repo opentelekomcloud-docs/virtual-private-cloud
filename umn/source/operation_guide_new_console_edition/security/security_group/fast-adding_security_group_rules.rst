@@ -29,7 +29,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0211552164.png
       :alt: **Figure 1** Fast-Add Inbound Rule
 
-
       **Figure 1** Fast-Add Inbound Rule
 
 7. On the **Outbound Rules** tab, click **Fast-Add Rule**. In the displayed dialog box, select required protocols and ports to add multiple rules at a time.
@@ -37,7 +36,6 @@ Procedure
 
    .. figure:: /_static/images/en-us_image_0211560998.png
       :alt: **Figure 2** Fast-Add Outbound Rule
-
 
       **Figure 2** Fast-Add Outbound Rule
 

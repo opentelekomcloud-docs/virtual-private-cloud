@@ -35,7 +35,6 @@ Assigning an EIP
    .. figure:: /_static/images/en-us_image_0000001117669274.png
       :alt: **Figure 1** Assign EIP
 
-
       **Figure 1** Assign EIP
 
    .. table:: **Table 1** Parameter descriptions
@@ -101,7 +100,6 @@ Binding an EIP
 
    .. figure:: /_static/images/en-us_image_0000001166028070.png
       :alt: **Figure 2** Bind EIP
-
 
       **Figure 2** Bind EIP
 

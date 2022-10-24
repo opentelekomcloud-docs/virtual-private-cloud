@@ -97,7 +97,6 @@ Procedure
     .. figure:: /_static/images/en-us_image_0118498992.png
        :alt: **Figure 1** Configuring SNAT
 
-
        **Figure 1** Configuring SNAT
 
     .. note::
@@ -128,7 +127,6 @@ Procedure
 
     .. figure:: /_static/images/en-us_image_0118499109.png
        :alt: **Figure 2** Verifying configuration
-
 
        **Figure 2** Verifying configuration
 

@@ -17,7 +17,6 @@ VPC has old and new console editions. You can click |image1| in the lower right 
    .. figure:: /_static/images/en-us_image_0000001206933138.png
       :alt: **Figure 1** New console
 
-
       **Figure 1** New console
 
 -  On the old console, the route table module is accessible from the VPC details page, as shown in :ref:`Figure 2 <en-us_topic_0038263963__en-us_topic_0118498988_fig1118575931512>`. For details, see :ref:`Route Table (Old Console Edition) <en-us_topic_0038263963__en-us_topic_0118498988_section1155203705018>`.
@@ -26,7 +25,6 @@ VPC has old and new console editions. You can click |image1| in the lower right 
 
    .. figure:: /_static/images/en-us_image_0000001251773147.png
       :alt: **Figure 2** Old console
-
 
       **Figure 2** Old console
 
@@ -40,7 +38,6 @@ A route table contains a set of routes that are used to determine where network 
 
 .. figure:: /_static/images/en-us_image_0000001229959315.png
    :alt: **Figure 3** Route Table
-
 
    **Figure 3** Route Table
 
@@ -124,7 +121,6 @@ You can use a route table configured in standalone mode or active/standby mode.
    .. figure:: /_static/images/en-us_image_0209273220.png
       :alt: **Figure 4** Route table configured in standalone mode
 
-
       **Figure 4** Route table configured in standalone mode
 
    In standalone mode, ECSs in a VPC that do not have EIPs bound access the Internet through an ECS that has an EIP bound and has the SNAT function configured.
@@ -137,7 +133,6 @@ You can use a route table configured in standalone mode or active/standby mode.
 
    .. figure:: /_static/images/en-us_image_0118498947.png
       :alt: **Figure 5** Route table configured in active/standby mode
-
 
       **Figure 5** Route table configured in active/standby mode
 

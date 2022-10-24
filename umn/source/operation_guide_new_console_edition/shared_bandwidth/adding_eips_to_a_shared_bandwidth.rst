@@ -34,7 +34,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0000001211006359.png
       :alt: **Figure 1** Add EIP
 
-
       **Figure 1** Add EIP
 
 6. Click **OK**.

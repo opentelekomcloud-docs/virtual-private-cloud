@@ -29,7 +29,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0226829586.png
       :alt: **Figure 1** Modify Subnet
 
-
       **Figure 1** Modify Subnet
 
    .. table:: **Table 1** Parameter description

@@ -34,7 +34,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0173155870.png
       :alt: **Figure 1** Associate Subnet
 
-
       **Figure 1** Associate Subnet
 
 #. Click **OK**.

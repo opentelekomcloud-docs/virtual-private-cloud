@@ -105,7 +105,6 @@ Procedure
        .. figure:: /_static/images/en-us_image_0000001179761510.png
           :alt: **Figure 1** Configuring private IP address
 
-
           **Figure 1** Configuring private IP address
 
     f. Click **Advanced**.
@@ -117,7 +116,6 @@ Procedure
 
        .. figure:: /_static/images/en-us_image_0000001225081545.png
           :alt: **Figure 2** Configuring virtual IP address
-
 
           **Figure 2** Configuring virtual IP address
 

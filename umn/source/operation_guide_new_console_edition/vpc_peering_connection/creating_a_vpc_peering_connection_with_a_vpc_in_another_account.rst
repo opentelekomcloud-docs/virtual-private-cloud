@@ -29,7 +29,6 @@ Creating a VPC Peering Connection
    .. figure:: /_static/images/en-us_image_0167840073.png
       :alt: **Figure 1** Create VPC Peering Connection
 
-
       **Figure 1** Create VPC Peering Connection
 
    .. table:: **Table 1** Parameter descriptions
@@ -75,7 +74,6 @@ To request a VPC peering connection with a VPC in another account, the owner of 
 
    .. figure:: /_static/images/en-us_image_0162391155.png
       :alt: **Figure 2** VPC peering connection list
-
 
       **Figure 2** VPC peering connection list
 

@@ -31,7 +31,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0173155793.png
       :alt: **Figure 1** Add Route
 
-
       **Figure 1** Add Route
 
    .. table:: **Table 1** Parameter descriptions

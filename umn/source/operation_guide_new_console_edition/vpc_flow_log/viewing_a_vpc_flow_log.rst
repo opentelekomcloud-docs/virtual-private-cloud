@@ -33,13 +33,11 @@ Procedure
    .. figure:: /_static/images/en-us_image_0191577030.png
       :alt: **Figure 1** Viewing a log record
 
-
       **Figure 1** Viewing a log record
 
 
    .. figure:: /_static/images/en-us_image_0191588554.png
       :alt: **Figure 2** Flow log record
-
 
       **Figure 2** Flow log record
 
