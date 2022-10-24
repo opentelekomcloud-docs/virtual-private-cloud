@@ -23,19 +23,19 @@ Monitoring Metrics
    +----------------------+--------------------+-------------------------------------------------+-------------+------------------+--------------------------------+
    | ID                   | Name               | Description                                     | Value Range | Monitored Object | Monitoring Interval (Raw Data) |
    +======================+====================+=================================================+=============+==================+================================+
-   | upstream_bandwidth   | Outbound Bandwidth | Network rate of outbound traffic                | ≥ 0 bit/s   | Bandwidth or EIP | 1 minute                       |
+   | upstream_bandwidth   | Outbound Bandwidth | Network rate of outbound traffic                | >= 0 bit/s  | Bandwidth or EIP | 1 minute                       |
    |                      |                    |                                                 |             |                  |                                |
    |                      |                    | Unit: bit/s                                     |             |                  |                                |
    +----------------------+--------------------+-------------------------------------------------+-------------+------------------+--------------------------------+
-   | downstream_bandwidth | Inbound Bandwidth  | Network rate of inbound traffic                 | ≥ 0 bit/s   | Bandwidth or EIP | 1 minute                       |
+   | downstream_bandwidth | Inbound Bandwidth  | Network rate of inbound traffic                 | >= 0 bit/s  | Bandwidth or EIP | 1 minute                       |
    |                      |                    |                                                 |             |                  |                                |
    |                      |                    | Unit: bit/s                                     |             |                  |                                |
    +----------------------+--------------------+-------------------------------------------------+-------------+------------------+--------------------------------+
-   | up_stream            | Outbound Traffic   | Network traffic going out of the cloud platform | ≥ 0 bytes   | Bandwidth or EIP | 1 minute                       |
+   | up_stream            | Outbound Traffic   | Network traffic going out of the cloud platform | >= 0 bytes  | Bandwidth or EIP | 1 minute                       |
    |                      |                    |                                                 |             |                  |                                |
    |                      |                    | Unit: byte                                      |             |                  |                                |
    +----------------------+--------------------+-------------------------------------------------+-------------+------------------+--------------------------------+
-   | down_stream          | Inbound Traffic    | Network traffic going into the cloud platform   | ≥ 0 bytes   | Bandwidth or EIP | 1 minute                       |
+   | down_stream          | Inbound Traffic    | Network traffic going into the cloud platform   | >= 0 bytes  | Bandwidth or EIP | 1 minute                       |
    |                      |                    |                                                 |             |                  |                                |
    |                      |                    | Unit: byte                                      |             |                  |                                |
    +----------------------+--------------------+-------------------------------------------------+-------------+------------------+--------------------------------+

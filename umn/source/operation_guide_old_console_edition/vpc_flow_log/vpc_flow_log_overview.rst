@@ -14,7 +14,6 @@ VPC flow logs must be used together with the Log Tank Service (LTS). Before you 
 .. figure:: /_static/images/en-us_image_0162336264.png
    :alt: **Figure 1** Configuring the VPC flow log function
 
-
    **Figure 1** Configuring the VPC flow log function
 
 Notes and Constraints

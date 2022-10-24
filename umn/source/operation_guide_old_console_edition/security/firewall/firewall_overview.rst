@@ -14,7 +14,6 @@ A firewall is an optional layer of security for your subnets. After you associat
 .. figure:: /_static/images/en-us_image_0148244691.png
    :alt: **Figure 1** Security groups and firewalls
 
-
    **Figure 1** Security groups and firewalls
 
 Similar to security groups, firewalls control access to subnets and add an additional layer of defense to your subnets. Security groups only have the "allow" rules, but firewalls have both "allow" and "deny" rules. You can use firewalls together with security groups to implement comprehensive and fine-grained access control.
@@ -93,7 +92,6 @@ Configuration Procedure
 
 .. figure:: /_static/images/en-us_image_0162335382.png
    :alt: **Figure 2** firewall configuration procedure
-
 
    **Figure 2** firewall configuration procedure
 

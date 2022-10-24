@@ -27,7 +27,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0000001211445065.png
       :alt: **Figure 1** Remove EIP
 
-
       **Figure 1** Remove EIP
 
 6. Click **OK**.

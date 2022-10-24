@@ -31,7 +31,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0191594527.png
       :alt: **Figure 1** Deleting a VPC flow log
 
-
       **Figure 1** Deleting a VPC flow log
 
 6. Click **Yes** in the displayed dialog box.

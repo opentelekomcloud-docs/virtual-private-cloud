@@ -29,7 +29,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0129304042.png
       :alt: **Figure 1** Create Firewall
 
-
       **Figure 1** Create Firewall
 
    .. _en-us_topic_0051746698__en-us_topic_0118499011_table145313414319:

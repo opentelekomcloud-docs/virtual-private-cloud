@@ -37,7 +37,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0191544038.png
       :alt: **Figure 1** Create VPC Flow Log
 
-
       **Figure 1** Create VPC Flow Log
 
    .. table:: **Table 1** Parameter descriptions

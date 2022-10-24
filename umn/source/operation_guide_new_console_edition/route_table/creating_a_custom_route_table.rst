@@ -27,7 +27,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0173155804.png
       :alt: **Figure 1** Create Route Table
 
-
       **Figure 1** Create Route Table
 
    .. table:: **Table 1** Parameter descriptions

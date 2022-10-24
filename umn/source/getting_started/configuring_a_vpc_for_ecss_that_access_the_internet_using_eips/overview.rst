@@ -12,7 +12,6 @@ If your ECSs need to access the Internet (for example, the ECSs functioning as t
 .. figure:: /_static/images/en-us_image_0162332046.png
    :alt: **Figure 1** Configuring the network
 
-
    **Figure 1** Configuring the network
 
 :ref:`Table 1 <vpc_qs_0022__en-us_topic_0118499056_t5143cea7d59f4c31b1c56ab35e86f71f>` describes the different tasks in the procedure for configuring the network.

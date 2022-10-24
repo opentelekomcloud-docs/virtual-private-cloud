@@ -13,5 +13,4 @@ Within your own VPC, you can create security groups and VPNs, configure IP addre
 .. figure:: /_static/images/en-us_image_0209606948.png
    :alt: **Figure 1** VPC components
 
-
    **Figure 1** VPC components

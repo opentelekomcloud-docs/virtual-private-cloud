@@ -27,7 +27,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0000001117669524.png
       :alt: **Figure 1** Modify Bandwidth
 
-
       **Figure 1** Modify Bandwidth
 
 6. Click **Next**.

@@ -50,7 +50,6 @@ For example, VPC 1 and VPC 2 have matching CIDR blocks, but the subnets in the t
 .. figure:: /_static/images/en-us_image_0194358487.png
    :alt: **Figure 1** VPC peering connection between Subnet A and Subnet X
 
-
    **Figure 1** VPC peering connection between Subnet A and Subnet X
 
 :ref:`Figure 2 <en-us_topic_0046809840__en-us_topic_0118499087_fig13211186151514>` shows the routes configured for the VPC peering connection between Subnet A and Subnet X. After the routes are configured, Subnet A and Subnet X can communicate with each other.
@@ -59,7 +58,6 @@ For example, VPC 1 and VPC 2 have matching CIDR blocks, but the subnets in the t
 
 .. figure:: /_static/images/en-us_image_0194358495.png
    :alt: **Figure 2** Route tables for the VPC peering connection between Subnet A and Subnet X
-
 
    **Figure 2** Route tables for the VPC peering connection between Subnet A and Subnet X
 
@@ -71,7 +69,6 @@ As shown in :ref:`Figure 3 <en-us_topic_0046809840__en-us_topic_0118499087_fig12
 
 .. figure:: /_static/images/en-us_image_0194358504.png
    :alt: **Figure 3** Invalid VPC peering connection
-
 
    **Figure 3** Invalid VPC peering connection
 

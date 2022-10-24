@@ -21,5 +21,4 @@ The following figure provides an example of the security group rule configuratio
 .. figure:: /_static/images/en-us_image_0129473334.png
    :alt: **Figure 1** Security group rules
 
-
    **Figure 1** Security group rules
