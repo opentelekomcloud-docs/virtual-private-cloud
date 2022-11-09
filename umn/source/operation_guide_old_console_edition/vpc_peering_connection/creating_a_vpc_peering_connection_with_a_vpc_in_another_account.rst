@@ -47,7 +47,7 @@ Creating a VPC Peering Connection
       |                       | -  **My account**: The VPC peering connection will be created between two VPCs, in the same region, in your account.                       |                                      |
       |                       | -  **Another account**: The VPC peering connection will be created between your VPC and a VPC in another account, in the same region.      |                                      |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Peer Project ID       | This parameter is available only when **Another account** is selected.                                                                     | -                                    |
+      | Peer Project ID       | This parameter is available only when **Another account** is selected.                                                                     | ``-``                                |
       |                       |                                                                                                                                            |                                      |
       |                       | For details about how to obtain the peer project ID, see :ref:`Obtaining the Peer Project ID <vpc_peering02_0004__section41291933224121>`. |                                      |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
