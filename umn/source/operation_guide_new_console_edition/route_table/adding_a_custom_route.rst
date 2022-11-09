@@ -50,7 +50,7 @@ Procedure
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Next Hop              | Set the next hop. The resources in the drop-down list box are displayed based on the selected next hop type.                                                      | ecs-001               |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Description           | Supplementary information about the route. This parameter is optional.                                                                                            | -                     |
+      | Description           | Supplementary information about the route. This parameter is optional.                                                                                            | ``-``                 |
       |                       |                                                                                                                                                                   |                       |
       |                       | The route description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).                                                         |                       |
       +-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
