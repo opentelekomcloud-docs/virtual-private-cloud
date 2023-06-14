@@ -5,14 +5,22 @@
 VPC Peering Connection
 ======================
 
-A VPC peering connection is a network connection between two VPCs in one region that enables you to route traffic between them using private IP addresses. ECSs in either VPC can communicate with each other just as if they were in the same region. You can create a VPC peering connection between your own VPCs, or between your VPC and another account's VPC within the same region. However, you cannot create a VPC peering connection between VPCs in different regions.
+A VPC peering connection is a networking connection between two VPCs and enables them to communicate using private IP addresses. The VPCs to be peered can be in the same account or different accounts, but must be in the same region.
 
-Each account can have a maximum of 50 VPC peering connections in each region by default.
+-  You can use VPC peering connections to build networks in different scenarios. For details, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.
 
--  VPC peering connections between VPCs in one account: Each account can create a maximum of 50 VPC peering connections in one region.
+:ref:`Figure 1 <vpc_concepts_0011__en-us_topic_0046655036_fig4721642193711>` shows an application scenario of VPC peering connections.
 
--  VPC peering connections between VPCs of different accounts: Accepted VPC peering connections use the quotas of both accounts. To-be-accepted VPC peering connections only use the quotas of accounts that request the connections.
+-  There are two VPCs (VPC-A and VPC-B) in region A that are not connected.
+-  Service servers (ECS-A01 and ECS-A02) are in VPC-A, and database servers (RDS-B01 and RDS-B02) are in VPC-B. The service servers and database servers cannot communicate with each other.
 
-   An account can create VPC peering connections with different accounts if the account has enough quota.
+-  You need to create a VPC peering connection (peering-AB) between VPC-A and VPC-B so the service servers and database servers can communicate with each other.
+
+.. _vpc_concepts_0011__en-us_topic_0046655036_fig4721642193711:
+
+.. figure:: /_static/images/en-us_image_0000001512591549.png
+   :alt: **Figure 1** VPC peering connection network diagram
+
+   **Figure 1** VPC peering connection network diagram
 
 For details about VPC peering connections, see :ref:`VPC Peering Connection <vpc_peering_0000>`.
