@@ -9,7 +9,7 @@ A subnet is a unique CIDR block with a range of IP addresses in a VPC. All resou
 
 -  By default, ECSs in all subnets of the same VPC can communicate with one another, but ECSs in different VPCs cannot.
 
-   You can create VPC peering connections to enable ECSs in different VPCs but in the same region to communicate with one another. For details, see :ref:`VPC Peering Connection Creation Procedure <en-us_topic_0046655036>`.
+   You can create VPC peering connections to enable ECSs in different VPCs but in the same region to communicate with one another. For details, see :ref:`VPC Peering Connection Overview <en-us_topic_0046655036>`.
 
 -  After a subnet is created, its CIDR block cannot be modified.
 

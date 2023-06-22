@@ -5,18 +5,18 @@
 Overview
 ========
 
-If your ECSs do not require Internet access or need to access the Internet using IP addresses on the default network (100.64.0.0/11) with limited bandwidth (for example, the ECSs functioning as the database nodes or server nodes for deploying a website), you can follow the procedure shown in :ref:`Figure 1 <vpc_qs_0004__en-us_topic_0118498946_fd87108563a6848bba1a0f0295fef3515>` to configure a VPC for the ECSs.
+If your ECSs do not require Internet access or need to access the Internet using IP addresses on the default network (100.64.0.0/11) with limited bandwidth (for example, the ECSs functioning as the database nodes or server nodes for deploying a website), you can follow the procedure shown in :ref:`Figure 1 <vpc_qs_0004__fd87108563a6848bba1a0f0295fef3515>` to configure a VPC for the ECSs.
 
-.. _vpc_qs_0004__en-us_topic_0118498946_fd87108563a6848bba1a0f0295fef3515:
+.. _vpc_qs_0004__fd87108563a6848bba1a0f0295fef3515:
 
 .. figure:: /_static/images/en-us_image_0162329244.png
    :alt: **Figure 1** Configuring the network
 
    **Figure 1** Configuring the network
 
-:ref:`Table 1 <vpc_qs_0004__en-us_topic_0118498946_t1b39acc5d1d449eabbea2aab68bfab25>` describes the different tasks in the procedure for configuring the network.
+:ref:`Table 1 <vpc_qs_0004__t1b39acc5d1d449eabbea2aab68bfab25>` describes the different tasks in the procedure for configuring the network.
 
-.. _vpc_qs_0004__en-us_topic_0118498946_t1b39acc5d1d449eabbea2aab68bfab25:
+.. _vpc_qs_0004__t1b39acc5d1d449eabbea2aab68bfab25:
 
 .. table:: **Table 1** Configuration process description
 

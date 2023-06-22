@@ -10,7 +10,7 @@ Scenarios
 
 A VPC comes with a default subnet. If the default subnet cannot meet your requirements, you can create one.
 
-The subnet is configured with DHCP by default. When an ECS in this subnet starts, the ECS automatically obtains an IP address using DHCP.
+A subnet is configured with DHCP by default. When an ECS in this subnet starts, the ECS automatically obtains an IP address using DHCP.
 
 Procedure
 ---------
@@ -19,9 +19,9 @@ Procedure
 
 2. Click |image1| in the upper left corner and select the desired region and project.
 
-3. On the console homepage, under **Network**, click **Virtual Private Cloud**.
+3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-4. In the navigation pane on the left, click **Subnets**.
+4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
 5. Click **Create Subnet**.
 
@@ -50,8 +50,6 @@ Procedure
       +------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Associated Route Table | The default route table to which the subnet will be associated. You can change the route table to a custom route table on the **Subnets** page.                                                                                             | Default               |
       +------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Advanced Settings      | Two options are available, **Default** and **Custom**. You can set **Advanced Settings** to **Custom** to configure advanced subnet parameters.                                                                                             | ``-``                 |
-      +------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Gateway                | The gateway address of the subnet.                                                                                                                                                                                                          | 192.168.0.1           |
       +------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | DNS Server Address     | By default, two DNS server addresses are configured. You can change them if necessary. A maximum of five DNS server addresses can be configured. Multiple IP addresses must be separated using commas (,).                                  | 100.125.x.x           |
@@ -64,10 +62,10 @@ Procedure
       +------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Tag                    | The subnet tag, which consists of a key and value pair. You can add a maximum of 20 tags to each subnet.                                                                                                                                    | -  Key: subnet_key1   |
       |                        |                                                                                                                                                                                                                                             | -  Value: subnet-01   |
-      |                        | The tag key and value must meet the requirements listed in :ref:`Table 2 <vpc_qs_0006__en-us_topic_0118498844_en-us_topic_0118498823_table42131827173915>`.                                                                                 |                       |
+      |                        | The tag key and value must meet the requirements listed in :ref:`Table 2 <vpc_qs_0006__en-us_topic_0013748726_table42131827173915>`.                                                                                                        |                       |
       +------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
-   .. _vpc_qs_0006__en-us_topic_0118498844_en-us_topic_0118498823_table42131827173915:
+   .. _vpc_qs_0006__en-us_topic_0013748726_table42131827173915:
 
    .. table:: **Table 2** Subnet tag key and value requirements
 
@@ -109,3 +107,4 @@ When a subnet is created, there are five reserved IP addresses, which cannot be 
 If you configured the default settings under **Advanced Settings** during subnet creation, the reserved IP addresses may be different from the default ones, but there will still be five of them. The specific addresses depend on your subnet settings.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
+.. |image2| image:: /_static/images/en-us_image_0000001500905066.png

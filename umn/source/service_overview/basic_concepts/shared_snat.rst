@@ -7,9 +7,9 @@ Shared SNAT
 
 The VPC service provides free SNAT function, which allows ECSs to use a limited number of public IP addresses to gain one-way access to the Internet for operations, such as updating software. However, Internet users cannot directly access the ECSs.
 
-:ref:`Figure 1 <vpc_concepts_0010__en-us_topic_0118499016_f04fc5d5739d142e5b38d73f3746f6cad>` shows how shared SNAT works. The SNAT device forwards traffic from ECSs to the Internet and the response traffic from the Internet to the ECSs. When forwarding ECS traffic to the Internet, the SNAT device converts the source IP addresses (ECS private IP addresses) in the data packets into the public IP addresses set on the SNAT device. When processing the response packets from the Internet to the ECSs, the SNAT device changes the public IP addresses in the response data packets to the private IP addresses of the ECSs.
+:ref:`Figure 1 <vpc_concepts_0010__f04fc5d5739d142e5b38d73f3746f6cad>` shows how shared SNAT works. The SNAT device forwards traffic from ECSs to the Internet and the response traffic from the Internet to the ECSs. When forwarding ECS traffic to the Internet, the SNAT device converts the source IP addresses (ECS private IP addresses) in the data packets into the public IP addresses set on the SNAT device. When processing the response packets from the Internet to the ECSs, the SNAT device changes the public IP addresses in the response data packets to the private IP addresses of the ECSs.
 
-.. _vpc_concepts_0010__en-us_topic_0118499016_f04fc5d5739d142e5b38d73f3746f6cad:
+.. _vpc_concepts_0010__f04fc5d5739d142e5b38d73f3746f6cad:
 
 .. figure:: /_static/images/en-us_image_0118499140.png
    :alt: **Figure 1** SNAT function
