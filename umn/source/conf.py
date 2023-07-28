@@ -18,7 +18,7 @@ import os
 import sys
 
 extensions = [
-    'otcdocstheme'
+    'otcdocstheme',
 ]
 
 otcdocs_auto_name = False
@@ -36,6 +36,8 @@ otcdocs_doc_type = 'umn'
 otcdocs_service_category = 'network'
 otcdocs_service_title = 'Virtual Private Cloud'
 otcdocs_service_type = 'vpc'
+otcdocs_search_environment = 'hc_de'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
