@@ -9,6 +9,7 @@ The Virtual Private Cloud (VPC) service enables you to provision logically isola
 
    .. service_card::
       :service_type: vpc
+      :environment: internal
       :umn: This document describes Virtual Private Cloud service, helping you quickly create and properly use the service.
       :api-ref: This document describes application programming interfaces (APIs) of Virtual Private Cloud (VPC) and provides API parameter description and example values.
-
+      :best-practice: To use Virtual Private Cloud more securely, reliably, flexibly, and efficiently, you are advised to follow the following best practices.
