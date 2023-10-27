@@ -9,26 +9,38 @@ A security group is a collection of access control rules for cloud resources, su
 
 Like whitelists, security group rules work as follows:
 
--  Inbound rule: If an inbound request matches the source in an inbound security group rule with **Action** set to **Allow**, the request is allowed.
+-  Inbound rules control incoming traffic to instances in the security group.
 
-   Unless otherwise specified, you do not need to configure deny rules in the inbound direction because requests that do not match allow rules will be denied.
+   If an inbound request matches the source in an inbound security group rule, the request is allowed and other requests are denied.
 
--  Outbound rule: If the destination of an outbound security group rule with **Action** set to **Allow** is 0.0.0.0/0, all outbound requests are allowed.
+   By default, you do not need to configure deny rules in the inbound direction because requests that do not match allow rules will be denied.
 
-   IPv4 default route: 0.0.0.0/0
+-  Outbound rules control outgoing traffic from instances in the security group.
 
-   IPv6 default route: ::/0
+   If the destination of an outbound security group rule is 0.0.0.0/0, all outbound requests are allowed.
 
-:ref:`Table 1 <vpc_concepts_0005__en-us_topic_0073379079_table102261597217>` shows the inbound and outbound rules in security group sg-AB.
+   0.0.0.0/0 represents all IPv4 addresses.
+
+   ::/0 represents all IPv6 addresses.
+
+:ref:`Table 1 <vpc_concepts_0005__en-us_topic_0073379079_table102261597217>` uses custom security group sg-AB as an example to describe its inbound and outbound rules in detail.
 
 .. _vpc_concepts_0005__en-us_topic_0073379079_table102261597217:
 
 .. table:: **Table 1** Rules in security group sg-AB
 
-   +-----------+--------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-   | Direction | Action | Protocol & Port | Source or Destination  | Description                                                                                                                               |
-   +===========+========+=================+========================+===========================================================================================================================================+
-   | Inbound   | Allow  | All             | Source: sg-AB          | Allows access requests from security group sg-AB. This rule ensures that instances in the security group can communicate with each other. |
-   +-----------+--------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
-   | Outbound  | Allow  | All             | Destination: 0.0.0.0/0 | Allows all requests in the security group to be sent out.                                                                                 |
-   +-----------+--------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+
+   | Direction | Type | Protocol & Port | Source/Destination     | Description                                                                                                                  |
+   +===========+======+=================+========================+==============================================================================================================================+
+   | Inbound   | IPv4 | All             | Source: sg-AB          | Allows ECSs in the security group to communicate with each other.                                                            |
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+
+   | Inbound   | IPv4 | TCP: 22         | Source: 0.0.0.0/0      | Allows all IPv4 addresses to access ECSs in the security group over port 22 (SSH) for remotely logging in to Linux ECSs.     |
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+
+   | Inbound   | IPv4 | TCP: 3389       | Source: 0.0.0.0/0      | Allows all IPv4 addresses to access ECSs in the security group over port 3389 (RDP) for remotely logging in to Windows ECSs. |
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+
+   | Inbound   | IPv4 | TCP: 80         | Source: 10.5.6.30/32   | Allows IP address 10.5.6.30 to access ECSs in the security group over port 80.                                               |
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+
+   | Outbound  | IPv4 | All             | Destination: 0.0.0.0/0 | Allows access from ECSs in the security group to any IPv4 address over any port.                                             |
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+
+   | Outbound  | IPv6 | All             | Destination: ::/0      | Allows access from ECSs in the security group to any IPv6 address over any port.                                             |
+   +-----------+------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------+

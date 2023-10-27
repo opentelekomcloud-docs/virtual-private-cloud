@@ -9,7 +9,6 @@ Service Overview
 -  :ref:`Product Advantages <overview_0004>`
 -  :ref:`Application Scenarios <overview_0002>`
 -  :ref:`VPC Connectivity <overview_0001>`
--  :ref:`Notes and Constraints <overview_0003>`
 -  :ref:`VPC and Other Services <vpc_relationship_0001>`
 -  :ref:`Permissions <overview_permission>`
 -  :ref:`Basic Concepts <vpc_concepts_0001>`
@@ -23,7 +22,6 @@ Service Overview
    product_advantages
    application_scenarios
    vpc_connectivity
-   notes_and_constraints
    vpc_and_other_services
    permissions
    basic_concepts/index

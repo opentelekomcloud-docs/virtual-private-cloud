@@ -19,6 +19,8 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
    The **Subnets** page is displayed.
@@ -38,4 +40,4 @@ Procedure
 #. Confirm the information and click **Yes**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001503170970.png
+.. |image2| image:: /_static/images/en-us_image_0000001675258381.png

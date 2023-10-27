@@ -43,11 +43,9 @@ Procedure
       | Enterprise Project    | The enterprise project that the EIP belongs to.                                                                                                                                                                                                                                                         | default               |
       |                       |                                                                                                                                                                                                                                                                                                         |                       |
       |                       | An enterprise project facilitates project-level management and grouping of cloud resources and users. The name of the default project is **default**.                                                                                                                                                   |                       |
-      |                       |                                                                                                                                                                                                                                                                                                         |                       |
-      |                       | For details about creating and managing enterprise projects, see the *Enterprise Management User Guide*.                                                                                                                                                                                                |                       |
       +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
-#. Click **Create Now**.
+#. Click **Assign Now**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
 .. |image2| image:: /_static/images/en-us_image_0000001454059512.png

@@ -19,6 +19,6 @@ VPC flow logs must be used together with the Log Tank Service (LTS). Before you 
 Notes and Constraints
 ---------------------
 
--  Currently, only C3, M3, and S2 ECSs support VPC flow logs.
--  By default, you can create a maximum of 10 VPC flow logs.
+-  Currently, C3, M3, and S2 ECSs support VPC flow logs.
+-  Each account can have up to 10 VPC flow logs in a region.
 -  By default, a maximum of 400,000 flow log records are supported.

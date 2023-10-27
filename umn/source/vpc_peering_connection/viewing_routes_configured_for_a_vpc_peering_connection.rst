@@ -26,6 +26,8 @@ Viewing Routes of a VPC Peering Connection Between VPCs in the Same Account
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **VPC Peering Connections**.
 
    The VPC peering connection list is displayed.
@@ -54,6 +56,8 @@ Only the account owner of a VPC in a VPC peering connection can view the routes 
 
    b. Click |image4| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+      The **Virtual Private Cloud** page is displayed.
+
    c. In the navigation pane on the left, choose **Virtual Private Cloud** > **VPC Peering Connections**.
 
       The VPC peering connection list is displayed.
@@ -67,6 +71,6 @@ Only the account owner of a VPC in a VPC peering connection can view the routes 
 #. Log in to the management console using the account of the peer VPC and view the route of the peer VPC by referring to :ref:`1 <vpc_peering_0004__li4105938135810>`.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001503011074.png
+.. |image2| image:: /_static/images/en-us_image_0000001626576858.png
 .. |image3| image:: /_static/images/en-us_image_0141273034.png
-.. |image4| image:: /_static/images/en-us_image_0000001503490750.png
+.. |image4| image:: /_static/images/en-us_image_0000001675256529.png

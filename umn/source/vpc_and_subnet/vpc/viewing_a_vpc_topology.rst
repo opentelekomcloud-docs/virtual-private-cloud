@@ -19,6 +19,8 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 4. In the VPC list, click the name of the VPC for which the topology is to be viewed.
 
    The VPC details page is displayed.
@@ -33,4 +35,4 @@ Procedure
    -  Add an ECS to a subnet, bind an EIP to the ECS, and change the security group of the ECS.
 
 .. |image1| image:: /_static/images/en-us_image_0000001221790501.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001675413833.png

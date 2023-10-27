@@ -19,7 +19,9 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-4. Locate the row that contains the target VPC and click the number in the **Subnets** column.
+   The **Virtual Private Cloud** page is displayed.
+
+4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
    The **Subnets** page is displayed.
 
@@ -44,7 +46,7 @@ Procedure
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | NTP Server Address    | The IP address of the NTP server. This parameter is optional.                                                                                                                                                                                                                                                                                                                                                                                                                              | 192.168.2.1           |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                       |
-      |                       | You can configure the NTP server IP addresses to be added to the subnet as required. The IP addresses are added in addition to the default NTP server addresses. If this parameter is left empty, you do not add an NTP server IP address.                                                                                                                                                                                                                                                 |                       |
+      |                       | You can configure the NTP server IP addresses to be added to the subnet as required. The IP addresses are added in addition to the default NTP server addresses. If you do not specify this parameter, no additional NTP server IP addresses will be added.                                                                                                                                                                                                                                |                       |
       |                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                       |
       |                       | A maximum of four unique NTP server IP addresses can be configured. Multiple IP addresses must be separated by a comma (,). If you add or change the NTP server addresses of a subnet, you need to renew the DHCP lease for or restart all the ECSs in the subnet to make the change take effect immediately. If the NTP server addresses have been cleared out, restarting the ECSs will not help. You must renew the DHCP lease for all ECSs to make the change take effect immediately. |                       |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
@@ -56,5 +58,5 @@ Procedure
 7. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001626574370.png
 .. |image3| image:: /_static/images/en-us_image_0000001337710801.png

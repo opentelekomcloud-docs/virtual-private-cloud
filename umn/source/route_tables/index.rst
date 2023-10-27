@@ -5,7 +5,7 @@
 Route Tables
 ============
 
--  :ref:`Route Table Overview <vpc_route01_0001>`
+-  :ref:`Route Tables and Routes <vpc_route01_0001>`
 -  :ref:`Creating a Custom Route Table <vpc_route01_0005>`
 -  :ref:`Associating a Route Table with a Subnet <vpc_route01_0007>`
 -  :ref:`Changing the Route Table Associated with a Subnet <vpc_route01_0008>`
@@ -23,7 +23,7 @@ Route Tables
    :maxdepth: 1
    :hidden: 
 
-   route_table_overview
+   route_tables_and_routes
    creating_a_custom_route_table
    associating_a_route_table_with_a_subnet
    changing_the_route_table_associated_with_a_subnet

@@ -5,7 +5,8 @@
 Can Subnets Communicate with Each Other?
 ========================================
 
-Subnets in the same VPC can communicate with each other, but subnets in different VPCs cannot communicate with each other by default. However, you can create VPC peering connections to enable subnets in different VPCs to communicate with each other.
+-  Subnets in the same VPC can communicate with each other by default.
+-  VPCs are isolated from each other. Subnets from different VPCs cannot communicate with each other. You can use a VPC peering connection to enable communication between VPCs in the same region.
 
 .. note::
 

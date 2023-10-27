@@ -20,26 +20,26 @@ If your ECSs do not require Internet access or need to access the Internet using
 
 .. table:: **Table 1** Configuration process description
 
-   +------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Task                               | Description                                                                                                                                                                     |
-   +====================================+=================================================================================================================================================================================+
-   | Create a VPC.                      | This task is mandatory.                                                                                                                                                         |
-   |                                    |                                                                                                                                                                                 |
-   |                                    | After the VPC is created, you can create other required network resources in the VPC based on your service requirements.                                                        |
-   +------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Create another subnet for the VPC. | This task is optional.                                                                                                                                                          |
-   |                                    |                                                                                                                                                                                 |
-   |                                    | If the default subnet cannot meet your requirements, you can create one.                                                                                                        |
-   |                                    |                                                                                                                                                                                 |
-   |                                    | The new subnet is used to assign IP addresses to NICs added to the ECS.                                                                                                         |
-   +------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Create a security group.           | This task is mandatory.                                                                                                                                                         |
-   |                                    |                                                                                                                                                                                 |
-   |                                    | You can create a security group and add ECSs in the VPC to the security group to improve ECS access security.                                                                   |
-   |                                    |                                                                                                                                                                                 |
-   |                                    | After a security group is created, it has a default rule, which allows all outgoing data packets. ECSs in a security group can access each other without the need to add rules. |
-   +------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Add a security group rule.         | This task is optional.                                                                                                                                                          |
-   |                                    |                                                                                                                                                                                 |
-   |                                    | If the default rule meets your service requirements, you do not need to add rules to the security group.                                                                        |
-   +------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | Task                               | Description                                                                                                              |
+   +====================================+==========================================================================================================================+
+   | Create a VPC.                      | This task is mandatory.                                                                                                  |
+   |                                    |                                                                                                                          |
+   |                                    | After the VPC is created, you can create other required network resources in the VPC based on your service requirements. |
+   +------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | Create another subnet for the VPC. | This task is optional.                                                                                                   |
+   |                                    |                                                                                                                          |
+   |                                    | If the default subnet cannot meet your requirements, you can create one.                                                 |
+   |                                    |                                                                                                                          |
+   |                                    | The new subnet is used to assign IP addresses to NICs added to the ECS.                                                  |
+   +------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | Create a security group.           | This task is mandatory.                                                                                                  |
+   |                                    |                                                                                                                          |
+   |                                    | You can create a security group and add ECSs in the VPC to the security group to improve ECS access security.            |
+   |                                    |                                                                                                                          |
+   |                                    | After a security group is created, it has default rules.                                                                 |
+   +------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | Add a security group rule.         | This task is optional.                                                                                                   |
+   |                                    |                                                                                                                          |
+   |                                    | If the default rule meets your service requirements, you do not need to add rules to the security group.                 |
+   +------------------------------------+--------------------------------------------------------------------------------------------------------------------------+

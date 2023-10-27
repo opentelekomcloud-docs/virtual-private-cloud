@@ -19,7 +19,7 @@ Procedure
 
 2. Click |image1| in the upper left corner and select the desired region and project.
 
-3. On the console homepage, under **Network**, click **Virtual Private Cloud**.
+3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
    The **Virtual Private Cloud** page is displayed.
 
@@ -34,3 +34,4 @@ Procedure
 6. Modify the VPC peering connection information and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
+.. |image2| image:: /_static/images/en-us_image_0000001626576382.png

@@ -52,19 +52,21 @@ Procedure
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select the desired region and project.
+2. Click |image1| in the upper left corner and select the desired region and project.
 
-#. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-#. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
+   The **Virtual Private Cloud** page is displayed.
 
-#. In the route table list, locate the row that contains the route table you want to replicate routes from and click **Replicate Route** in the **Operation** column.
+4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
 
-#. Select the target route table that you want to replicate route to and the routes to be replicated as prompted.
+5. In the route table list, locate the row that contains the route table you want to replicate routes from and click **Replicate Route** in the **Operation** column.
+
+6. Select the target route table that you want to replicate route to and the routes to be replicated as prompted.
 
    The listed routes are those that do not exist in the target route table. You can select one or more routes to replicate to the target route table.
 
-#. Click **OK**.
+7. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001626735566.png

@@ -64,27 +64,4 @@ Notes and Constraints
 ---------------------
 
 -  Virtual IP addresses are not recommended when multiple NICs in the same subnet are configured on an ECS. It is too easy for there to be route conflicts on the ECS, which would cause communication failure using the virtual IP address.
--  IP forwarding must be disabled on the standby ECS. Perform the following operations to confirm whether the IP forwarding is disabled on the standby ECS:
-
-   #. Log in to standby ECS and run the following command to check whether the IP forwarding is enabled:
-
-      cat /proc/sys/net/ipv4/ip_forward
-
-      In the command output, **1** indicates it is enabled, and **0** indicates it is disabled. The default value is **0**.
-
-      -  If the command output is **1**, perform :ref:`2 <vpc_vip_0001__en-us_topic_0206027322_en-us_topic_0095139658_li1473585332417>` and :ref:`3 <vpc_vip_0001__en-us_topic_0206027322_en-us_topic_0095139658_li88984711254>` to disable the IP forwarding.
-      -  If the command output is **0**, no further action is required.
-
-   #. .. _vpc_vip_0001__en-us_topic_0206027322_en-us_topic_0095139658_li1473585332417:
-
-      Use the vi editor to open the **/etc/sysctl.conf** file, change the value of **net.ipv4.ip_forward** to **0**, and enter **:wq** to save the change and exit. You can also use the **sed** command to modify the configuration. A command example is as follows:
-
-      sed -i '/net.ipv4.ip_forward/s/1/0/g' /etc/sysctl.conf
-
-   #. .. _vpc_vip_0001__en-us_topic_0206027322_en-us_topic_0095139658_li88984711254:
-
-      Run the following command to make the change take effect:
-
-      sysctl -p /etc/sysctl.conf
-
--  Each virtual IP address can be bound to only one EIP.
+-  If a virtual IP address is used in an active/standby scenario, disable IP forwarding on the standby ECS. For details, see :ref:`Disabling IP Forwarding on the Standby ECS <vpc_vip_0007>`.

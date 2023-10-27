@@ -25,6 +25,8 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 4. In the navigation pane on the left, choose **VPC Flow Logs**.
 
 5. Locate the target VPC flow log and click **View Log Record** in the **Operation** column to view information about the flow log record in LTS.
@@ -119,4 +121,4 @@ Procedure
 You can enter a keyword on the log topic details page on the LTS console to search for flow log records.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001503490746.png
+.. |image2| image:: /_static/images/en-us_image_0000001675256657.png

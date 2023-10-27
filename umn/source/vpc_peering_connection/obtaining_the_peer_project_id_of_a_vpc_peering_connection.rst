@@ -17,5 +17,5 @@ Procedure
 
    The owner of the peer account logs in to the management console.
 
-2. Select **My Credentials** from the username drop-down list.
+2. In the upper right corner of the page, select **My Credentials** from the username drop-down list.
 3. In the project list, obtain the project ID.

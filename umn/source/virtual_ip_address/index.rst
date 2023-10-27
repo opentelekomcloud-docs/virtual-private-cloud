@@ -12,6 +12,7 @@ Virtual IP Address
 -  :ref:`Using a VPN to Access a Virtual IP Address <vpc_vip_0004>`
 -  :ref:`Using a Direct Connect Connection to Access the Virtual IP Address <vpc_vip_0005>`
 -  :ref:`Using a VPC Peering Connection to Access the Virtual IP Address <vpc_vip_0006>`
+-  :ref:`Disabling IP Forwarding on the Standby ECS <vpc_vip_0007>`
 -  :ref:`Disabling Source and Destination Check (HA Load Balancing Cluster Scenario) <vpc_vip_0008>`
 -  :ref:`Unbinding a Virtual IP Address from an Instance <vpc_vip_0010>`
 -  :ref:`Unbinding a Virtual IP Address from an EIP <vpc_vip_0011>`
@@ -28,6 +29,7 @@ Virtual IP Address
    using_a_vpn_to_access_a_virtual_ip_address
    using_a_direct_connect_connection_to_access_the_virtual_ip_address
    using_a_vpc_peering_connection_to_access_the_virtual_ip_address
+   disabling_ip_forwarding_on_the_standby_ecs
    disabling_source_and_destination_check_ha_load_balancing_cluster_scenario
    unbinding_a_virtual_ip_address_from_an_instance
    unbinding_a_virtual_ip_address_from_an_eip

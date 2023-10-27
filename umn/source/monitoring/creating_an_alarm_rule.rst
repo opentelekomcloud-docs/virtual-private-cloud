@@ -17,7 +17,7 @@ Procedure
 
 2. Click |image1| in the upper left corner and select the desired region and project.
 
-3. Hover on the upper left corner to display **Service List** and choose **Management & Deployment** > **Cloud Eye**.
+3. In the upper left corner of the page, click |image2| to open the service list and choose **Management & Deployment** > **Cloud Eye**.
 
 4. In the left navigation pane on the left, choose **Alarm Management** > **Alarm Rules**.
 
@@ -32,3 +32,4 @@ Procedure
       For more information about alarm rules, see the *Cloud Eye User Guide*.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
+.. |image2| image:: /_static/images/en-us_image_0000001675258889.png

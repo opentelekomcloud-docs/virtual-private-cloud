@@ -19,6 +19,8 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
    The **Subnets** page is displayed.
@@ -28,5 +30,5 @@ Procedure
    The system will automatically export information about all subnets under your account in the current region as an Excel file to a local directory.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001675613941.png
 .. |image3| image:: /_static/images/en-us_image_0000001221842468.png

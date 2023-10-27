@@ -8,7 +8,9 @@ Managing VPC Tags
 Scenarios
 ---------
 
-A VPC tag identifies a VPC. Tags can be added to VPCs to facilitate VPC identification and management. You can add a tag to a VPC when creating the VPC, or you can add a tag to a created VPC on the VPC details page. A maximum of 20 tags can be added to each VPC.
+You can add tags to VPCs to help you identify and organize them.
+
+You can add a tag to a VPC when creating the VPC, or you can add a tag to a created VPC on the VPC details page. A maximum of 20 tags can be added to each VPC.
 
 A tag consists of a key and value pair. :ref:`Table 1 <vpc_vpc_0004__ted9687ca14074ef785241145365a6175>` lists the tag key and value requirements.
 
@@ -16,27 +18,27 @@ A tag consists of a key and value pair. :ref:`Table 1 <vpc_vpc_0004__ted9687ca14
 
 .. table:: **Table 1** VPC tag key and value requirements
 
-   +-----------------------+----------------------------------------------------------------------------+-----------------------+
-   | Parameter             | Requirements                                                               | Example Value         |
-   +=======================+============================================================================+=======================+
-   | Key                   | -  Cannot be left blank.                                                   | vpc_key1              |
-   |                       | -  Must be unique for the same VPC and can be the same for different VPCs. |                       |
-   |                       | -  Can contain a maximum of 36 characters.                                 |                       |
-   |                       | -  Can contain only the following character types:                         |                       |
-   |                       |                                                                            |                       |
-   |                       |    -  Uppercase letters                                                    |                       |
-   |                       |    -  Lowercase letters                                                    |                       |
-   |                       |    -  Digits                                                               |                       |
-   |                       |    -  Special characters, including hyphens (-) and underscores (_)        |                       |
-   +-----------------------+----------------------------------------------------------------------------+-----------------------+
-   | Value                 | -  Can contain a maximum of 43 characters.                                 | vpc-01                |
-   |                       | -  Can contain only the following character types:                         |                       |
-   |                       |                                                                            |                       |
-   |                       |    -  Uppercase letters                                                    |                       |
-   |                       |    -  Lowercase letters                                                    |                       |
-   |                       |    -  Digits                                                               |                       |
-   |                       |    -  Special characters, including hyphens (-) and underscores (_)        |                       |
-   +-----------------------+----------------------------------------------------------------------------+-----------------------+
+   +-----------------------+------------------------------------------------------------------------+-----------------------+
+   | Parameter             | Requirements                                                           | Example Value         |
+   +=======================+========================================================================+=======================+
+   | Key                   | -  Cannot be left blank.                                               | vpc_key1              |
+   |                       | -  Must be unique for each VPC and can be the same for different VPCs. |                       |
+   |                       | -  Can contain a maximum of 36 characters.                             |                       |
+   |                       | -  Can contain only the following character types:                     |                       |
+   |                       |                                                                        |                       |
+   |                       |    -  Uppercase letters                                                |                       |
+   |                       |    -  Lowercase letters                                                |                       |
+   |                       |    -  Digits                                                           |                       |
+   |                       |    -  Special characters, including hyphens (-) and underscores (_)    |                       |
+   +-----------------------+------------------------------------------------------------------------+-----------------------+
+   | Value                 | -  Can contain a maximum of 43 characters.                             | vpc-01                |
+   |                       | -  Can contain only the following character types:                     |                       |
+   |                       |                                                                        |                       |
+   |                       |    -  Uppercase letters                                                |                       |
+   |                       |    -  Lowercase letters                                                |                       |
+   |                       |    -  Digits                                                           |                       |
+   |                       |    -  Special characters, including hyphens (-) and underscores (_)    |                       |
+   +-----------------------+------------------------------------------------------------------------+-----------------------+
 
 Procedure
 ---------
@@ -49,19 +51,15 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-#. In the upper right corner of the VPC list, click **Search by Tag**.
+   The **Virtual Private Cloud** page is displayed.
 
-#. In the displayed area, enter the tag key and value of the VPC you are looking for.
+#. In the search box above the subnet list, click the search box.
 
-   Both the tag key and value must be specified. The system automatically displays the VPCs you are looking for if both the tag key and value are matched.
+   Click the tag key and then the value as required. The system filters resources based on the tag you select.
 
-#. Click + to add more tag keys and values.
+   Click anywhere in the search box to add the next tag key and value.
 
    You can add multiple tag keys and values to refine your search results. If you add more than one tag to search for VPCs, the VPCs containing all specified tags will be displayed.
-
-#. Click **Search**.
-
-   The system displays the VPCs you are looking for based on the entered tag keys and values.
 
 **Add, delete, edit, and view tags on the Tags tab of a VPC.**
 
@@ -70,6 +68,8 @@ Procedure
 #. Click |image3| in the upper left corner and select the desired region and project.
 
 #. Click |image4| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+
+   The **Virtual Private Cloud** page is displayed.
 
 #. On the **Virtual Private Cloud** page, locate the VPC whose tags are to be managed and click the VPC name.
 
@@ -94,6 +94,6 @@ Procedure
       Locate the row that contains the tag you want to delete, and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001627052380.png
 .. |image3| image:: /_static/images/en-us_image_0141273034.png
-.. |image4| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image4| image:: /_static/images/en-us_image_0000001675373913.png

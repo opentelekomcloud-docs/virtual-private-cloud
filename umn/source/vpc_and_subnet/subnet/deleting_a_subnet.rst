@@ -26,6 +26,8 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
    The **Subnets** page is displayed.
@@ -41,4 +43,4 @@ Procedure
       If a VPC cannot be deleted, a message will be displayed on the console. Delete the resources that are in the VPC by referring to :ref:`Why Can't I Delete My VPCs and Subnets? <vpc_faq_0075>`
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001626574366.png

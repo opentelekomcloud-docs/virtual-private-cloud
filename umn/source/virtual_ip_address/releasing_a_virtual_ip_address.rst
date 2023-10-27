@@ -22,7 +22,9 @@ If you want to release a virtual IP address that is being used by a resource, re
    +-----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
    | Prompts                                                                                                                           | Cause Analysis and Solution                                                                                                         |
    +===================================================================================================================================+=====================================================================================================================================+
-   | This operation cannot be performed because the IP address is bound to an instance or an EIP. Unbind the IP address and try again. | This virtual IP address is being by an EIP or an ECS. Unbind the virtual IP address first.                                          |
+   | This operation cannot be performed because the IP address is bound to an instance or an EIP. Unbind the IP address and try again. | This virtual IP address is being by an EIP or an ECS.                                                                               |
+   |                                                                                                                                   |                                                                                                                                     |
+   |                                                                                                                                   | Unbind the virtual IP address first.                                                                                                |
    |                                                                                                                                   |                                                                                                                                     |
    |                                                                                                                                   | -  EIP: :ref:`Unbinding a Virtual IP Address from an EIP <vpc_vip_0011>`                                                            |
    |                                                                                                                                   | -  ECS: :ref:`Unbinding a Virtual IP Address from an Instance <vpc_vip_0010>`                                                       |
@@ -41,6 +43,8 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
 #. Click the name of the subnet that the virtual IP address belongs to.
@@ -52,4 +56,4 @@ Procedure
 #. Confirm the information and click **Yes**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001553650753.png
+.. |image2| image:: /_static/images/en-us_image_0000001675378241.png
