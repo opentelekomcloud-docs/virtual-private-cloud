@@ -5,7 +5,7 @@
 Security Group
 ==============
 
-A security group is a collection of access control rules for cloud resources, such as cloud servers, containers, and databases, that have the same security protection requirements and that are mutually trusted. After a security group is created, you can create various access rules for the security group, these rules will apply to all cloud resources added to this security group.
+A security group is a collection of access control rules for cloud resources, such as cloud servers, containers, and databases, that have the same security protection requirements and that are mutually trusted. After a security group is created, you can create various access rules for the security group and these rules will apply to all cloud resources added to this security group.
 
 Like whitelists, security group rules work as follows:
 

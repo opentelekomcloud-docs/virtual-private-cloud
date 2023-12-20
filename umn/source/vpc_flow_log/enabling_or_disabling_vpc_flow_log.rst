@@ -8,7 +8,13 @@ Enabling or Disabling VPC Flow Log
 Scenarios
 ---------
 
-After a VPC flow log is created, the VPC flow log is automatically enabled. If you do not need to record traffic data, you can disable the corresponding VPC flow log. The disabled VPC flow log can be enabled again.
+After a VPC flow log is created, the VPC flow log is automatically enabled. If you do not need to record flow log data, you can disable the corresponding VPC flow log. A disabled VPC flow log can be enabled again.
+
+Notes and Constraints
+---------------------
+
+-  After a VPC flow log is enabled, the system starts to collect flow logs in the next log collection period.
+-  After a VPC flow log is disabled, the system stops collecting flow logs in the next log collection period. Generated flow logs will still be reported.
 
 Procedure
 ---------

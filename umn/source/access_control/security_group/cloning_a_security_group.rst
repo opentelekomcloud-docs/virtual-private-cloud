@@ -16,10 +16,6 @@ You can clone a security group in the following scenarios:
 -  If you need new security group rules, you can clone the original security group as a backup.
 -  Before you modify security group rules used by a service, you can clone the security group and modify the security group rules in the test environment to ensure that the modified rules work.
 
-   .. note::
-
-      Security group cloning is not supported now.
-
 Notes and Constraints
 ---------------------
 

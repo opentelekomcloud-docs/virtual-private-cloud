@@ -57,13 +57,13 @@ Procedure
 
    The **Subnets** page is displayed.
 
-#. Click **+** to add another tag key and value.
-
-   You can add multiple tag keys and values to refine your search results. If you add more than one tag to search for subnets, the subnets containing all specified tags will be displayed.
-
 #. In the search box above the subnet list, click the search box.
 
    Click the tag key and then the value as required. The system filters resources based on the tag you select.
+
+   Click anywhere in the search box to add the next tag key and value.
+
+   You can add multiple tag keys and values to refine your search results. If you add more than one tag to search for VPCs, the VPCs containing all specified tags will be displayed.
 
 **Add, delete, edit, and view tags on the Tags tab of a subnet.**
 

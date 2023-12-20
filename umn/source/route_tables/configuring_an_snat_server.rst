@@ -60,7 +60,7 @@ Procedure
    .. code-block:: console
 
       [root@localhost ~]# ping www.google.com
-      PING www.XXX.com (xxx.xxx.xxx.xxx) 56(84) bytes of data.
+      PING www.google.com (xxx.xxx.xxx.xxx) 56(84) bytes of data.
       64 bytes from xxx.xxx.xxx.xxx: icmp_seq=1 ttl=51 time=9.34 ms
       64 bytes from xxx.xxx.xxx.xxx: icmp_seq=2 ttl=51 time=9.11 ms
       64 bytes from xxx.xxx.xxx.xxx: icmp_seq=3 ttl=51 time=8.99 ms

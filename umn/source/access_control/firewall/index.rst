@@ -10,7 +10,7 @@ Firewall
 -  :ref:`Creating a Firewall <en-us_topic_0051746698>`
 -  :ref:`Adding a Firewall Rule <en-us_topic_0051746702>`
 -  :ref:`Associating Subnets with a Firewall <en-us_topic_0051746700>`
--  :ref:`Disassociating a Subnet from a Firewall <vpc_acl_0003>`
+-  :ref:`Disassociating Subnets from a Firewall <vpc_acl_0003>`
 -  :ref:`Changing the Sequence of a Firewall Rule <vpc_acl_0004>`
 -  :ref:`Modifying a Firewall Rule <vpc_acl_0005>`
 -  :ref:`Enabling or Disabling a Firewall Rule <vpc_acl_0006>`
@@ -29,7 +29,7 @@ Firewall
    creating_a_firewall
    adding_a_firewall_rule
    associating_subnets_with_a_firewall
-   disassociating_a_subnet_from_a_firewall
+   disassociating_subnets_from_a_firewall
    changing_the_sequence_of_a_firewall_rule
    modifying_a_firewall_rule
    enabling_or_disabling_a_firewall_rule

@@ -23,7 +23,7 @@ A route table contains a set of routes that are used to determine where network 
 
 -  Custom route table: If you do not want to use the default route table, you can create a custom route table and associate it with the subnet. Custom route tables can be deleted if they are no longer required.
 
-   The custom route table associated with a subnet affects only the outbound traffic. The default route table controls the inbound traffic.
+   The custom route table associated with a subnet affects only the outbound traffic. The default route table of a subnet controls the inbound traffic.
 
 Route
 -----
@@ -35,7 +35,13 @@ You can add routes to default and custom route tables and configure the destinat
    After a route table is created, the system automatically adds the following system routes to the route table, so that instances in a VPC can communicate with each other.
 
    -  Routes whose destination is 100.64.0.0/10 or 198.19.128.0/20.
+
    -  Routes whose destination is a subnet CIDR block.
+
+      If you enable IPv6 when creating a subnet, the system automatically assigns an IPv6 CIDR block to the subnet. Then, you can view IPv6 routes in its route table. Example destinations of subnet CIDR blocks are as follows:
+
+      -  IPv4: 192.168.2.0/24
+      -  IPv6: 2407:c080:802:be7::/64
 
       .. note::
 

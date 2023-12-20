@@ -27,6 +27,11 @@ Procedure
 
 #. Click the **IP Addresses** tab and click **Assign Virtual IP Address**.
 
+#. Select an IP address type. This parameter is available only in regions supporting IPv6.
+
+   -  IPv4
+   -  IPv6
+
 #. Select a virtual IP address assignment mode.
 
    -  **Automatic**: The system assigns an IP address automatically.
