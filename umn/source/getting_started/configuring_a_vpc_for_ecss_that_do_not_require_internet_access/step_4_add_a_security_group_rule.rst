@@ -8,14 +8,27 @@ Step 4: Add a Security Group Rule
 Scenarios
 ---------
 
-A security group is a collection of access control rules for cloud resources, such as cloud servers, containers, and databases, to control inbound and outbound traffic. Cloud resources associated with the same security group have the same security requirements and are mutually trusted within a VPC.
+A security group is a collection of access control rules to control the traffic that is allowed to reach and leave the cloud resources that it is associated with. The cloud resources can be cloud servers, containers, databases, and more. Cloud resources associated with the same security group have the same security requirements and are mutually trusted within a VPC. A security group consists of inbound and outbound rules.
 
-If the rules of the security group associated with your instance cannot meet your requirements, for example, you need to allow inbound traffic on a specified TCP port, you can add an inbound rule.
+Each ECS must be associated with at least one security group. If you do not have a security group when creating an ECS, the system provides a default security group.
 
--  Inbound rules control incoming traffic to cloud resources in the security group.
--  Outbound rules control outgoing traffic from cloud resources in the security group.
+Like whitelists, security group rules work as follows:
 
-For details about the default security group rules, see :ref:`Default Security Groups and Security Group Rules <securitygroup_0003>`. For details about security group rule configuration examples, see :ref:`Security Group Configuration Examples <en-us_topic_0081124350>`.
+-  Inbound rules control incoming traffic to instances in the security group.
+
+   If an inbound request matches the source in an inbound security group rule, the request is allowed and other requests are denied.
+
+   By default, you do not need to configure deny rules in the inbound direction because requests that do not match allow rules will be denied.
+
+-  Outbound rules control outgoing traffic from instances in the security group.
+
+   If the destination of an outbound security group rule is 0.0.0.0/0, all outbound requests are allowed.
+
+   0.0.0.0/0 represents all IPv4 addresses.
+
+   ::/0 represents all IPv6 addresses.
+
+If the rules of the security group associated with your instance cannot meet your requirements, for example, you need to allow inbound traffic on a specific TCP port, you can add an inbound rule to allow traffic on the TCP port.
 
 Procedure
 ---------
@@ -26,11 +39,21 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Access Control** > **Security Groups**.
 
-#. On the **Security Groups** page, locate the target security group and click **Manage Rule** in the **Operation** column to switch to the page for managing inbound and outbound rules.
+   The security group list is displayed.
 
-#. On the **Inbound Rules** tab, click **Add Rule**. In the displayed dialog box, set required parameters to add an inbound rule.
+#. Locate the row that contains the target security group, and click **Manage Rule** in the **Operation** column.
+
+   The page for configuring security group rules is displayed.
+
+#. On the **Inbound Rules** tab, click **Add Rule**.
+
+   The **Add Inbound Rule** dialog box is displayed.
+
+#. Configure required parameters.
 
    You can click **+** to add more inbound rules.
 
@@ -45,11 +68,16 @@ Procedure
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Parameter             | Description                                                                                                                                                              | Example Value         |
       +=======================+==========================================================================================================================================================================+=======================+
-      | Protocol & Port       | **Protocol**: The network protocol. Currently, the value can be **All**, **TCP**, **UDP**, **ICMP**, **GRE**, or others.                                                 | TCP                   |
+      | Protocol & Port       | The network protocol used to match traffic in a security group rule.                                                                                                     | TCP                   |
+      |                       |                                                                                                                                                                          |                       |
+      |                       | Currently, the value can be **All**, **TCP**, **UDP**, **GRE**, **ICMP**, or more.                                                                                       |                       |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      |                       | **Port**: The port or port range over which the traffic can reach your ECS. The value ranges from 1 to 65535.                                                            | 22, or 22-30          |
+      |                       | **Port**: The port or port range over which traffic can reach your ECS. The value can be from 1 to 65535.                                                                | 22, or 22-30          |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Type                  | IPv4                                                                                                                                                                     | IPv4                  |
+      | Type                  | Source IP address version. You can select:                                                                                                                               | IPv4                  |
+      |                       |                                                                                                                                                                          |                       |
+      |                       | -  IPv4                                                                                                                                                                  |                       |
+      |                       | -  IPv6                                                                                                                                                                  |                       |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Source                | Source of the security group rule. The value can be an IP address or a security group to allow access from IP addresses or instances in the security group. For example: | 0.0.0.0/0             |
       |                       |                                                                                                                                                                          |                       |
@@ -68,7 +96,15 @@ Procedure
       |                       | The security group rule description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).                                                  |                       |
       +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
-#. On the **Outbound Rules** tab, click **Add Rule**. In the displayed dialog box, set required parameters to add an outbound rule.
+#. Click **OK**.
+
+   The inbound rule list is displayed.
+
+#. On the **Outbound Rules** tab, click **Add Rule**.
+
+   The **Add Outbound Rule** dialog box is displayed.
+
+#. Configure required parameters.
 
    You can click **+** to add more outbound rules.
 
@@ -83,11 +119,16 @@ Procedure
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Parameter             | Description                                                                                                                                                                 | Example Value         |
       +=======================+=============================================================================================================================================================================+=======================+
-      | Protocol & Port       | **Protocol**: The network protocol. Currently, the value can be **All**, **TCP**, **UDP**, **ICMP**, **GRE**, or others.                                                    | TCP                   |
+      | Protocol & Port       | The network protocol used to match traffic in a security group rule.                                                                                                        | TCP                   |
+      |                       |                                                                                                                                                                             |                       |
+      |                       | Currently, the value can be **All**, **TCP**, **UDP**, **GRE**, **ICMP**, or more.                                                                                          |                       |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      |                       | **Port**: The port or port range over which the traffic can leave your ECS. The value ranges from 1 to 65535.                                                               | 22, or 22-30          |
+      |                       | **Port**: The port or port range over which traffic can leave your ECS. The value can be from 1 to 65535.                                                                   | 22, or 22-30          |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Type                  | IPv4                                                                                                                                                                        | IPv4                  |
+      | Type                  | Source IP address version. You can select:                                                                                                                                  | IPv4                  |
+      |                       |                                                                                                                                                                             |                       |
+      |                       | -  IPv4                                                                                                                                                                     |                       |
+      |                       | -  IPv6                                                                                                                                                                     |                       |
       +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Destination           | Destination of the security group rule. The value can be an IP address or a security group to allow access to IP addresses or instances in the security group. For example: | 0.0.0.0/0             |
       |                       |                                                                                                                                                                             |                       |
@@ -106,5 +147,7 @@ Procedure
 
 #. Click **OK**.
 
+   The outbound rule list is displayed.
+
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001626734166.png

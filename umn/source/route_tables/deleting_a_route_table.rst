@@ -24,17 +24,17 @@ Procedure
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select the desired region and project.
+2. Click |image1| in the upper left corner and select the desired region and project.
 
-#. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**. The **Virtual Private Cloud** page is displayed.
 
-#. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
+4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
 
-#. Locate the row that contains the route table you want to delete and click **Delete** in the **Operation** column.
+5. Locate the row that contains the route table you want to delete and click **Delete** in the **Operation** column.
 
    A confirmation dialog box is displayed.
 
-#. Click **Yes**.
+6. Click **Yes**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001675615337.png

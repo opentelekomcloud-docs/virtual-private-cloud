@@ -29,7 +29,7 @@ Example Custom Policies
                   "Action": [
                       "
                            vpc:vpcs:create
-                           vpc:svpcs:list
+                           vpc:vpcs:list
                        "
                   ]
               }

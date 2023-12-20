@@ -30,11 +30,12 @@ Notes and Constraints
 -  Only one VPC peering connection can be created between two VPCs at the same time.
 -  A VPC peering connection can only connect VPCs in the same region.
 -  If the local and peer VPCs have overlapping CIDR blocks, the VPC peering connection may not take effect.
+-  After a VPC peering connection is created, you must add routes to the route tables of the local and peer VPCs. Otherwise, the VPC peering connection does not take effect.
 
 Prerequisites
 -------------
 
-You have two VPCs in the same region. If you want to create one, see :ref:`Creating a VPC <en-us_topic_0013935842>`.
+You have two VPCs from the same account in the same region. If you want to create one, see :ref:`Creating a VPC <en-us_topic_0013935842>`.
 
 .. _en-us_topic_0046655037__section143383585438:
 
@@ -46,6 +47,8 @@ Step 1: Create a VPC Peering Connection
 2. Click |image1| in the upper left corner and select the desired region and project.
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+
+   The **Virtual Private Cloud** page is displayed.
 
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **VPC Peering Connections**.
 
@@ -69,38 +72,42 @@ Step 1: Create a VPC Peering Connection
 
    .. table:: **Table 1** Parameters for creating a VPC peering connection
 
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Parameter             | Description                                                                                                                                                                                      | Example Value         |
-      +=======================+==================================================================================================================================================================================================+=======================+
-      | Name                  | Mandatory                                                                                                                                                                                        | peering-AB            |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | Enter a name for the VPC peering connection.                                                                                                                                                     |                       |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | The name can contain a maximum of 64 characters, including letters, digits, hyphens (-), and underscores (_).                                                                                    |                       |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Local VPC             | Mandatory                                                                                                                                                                                        | VPC-A                 |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | VPC at one end of the VPC peering connection. You can select one from the drop-down list.                                                                                                        |                       |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Local VPC CIDR Block  | CIDR block of the selected local VPC                                                                                                                                                             | 172.16.0.0/16         |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Account               | Mandatory                                                                                                                                                                                        | My account            |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | -  Options: **My account** and **Another account**                                                                                                                                               |                       |
-      |                       | -  Select **My account**.                                                                                                                                                                        |                       |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Peer Project          | The system fills in the corresponding project by default because **My account** is set to **Account**.                                                                                           | ab-cdef-1             |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | For example, if VPC-A and VPC-B are in account A and region A, the system fills in the correspond project of account A in region A by default.                                                   |                       |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Peer VPC              | This parameter is mandatory if **Account** is set to **My account**.                                                                                                                             | VPC-B                 |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | VPC at the other end of the VPC peering connection. You can select one from the drop-down list.                                                                                                  |                       |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Peer VPC CIDR Block   | CIDR block of the selected peer VPC                                                                                                                                                              | 172.17.0.0/16         |
-      |                       |                                                                                                                                                                                                  |                       |
-      |                       | If the local and peer VPCs have overlapping CIDR blocks, the VPC peering connection may not take effect. For details, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`. |                       |
-      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Parameter                   | Description                                                                                                                                                                                      | Example Value                        |
+      +=============================+==================================================================================================================================================================================================+======================================+
+      | VPC Peering Connection Name | Mandatory                                                                                                                                                                                        | peering-AB                           |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | Enter a name for the VPC peering connection.                                                                                                                                                     |                                      |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | The name can contain a maximum of 64 characters, including letters, digits, hyphens (-), and underscores (_).                                                                                    |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Local VPC                   | Mandatory                                                                                                                                                                                        | VPC-A                                |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | VPC at one end of the VPC peering connection. You can select one from the drop-down list.                                                                                                        |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Local VPC CIDR Block        | CIDR block of the selected local VPC                                                                                                                                                             | 172.16.0.0/16                        |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Account                     | Mandatory                                                                                                                                                                                        | My account                           |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | -  Options: **My account** and **Another account**                                                                                                                                               |                                      |
+      |                             | -  Select **My account**.                                                                                                                                                                        |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Peer Project                | The system fills in the corresponding project by default because **My account** is set to **Account**.                                                                                           | ab-cdef-1                            |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | For example, if VPC-A and VPC-B are in account A and region A, the system fills in the correspond project of account A in region A by default.                                                   |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Peer VPC                    | This parameter is mandatory if **Account** is set to **My account**.                                                                                                                             | VPC-B                                |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | VPC at the other end of the VPC peering connection. You can select one from the drop-down list.                                                                                                  |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Peer VPC CIDR Block         | CIDR block of the selected peer VPC                                                                                                                                                              | 172.17.0.0/16                        |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | If the local and peer VPCs have overlapping CIDR blocks, the VPC peering connection may not take effect. For details, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`. |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Description                 | Optional                                                                                                                                                                                         | peering-AB connects VPC-A and VPC-B. |
+      |                             |                                                                                                                                                                                                  |                                      |
+      |                             | Enter the description of the VPC peering connection in the text box as required.                                                                                                                 |                                      |
+      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
 
 7. Click **OK**.
 
@@ -111,14 +118,12 @@ Step 1: Create a VPC Peering Connection
    a. If you click **Add Route**, the **Local Routes** page is displayed. Then, go to :ref:`Step 2: Add Routes for the VPC Peering Connection <en-us_topic_0046655037__section19655123018712>`.
    b. If you click **Add Later**, the VPC peering connection list is displayed.
 
-   .. important::
-
-      After a VPC peering connection is created, you must add routes to the route tables of the local and peer VPCs. Otherwise, the VPC peering connection does not take effect.
-
 .. _en-us_topic_0046655037__section19655123018712:
 
 Step 2: Add Routes for the VPC Peering Connection
 -------------------------------------------------
+
+To enable communications between VPCs connected by a VPC peering connection, you need to add forward and return routes to the route tables of the VPCs. For details, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.
 
 #. Add routes to the route table of the local VPC:
 
@@ -216,8 +221,8 @@ After you add routes for the VPC peering connection, verify the communication be
 
    .. important::
 
-      -  In this example, ECS-A01 and RDS-B01 are in the same security group. If the instances in different security groups, you need to add inbound rules to allow access from the peer security group. For details, see :ref:`Enabling ECSs in Different Security Groups to Communicate with Each Other Through an Internal Network <en-us_topic_0081124350__section14197522283>`.
+      -  In this example, ECS-A01 and RDS-B01 are in the same security group. If the instances in different security groups, you need to add inbound rules to allow access from the peer security group. For details, see :ref:`Enabling ECSs In Different Security Groups to Communicate Through an Internal Network <en-us_topic_0081124350__section094514632817>`.
       -  If VPCs connected by a VPC peering connection cannot communicate with each other, refer to :ref:`Why Did Communication Fail Between VPCs That Were Connected by a VPC Peering Connection? <vpc_faq_0069>`.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001503318922.png
+.. |image2| image:: /_static/images/en-us_image_0000001627056086.png

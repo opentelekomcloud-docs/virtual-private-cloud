@@ -22,10 +22,17 @@ Procedure
 #. Log in to the management console.
 
 2. Click |image1| in the upper left corner and select the desired region and project.
+
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+
+   The **Virtual Private Cloud** page is displayed.
+
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
+
 5. In the route table list, click the name of the target route table.
+
 6. Locate the row that contains the route to be modified and click **Modify** in the **Operation** column.
+
 7. Modify the route information in the displayed dialog box.
 
    .. table:: **Table 1** Parameter descriptions
@@ -41,7 +48,7 @@ Procedure
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | Next Hop Type         | Mandatory                                                                                                                                                            | VPC peering connection |
       |                       |                                                                                                                                                                      |                        |
-      |                       | Set the type of the next hop. For details about the supported resource types, see :ref:`Table 1 <vpc_route01_0001__table1727714140542>`.                             |                        |
+      |                       | Set the type of the next hop.                                                                                                                                        |                        |
       |                       |                                                                                                                                                                      |                        |
       |                       | .. note::                                                                                                                                                            |                        |
       |                       |                                                                                                                                                                      |                        |
@@ -59,4 +66,4 @@ Procedure
 8. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001627055450.png

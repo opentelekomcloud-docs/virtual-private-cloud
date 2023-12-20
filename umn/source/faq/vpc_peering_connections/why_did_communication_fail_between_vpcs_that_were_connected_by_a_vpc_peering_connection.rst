@@ -137,7 +137,7 @@ Incorrect Network Configuration
 #. Check whether security group rules of the ECSs that need to communicate allow inbound traffic from each other by referring to :ref:`Viewing the Security Group of an ECS <vpc_securitygroup_0011>`.
 
    -  If the ECSs are associated with the same security group, you do not need to check their rules.
-   -  If the ECSs are associated with different security groups, add an inbound rule to allow access from each other by referring to :ref:`Enabling ECSs in Different Security Groups to Communicate with Each Other Through an Internal Network <en-us_topic_0081124350__section14197522283>`.
+   -  If the ECSs are associated with different security groups, add an inbound rule to allow access from each other by referring to :ref:`Security Group Configuration Examples <en-us_topic_0081124350>`.
 
 #. Check whether the firewall of the ECS NIC blocks traffic.
 

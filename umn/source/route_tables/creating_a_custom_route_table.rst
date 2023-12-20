@@ -8,12 +8,12 @@ Creating a Custom Route Table
 Scenarios
 ---------
 
-If your default route table cannot meet your service requirements, you can create a custom route table by following the instructions provided in this section.
+A VPC automatically comes with a default route table. If your default route table cannot meet your service requirements, you can create a custom route table.
 
 Notes and Constraints
 ---------------------
 
--  Each VPC can have a maximum of 10 route tables, including the default route table.
+By default, each VPC can have up to 10 route tables, including the default route table.
 
 Procedure
 ---------
@@ -23,6 +23,8 @@ Procedure
 2. Click |image1| in the upper left corner and select the desired region and project.
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+
+   The **Virtual Private Cloud** page is displayed.
 
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
 
@@ -65,4 +67,4 @@ Procedure
    c. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001627055454.png

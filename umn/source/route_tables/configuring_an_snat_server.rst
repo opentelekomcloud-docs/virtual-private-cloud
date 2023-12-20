@@ -69,7 +69,7 @@ Procedure
 
    **cat /proc/sys/net/ipv4/ip_forward**
 
-   In the command output, **1** indicates it is enabled, and **0** indicates it is disabled. The default value is **0**.
+   In the command output, **1** indicates that IP forwarding is enabled, and **0** indicates that IP forwarding is disabled. The default value is **0**.
 
    -  If IP forwarding in Linux is enabled, go to step :ref:`14 <vpc_route_0004__en-us_topic_0212076959_li2168883919851>`.
    -  If IP forwarding in Linux is disabled, go to :ref:`12 <vpc_route_0004__en-us_topic_0212076959_li3948189019612>` to enable IP forwarding in Linux.

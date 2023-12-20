@@ -10,20 +10,32 @@ Scenarios
 
 You can bind a virtual IP address to an EIP so that you can access the ECSs bound with the same virtual IP address from the Internet. These ECSs can work in the active/standby mode to improve fault tolerance.
 
+Notes and Constraints
+---------------------
+
+-  Each virtual IP address can be bound to only one EIP.
+
 Procedure
 ---------
 
 #. Log in to the management console.
+
 #. Click |image1| in the upper left corner and select the desired region and project.
+
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
+
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
+
 #. In the subnet list, click the name of the subnet that the virtual IP address belongs to.
+
 #. Click the **IP Addresses** tab.
 
    -  To bind a virtual IP address to an EIP, locate the row that contains the virtual IP address and click **Bind to EIP** in the **Operation** column.
    -  To bind a virtual IP address to an ECS, locate the row that contains the virtual IP address and click **Bind to Server** in the **Operation** column.
 
-#. Select the desired EIP, or ECS and its NIC.
+#. Select the EIP or ECS to be bound.
 
    .. note::
 
@@ -129,7 +141,7 @@ Procedure
       In the command output, **IPv4 Address** is the virtual IP address 10.0.0.154, indicating that the virtual IP address of the ECS NIC has been correctly configured.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001553930581.png
+.. |image2| image:: /_static/images/en-us_image_0000001626738526.png
 .. |image3| image:: /_static/images/en-us_image_0000001281210233.png
 .. |image4| image:: /_static/images/en-us_image_0000001237328110.png
 .. |image5| image:: /_static/images/en-us_image_0000001237013856.png

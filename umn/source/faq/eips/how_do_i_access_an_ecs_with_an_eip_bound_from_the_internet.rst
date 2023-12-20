@@ -7,7 +7,7 @@ How Do I Access an ECS with an EIP Bound from the Internet?
 
 Each ECS is automatically added to a security group after being created to ensure its security. The security group denies access traffic from the Internet by default. To allow external access to ECSs in the security group, add an inbound rule to the security group.
 
-You can set **Protocol** to **TCP**, **UDP**, **ICMP**, or **All** as required on the page for creating a security group rule.
+You can set **Protocol** to **TCP**, **UDP**, **ICMP**, **GRE**, or **All** as required on the page for creating a security group rule.
 
 -  If your ECS needs to be accessible over the Internet and you know the IP address used to access the ECS, set **Source** to the IP address range containing the IP address.
 

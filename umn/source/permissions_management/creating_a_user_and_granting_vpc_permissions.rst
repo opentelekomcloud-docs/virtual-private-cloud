@@ -8,19 +8,19 @@ Creating a User and Granting VPC Permissions
 This section describes how to use IAM to implement fine-grained permissions control for your VPC resources. With IAM, you can:
 
 -  Create IAM users for employees based on your enterprise's organizational structure. Each IAM user will have their own security credentials for accessing VPC resources.
--  Grant only the permissions required for users to perform a specific task.
+-  Grant users only the permissions required to perform a given task based on their job responsibilities.
 -  Entrust a cloud account or cloud service to perform efficient O&M on your VPC resources.
 
-If your cloud account does not require individual IAM users, skip this section.
+If your cloud account meets your permissions requirements, you can skip this section.
 
-This section describes the procedure for granting permissions (see :ref:`Figure 1 <permission_0003__fig1447123814172>`).
+:ref:`Figure 1 <permission_0003__fig1447123814172>` shows the process flow for granting permissions.
 
 Prerequisites
 -------------
 
-Learn about the permissions (:ref:`Permissions <overview_permission>`) supported by VPC and choose policies or roles according to your requirements.
+Learn about the permissions (see :ref:`Permissions <overview_permission>`) supported by VPC and choose policies or roles according to your requirements.
 
-For permissions of other services, see .
+To grant permissions for other services, learn about all `permissions <https://docs.otc.t-systems.com/permissions/index.html>`__ supported by IAM.
 
 Process Flow
 ------------
@@ -32,19 +32,13 @@ Process Flow
 
    **Figure 1** Process for granting VPC permissions
 
-#. .. _permission_0003__li8447183891715:
+#. On the IAM console, `create a user group and assign permissions to it <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0030.html>`__ (**VPC ReadOnlyAccess** as an example).
 
-   `Create a user group and assign permissions to it <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0030.html>`__.
+#. `Create an IAM user and add it to the created user group <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0031.html>`__.
 
-   Create a user group on the IAM console, and assign the **VPC ReadOnlyAccess** policy to the group.
+#. `Log in as the IAM user <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0032.html>`__ and verify permissions.
 
-#. `Create an IAM user and add it to the user group <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0031.html>`__.
+   In the authorized region, perform the following operations:
 
-   Create a user on the IAM console and add the user to the group created in :ref:`1 <permission_0003__li8447183891715>`.
-
-#. `Log in <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0032.html>`__ and verify permissions.
-
-   Log in to the VPC console by using the user created in 2, and verify that the user only has read permissions for VPC.
-
-   -  Choose **Service List** > **Virtual Private Cloud**. Then click **Create VPC** on the VPC console. If a message appears indicating that you have insufficient permissions to perform the operation, the **VPC ReadOnlyAccess** policy has already taken effect.
-   -  Choose any other service in **Service List**. If a message appears indicating that you have insufficient permissions to access the service, the **VPC ReadOnlyAccess** policy has already taken effect.
+   -  Choose **Service List** > **Virtual Private Cloud**. Then click **Create VPC** on the VPC console. If a message appears indicating that you have insufficient permissions to perform the operation, the **VPCReadOnlyAccess** policy is in effect.
+   -  Choose another service from **Service List**. If a message appears indicating that you have insufficient permissions to access the service, the **VPCReadOnlyAccess** policy is in effect.

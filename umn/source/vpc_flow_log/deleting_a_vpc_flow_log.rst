@@ -23,6 +23,8 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 4. In the navigation pane on the left, choose **VPC Flow Logs**.
 
 5. Locate the row that contains the VPC flow log to be deleted and click **Delete** in the **Operation** column.
@@ -36,4 +38,4 @@ Procedure
 6. Click **Yes** in the displayed dialog box.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001503330854.png
+.. |image2| image:: /_static/images/en-us_image_0000001626736794.png

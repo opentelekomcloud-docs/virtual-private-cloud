@@ -22,7 +22,7 @@ Notes and Constraints
    -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
 
 -  EIP assigned together with your load balancers will also be displayed in the EIP list.
--  You can only release EIPs that are not bound to any resources.
+-  Only EIPs with no instance bound can be released. If you want to release an EIP with an instance bound, you need to unbind EIP from the instance first.
 
 Procedure
 ---------
@@ -32,7 +32,7 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select the desired region and project.
 #. Click |image2| in the upper left corner and choose **Network** > **Elastic IP**.
-#. On the displayed page, locate the row that contains the target EIP, and click **Unbind**.
+#. On the displayed page, locate the row that contains the EIP, and click **Unbind**.
 #. Click **Yes** in the displayed dialog box.
 
 **Releasing a single EIP**

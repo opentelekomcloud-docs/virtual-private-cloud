@@ -25,6 +25,8 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
    The **Subnets** page is displayed.
@@ -35,8 +37,14 @@ Procedure
 
 #. On the **Summary** page, view the resources in the subnet.
 
-   a. In the **Resources** area, view the ECSs, BMSs, network interfaces, and load balancers in the subnet.
-   b. In the **Networking Components** area, view the NAT gateways in the subnet.
+   a. In the **VPC Resources** area, view the quantities of resources, such as ECSs, BMSs, network interfaces, and load balancers, in the subnet. Click the resource quantity with a hyperlink to view the resources in the subnet.
+   b. In the **Networking Components** area on the right of the page, view the NAT gateway, route table, and subnet.
+
+
+   .. figure:: /_static/images/en-us_image_0000001678437642.png
+      :alt: **Figure 1** Viewing resources in a subnet
+
+      **Figure 1** Viewing resources in a subnet
 
 #. Delete resources from the subnet.
 
@@ -63,7 +71,7 @@ Procedure
       +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
       | Load balancer                     | You can directly switch to load balancers from the subnet details page.                                                                          |
       |                                   |                                                                                                                                                  |
-      |                                   | a. Click the load balancer quantity in the **Resources** area.                                                                                   |
+      |                                   | a. Click the load balancer quantity.                                                                                                             |
       |                                   |                                                                                                                                                  |
       |                                   |    The load balancer list is displayed.                                                                                                          |
       |                                   |                                                                                                                                                  |
@@ -81,5 +89,5 @@ Procedure
       +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001500905066.png
+.. |image2| image:: /_static/images/en-us_image_0000001675413829.png
 .. |image3| image:: /_static/images/en-us_image_0000001461263993.png

@@ -29,6 +29,8 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
+   The **Virtual Private Cloud** page is displayed.
+
 4. In the navigation pane on the left, choose **VPC Flow Logs**.
 
 5. In the upper right corner, click **Create VPC Flow Log**. On the displayed page, configure parameters as prompted.
@@ -76,4 +78,4 @@ Procedure
 6. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001553770733.png
+.. |image2| image:: /_static/images/en-us_image_0000001675616561.png

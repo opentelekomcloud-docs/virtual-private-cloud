@@ -5,7 +5,7 @@
 VPC Peering Connection Usage Examples
 =====================================
 
-A VPC peering connection is a networking connection between two VPCs and enables them to communicate. :ref:`Table 1 <en-us_topic_0046809840__table18339193642913>` lists different scenarios of using VPC peering connections.
+A VPC peering connection is a networking connection between two VPCs in the same region and enables them to communicate. :ref:`Table 1 <en-us_topic_0046809840__table18339193642913>` lists different scenarios of using VPC peering connections.
 
 .. _en-us_topic_0046809840__table18339193642913:
 
@@ -191,7 +191,10 @@ As shown in :ref:`Figure 4 <en-us_topic_0046809840__fig06955277200>`, VPC-A and 
 Peering ECSs in a Central VPC with ECSs in Two Other VPCs
 ---------------------------------------------------------
 
-As shown in :ref:`Figure 5 <en-us_topic_0046809840__fig568511518481>`, VPC-B and VPC-C have overlapping CIDR blocks, and their Subnet-B01 and Subnet-BC01 have overlapping CIDR blocks. In this case, the VPC peering connection can connect ECSs in Subnet-B01 and Subnet-A01, and ECSs in Subnet-C01 and Subnet-A01.
+As shown in :ref:`Figure 5 <en-us_topic_0046809840__fig568511518481>`, VPC-B and VPC-C have overlapping CIDR blocks, and their Subnet-B01 and Subnet-C01 have overlapping CIDR blocks. You can only create a VPC peering connection between ECSs.
+
+-  Use VPC peering connection Peering-AB to connect ECSs in Subnet-B01 and Subnet-A01.
+-  Use VPC peering connection Peering-AC to connect ECSs in Subnet-C01 and Subnet-A01.
 
 .. _en-us_topic_0046809840__fig568511518481:
 
