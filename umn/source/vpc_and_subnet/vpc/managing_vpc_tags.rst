@@ -53,7 +53,7 @@ Procedure
 
    The **Virtual Private Cloud** page is displayed.
 
-#. In the search box above the subnet list, click the search box.
+#. In the search box above the VPC list, click anywhere in the search box.
 
    Click the tag key and then the value as required. The system filters resources based on the tag you select.
 

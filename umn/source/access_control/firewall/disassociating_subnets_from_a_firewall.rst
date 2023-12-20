@@ -2,13 +2,13 @@
 
 .. _vpc_acl_0003:
 
-Disassociating a Subnet from a Firewall
-=======================================
+Disassociating Subnets from a Firewall
+======================================
 
 Scenarios
 ---------
 
-Disassociate a subnet from a firewall when necessary.
+You can disassociate a subnet from its firewall based on your network requirements.
 
 Procedure
 ---------
@@ -33,7 +33,7 @@ Procedure
 
 **Disassociating subnets from a firewall**
 
-Select multiple subnets and click **Disassociate** above the subnet list to disassociate the subnets from a firewall at a time.
+Select multiple subnets and click **Disassociate** above the subnet list to disassociate the subnets from the firewall at a time.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
 .. |image2| image:: /_static/images/en-us_image_0000001675413845.png

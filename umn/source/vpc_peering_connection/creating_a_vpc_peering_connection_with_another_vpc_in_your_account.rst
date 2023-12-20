@@ -14,9 +14,11 @@ This following describes how to create a VPC peering connection between VPC-A an
 
 Procedure:
 
-#. :ref:`Step 1: Create a VPC Peering Connection <en-us_topic_0046655037__section143383585438>`
-#. :ref:`Step 2: Add Routes for the VPC Peering Connection <en-us_topic_0046655037__section19655123018712>`
-#. :ref:`Step 3: Verify Network Connectivity <en-us_topic_0046655037__section026312306414>`
+:ref:`Step 1: Create a VPC Peering Connection <en-us_topic_0046655037__section143383585438>`
+
+:ref:`Step 2: Add Routes for the VPC Peering Connection <en-us_topic_0046655037__section19655123018712>`
+
+:ref:`Step 3: Verify Network Connectivity <en-us_topic_0046655037__section026312306414>`
 
 
 .. figure:: /_static/images/en-us_image_0000001512876289.png

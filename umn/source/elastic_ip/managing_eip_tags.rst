@@ -49,7 +49,7 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Elastic IP**.
 
-#. Click the search box and then click **Tag** in the drop-down list.
+#. Click the search box above the EIP list.
 
 #. Select the tag key and value of the EIP.
 
