@@ -2,8 +2,8 @@
 
 .. _vpc_eip_0000:
 
-Elastic IP
-==========
+EIP
+===
 
 -  :ref:`Assigning an EIP <en-us_topic_0020090596>`
 -  :ref:`Querying an EIP <vpc_eip_0002>`

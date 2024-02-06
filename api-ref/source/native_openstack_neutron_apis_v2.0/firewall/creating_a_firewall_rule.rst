@@ -15,8 +15,8 @@ URI
 
 POST /v2.0/fwaas/firewall_rules
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -70,8 +70,27 @@ Request Message
    |                        |             |             |                                                                                              | The value can be **true** or **false**.                                                      |
    +------------------------+-------------+-------------+----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Create an ACL rule with **action** set to **allow**, **protocol** set to **tcp**, and destination port set to 80.
+
+.. code-block:: text
+
+   POST https://{Endpoint}/v2.0/fwaas/firewall_rules
+
+   {
+       "firewall_rule": {
+           "action": "allow",
+           "enabled": true,
+           "destination_port": "80",
+           "protocol": "tcp",
+           "name": "ALLOW_HTTP"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -117,26 +136,8 @@ Response Message
    | project_id             | String  | Specifies the project ID.                                               |
    +------------------------+---------+-------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   POST https://{Endpoint}/v2.0/fwaas/firewall_rules
-
-   {
-       "firewall_rule": {
-           "action": "allow",
-           "enabled": true,
-           "destination_port": "80",
-           "protocol": "tcp",
-           "name": "ALLOW_HTTP"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

@@ -5,17 +5,23 @@
 Permissions Policies and Supported Actions
 ==========================================
 
+-  :ref:`Introduction <permission_0001>`
 -  :ref:`VPC <vpc_permission_0022>`
 -  :ref:`Subnet <vpc_permission_0001>`
--  :ref:`Elastic IP <vpc_permission_0002>`
+-  :ref:`EIP <vpc_permission_0002>`
 -  :ref:`Bandwidth <vpc_permission_0003>`
 -  :ref:`Bandwidth (V2.0) <vpc_permission_0018>`
+-  :ref:`EIP V3 <vpc_permission_0031>`
 -  :ref:`VPC Peering Connection <vpc_permission_0005>`
 -  :ref:`VPC Route <en-us_topic_0000001234666799>`
 -  :ref:`Route Table <en-us_topic_0000001234585289>`
 -  :ref:`Quota <vpc_permission_0006>`
 -  :ref:`Private IP Address <vpc_permission_0007>`
 -  :ref:`Security Group <vpc_permission_0008>`
+-  :ref:`Security Group Rule <vpc_permission_0009>`
+-  :ref:`VPC Tags <vpc_permission_0021>`
+-  :ref:`Subnet Tags <vpc_permission_0019>`
+-  :ref:`VPC Flow Log <vpc_permission_0025>`
 -  :ref:`Port (OpenStack Neutron API) <vpc_permission_0010>`
 -  :ref:`Network (OpenStack Neutron API) <vpc_permission_0011>`
 -  :ref:`Subnet (OpenStack Neutron API) <vpc_permission_0012>`
@@ -29,17 +35,23 @@ Permissions Policies and Supported Actions
    :maxdepth: 1
    :hidden: 
 
+   introduction
    vpc
    subnet
-   elastic_ip
+   eip
    bandwidth
    bandwidth_v2.0
+   eip_v3
    vpc_peering_connection
    vpc_route
    route_table
    quota
    private_ip_address
    security_group
+   security_group_rule
+   vpc_tags
+   subnet_tags
+   vpc_flow_log
    port_openstack_neutron_api
    network_openstack_neutron_api
    subnet_openstack_neutron_api

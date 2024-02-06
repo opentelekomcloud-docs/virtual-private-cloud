@@ -14,7 +14,7 @@ Route Table
 +-------------------------------------------+----------------------------------------------------------+---------------------------+
 | Creating a Route Table                    | POST /v1/{project_id}/routetables                        | vpc:routeTables:create    |
 +-------------------------------------------+----------------------------------------------------------+---------------------------+
-| Updating a Route Table                    | UPDATE /v1/{project_id}/routetables/{routetable_id}      | vpc:routeTables:update    |
+| Updating a Route Table                    | PUT /v1/{project_id}/routetables/{routetable_id}         | vpc:routeTables:update    |
 +-------------------------------------------+----------------------------------------------------------+---------------------------+
 | Associating Subnets with a Route Table    | POST /v1/{project_id}/routetables/{routetable_id}/action | vpc:routeTables:associate |
 +-------------------------------------------+----------------------------------------------------------+---------------------------+

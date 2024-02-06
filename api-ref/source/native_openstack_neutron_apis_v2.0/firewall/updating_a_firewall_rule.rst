@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/fwaas/firewall_rules/{firewall_rule_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -70,8 +70,23 @@ Request Message
    |                        |                 |                 | The value can be **true** or **false**.                                                      |
    +------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Change the **action** of the ACL rule whose ID is b94acf06-efc2-485d-ba67-a61acf2a7e28 to **deny**.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/fwaas/firewall_rules/b94acf06-efc2-485d-ba67-a61acf2a7e28
+
+   {
+       "firewall_rule": {
+           "action": "deny"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -117,22 +132,8 @@ Response Message
    | project_id             | String  | Specifies the project ID.                                               |
    +------------------------+---------+-------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/fwaas/firewall_rules/b94acf06-efc2-485d-ba67-a61acf2a7e28
-
-   {
-       "firewall_rule": {
-           "action": "deny"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

@@ -42,5 +42,5 @@ Firewall (OpenStack Neutron API)
 +--------------------------------+--------------------------------------------------------------------+------------------------------------+
 | Updates a firewall group.      | PUT /v2.0/fwaas/firewall_groups/{firewall_group_id}                | vpc:firewallGroups:update          |
 +--------------------------------+--------------------------------------------------------------------+------------------------------------+
-| Deletes a firewall group.      | DELETE /v2.0/fwaas/firewall_groups/{firewall_group_id}             | vpc:firewallGroups:delete          |
+| Deletes a firewall group       | DELETE /v2.0/fwaas/firewall_groups/{firewall_group_id}             | vpc:firewallGroups:delete          |
 +--------------------------------+--------------------------------------------------------------------+------------------------------------+

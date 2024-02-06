@@ -31,29 +31,27 @@ DELETE /v2.0/{project_id}/vpcs/{vpc_id}/tags/{key}
    | key        | Yes       | Specifies the tag key.                                   |
    +------------+-----------+----------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v2.0/{project_id}/vpcs/{vpc_id}/tags/{key}
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v2.0/{project_id}/vpcs/{vpc_id}/tags/{key}
-
-Response Message
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

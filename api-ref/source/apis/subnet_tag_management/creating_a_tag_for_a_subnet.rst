@@ -31,10 +31,8 @@ POST /v2.0/{project_id}/subnets/{subnet_id}/tags
    |                       |                       | If you use the management console, the value of this parameter is the **Network ID** value. |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------+
 
-Request Message
----------------
-
--  Request parameter
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameter
 
@@ -53,7 +51,7 @@ Request Message
    +=================+=================+=================+=====================================================================+
    | key             | String          | Yes             | -  Specifies the tag key.                                           |
    |                 |                 |                 | -  Cannot be left blank.                                            |
-   |                 |                 |                 | -  Can contain a maximum of 36 characters.                          |
+   |                 |                 |                 | -  Contain up to 128 characters (36 characters on the console).     |
    |                 |                 |                 | -  Can contain only the following character types:                  |
    |                 |                 |                 |                                                                     |
    |                 |                 |                 |    -  Uppercase letters                                             |
@@ -64,7 +62,7 @@ Request Message
    |                 |                 |                 | -  The tag key of a VPC must be unique.                             |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
    | value           | String          | Yes             | -  Specifies the tag value.                                         |
-   |                 |                 |                 | -  Can contain a maximum of 43 characters.                          |
+   |                 |                 |                 | -  Contain up to 255 characters (43 characters on the console).     |
    |                 |                 |                 | -  Can contain only the following character types:                  |
    |                 |                 |                 |                                                                     |
    |                 |                 |                 |    -  Uppercase letters                                             |
@@ -73,7 +71,10 @@ Request Message
    |                 |                 |                 |    -  Special characters, including hyphens (-) and underscores (_) |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
 
--  Example request
+Example Request
+---------------
+
+-  Create a tag for a subnet. The key is **key1**, and the value is **value1**.
 
 .. code-block:: text
 
@@ -86,16 +87,15 @@ Request Message
        }
    }
 
-Response Message
+Response Parameters
+-------------------
+
+None
+
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

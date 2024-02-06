@@ -7,7 +7,7 @@ APIs
 
 -  :ref:`Virtual Private Cloud <vpc_api01_0000>`
 -  :ref:`Subnet <vpc_subnet01_0000>`
--  :ref:`Elastic IP <vpc_eip_0000>`
+-  :ref:`EIP <vpc_eip_0000>`
 -  :ref:`Floating IP Address (IPv6) <vpc_ipv6_0000>`
 -  :ref:`Bandwidth <vpc_bandwidth_0000>`
 -  :ref:`Bandwidth (V2.0) <vpc_sharebandwidth_0000>`
@@ -16,6 +16,7 @@ APIs
 -  :ref:`Security Group <vpc_sg01_0000>`
 -  :ref:`VPC Peering Connection <vpc_peering_0000>`
 -  :ref:`VPC Route <vpc_route_0000>`
+-  :ref:`Route Table <vpc_apiroutetab_0000>`
 -  :ref:`VPC Tag Management <vpc_tag_0000>`
 -  :ref:`Subnet Tag Management <subnet_tag_0000>`
 -  :ref:`EIP Tag Management <eip_tag_0000>`
@@ -28,7 +29,7 @@ APIs
 
    virtual_private_cloud/index
    subnet/index
-   elastic_ip/index
+   eip/index
    floating_ip_address_ipv6/index
    bandwidth/index
    bandwidth_v2.0/index
@@ -37,6 +38,7 @@ APIs
    security_group/index
    vpc_peering_connection/index
    vpc_route/index
+   route_table/index
    vpc_tag_management/index
    subnet_tag_management/index
    eip_tag_management/index

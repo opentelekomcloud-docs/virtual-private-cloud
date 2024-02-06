@@ -60,35 +60,42 @@ Example of querying rules by page
    |                 |                 |                 |                                                                                                                                                                                                                        |
    |                 |                 |                 | This parameter can work together with the parameter **limit**.                                                                                                                                                         |
    |                 |                 |                 |                                                                                                                                                                                                                        |
-   |                 |                 |                 | -  If parameters **marker** and **limit** are not passed, all resource records will be returned.                                                                                                                       |
+   |                 |                 |                 | -  If parameters **marker** and **limit** are not passed, resource records on the first page will be returned.                                                                                                         |
    |                 |                 |                 | -  If the parameter **marker** is not passed and the value of parameter **limit** is set to **10**, the first 10 resource records will be returned.                                                                    |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the value of parameter **limit** is set to **10**, the 11th to 20th resource records will be returned.                    |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, resource records starting from the 11th records (including 11th) will be returned. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax.                                                                                                                     |
+   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                 |
    |                 |                 |                 |                                                                                                                                                                                                                        |
    |                 |                 |                 | **limit** can be used together with **marker**. For details, see the parameter description of **marker**.                                                                                                              |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/fwaas/firewall_rules
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
-   +-----------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                                                                               | Description                                                                                                                                                                                                          |
-   +=======================+====================================================================================+======================================================================================================================================================================================================================+
-   | firewall_rules        | Array of :ref:`Firewall Rule <vpc_firewall_0001__table38646929121127>` objects     | Specifies the firewall rule list. For details, see :ref:`Table 4 <vpc_firewall_0001__table38646929121127>`.                                                                                                          |
-   +-----------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | firewall_rules_links  | Array of :ref:`firewall_rules_link <vpc_firewall_0001__table2049004519490>` Object | Specifies the pagination information. For details, see :ref:`Table 3 <vpc_firewall_0001__table2049004519490>`.                                                                                                       |
-   |                       |                                                                                    |                                                                                                                                                                                                                      |
-   |                       |                                                                                    | The value of **rel** will be **next** and that of **href** will be a link only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**). |
-   +-----------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                               | Description                                                                                                                                                                                                     |
+   +=======================+====================================================================================+=================================================================================================================================================================================================================+
+   | firewall_rules        | Array of :ref:`Firewall Rule <vpc_firewall_0001__table38646929121127>` objects     | Specifies the firewall rule list. For details, see :ref:`Table 4 <vpc_firewall_0001__table38646929121127>`.                                                                                                     |
+   +-----------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | firewall_rules_links  | Array of :ref:`firewall_rules_link <vpc_firewall_0001__table2049004519490>` Object | Specifies the pagination information. For details, see :ref:`Table 3 <vpc_firewall_0001__table2049004519490>`.                                                                                                  |
+   |                       |                                                                                    |                                                                                                                                                                                                                 |
+   |                       |                                                                                    | Only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**), value **next** will be returned for **rel** and a link for **href**. |
+   +-----------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _vpc_firewall_0001__table2049004519490:
 
@@ -138,16 +145,8 @@ Response Message
    | project_id             | String  | Specifies the project ID.                                               |
    +------------------------+---------+-------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/fwaas/firewall_rules
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 
@@ -155,49 +154,40 @@ Example response
        "firewall_rules": [
            {
                "protocol": "tcp",
-               "name": "crhfwruleupdate",
-               "mode": "normal",
-               "tenant_id": "f480f5d250824e5fafedcf05acf1419c",
-               "rule_profile": "",
-               "enabled": true,
-               "source_port": null,
-               "source_ip_address": null,
-               "destination_ip_address": null,
-               "firewall_policy_id": "b4f81251-c47a-4fe1-8579-6f9271d015d1",
-               "action": "deny",
-               "position": 1,
-               "ip_version": 4,
-               "shared": false,
+               "description": "update check parameter",
+               "source_ip_address": "116.66.184.0/24",
+               "destination_ip_address": "0.0.0.0/0",
                "destination_port": null,
+               "source_port": null,
                "id": "2a193015-4a88-4aa1-84ad-d4955adae707",
-               "description": "",
-               "project_id": "f480f5d250824e5fafedcf05acf1419c"
+               "name": "crhfwruleupdate",
+               "tenant_id": "a1c6f90c94334bd2953d9a61b8031a68",
+               "project_id": "a1c6f90c94334bd2953d9a61b8031a68",
+               "enabled": true,
+               "action": "allow",
+               "ip_version": 4,
+               "public": false
            },
            {
                "protocol": "tcp",
-               "name": "update_firewall-role-tommy",
-               "mode": "mix",
-               "tenant_id": "a1c6f90c94334bd2953d9a61b8031a68",
-               "rule_profile": "",
-               "enabled": false,
-               "source_port": "20:50",
+               "description": "update check parameter",
                "source_ip_address": null,
                "destination_ip_address": null,
-               "firewall_policy_id": null,
-               "action": "deny",
-               "position": null,
-               "ip_version": 4,
-               "shared": true,
                "destination_port": "40:60",
+               "source_port": "20:50",
                "id": "db7a204c-9eb1-40a2-9bd6-ed5cfd3cff32",
-               "description": "update check parameter",
-               "project_id": "a1c6f90c94334bd2953d9a61b8031a68"
+               "name": "update_firewall-role-tommy",
+               "tenant_id": "a1c6f90c94334bd2953d9a61b8031a68",
+               "project_id": "a1c6f90c94334bd2953d9a61b8031a68",
+               "enabled": false,
+               "action": "deny",
+               "ip_version": 4,
+               "public": false
            }
        ],
        "firewall_rules_links": [
           {    "rel": "previous",
-               "href": "https://{Endpoint}/v2.0/
-   fwaas/firewall_rules?marker=2a193015-4a88-4aa1-84ad-d4955adae707&page_reverse=True"
+               "href": "https://{Endpoint}/v2.0/fwaas/firewall_rules?marker=2a193015-4a88-4aa1-84ad-d4955adae707&page_reverse=True"
            }
        ]
    }

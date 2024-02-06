@@ -29,49 +29,50 @@ POST /v2.0/{project_id}/vpcs/{vpc_id}/tags
    | vpc_id     | Yes       | Specifies the VPC ID, which uniquely identifies the VPC. |
    +------------+-----------+----------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+.. table:: **Table 2** Request parameter
+
+   +-----------+-------------------------------------------------------+-----------+-----------------------------------------------------------------------------------------------------+
+   | Parameter | Type                                                  | Mandatory | Description                                                                                         |
+   +===========+=======================================================+===========+=====================================================================================================+
+   | tag       | :ref:`tag <vpc_tag_0001__table13242848193719>` object | Yes       | Specifies the **tag** objects. For details, see :ref:`Table 3 <vpc_tag_0001__table13242848193719>`. |
+   +-----------+-------------------------------------------------------+-----------+-----------------------------------------------------------------------------------------------------+
+
+.. _vpc_tag_0001__table13242848193719:
+
+.. table:: **Table 3** **tag** objects
+
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
+   | Attribute       | Type            | Mandatory       | Description                                                         |
+   +=================+=================+=================+=====================================================================+
+   | key             | String          | Yes             | -  Specifies the tag key.                                           |
+   |                 |                 |                 | -  Cannot be left blank.                                            |
+   |                 |                 |                 | -  Contain up to 128 characters (36 characters on the console).     |
+   |                 |                 |                 | -  Can contain only the following character types:                  |
+   |                 |                 |                 |                                                                     |
+   |                 |                 |                 |    -  Uppercase letters                                             |
+   |                 |                 |                 |    -  Lowercase letters                                             |
+   |                 |                 |                 |    -  Digits                                                        |
+   |                 |                 |                 |    -  Special characters, including hyphens (-) and underscores (_) |
+   |                 |                 |                 |                                                                     |
+   |                 |                 |                 | -  The tag key of a VPC must be unique.                             |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
+   | value           | String          | Yes             | -  Specifies the tag value.                                         |
+   |                 |                 |                 | -  Contain up to 255 characters (43 characters on the console).     |
+   |                 |                 |                 | -  Can contain only the following character types:                  |
+   |                 |                 |                 |                                                                     |
+   |                 |                 |                 |    -  Uppercase letters                                             |
+   |                 |                 |                 |    -  Lowercase letters                                             |
+   |                 |                 |                 |    -  Digits                                                        |
+   |                 |                 |                 |    -  Special characters, including hyphens (-) and underscores (_) |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
+
+Example Request
 ---------------
 
--  Request parameter
-
-   .. table:: **Table 2** Request parameter
-
-      +-----------+-------------------------------------------------------+-----------+-----------------------------------------------------------------------------------------------------+
-      | Parameter | Type                                                  | Mandatory | Description                                                                                         |
-      +===========+=======================================================+===========+=====================================================================================================+
-      | tag       | :ref:`tag <vpc_tag_0001__table13242848193719>` object | Yes       | Specifies the **tag** objects. For details, see :ref:`Table 3 <vpc_tag_0001__table13242848193719>`. |
-      +-----------+-------------------------------------------------------+-----------+-----------------------------------------------------------------------------------------------------+
-
-   .. _vpc_tag_0001__table13242848193719:
-
-   .. table:: **Table 3** **tag** objects
-
-      +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
-      | Attribute       | Type            | Mandatory       | Description                                                         |
-      +=================+=================+=================+=====================================================================+
-      | key             | String          | Yes             | -  Specifies the tag key.                                           |
-      |                 |                 |                 | -  Cannot be left blank.                                            |
-      |                 |                 |                 | -  Can contain a maximum of 36 characters.                          |
-      |                 |                 |                 | -  Can contain only the following character types:                  |
-      |                 |                 |                 |                                                                     |
-      |                 |                 |                 |    -  Uppercase letters                                             |
-      |                 |                 |                 |    -  Lowercase letters                                             |
-      |                 |                 |                 |    -  Digits                                                        |
-      |                 |                 |                 |    -  Special characters, including hyphens (-) and underscores (_) |
-      |                 |                 |                 |                                                                     |
-      |                 |                 |                 | -  The tag key of a VPC must be unique.                             |
-      +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
-      | value           | String          | Yes             | -  Specifies the tag value.                                         |
-      |                 |                 |                 | -  Can contain a maximum of 43 characters.                          |
-      |                 |                 |                 | -  Can contain only the following character types:                  |
-      |                 |                 |                 |                                                                     |
-      |                 |                 |                 |    -  Uppercase letters                                             |
-      |                 |                 |                 |    -  Lowercase letters                                             |
-      |                 |                 |                 |    -  Digits                                                        |
-      |                 |                 |                 |    -  Special characters, including hyphens (-) and underscores (_) |
-      +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
-
--  Example request
+-  Create a tag for a VPC. The key is **key1**, and the value is **value1**.
 
    .. code-block:: text
 
@@ -84,16 +85,15 @@ Request Message
           }
       }
 
-Response Message
+Response Parameters
+-------------------
+
+None
+
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

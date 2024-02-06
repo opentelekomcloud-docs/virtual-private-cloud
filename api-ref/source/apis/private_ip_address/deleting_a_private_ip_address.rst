@@ -29,31 +29,27 @@ DELETE /v1/{project_id}/privateips/{privateip_id}
    | privateip_id | Yes       | Specifies the ID of the private IP address, which uniquely identifies the private IP address. |
    +--------------+-----------+-----------------------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v1/{project_id}/privateips/4779ab1c-7c1a-44b1-a02e-93dfc361b32d
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v1/{project_id}/privateips/4779ab1c-7c1a-44b1-a02e-93dfc361b32d
-
-Response Message
+Example Response
 ----------------
 
--  Request parameter
-
-   None
-
--  Example response
-
-   .. code-block:: text
-
-      None
+None
 
 Status Code
 -----------

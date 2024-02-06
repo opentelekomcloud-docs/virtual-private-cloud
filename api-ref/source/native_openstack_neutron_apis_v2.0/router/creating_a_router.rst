@@ -15,8 +15,8 @@ URI
 
 POST /v2.0/routers
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -62,8 +62,24 @@ Request Message
    |                 |                 |                 | The default value is **false**.                                                                                                                           |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Create a router named **router-test2**.
+
+.. code-block:: text
+
+   POST https://{Endpoint}/v2.0/routers
+
+   {
+       "router": {
+              "name": "router-test2",
+              "admin_state_up": true
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameter
 
@@ -137,22 +153,8 @@ Response Message
    | nexthop     | String | Specifies the next hop IP address. The IP address can only be one in the subnet associated with the router. |
    +-------------+--------+-------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   POST https://{Endpoint}/v2.0/routers
-   {
-       "router": {
-              "name": "router-test2",
-              "admin_state_up": true
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

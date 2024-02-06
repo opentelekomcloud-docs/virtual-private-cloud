@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/security-groups/{security_group_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -40,8 +40,23 @@ Request Message
    | description | No        | String | Provides supplementary information about the security group. |
    +-------------+-----------+--------+--------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Change the name of the security group whose ID is d29ae17d-f355-4992-8747-1fb66cc9afd2 to **sg-test02**.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/security-groups/d29ae17d-f355-4992-8747-1fb66cc9afd2
+
+   {
+       "security_group": {
+              "name": "sg-test02"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -119,7 +134,7 @@ Response Message
    | tenant_id               | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_address_group_id | String                | -  Specifies the remote IP address group ID.                                                                                                                                                |
-   |                         |                       | -  The value is exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                                     |
+   |                         |                       | -  The value is mutually exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                            |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | project_id              | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -132,22 +147,8 @@ Response Message
    |                         |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                                                                               |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/security-groups/d29ae17d-f355-4992-8747-1fb66cc9afd2
-
-   {
-       "security_group": {
-              "name": "sg-test02"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

@@ -20,10 +20,8 @@ Neutron APIs v2.0 provides the pagination function. You can set parameters **lim
    -  Replace the value of **marker** in the original access request URL. Replace the value of **marker** to the value of **marker** in the value of **herf** if the value of **rel** in the response is **previous**.
    -  Set the value of **page_reverse** to **True**.
 
-Request Message
----------------
-
-Request parameter
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -37,26 +35,50 @@ Request parameter
    | page_reverse | Boolean | No        | Specifies the page direction. The value can be **True** or **False**.                                                    |
    +--------------+---------+-----------+--------------------------------------------------------------------------------------------------------------------------+
 
-Example request 1
+Example Request
+---------------
+
+-  When **page_reverse** is set to **False**:
 
 .. code-block:: text
 
    GET https://{Endpoint}/v2.0/networks?limit=2&marker=3d42a0d4-a980-4613-ae76-a2cddecff054&page_reverse=False
 
-Example request 2
+-  When **page_reverse** is set to **True**:
 
 .. code-block:: text
 
    GET https://{Endpoint}/v2.0/vpc/peerings?limit=2&marker=e5a0c88e-228e-4e62-a8b0-90825b1b7958&page_reverse=True
 
-Response Message
+Response Parameters
+-------------------
+
+.. table:: **Table 2** Response parameter
+
+   +-----------------------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                           | Description                                                                                                                                                                                                                                                                                                                                                                    |
+   +=======================+================================================================================+================================================================================================================================================================================================================================================================================================================================================================================+
+   | {resources}_links     | Array of :ref:`{resources}_link <vpc_version_0003__table109221759807>` objects | Specifies the pagination information. For details, see :ref:`Table 3 <vpc_version_0003__table109221759807>`. **{resources}** indicates the resource name, for example, **ports**, **networks**, **subnets**, **routers**, **firewall_rules**, **firewall_policies**, **firewall_groups**, **security_groups**, **subnetpools**, **floatingips**, and **security_group_rules**. |
+   |                       |                                                                                |                                                                                                                                                                                                                                                                                                                                                                                |
+   |                       |                                                                                | Only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**), value **next** will be returned for **rel** and a link for **href**.                                                                                                                                                                |
+   +-----------------------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _vpc_version_0003__table109221759807:
+
+.. table:: **Table 3** {resources}_link object
+
+   +-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter | Type   | Description                                                                                                                              |
+   +===========+========+==========================================================================================================================================+
+   | href      | String | Specifies the API link.                                                                                                                  |
+   +-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | rel       | String | The API link is used to query the next or previous page. **next**: The next page is queried. **previous**: The previous page is queried. |
+   +-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+Example Response
 ----------------
 
-Response parameter
-
-None
-
-Example response 1
+-  When **page_reverse** is set to **False**:
 
 .. code-block::
 
@@ -93,7 +115,7 @@ Example response 1
        ]
    }
 
-Example response 2
+-  When **page_reverse** is set to **True**:
 
 .. code-block::
 

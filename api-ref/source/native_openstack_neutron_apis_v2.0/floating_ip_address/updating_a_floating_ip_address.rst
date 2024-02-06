@@ -18,9 +18,18 @@ If **port_id** is left blank, the floating IP address has been unbound from the 
 
    This API has the following constraints:
 
-   -  If you want to bind a floating IP address in the **error** state, unbind the IP address first.
+   -  If a floating IP address that you are binding is in the **error** state, unbind the IP address first.
    -  Do not associate a port that has a floating IP address associated to another floating IP address. You must first disassociate the port from the IP address and then associate it with another IP address.
    -  This API cannot be used to bind an EIP to or unbind an EIP from a dedicated load balancer.
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
+
+      -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
+      -  You can use APIs to bind EIPs to or unbind them from dedicated load balancers. For details, see `Binding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/binding_an_eip.html>`__ and `Unbinding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/unbinding_an_eip.html>`__.
+      -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
+      -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
+
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
 
 URI
 ---
@@ -107,56 +116,39 @@ Response Message
    | dns_domain            | String                | Specifies the DNS domain.                                                                      |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
 
-Example:
---------
+Example Request
+---------------
 
-Example request 1 (Binding a floating IP address to a port)
+-  Unbind a floating IP address from a port.
 
-.. code-block:: text
+   .. code-block:: text
 
-   PUT https://{Endpoint}/v2.0/floatingips/b997e0d4-3359-4c74-8f88-bc0af81cd5a2
+      PUT https://{Endpoint}/v2.0/floatingips/b997e0d4-3359-4c74-8f88-bc0af81cd5a2
 
-   {
-       "floatingip": {
-              "port_id": "f91f5763-c5a2-4458-979d-61e48b3c3fac"
-       }
-   }
+      {
+          "floatingip": {
+              "port_id": null
+          }
+      }
 
-Example response 1 (Binding a floating IP address to a port)
+-  Bind a floating IP address to a port. The port ID is f91f5763-c5a2-4458-979d-61e48b3c3fac.
 
-.. code-block::
+   .. code-block:: text
 
-   {
-       "floatingip": {
-           "id": "b997e0d4-3359-4c74-8f88-bc0af81cd5a2",
-           "status": "DOWN",
-           "router_id": null,
-           "tenant_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
-           "project_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
-           "floating_network_id": "0a2228f2-7f8a-45f1-8e09-9039e1d09975",
-           "fixed_ip_address": "192.168.10.3",
-           "floating_ip_address": "88.88.215.205",
-           "port_id": 00587256-27e3-489b-96bf-ea80c1da4aeb,
-           "dns_name": "ecs-80-158-78-239",
-           "dns_domain": "reverse.domain-name.com",
-           "created_at": "2018-09-20T02:10:02",
-           "updated_at": "2018-09-20T02:10:07"
-       }
-   }
+      PUT https://{Endpoint}/v2.0/floatingips/b997e0d4-3359-4c74-8f88-bc0af81cd5a2
 
-Example request 2 (Unbinding a floating IP address from a port)
+      {
+          "floatingip": {
+                 "port_id": "f91f5763-c5a2-4458-979d-61e48b3c3fac"
+          }
+      }
 
-.. code-block:: text
+Example Response
+----------------
 
-   PUT https://{Endpoint}/v2.0/floatingips/b997e0d4-3359-4c74-8f88-bc0af81cd5a2
+**Status code: 200**
 
-   {
-       "floatingip": {
-           "port_id": null
-       }
-   }
-
-Example response 2 (Unbinding a floating IP address from a port)
+(The floating IP address is unbound from the port.)
 
 .. code-block::
 
@@ -166,15 +158,31 @@ Example response 2 (Unbinding a floating IP address from a port)
            "status": "DOWN",
            "router_id": null,
            "tenant_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
-           "project_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
            "floating_network_id": "0a2228f2-7f8a-45f1-8e09-9039e1d09975",
            "fixed_ip_address": null,
            "floating_ip_address": "88.88.215.205",
            "port_id": null,
            "dns_name": "ecs-80-158-78-239",
-           "dns_domain": "reverse.domain-name.com",
-           "created_at": "2018-09-20T02:10:02",
-           "updated_at": "2018-09-20T02:10:07"
+           "dns_domain": "reverse.domain-name.com"
+       }
+   }
+
+(The floating IP address is bound to the port.)
+
+.. code-block::
+
+   {
+       "floatingip": {
+           "id": "b997e0d4-3359-4c74-8f88-bc0af81cd5a2",
+           "status": "DOWN",
+           "router_id": null,
+           "tenant_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
+           "floating_network_id": "0a2228f2-7f8a-45f1-8e09-9039e1d09975",
+           "fixed_ip_address": "192.168.10.3",
+           "floating_ip_address": "88.88.215.205",
+           "port_id": "f91f5763-c5a2-4458-979d-61e48b3c3fac",
+           "dns_name": "ecs-80-158-78-239",
+           "dns_domain": "reverse.domain-name.com"
        }
    }
 

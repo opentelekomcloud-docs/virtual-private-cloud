@@ -27,26 +27,25 @@ DELETE /v2.0/networks/{network_id}
    network_id Yes       Specifies the network ID.
    ========== ========= =========================
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/networks/60c809cb-6731-45d0-ace8-3bf5626421a9
 
-Example response
+Example Response
+----------------
 
 None
 

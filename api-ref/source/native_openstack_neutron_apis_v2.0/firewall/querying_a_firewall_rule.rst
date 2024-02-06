@@ -27,13 +27,20 @@ GET /v2.0/fwaas/firewall_rules/{firewall_rule_id}
    | firewall_rule_id | Yes       | String | Specifies the firewall rule ID, which uniquely identifies the firewall rule. The **firewall_rule_id** value is used as the filter. |
    +------------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/fwaas/firewall_rules/514e6776-162a-4b5d-ab8b-aa36b86655ef
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -79,39 +86,27 @@ Response Message
    | project_id             | String  | Specifies the project ID.                                               |
    +------------------------+---------+-------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/fwaas/firewall_rules/514e6776-162a-4b5d-ab8b-aa36b86655ef
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 
    {
        "firewall_rule": {
            "protocol": "tcp",
-           "name": "bobby_rule",
-           "mode": "normal",
-           "tenant_id": "4490a89232ce46d4ae4bfb227ef1a40a",
-           "rule_profile": "",
-           "enabled": true,
-           "source_port": null,
-           "source_ip_address": null,
-           "destination_ip_address": null,
-           "firewall_policy_id": null,
-           "action": "allow",
-           "position": null,
-           "ip_version": 4,
-           "shared": false,
+           "description": "update check parameter",
+           "source_ip_address": "116.66.184.0/24",
+           "destination_ip_address": "0.0.0.0/0",
            "destination_port": null,
+           "source_port": null,
            "id": "514e6776-162a-4b5d-ab8b-aa36b86655ef",
-           "description": "",
-           "project_id": "4490a89232ce46d4ae4bfb227ef1a40a"
+           "name": "test",
+           "tenant_id": "a1c6f90c94334bd2953d9a61b8031a68",
+           "project_id": "a1c6f90c94334bd2953d9a61b8031a68",
+           "enabled": true,
+           "action": "allow",
+           "ip_version": 4,
+           "public": false
        }
    }
 

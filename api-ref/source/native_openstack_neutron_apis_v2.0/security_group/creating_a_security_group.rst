@@ -15,8 +15,8 @@ URI
 
 POST /v2.0/security-groups
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -38,8 +38,23 @@ Request Message
    | description | No        | String | Provides supplementary information about the security group. |
    +-------------+-----------+--------+--------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Create a security group named **sg-test**.
+
+.. code-block:: text
+
+   POST https://{Endpoint}/v2.0/security-groups
+
+   {
+       "security_group": {
+              "name": "sg-test"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -117,7 +132,7 @@ Response Message
    | tenant_id               | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_address_group_id | String                | -  Specifies the remote IP address group ID.                                                                                                                                                |
-   |                         |                       | -  The value is exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                                     |
+   |                         |                       | -  The value is mutually exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                            |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | project_id              | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -130,22 +145,8 @@ Response Message
    |                         |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                                                                               |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   POST https://{Endpoint}/v2.0/security-groups
-
-   {
-       "security_group": {
-              "name": "sg-test"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 
@@ -183,7 +184,7 @@ Example response
                    "port_range_max": null,
                    "port_range_min": null,
                    "security_group_id": "d29ae17d-f355-4992-8747-1fb66cc9afd2",
-                  "remote_address_group_id": null
+                   "remote_address_group_id": null
                }
            ],
            "created_at": "2018-09-20T02:15:34",

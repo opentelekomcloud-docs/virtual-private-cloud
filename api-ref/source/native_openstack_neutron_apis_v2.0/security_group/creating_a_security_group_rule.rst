@@ -15,8 +15,8 @@ URI
 
 POST /v2.0/security-group-rules
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -39,7 +39,7 @@ Request Message
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_group_id         | No              | String          | Specifies the peer ID of the belonged security group.                                                                                                                                       |
    |                         |                 |                 |                                                                                                                                                                                             |
-   |                         |                 |                 | Either **remote_group_id** or **remote_ip_prefix** is used.                                                                                                                                 |
+   |                         |                 |                 | This parameter is mutually exclusive with **remote_ip_prefix**.                                                                                                                             |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | direction               | Yes             | String          | Specifies the direction of the traffic for which the security group rule takes effect.                                                                                                      |
    |                         |                 |                 |                                                                                                                                                                                             |
@@ -47,7 +47,7 @@ Request Message
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_ip_prefix        | No              | String          | Specifies the peer IP address segment.                                                                                                                                                      |
    |                         |                 |                 |                                                                                                                                                                                             |
-   |                         |                 |                 | Either **remote_ip_prefix** or **remote_group_id** is used.                                                                                                                                 |
+   |                         |                 |                 | This parameter is mutually exclusive with **remote_group_id**.                                                                                                                              |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | protocol                | No              | String          | Specifies the protocol type or the IP protocol number.                                                                                                                                      |
    |                         |                 |                 |                                                                                                                                                                                             |
@@ -70,11 +70,29 @@ Request Message
    |                         |                 |                 | The value can be **IPv4** or **IPv6**.                                                                                                                                                      |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_address_group_id | No              | String          | -  Specifies the remote IP address group ID. You can log in to the management console and view the ID on the IP address group page.                                                         |
-   |                         |                 |                 | -  The value is exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                                     |
+   |                         |                 |                 | -  This parameter is mutually exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                       |
    +-------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Create an outbound rule in the security group whose ID is 5cb9c1ee-00e0-4d0f-9623-55463cd26ff8. Set **protocol** to **tcp**, and **remote_ip_prefix** to 10.10.0.0/24.
+
+.. code-block:: text
+
+   POST https://{Endpoint}/v2.0/security-group-rules
+
+   {
+       "security_group_rule": {
+           "security_group_id": "5cb9c1ee-00e0-4d0f-9623-55463cd26ff8",
+           "direction": "egress",
+           "protocol": "tcp",
+           "remote_ip_prefix": "10.10.0.0/24"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -122,7 +140,7 @@ Response Message
    | tenant_id               | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_address_group_id | String                | -  Specifies the remote IP address group ID.                                                                                                                                                |
-   |                         |                       | -  The value is exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                                     |
+   |                         |                       | -  The value is mutually exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                            |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | project_id              | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -135,25 +153,8 @@ Response Message
    |                         |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                                                                               |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   POST https://{Endpoint}/v2.0/security-group-rules
-
-   {
-       "security_group_rule": {
-           "security_group_id": "5cb9c1ee-00e0-4d0f-9623-55463cd26ff8",
-           "direction": "egress",
-           "protocol": "tcp",
-           "remote_ip_prefix": "10.10.0.0/24"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 
@@ -172,7 +173,8 @@ Example response
            "id": "7c336b04-1603-4911-a6f4-f2af1d9a0488",
            "project_id": "6fbe9263116a4b68818cf1edce16bc4f",
            "created_at": "2018-09-20T02:15:34",
-           "updated_at": "2018-09-20T02:15:34"
+           "updated_at": "2018-09-20T02:15:34",
+           "remote_address_group_id": null
        }
    }
 

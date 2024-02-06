@@ -27,23 +27,20 @@ GET /v2.0/{project_id}/vpcs/tags
    project_id Yes       Specifies the project ID.
    ========== ========= =========================
 
-Request Message
----------------
-
-Request parameter
+Request Parameters
+------------------
 
 None
 
-Example request
+Example Request
+---------------
 
 .. code-block:: text
 
    GET https://{Endpoint}/v2.0/{project_id}/vpcs/tags
 
-Response Message
-----------------
-
-Response parameter
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -63,7 +60,7 @@ Response parameter
    | key                   | String                | Specifies the tag key.                                              |
    |                       |                       |                                                                     |
    |                       |                       | -  Cannot be left blank.                                            |
-   |                       |                       | -  Can contain a maximum of 36 characters.                          |
+   |                       |                       | -  Contain up to 128 characters (36 characters on the console).     |
    |                       |                       | -  Can contain only the following character types:                  |
    |                       |                       |                                                                     |
    |                       |                       |    -  Uppercase letters                                             |
@@ -73,7 +70,7 @@ Response parameter
    +-----------------------+-----------------------+---------------------------------------------------------------------+
    | values                | Array of strings      | Specifies the tag value list.                                       |
    |                       |                       |                                                                     |
-   |                       |                       | -  Can contain a maximum of 43 characters.                          |
+   |                       |                       | -  Contain up to 255 characters (43 characters on the console).     |
    |                       |                       | -  Can contain only the following character types:                  |
    |                       |                       |                                                                     |
    |                       |                       |    -  Uppercase letters                                             |
@@ -82,7 +79,8 @@ Response parameter
    |                       |                       |    -  Special characters, including hyphens (-) and underscores (_) |
    +-----------------------+-----------------------+---------------------------------------------------------------------+
 
-Example response
+Example Response
+----------------
 
 .. code-block::
 

@@ -15,26 +15,25 @@ URI
 
 DELETE /v2.0/subnets/{subnet_id}
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/subnets/74259164-e63a-4ad9-9c77-a1bd2c9aa187
 
-Example response
+Example Response
+----------------
 
 None
 

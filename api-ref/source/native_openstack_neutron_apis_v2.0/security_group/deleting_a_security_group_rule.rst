@@ -15,26 +15,25 @@ URI
 
 DELETE /v2.0/security-group-rules/{security_group_rule_id}
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/security-group-rules/07adc044-3f21-4eeb-bd57-5e5eb6024b7f
 
-Example response
+Example Response
+----------------
 
 None
 

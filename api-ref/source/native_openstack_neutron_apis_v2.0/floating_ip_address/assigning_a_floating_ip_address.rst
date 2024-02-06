@@ -12,6 +12,20 @@ When assigning a floating IP address, you need to obtain the external network ID
 
 You can use **GET /v2.0/networks?router:external=True** or run the **neutron net-external-list** command to obtain the UUID of the external network required for assigning a floating IP address.
 
+.. note::
+
+   Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
+
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
+
+      -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
+      -  You can use APIs to bind EIPs to or unbind them from dedicated load balancers. For details, see `Binding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/binding_an_eip.html>`__ and `Unbinding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/unbinding_an_eip.html>`__.
+      -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
+      -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
+
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
+
 URI
 ---
 
@@ -95,10 +109,10 @@ Response Message
    | dns_domain            | String                | Specifies the DNS domain.                                                                      |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
 
-Example:
---------
+Example Request
+---------------
 
-Example request
+Create a floating IP address whose network is **0a2228f2-7f8a-45f1-8e09-9039e1d09975**.
 
 .. code-block:: text
 
@@ -110,7 +124,12 @@ Example request
        }
    }
 
-Example response
+Example Response
+----------------
+
+**Status code: 201**
+
+Normal response to POST requests
 
 .. code-block::
 
@@ -120,15 +139,13 @@ Example response
            "status": "DOWN",
            "router_id": null,
            "tenant_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
-           "project_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
+
            "floating_network_id": "0a2228f2-7f8a-45f1-8e09-9039e1d09975",
            "fixed_ip_address": null,
            "floating_ip_address": "88.88.215.205",
            "port_id": null,
            "dns_name": "ecs-80-158-78-239",
-           "dns_domain": "reverse.domain-name.com",
-           "created_at": "2018-09-20T02:10:02",
-           "updated_at": "2018-09-20T02:10:02"
+           "dns_domain": "reverse.domain-name.com"
        }
    }
 

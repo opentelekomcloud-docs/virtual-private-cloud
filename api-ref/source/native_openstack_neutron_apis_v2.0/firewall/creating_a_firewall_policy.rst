@@ -8,15 +8,15 @@ Creating a Firewall Policy
 Function
 --------
 
-This API is used to create a firewall policy.
+This API is used to create a firewall policy. A firewall policy must be associated with a firewall group. You can learn more about the :ref:`relationships among network ACL groups, policies, and rules <en-us_topic_0000001487936070>`.
 
 URI
 ---
 
 POST /v2.0/fwaas/firewall_policies
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -48,8 +48,26 @@ Request Message
    |                 |                 |                  | The value can be **true** or **false**.                         |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Create an ACL policy named **test-policy** and associate it with the ACL rule whose ID is b8243448-cb3c-496e-851c-dadade4c161b.
+
+.. code-block:: text
+
+   POST https://{Endpoint}/v2.0/fwaas/firewall_policies
+
+   {
+       "firewall_policy": {
+           "name": "test-policy",
+           "firewall_rules": [
+               "b8243448-cb3c-496e-851c-dadade4c161b"
+           ]
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -83,25 +101,8 @@ Response Message
    | project_id     | String           | Specifies the project ID.                                                 |
    +----------------+------------------+---------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   POST https://{Endpoint}/v2.0/fwaas/firewall_policies
-
-   {
-       "firewall_policy": {
-           "name": "test-policy",
-           "firewall_rules": [
-               "b8243448-cb3c-496e-851c-dadade4c161b"
-           ]
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

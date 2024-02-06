@@ -32,26 +32,25 @@ DELETE /v2.0/ports/{port_id}
    | port_id | Yes       | Specifies the port ID, which uniquely identifies the port. |
    +---------+-----------+------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/ports/2b098395-046a-4071-b009-312bcee665cb
 
-Example response
+Example Response
+----------------
 
 None
 
