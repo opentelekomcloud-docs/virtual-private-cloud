@@ -29,29 +29,27 @@ DELETE /v1/{project_id}/vpcs/{vpc_id}
    | vpc_id     | Yes       | Specifies the VPC ID, which uniquely identifies the VPC. |
    +------------+-----------+----------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v1/{project_id}/vpcs/13551d6b-755d-4757-b956-536f674975c0
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v1/{project_id}/vpcs/13551d6b-755d-4757-b956-536f674975c0
-
-Response Message
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

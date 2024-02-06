@@ -27,8 +27,8 @@ PUT /v2.0/fwaas/firewall_policies/{firewall_policy_id}/insert_rule
    | firewall_policy_id | Yes       | String | Specifies the firewall policy ID, which uniquely identifies the firewall policy. |
    +--------------------+-----------+--------+----------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameter
 
@@ -46,8 +46,23 @@ Request Message
    |                  |                 |                 | If both the **insert_after** and **insert_before** parameters are specified, the **insert_after** parameter will be ignored.                                                                                              |
    +------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Insert rule 0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1 below rule b8243448-cb3c-496e-851c-dadade4c161b in the ACL policy whose ID is afc52ce9-5305-4ec9-9feb-44feb8330341.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/fwaas/firewall_policies/afc52ce9-5305-4ec9-9feb-44feb8330341/insert_rule
+
+   {
+       "insert_after": "b8243448-cb3c-496e-851c-dadade4c161b",
+       "firewall_rule_id": "0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1",
+       "insert_before": ""
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -71,22 +86,8 @@ Response Message
    | project_id     | String           | Specifies the project ID.                                                                                                                                             |
    +----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/fwaas/firewall_policies/afc52ce9-5305-4ec9-9feb-44feb8330341/insert_rule
-
-   {
-       "insert_after": "b8243448-cb3c-496e-851c-dadade4c161b",
-       "firewall_rule_id": "0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1",
-       "insert_before": ""
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

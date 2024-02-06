@@ -29,29 +29,27 @@ DELETE /v1/{project_id}/security-group-rules/{security_group_rule_id}
    | project_id             | Yes       | Specifies the project ID.                                                                |
    +------------------------+-----------+------------------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v1/{project_id}/security-group-rules/2bc0accf-312e-429a-956e-e4407625eb62
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v1/{project_id}/security-group-rules/2bc0accf-312e-429a-956e-e4407625eb62
-
-Response Message
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

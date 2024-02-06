@@ -19,8 +19,8 @@ URI
 
 PUT /v2.0/routers/{router_id}/remove_router_interface
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -34,8 +34,19 @@ Request Message
    | port_id         | String          | No              | Specifies the port ID. Either **subnet_id** or **port_id** is used. Use the port IP address to create a router interface. |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Remove an interface from a router. The router ID is b625c58c-0cfe-49e0-acc8-f2374f8187ff, and the subnet ID is 4b910a10-0860-428b-b463-d84dbc5e288e.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/routers/b625c58c-0cfe-49e0-acc8-f2374f8187ff/remove_router_interface
+
+   {"subnet_id": "4b910a10-0860-428b-b463-d84dbc5e288e"}
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -49,18 +60,8 @@ Response Message
    id         String Specifies the router ID.
    ========== ====== =========================
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/routers/b625c58c-0cfe-49e0-acc8-f2374f8187ff/remove_router_interface
-
-   {"subnet_id": "4b910a10-0860-428b-b463-d84dbc5e288e"}
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

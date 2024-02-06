@@ -33,29 +33,27 @@ DELETE /v1/{project_id}/vpcs/{vpc_id}/subnets/{subnet_id}
    |                       |                       | If you use the management console, the value of this parameter is the **Network ID** value. |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v1/{project_id}/vpcs/{vpc_id}/subnets/4779ab1c-7c1a-44b1-a02e-93dfc361b32d
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v1/{project_id}/vpcs/{vpc_id}/subnets/4779ab1c-7c1a-44b1-a02e-93dfc361b32d
-
-Response Message
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

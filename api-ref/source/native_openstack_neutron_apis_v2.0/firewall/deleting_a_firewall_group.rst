@@ -27,26 +27,25 @@ DELETE /v2.0/fwaas/firewall_groups/{firewall_group_id}
    | firewall_group_id | Yes       | String | Specifies the firewall group ID, which uniquely identifies the firewall group. |
    +-------------------+-----------+--------+--------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/fwaas/firewall_groups/0415f554-26ed-44e7-a881-bdf4e6216e38
 
-Example response
+Example Response
+----------------
 
 None
 

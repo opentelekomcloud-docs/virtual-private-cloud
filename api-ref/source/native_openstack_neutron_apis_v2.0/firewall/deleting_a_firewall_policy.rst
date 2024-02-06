@@ -27,26 +27,25 @@ DELETE /v2.0/fwaas/firewall_policies/{firewall_policy_id}
    | firewall_policy_id | Yes       | String | Specifies the firewall policy ID, which uniquely identifies the firewall policy. |
    +--------------------+-----------+--------+----------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/fwaas/firewall_policies/2fb0e81f-9f63-44b2-9894-c13a3284594a
 
-Example response
+Example Response
+----------------
 
 None
 

@@ -37,10 +37,8 @@ POST /v2.0/{project_id}/vpcs/{vpc_id}/tags/action
    | vpc_id     | Yes       | Specifies the VPC ID, which uniquely identifies the VPC. |
    +------------+-----------+----------------------------------------------------------+
 
-Request Message
----------------
-
-Request parameter
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameter
 
@@ -64,7 +62,7 @@ Request parameter
    +=================+=================+=================+=====================================================================+
    | key             | String          | Yes             | -  Specifies the tag key.                                           |
    |                 |                 |                 | -  Cannot be left blank.                                            |
-   |                 |                 |                 | -  Can contain a maximum of 36 characters.                          |
+   |                 |                 |                 | -  Contain up to 128 characters (36 characters on the console).     |
    |                 |                 |                 | -  Can contain only the following character types:                  |
    |                 |                 |                 |                                                                     |
    |                 |                 |                 |    -  Uppercase letters                                             |
@@ -75,7 +73,7 @@ Request parameter
    |                 |                 |                 | -  The tag key of a VPC must be unique.                             |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
    | value           | String          | Yes             | -  Specifies the tag value.                                         |
-   |                 |                 |                 | -  Can contain a maximum of 43 characters.                          |
+   |                 |                 |                 | -  Contain up to 255 characters (43 characters on the console).     |
    |                 |                 |                 | -  Can contain only the following character types:                  |
    |                 |                 |                 |                                                                     |
    |                 |                 |                 |    -  Uppercase letters                                             |
@@ -84,54 +82,56 @@ Request parameter
    |                 |                 |                 |    -  Special characters, including hyphens (-) and underscores (_) |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
 
-Request example 1: Creating tags in batches
+Example Request
+---------------
 
-.. code-block:: text
+-  Batch create two tags for a VPC.
 
-   POST https://{Endpoint}/v2.0/{project_id}/vpcs/{vpc_id}/tags/action
+   .. code-block:: text
 
-   {
-       "action": "create",
-       "tags": [
-           {
-               "key": "key1",
-               "value": "value1"
-           },
-           {
-               "key": "key2",
-               "value": "value3"
-           }
-       ]
-   }
+      POST https://{Endpoint}/v2.0/{project_id}/vpcs/{vpc_id}/tags/action
 
-Request example 2: Deleting tags in batches
+      {
+          "action": "create",
+          "tags": [
+              {
+                  "key": "key1",
+                  "value": "value1"
+              },
+              {
+                  "key": "key2",
+                  "value": "value3"
+              }
+          ]
+      }
 
-.. code-block:: text
+-  Batch delete two tags for a VPC.
 
-   POST https://{Endpoint}/v2.0/{project_id}/vpcs/{vpc_id}/tags/action
+   .. code-block:: text
 
-   {
-       "action": "delete",
-       "tags": [
-           {
-               "key": "key1",
-               "value": "value1"
-           },
-           {
-               "key": "key2",
-               "value": "value3"
-           }
-       ]
-   }
+      POST https://{Endpoint}/v2.0/{project_id}/vpcs/{vpc_id}/tags/action
 
-Response Message
-----------------
+      {
+          "action": "delete",
+          "tags": [
+              {
+                  "key": "key1",
+                  "value": "value1"
+              },
+              {
+                  "key": "key2",
+                  "value": "value3"
+              }
+          ]
+      }
 
-Response parameter
+Response Parameters
+-------------------
 
 None
 
-Example response
+Example Response
+----------------
 
 None
 

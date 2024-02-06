@@ -27,13 +27,20 @@ GET /v2.0/fwaas/firewall_policies/{firewall_policy_id}
    | firewall_policy_id | Yes       | String | Specifies the firewall policy ID, which uniquely identifies the firewall policy. The **firewall_policy_id** value is used as the filter. |
    +--------------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/fwaas/firewall_policies/fed2d88f-d0e7-4cc5-bd7e-c495f67037b6
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -67,16 +74,8 @@ Response Message
    | project_id     | String           | Specifies the project ID.                                                 |
    +----------------+------------------+---------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/fwaas/firewall_policies/fed2d88f-d0e7-4cc5-bd7e-c495f67037b6
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

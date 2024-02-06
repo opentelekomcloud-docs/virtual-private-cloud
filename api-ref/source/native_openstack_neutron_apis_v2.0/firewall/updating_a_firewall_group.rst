@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/fwaas/firewall_groups/{firewall_group_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -30,32 +30,59 @@ Request Message
 
 .. table:: **Table 2** **Firewall Group** objects
 
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
-   | Attribute                  | Mandatory       | Type             | Description                                                  |
-   +============================+=================+==================+==============================================================+
-   | name                       | No              | String           | Specifies the name of the firewall group.                    |
-   |                            |                 |                  |                                                              |
-   |                            |                 |                  | The value can contain a maximum of 255 characters.           |
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
-   | description                | No              | String           | Provides supplementary information about the firewall group. |
-   |                            |                 |                  |                                                              |
-   |                            |                 |                  | The value can contain a maximum of 255 characters.           |
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
-   | ingress_firewall_policy_id | No              | String           | Specifies the firewall policy for inbound traffic.           |
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
-   | egress_firewall_policy_id  | No              | String           | Specifies the firewall policy for outbound traffic.          |
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
-   | ports                      | No              | Array of strings | Specifies the list of ports bound with the firewall group.   |
-   |                            |                 |                  |                                                              |
-   |                            |                 |                  | The value must be the port ID of the distributed router.     |
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
-   | admin_state_up             | No              | Boolean          | Specifies the administrative status of the firewall.         |
-   |                            |                 |                  |                                                              |
-   |                            |                 |                  | The value can be **true** or **false**.                      |
-   +----------------------------+-----------------+------------------+--------------------------------------------------------------+
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                  | Mandatory       | Type             | Description                                                                                                                                                                                                     |
+   +============================+=================+==================+=================================================================================================================================================================================================================+
+   | name                       | No              | String           | Specifies the name of the firewall group.                                                                                                                                                                       |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  | The value can contain a maximum of 255 characters.                                                                                                                                                              |
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description                | No              | String           | Provides supplementary information about the firewall group.                                                                                                                                                    |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  | The value can contain a maximum of 255 characters.                                                                                                                                                              |
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ingress_firewall_policy_id | No              | String           | Specifies the firewall policy for inbound traffic.                                                                                                                                                              |
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | egress_firewall_policy_id  | No              | String           | Specifies the firewall policy for outbound traffic.                                                                                                                                                             |
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ports                      | No              | Array of strings | Specifies the list of ports bound with the firewall group.                                                                                                                                                      |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  | The value must be the port ID.                                                                                                                                                                                  |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  | .. note::                                                                                                                                                                                                       |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  |    The port is the one whose **device_owner** is **network:router_interface_distributed**.                                                                                                                      |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  |    -  Call the VPC API for querying the port ID. The filtering criteria are the specified **network_id** and **device_owner**. The **network_id** is the network ID of the subnet associated with the firewall. |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  |       Example:                                                                                                                                                                                                  |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  |       .. code:: text                                                                                                                                                                                            |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  |          GET https://{Endpoint}/v1/{project_id}/ports?network_id={network_id}&device_owner=network%3Arouter_interface_distributed                                                                               |
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | admin_state_up             | No              | Boolean          | Specifies the administrative status of the firewall.                                                                                                                                                            |
+   |                            |                 |                  |                                                                                                                                                                                                                 |
+   |                            |                 |                  | The value can be **true** or **false**.                                                                                                                                                                         |
+   +----------------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Associate the ACL group whose ID is 2fb0e81f-9f63-44b2-9894-c13a3284594a with the outbound ACL policy 53f36c32-db25-4856-a0ba-e605fd88c5e9.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/fwaas/firewall_groups/2fb0e81f-9f63-44b2-9894-c13a3284594a
+
+   {
+       "firewall_group": {
+           "egress_firewall_policy_id": "53f36c32-db25-4856-a0ba-e605fd88c5e9"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -69,56 +96,42 @@ Response Message
 
 .. table:: **Table 4** **Firewall Group** objects
 
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | Attribute                  | Type                  | Description                                                               |
-   +============================+=======================+===========================================================================+
-   | id                         | String                | Specifies the UUID of the firewall group.                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | name                       | String                | Specifies the name of the firewall group.                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | description                | String                | Provides supplementary information about the firewall group.              |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | tenant_id                  | String                | Specifies the project ID.                                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | ingress_firewall_policy_id | String                | Specifies the firewall policy for inbound traffic.                        |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | egress_firewall_policy_id  | String                | Specifies the firewall policy for outbound traffic.                       |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | ports                      | Array of strings      | Specifies the list of ports bound with the firewall group.                |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | public                     | Boolean               | Specifies whether the firewall policy can be shared by different tenants. |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | status                     | String                | Specifies the status of the firewall policy.                              |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | admin_state_up             | Boolean               | Specifies the administrative status of the firewall.                      |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | project_id                 | String                | Specifies the project ID.                                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | created_at                 | String                | Specifies the time (UTC) when the resource is created.                    |
-   |                            |                       |                                                                           |
-   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                             |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | updated_at                 | String                | Specifies the time (UTC) when the resource is updated.                    |
-   |                            |                       |                                                                           |
-   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                             |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | Attribute                  | Type                  | Description                                                              |
+   +============================+=======================+==========================================================================+
+   | id                         | String                | Specifies the UUID of the firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | name                       | String                | Specifies the name of the firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | description                | String                | Provides supplementary information about the firewall group.             |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | tenant_id                  | String                | Specifies the project ID.                                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | ingress_firewall_policy_id | String                | Specifies the firewall policy for inbound traffic.                       |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | egress_firewall_policy_id  | String                | Specifies the firewall policy for outbound traffic.                      |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | ports                      | Array of strings      | Specifies the list of ports bound with the firewall group.               |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | public                     | Boolean               | Specifies whether the firewall group can be shared by different tenants. |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | status                     | String                | Specifies the status of the firewall policy.                             |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | admin_state_up             | Boolean               | Specifies the administrative status of the firewall.                     |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | project_id                 | String                | Specifies the project ID.                                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | created_at                 | String                | Specifies the time (UTC) when the resource is created.                   |
+   |                            |                       |                                                                          |
+   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                            |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | updated_at                 | String                | Specifies the time (UTC) when the resource is updated.                   |
+   |                            |                       |                                                                          |
+   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                            |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/fwaas/firewall_groups/2fb0e81f-9f63-44b2-9894-c13a3284594a
-
-   {
-       "firewall_group": {
-           "egress_firewall_policy_id": "53f36c32-db25-4856-a0ba-e605fd88c5e9"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

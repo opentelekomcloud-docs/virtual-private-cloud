@@ -27,13 +27,20 @@ GET /v2.0/fwaas/firewall_groups/{firewall_group_id}
    | firewall_group_id | Yes       | String | Specifies the firewall group ID, which uniquely identifies the firewall group. The **fire_group_id** value is used as the filter. |
    +-------------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/fwaas/firewall_groups/a504a4cf-9300-40e0-b2d4-649bd157c55a
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -47,50 +54,42 @@ Response Message
 
 .. table:: **Table 3** **Firewall Group** objects
 
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | Attribute                  | Type                  | Description                                                               |
-   +============================+=======================+===========================================================================+
-   | id                         | String                | Specifies the UUID of the firewall group.                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | name                       | String                | Specifies the name of the firewall group.                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | description                | String                | Provides supplementary information about the firewall group.              |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | tenant_id                  | String                | Specifies the project ID.                                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | ingress_firewall_policy_id | String                | Specifies the firewall policy for inbound traffic.                        |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | egress_firewall_policy_id  | String                | Specifies the firewall policy for outbound traffic.                       |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | ports                      | Array of strings      | Specifies the list of ports bound with the firewall group.                |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | public                     | Boolean               | Specifies whether the firewall policy can be shared by different tenants. |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | status                     | String                | Specifies the status of the firewall policy.                              |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | admin_state_up             | Boolean               | Specifies the administrative status of the firewall.                      |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | project_id                 | String                | Specifies the project ID.                                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | created_at                 | String                | Specifies the time (UTC) when the resource is created.                    |
-   |                            |                       |                                                                           |
-   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                             |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | updated_at                 | String                | Specifies the time (UTC) when the resource is updated.                    |
-   |                            |                       |                                                                           |
-   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                             |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | Attribute                  | Type                  | Description                                                              |
+   +============================+=======================+==========================================================================+
+   | id                         | String                | Specifies the UUID of the firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | name                       | String                | Specifies the name of the firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | description                | String                | Provides supplementary information about the firewall group.             |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | tenant_id                  | String                | Specifies the project ID.                                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | ingress_firewall_policy_id | String                | Specifies the firewall policy for inbound traffic.                       |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | egress_firewall_policy_id  | String                | Specifies the firewall policy for outbound traffic.                      |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | ports                      | Array of strings      | Specifies the list of ports bound with the firewall group.               |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | public                     | Boolean               | Specifies whether the firewall group can be shared by different tenants. |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | status                     | String                | Specifies the status of the firewall policy.                             |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | admin_state_up             | Boolean               | Specifies the administrative status of the firewall.                     |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | project_id                 | String                | Specifies the project ID.                                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | created_at                 | String                | Specifies the time (UTC) when the resource is created.                   |
+   |                            |                       |                                                                          |
+   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                            |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | updated_at                 | String                | Specifies the time (UTC) when the resource is updated.                   |
+   |                            |                       |                                                                          |
+   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                            |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/fwaas/firewall_groups/a504a4cf-9300-40e0-b2d4-649bd157c55a
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

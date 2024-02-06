@@ -63,7 +63,7 @@ Response Message
       | key                   | String                | Specifies the tag key.                                              |
       |                       |                       |                                                                     |
       |                       |                       | -  Cannot be left blank.                                            |
-      |                       |                       | -  Can contain a maximum of 36 characters.                          |
+      |                       |                       | -  Contain up to 128 characters (36 characters on the console).     |
       |                       |                       | -  Can contain only the following character types:                  |
       |                       |                       |                                                                     |
       |                       |                       |    -  Uppercase letters                                             |
@@ -73,7 +73,7 @@ Response Message
       +-----------------------+-----------------------+---------------------------------------------------------------------+
       | values                | Array of strings      | Specifies the tag value list.                                       |
       |                       |                       |                                                                     |
-      |                       |                       | -  Can contain a maximum of 43 characters.                          |
+      |                       |                       | -  Contain up to 255 characters (43 characters on the console).     |
       |                       |                       | -  Can contain only the following character types:                  |
       |                       |                       |                                                                     |
       |                       |                       |    -  Uppercase letters                                             |

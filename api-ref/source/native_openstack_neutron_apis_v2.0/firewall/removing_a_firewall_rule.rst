@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/fwaas/firewall_policies/{firewall_policy_id}/remove_rule
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -26,8 +26,21 @@ Request Message
    | firewall_rule_id | String | Yes       | Specifies the firewall rule ID, which uniquely identifies the firewall rule. |
    +------------------+--------+-----------+------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Remove ACL rule 0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1 from the ACL policy whose ID is afc52ce9-5305-4ec9-9feb-44feb8330341.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/fwaas/firewall_policies/afc52ce9-5305-4ec9-9feb-44feb8330341/remove_rule
+
+   {
+       "firewall_rule_id": "0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1"
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -51,20 +64,8 @@ Response Message
    | project_id     | String           | Specifies the project ID.                                                                                                                                             |
    +----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/fwaas/firewall_policies/afc52ce9-5305-4ec9-9feb-44feb8330341/remove_rule
-
-   {
-       "firewall_rule_id": "0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1"
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/routers/{router_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -82,8 +82,23 @@ Request Message
    | nexthop         | No              | String          | Specifies the next hop IP address. The IP address can only be one in the subnet associated with the router. |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Change the name of the router whose ID is f5dbdfe0-86f9-4b0a-9a32-6be143f0a076 to **router-220**.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/routers/f5dbdfe0-86f9-4b0a-9a32-6be143f0a076
+
+   {
+       "router": {
+              "name": "router-220"
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 5** Response parameter
 
@@ -159,21 +174,8 @@ Response Message
    | nexthop     | String | Specifies the next hop IP address. The IP address can only be one in the subnet associated with the router. |
    +-------------+--------+-------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/routers/f5dbdfe0-86f9-4b0a-9a32-6be143f0a076
-   {
-       "router": {
-              "name": "router-220"
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

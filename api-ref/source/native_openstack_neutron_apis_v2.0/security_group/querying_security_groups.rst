@@ -42,35 +42,42 @@ Example of querying security groups by page
    |                 |                 |                 |                                                                                                                                                                                                                        |
    |                 |                 |                 | This parameter can work together with the parameter **limit**.                                                                                                                                                         |
    |                 |                 |                 |                                                                                                                                                                                                                        |
-   |                 |                 |                 | -  If parameters **marker** and **limit** are not passed, all resource records will be returned.                                                                                                                       |
+   |                 |                 |                 | -  If parameters **marker** and **limit** are not passed, resource records on the first page will be returned.                                                                                                         |
    |                 |                 |                 | -  If the parameter **marker** is not passed and the value of parameter **limit** is set to **10**, the first 10 resource records will be returned.                                                                    |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the value of parameter **limit** is set to **10**, the 11th to 20th resource records will be returned.                    |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, resource records starting from the 11th records (including 11th) will be returned. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax.                                                                                                                     |
+   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                 |
    |                 |                 |                 |                                                                                                                                                                                                                        |
    |                 |                 |                 | **limit** can be used together with **marker**. For details, see the parameter description of **marker**.                                                                                                              |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/security-groups?limit=1
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
-   +-----------------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                                                                           | Description                                                                                                                                                                                                          |
-   +=======================+================================================================================+======================================================================================================================================================================================================================+
-   | security_groups       | Array of :ref:`Security Group <vpc_sg02_0001__table513726041607>` objects      | Specifies the security group list. For details, see :ref:`Table 3 <vpc_sg02_0001__table513726041607>`.                                                                                                               |
-   +-----------------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | security_groups_links | Array of :ref:`SecurityGroupsLink <vpc_sg02_0001__table1318194661915>` objects | Shows pagination information about security groups.                                                                                                                                                                  |
-   |                       |                                                                                |                                                                                                                                                                                                                      |
-   |                       |                                                                                | The value of **rel** will be **next** and that of **href** will be a link only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**). |
-   +-----------------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+--------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                           | Description                                                                                                                                                                                                     |
+   +=======================+================================================================================+=================================================================================================================================================================================================================+
+   | security_groups       | Array of :ref:`Security Group <vpc_sg02_0001__table513726041607>` objects      | Specifies the security group list. For details, see :ref:`Table 3 <vpc_sg02_0001__table513726041607>`.                                                                                                          |
+   +-----------------------+--------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | security_groups_links | Array of :ref:`SecurityGroupsLink <vpc_sg02_0001__table1318194661915>` objects | Shows pagination information about security groups.                                                                                                                                                             |
+   |                       |                                                                                |                                                                                                                                                                                                                 |
+   |                       |                                                                                | Only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**), value **next** will be returned for **rel** and a link for **href**. |
+   +-----------------------+--------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _vpc_sg02_0001__table513726041607:
 
@@ -140,7 +147,7 @@ Response Message
    | tenant_id               | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_address_group_id | String                | -  Specifies the remote IP address group ID.                                                                                                                                                |
-   |                         |                       | -  The value is exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                                     |
+   |                         |                       | -  The value is mutually exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                            |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | project_id              | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -165,16 +172,8 @@ Response Message
    | rel       | String | Specifies the relationship between the API link and the API version. |
    +-----------+--------+----------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/security-groups?limit=1
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

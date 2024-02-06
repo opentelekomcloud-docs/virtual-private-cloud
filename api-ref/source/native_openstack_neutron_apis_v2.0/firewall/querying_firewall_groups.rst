@@ -46,73 +46,80 @@ Example of querying groups by page
    |                 |                 |                 |                                                                                                                                                                                                                        |
    |                 |                 |                 | This parameter can work together with the parameter **limit**.                                                                                                                                                         |
    |                 |                 |                 |                                                                                                                                                                                                                        |
-   |                 |                 |                 | -  If parameters **marker** and **limit** are not passed, all resource records will be returned.                                                                                                                       |
+   |                 |                 |                 | -  If parameters **marker** and **limit** are not passed, resource records on the first page will be returned.                                                                                                         |
    |                 |                 |                 | -  If the parameter **marker** is not passed and the value of parameter **limit** is set to **10**, the first 10 resource records will be returned.                                                                    |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the value of parameter **limit** is set to **10**, the 11th to 20th resource records will be returned.                    |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, resource records starting from the 11th records (including 11th) will be returned. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax.                                                                                                                     |
+   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                 |
    |                 |                 |                 |                                                                                                                                                                                                                        |
    |                 |                 |                 | **limit** can be used together with **marker**. For details, see the parameter description of **marker**.                                                                                                              |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/fwaas/firewall_groups
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
-   +-----------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                                                                               | Description                                                                                                                                                                                                          |
-   +=======================+====================================================================================+======================================================================================================================================================================================================================+
-   | firewall_groups       | Array of :ref:`Firewall Group <vpc_firewall_0013__table31629250121127>` objects    | Specifies the firewall group list. For details, see :ref:`Table 3 <vpc_firewall_0013__table31629250121127>`.                                                                                                         |
-   +-----------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | firewall_groups_links | Array of :ref:`firewall_groups_link <vpc_firewall_0013__table25150247450>` objects | Specifies the **firewall_groups_link** object list. For details, see :ref:`Table 4 <vpc_firewall_0013__table25150247450>`.                                                                                           |
-   |                       |                                                                                    |                                                                                                                                                                                                                      |
-   |                       |                                                                                    | The value of **rel** will be **next** and that of **href** will be a link only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**). |
-   +-----------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                               | Description                                                                                                                                                                                                     |
+   +=======================+====================================================================================+=================================================================================================================================================================================================================+
+   | firewall_groups       | Array of :ref:`Firewall Group <vpc_firewall_0013__table31629250121127>` objects    | Specifies the firewall group list. For details, see :ref:`Table 3 <vpc_firewall_0013__table31629250121127>`.                                                                                                    |
+   +-----------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | firewall_groups_links | Array of :ref:`firewall_groups_link <vpc_firewall_0013__table25150247450>` objects | Specifies the **firewall_groups_link** object list. For details, see :ref:`Table 4 <vpc_firewall_0013__table25150247450>`.                                                                                      |
+   |                       |                                                                                    |                                                                                                                                                                                                                 |
+   |                       |                                                                                    | Only when **limit** is used for filtering and the number of resources exceeds the value of **limit** or 2000 (default value of **limit**), value **next** will be returned for **rel** and a link for **href**. |
+   +-----------------------+------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _vpc_firewall_0013__table31629250121127:
 
 .. table:: **Table 3** **Firewall Group** objects
 
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | Attribute                  | Type                  | Description                                                               |
-   +============================+=======================+===========================================================================+
-   | id                         | String                | Specifies the UUID of the firewall group.                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | name                       | String                | Specifies the name of the firewall group.                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | description                | String                | Provides supplementary information about the firewall group.              |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | tenant_id                  | String                | Specifies the project ID.                                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | ingress_firewall_policy_id | String                | Specifies the firewall policy for inbound traffic.                        |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | egress_firewall_policy_id  | String                | Specifies the firewall policy for outbound traffic.                       |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | ports                      | Array of strings      | Specifies the list of ports bound with the firewall group.                |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | public                     | Boolean               | Specifies whether the firewall policy can be shared by different tenants. |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | status                     | String                | Specifies the status of the firewall policy.                              |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | admin_state_up             | Boolean               | Specifies the administrative status of the firewall.                      |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | project_id                 | String                | Specifies the project ID.                                                 |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | created_at                 | String                | Specifies the time (UTC) when the resource is created.                    |
-   |                            |                       |                                                                           |
-   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                             |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
-   | updated_at                 | String                | Specifies the time (UTC) when the resource is updated.                    |
-   |                            |                       |                                                                           |
-   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                             |
-   +----------------------------+-----------------------+---------------------------------------------------------------------------+
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | Attribute                  | Type                  | Description                                                              |
+   +============================+=======================+==========================================================================+
+   | id                         | String                | Specifies the UUID of the firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | name                       | String                | Specifies the name of the firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | description                | String                | Provides supplementary information about the firewall group.             |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | tenant_id                  | String                | Specifies the project ID.                                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | ingress_firewall_policy_id | String                | Specifies the firewall policy for inbound traffic.                       |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | egress_firewall_policy_id  | String                | Specifies the firewall policy for outbound traffic.                      |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | ports                      | Array of strings      | Specifies the list of ports bound with the firewall group.               |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | public                     | Boolean               | Specifies whether the firewall group can be shared by different tenants. |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | status                     | String                | Specifies the status of a firewall group.                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | admin_state_up             | Boolean               | Specifies the administrative status of the firewall.                     |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | project_id                 | String                | Specifies the project ID.                                                |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | created_at                 | String                | Specifies the time (UTC) when the resource is created.                   |
+   |                            |                       |                                                                          |
+   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                            |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
+   | updated_at                 | String                | Specifies the time (UTC) when the resource is updated.                   |
+   |                            |                       |                                                                          |
+   |                            |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                            |
+   +----------------------------+-----------------------+--------------------------------------------------------------------------+
 
 .. _vpc_firewall_0013__table25150247450:
 
@@ -126,16 +133,8 @@ Response Message
    | rel  | String | Specifies the relationship between the API link and the API version. |
    +------+--------+----------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/fwaas/firewall_groups
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 
@@ -174,8 +173,7 @@ Example response
        ],
        "firewall_groups_links": [
           {    "rel": "previous",
-               "href": "https://{Endpoint}/v2.0/
-   fwaas/firewall_groups?marker=cd600d47-0045-483f-87a1-5041ae2f513b&page_reverse=True"
+               "href": "https://{Endpoint}/v2.0/fwaas/firewall_groups?marker=cd600d47-0045-483f-87a1-5041ae2f513b&page_reverse=True"
            }
        ]
    }

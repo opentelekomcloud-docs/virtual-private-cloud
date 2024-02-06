@@ -15,13 +15,20 @@ URI
 
 GET /v2.0/security-groups/{security_group_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/security-groups/0431c9c5-1660-42e0-8a00-134bec7f03e2
+
+Response Parameters
+-------------------
 
 .. table:: **Table 1** Response parameter
 
@@ -99,7 +106,7 @@ Response Message
    | tenant_id               | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | remote_address_group_id | String                | -  Specifies the remote IP address group ID.                                                                                                                                                |
-   |                         |                       | -  The value is exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                                     |
+   |                         |                       | -  The value is mutually exclusive with parameters **remote_ip_prefix** and **remote_group_id**.                                                                                            |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | project_id              | String                | Specifies the project ID.                                                                                                                                                                   |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -112,16 +119,8 @@ Response Message
    |                         |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                                                                               |
    +-------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/security-groups/0431c9c5-1660-42e0-8a00-134bec7f03e2
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 
@@ -145,7 +144,7 @@ Example response
                    "port_range_max": null,
                    "port_range_min": null,
                    "security_group_id": "0431c9c5-1660-42e0-8a00-134bec7f03e2",
-                  "remote_address_group_id": "0150a3a7-82ca-4569-865c-04e46e5e9249"
+                   "remote_address_group_id": "0150a3a7-82ca-4569-865c-04e46e5e9249"
                },
                {
                    "id": "aecff4d4-9ce9-489c-86a3-803aedec65f7",
@@ -159,7 +158,7 @@ Example response
                    "port_range_max": null,
                    "port_range_min": null,
                    "security_group_id": "0431c9c5-1660-42e0-8a00-134bec7f03e2",
-                  "remote_address_group_id": null
+                   "remote_address_group_id": null
                }
            ],
            "created_at": "2018-09-12T08:24:14",

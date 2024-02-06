@@ -27,10 +27,8 @@ POST /v2.0/{project_id}/vpcs/resource_instances/action
    project_id Yes       Specifies the project ID.
    ========== ========= =========================
 
-Request Message
----------------
-
-Request parameter
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameter
 
@@ -54,13 +52,17 @@ Request parameter
 
 .. table:: **Table 3** Description of the **tag** field
 
-   +--------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Name   | Mandatory | Type             | Description                                                                                                                                                                        |
-   +========+===========+==================+====================================================================================================================================================================================+
-   | key    | Yes       | String           | Specifies the tag key. The value can contain a maximum of 127 Unicode characters. The tag key cannot be left blank. (This parameter is not verified during the search process.)    |
-   +--------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | values | Yes       | Array of strings | Specifies the tag value list. Each value can contain a maximum of 255 Unicode characters. An empty list for **values** indicates any value. The values are in the OR relationship. |
-   +--------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Name            | Mandatory       | Type             | Description                                                                                                                                                                                                     |
+   +=================+=================+==================+=================================================================================================================================================================================================================+
+   | key             | Yes             | String           | Specifies the tag key. The value can contain a maximum of 128 Unicode characters. The tag key cannot be left blank. (This parameter is not verified during the search process.)                                 |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | values          | Yes             | Array of strings | Specifies the tag values. Each value can contain a maximum of 255 Unicode characters. An empty list for **values** indicates any value.                                                                         |
+   |                 |                 |                  |                                                                                                                                                                                                                 |
+   |                 |                 |                  | The values are in the OR relationship.                                                                                                                                                                          |
+   |                 |                 |                  |                                                                                                                                                                                                                 |
+   |                 |                 |                  | Resources that match any value can be found. For example, if resource A has a tag value of **val1** and resource B has a tag value of **val2**, resources A and B can be found by using **values={val1,val2}**. |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _vpc_tag_0005__table104959232192:
 
@@ -74,69 +76,70 @@ Request parameter
    | value | Yes       | String | Specifies the tag value. Each value can contain a maximum of 255 Unicode characters. |
    +-------+-----------+--------+--------------------------------------------------------------------------------------+
 
-Example request 1: Setting **action** to **filter**
+Example Request
+---------------
 
-.. code-block:: text
+-  Filter VPCs by setting **action** to **filter**. The query starts from the first record. A maximum of 100 records can be returned for each query. You can use **matches** and **tags** to filter VPCs.
 
-   POST https://{Endpoint}/v2.0/{project_id}/vpcs/resource_instances/action
+   .. code-block:: text
 
-   {
-       "offset": "0",
-       "limit": "100",
-       "action": "filter",
-       "matches": [
-           {
-               "key": "resource_name",
-               "value": "resource1"
-           }
-       ],
-       "tags": [
-           {
-               "key": "key1",
-               "values": [
-                   "*value1",
-                   "value2"
-               ]
-           }
-       ]
-   }
+      POST https://{Endpoint}/v2.0/{project_id}/vpcs/resource_instances/action
 
-Example request 2: Setting **action** to **count**
+      {
+          "offset": "0",
+          "limit": "100",
+          "action": "filter",
+          "matches": [
+              {
+                  "key": "resource_name",
+                  "value": "resource1"
+              }
+          ],
+          "tags": [
+              {
+                  "key": "key1",
+                  "values": [
+                      "*value1",
+                      "value2"
+                  ]
+              }
+          ]
+      }
 
-.. code-block:: text
+-  Count VPCs by setting **action** to **count**. Use **matches** and **tags** to filter and count VPCs.
 
-   POST https://{Endpoint}/v2.0/{project_id}/vpcs/resource_instances/action
+   .. code-block:: text
 
-   {
-       "action": "count",
-       "tags": [
-           {
-               "key": "key1",
-               "values": [
-                   "value1",
-                   "value2"
-               ]
-           },
-           {
-               "key": "key2",
-               "values": [
-                   "value1",
-                   "value2"
-               ]
-           }
-       ],
-       "matches": [
-           {
-               "key": "resource_name",
-               "value": "resource1"
-           }
-       ]
-   }
+      POST https://{Endpoint}/v2.0/{project_id}/vpcs/resource_instances/action
 
-Response Message
-----------------
+      {
+          "action": "count",
+          "tags": [
+              {
+                  "key": "key1",
+                  "values": [
+                      "value1",
+                      "value2"
+                  ]
+              },
+              {
+                  "key": "key2",
+                  "values": [
+                      "value1",
+                      "value2"
+                  ]
+              }
+          ],
+          "matches": [
+              {
+                  "key": "resource_name",
+                  "value": "resource1"
+              }
+          ]
+      }
 
-Response parameter
+Response Parameters
+-------------------
 
 .. table:: **Table 5** Response parameter
 
@@ -168,47 +171,54 @@ Response parameter
 
 .. table:: **Table 7** Description of the **tag** field
 
-   +--------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Name   | Mandatory | Type             | Description                                                                                                                                                                        |
-   +========+===========+==================+====================================================================================================================================================================================+
-   | key    | Yes       | String           | Specifies the tag key. The value can contain a maximum of 127 Unicode characters. The tag key cannot be left blank. (This parameter is not verified during the search process.)    |
-   +--------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | values | Yes       | Array of strings | Specifies the tag value list. Each value can contain a maximum of 255 Unicode characters. An empty list for **values** indicates any value. The values are in the OR relationship. |
-   +--------+-----------+------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Name            | Mandatory       | Type             | Description                                                                                                                                                                                                     |
+   +=================+=================+==================+=================================================================================================================================================================================================================+
+   | key             | Yes             | String           | Specifies the tag key. The value can contain a maximum of 128 Unicode characters. The tag key cannot be left blank. (This parameter is not verified during the search process.)                                 |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | values          | Yes             | Array of strings | Specifies the tag value list. Each value can contain a maximum of 255 Unicode characters. An empty list for **values** indicates any value.                                                                     |
+   |                 |                 |                  |                                                                                                                                                                                                                 |
+   |                 |                 |                  | The values are in the OR relationship.                                                                                                                                                                          |
+   |                 |                 |                  |                                                                                                                                                                                                                 |
+   |                 |                 |                  | Resources that match any value can be found. For example, if resource A has a tag value of **val1** and resource B has a tag value of **val2**, resources A and B can be found by using **values={val1,val2}**. |
+   +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example response 1: Setting **action** to **filter**
+Example Response
+----------------
 
-.. code-block::
+-  When **action** is set to **filter**:
 
-   {
-         "resources": [
-            {
-               "resource_detail": null,
-               "resource_id": "cdfs_cefs_wesas_12_dsad",
-               "resource_name": "resouece1",
-               "tags": [
-                   {
-                      "key": "key1",
-                      "value": "value1"
-                   },
-                   {
-                      "key": "key2",
-                      "value": "value1"
-                   }
-                ]
-            }
-          ],
-         "total_count": 1000
-   }
+   .. code-block::
+
+      {
+            "resources": [
+               {
+                  "resource_detail": null,
+                  "resource_id": "cdfs_cefs_wesas_12_dsad",
+                  "resource_name": "resouece1",
+                  "tags": [
+                      {
+                         "key": "key1",
+                         "value": "value1"
+                      },
+                      {
+                         "key": "key2",
+                         "value": "value1"
+                      }
+                   ]
+               }
+             ],
+            "total_count": 1000
+      }
 
 
-Example response 2: Setting **action** to **count**
+-  When **action** is set to **count**:
 
-.. code-block::
+   .. code-block::
 
-   {
-          "total_count": 1000
-   }
+      {
+             "total_count": 1000
+      }
 
 Status Code
 -----------

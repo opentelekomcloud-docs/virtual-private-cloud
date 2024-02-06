@@ -22,8 +22,8 @@ URI
 
 PUT /v2.0/routers/{router_id}/add_router_interface
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -37,8 +37,19 @@ Request Message
    | port_id         | String          | No              | Specifies the port ID. Either **subnet_id** or **port_id** is used. Use the port IP address to create a router interface. |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Add an interface to the router. The router ID is i5b8e885c-1347-4ac2-baf9-2249c8ed1270, and the subnet ID is ab78be2d-782f-42a5-aa72-35879f6890ff.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/routers/5b8e885c-1347-4ac2-baf9-2249c8ed1270/add_router_interface
+
+   {"subnet_id": "ab78be2d-782f-42a5-aa72-35879f6890ff"}
+
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -52,18 +63,8 @@ Response Message
    id         String Specifies the router ID.
    ========== ====== =========================
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/routers/5b8e885c-1347-4ac2-baf9-2249c8ed1270/add_router_interface
-
-   {"subnet_id": "ab78be2d-782f-42a5-aa72-35879f6890ff"}
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

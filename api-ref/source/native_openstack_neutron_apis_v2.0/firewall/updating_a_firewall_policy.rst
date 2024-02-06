@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/fwaas/firewall_policies/{firewall_policy_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -48,8 +48,25 @@ Request Message
    |                 |                 |                  | The value can be **true** or **false**.                         |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------+
 
-Response Message
-----------------
+Example Request
+---------------
+
+Associate the ACL policy whose ID is 2fb0e81f-9f63-44b2-9894-c13a3284594a to the ACL rule whose ID is 0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1.
+
+.. code-block:: text
+
+   PUT https://{Endpoint}/v2.0/fwaas/firewall_policies/2fb0e81f-9f63-44b2-9894-c13a3284594a
+
+   {
+       "firewall_policy": {
+           "firewall_rules": [
+               "0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1"
+           ]
+       }
+   }
+
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 
@@ -83,24 +100,8 @@ Response Message
    | project_id     | String           | Specifies the project ID.                                                 |
    +----------------+------------------+---------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   PUT https://{Endpoint}/v2.0/fwaas/firewall_policies/2fb0e81f-9f63-44b2-9894-c13a3284594a
-
-   {
-       "firewall_policy": {
-           "firewall_rules": [
-               "0f82b221-8cd6-44bd-9dfc-0e118fa7b6b1"
-           ]
-       }
-   }
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

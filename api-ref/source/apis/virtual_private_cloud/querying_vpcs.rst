@@ -36,146 +36,137 @@ Example:
    |                       |                 |                 |                                                                                                                                                                                                                                                             |
    |                       |                 |                 | This parameter can work together with the parameter **limit**.                                                                                                                                                                                              |
    |                       |                 |                 |                                                                                                                                                                                                                                                             |
-   |                       |                 |                 | -  If parameters **marker** and **limit** are not passed, all resource records will be returned.                                                                                                                                                            |
+   |                       |                 |                 | -  If parameters **marker** and **limit** are not passed, resource records on the first page will be returned.                                                                                                                                              |
    |                       |                 |                 | -  If the parameter **marker** is not passed and the value of parameter **limit** is set to **10**, the first 10 resource records will be returned.                                                                                                         |
    |                       |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the value of parameter **limit** is set to **10**, the 11th to 20th resource records will be returned.                                                         |
    |                       |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, resource records starting from the 11th records (including 11th) will be returned.                                      |
    +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit                 | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax.                                                                                                                                                          |
+   | limit                 | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                                                      |
    |                       |                 |                 |                                                                                                                                                                                                                                                             |
    |                       |                 |                 | **limit** can be used together with **marker**. For details, see the parameter description of **marker**.                                                                                                                                                   |
    +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | enterprise_project_id | No              | String          | -  Specifies the enterprise project ID. This field can be used to filter out the VPCs associated with a specified enterprise project.                                                                                                                       |
    |                       |                 |                 | -  The value is **0** or a string that contains a maximum of 36 characters in UUID format with hyphens (-). Value **0** indicates the default enterprise project. To obtain the VPCs bound to all enterprise projects of the user, set **all_granted_eps**. |
-   |                       |                 |                 |                                                                                                                                                                                                                                                             |
-   |                       |                 |                 |    .. note::                                                                                                                                                                                                                                                |
-   |                       |                 |                 |                                                                                                                                                                                                                                                             |
-   |                       |                 |                 |       This parameter is unsupported. Do not use it.                                                                                                                                                                                                         |
+   |                       |                 |                 | -  If this parameter is not specified, VPCs in the default enterprise project are queried and are authenticated based on the default enterprise project.                                                                                                    |
    +-----------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   GET https://{Endpoint}/v1/{project_id}/vpcs
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+.. table:: **Table 2** Response parameter
 
-      GET https://{Endpoint}/v1/{project_id}/vpcs
+   +------+--------------------------------------------------------------+---------------------+
+   | Name | Type                                                         | Description         |
+   +======+==============================================================+=====================+
+   | vpcs | Array of :ref:`vpcs <vpc_api01_0003__table65129753>` objects | Specifies the VPCs. |
+   +------+--------------------------------------------------------------+---------------------+
 
-Response Message
+.. _vpc_api01_0003__table65129753:
+
+.. table:: **Table 3** Description of the **vpcs** field
+
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Name                  | Type                                                               | Description                                                                                                                                                                           |
+   +=======================+====================================================================+=======================================================================================================================================================================================+
+   | id                    | String                                                             | Specifies a resource ID in UUID format.                                                                                                                                               |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | name                  | String                                                             | -  Specifies the VPC name.                                                                                                                                                            |
+   |                       |                                                                    | -  The value can contain no more than 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).                                                        |
+   |                       |                                                                    | -  Each VPC name of a tenant must be unique if the VPC name is not left blank.                                                                                                        |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description           | String                                                             | -  Provides supplementary information about the VPC.                                                                                                                                  |
+   |                       |                                                                    | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                                                                                      |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | cidr                  | String                                                             | -  Specifies the available IP address ranges for subnets in the VPC.                                                                                                                  |
+   |                       |                                                                    | -  Possible values are as follows:                                                                                                                                                    |
+   |                       |                                                                    |                                                                                                                                                                                       |
+   |                       |                                                                    |    -  10.0.0.0/8-24                                                                                                                                                                   |
+   |                       |                                                                    |    -  172.16.0.0/12-24                                                                                                                                                                |
+   |                       |                                                                    |    -  192.168.0.0/16-24                                                                                                                                                               |
+   |                       |                                                                    |                                                                                                                                                                                       |
+   |                       |                                                                    | -  If **cidr** is not specified, the default value is left blank.                                                                                                                     |
+   |                       |                                                                    | -  The value must be in CIDR format, for example, **192.168.0.0/16**.                                                                                                                 |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | status                | String                                                             | -  Specifies the VPC status.                                                                                                                                                          |
+   |                       |                                                                    | -  Possible values are as follows:                                                                                                                                                    |
+   |                       |                                                                    |                                                                                                                                                                                       |
+   |                       |                                                                    |    -  **CREATING**: The VPC is being created.                                                                                                                                         |
+   |                       |                                                                    |    -  **OK**: The VPC is created successfully.                                                                                                                                        |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enterprise_project_id | String                                                             | -  Specifies the enterprise project ID.                                                                                                                                               |
+   |                       |                                                                    | -  The value is **0** or a string that contains a maximum of 36 characters in UUID format with hyphens (-). Value **0** indicates the default enterprise project.                     |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | routes                | Array of :ref:`route <vpc_api01_0003__table3576833291556>` objects | -  Specifies the route information.                                                                                                                                                   |
+   |                       |                                                                    | -  For details, see :ref:`Table 4 <vpc_api01_0003__table3576833291556>`.                                                                                                              |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | enable_shared_snat    | Boolean                                                            | Specifies whether the shared SNAT function is enabled. The value **true** indicates that the function is enabled, and the value **false** indicates that the function is not enabled. |
+   +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _vpc_api01_0003__table3576833291556:
+
+.. table:: **Table 4** **route** objects
+
+   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | Name                  | Type                  | Description                                                                                                              |
+   +=======================+=======================+==========================================================================================================================+
+   | destination           | String                | -  Specifies the destination network segment of a route.                                                                 |
+   |                       |                       | -  The value must be in the CIDR format. Currently, only the value **0.0.0.0/0** is supported.                           |
+   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+   | nexthop               | String                | -  Specifies the next hop of a route.                                                                                    |
+   |                       |                       | -  The value must be an IP address and must belong to the subnet in the VPC. Otherwise, this value does not take effect. |
+   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
+
+Example Response
 ----------------
 
--  Response parameter
+.. code-block::
 
-   .. table:: **Table 2** Response parameter
-
-      +------+--------------------------------------------------------------+---------------------+
-      | Name | Type                                                         | Description         |
-      +======+==============================================================+=====================+
-      | vpcs | Array of :ref:`vpcs <vpc_api01_0003__table65129753>` objects | Specifies the VPCs. |
-      +------+--------------------------------------------------------------+---------------------+
-
-   .. _vpc_api01_0003__table65129753:
-
-   .. table:: **Table 3** Description of the **vpcs** field
-
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name                  | Type                                                               | Description                                                                                                                                                                           |
-      +=======================+====================================================================+=======================================================================================================================================================================================+
-      | id                    | String                                                             | Specifies a resource ID in UUID format.                                                                                                                                               |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | name                  | String                                                             | -  Specifies the VPC name.                                                                                                                                                            |
-      |                       |                                                                    | -  The value can contain no more than 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).                                                        |
-      |                       |                                                                    | -  Each VPC name of a tenant must be unique if the VPC name is not left blank.                                                                                                        |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | description           | String                                                             | -  Provides supplementary information about the VPC.                                                                                                                                  |
-      |                       |                                                                    | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                                                                                      |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | cidr                  | String                                                             | -  Specifies the available IP address ranges for subnets in the VPC.                                                                                                                  |
-      |                       |                                                                    | -  Possible values are as follows:                                                                                                                                                    |
-      |                       |                                                                    |                                                                                                                                                                                       |
-      |                       |                                                                    |    -  10.0.0.0/8-24                                                                                                                                                                   |
-      |                       |                                                                    |    -  172.16.0.0/12-24                                                                                                                                                                |
-      |                       |                                                                    |    -  192.168.0.0/16-24                                                                                                                                                               |
-      |                       |                                                                    |                                                                                                                                                                                       |
-      |                       |                                                                    | -  If **cidr** is not specified, the default value is left blank.                                                                                                                     |
-      |                       |                                                                    | -  The value must be in CIDR format, for example, **192.168.0.0/16**.                                                                                                                 |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | status                | String                                                             | -  Specifies the VPC status.                                                                                                                                                          |
-      |                       |                                                                    | -  Possible values are as follows:                                                                                                                                                    |
-      |                       |                                                                    |                                                                                                                                                                                       |
-      |                       |                                                                    |    -  **CREATING**: The VPC is being created.                                                                                                                                         |
-      |                       |                                                                    |    -  **OK**: The VPC is created successfully.                                                                                                                                        |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | enterprise_project_id | String                                                             | -  Specifies the enterprise project ID.                                                                                                                                               |
-      |                       |                                                                    | -  The value is **0** or a string that contains a maximum of 36 characters in UUID format with hyphens (-). Value **0** indicates the default enterprise project.                     |
-      |                       |                                                                    |                                                                                                                                                                                       |
-      |                       |                                                                    |    .. note::                                                                                                                                                                          |
-      |                       |                                                                    |                                                                                                                                                                                       |
-      |                       |                                                                    |       This parameter is unsupported. Do not use it.                                                                                                                                   |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | routes                | Array of :ref:`route <vpc_api01_0003__table3576833291556>` objects | -  Specifies the route information.                                                                                                                                                   |
-      |                       |                                                                    | -  For details, see :ref:`Table 4 <vpc_api01_0003__table3576833291556>`.                                                                                                              |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | enable_shared_snat    | Boolean                                                            | Specifies whether the shared SNAT function is enabled. The value **true** indicates that the function is enabled, and the value **false** indicates that the function is not enabled. |
-      +-----------------------+--------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-   .. _vpc_api01_0003__table3576833291556:
-
-   .. table:: **Table 4** **route** objects
-
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                                                                              |
-      +=======================+=======================+==========================================================================================================================+
-      | destination           | String                | -  Specifies the destination network segment of a route.                                                                 |
-      |                       |                       | -  The value must be in the CIDR format. Currently, only the value **0.0.0.0/0** is supported.                           |
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
-      | nexthop               | String                | -  Specifies the next hop of a route.                                                                                    |
-      |                       |                       | -  The value must be an IP address and must belong to the subnet in the VPC. Otherwise, this value does not take effect. |
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------+
-
--  Example response
-
-   .. code-block::
-
-      {
-          "vpcs": [
-              {
-                  "id": "13551d6b-755d-4757-b956-536f674975c0",
-                  "name": "default",
-                  "description": "test",
-                  "cidr": "172.16.0.0/16",
-                  "status": "OK",
-                  "enterprise_project_id": "0",
-                  "routes": [],
-                  "enable_shared_snat": false
-              },
-              {
-                  "id": "3ec3b33f-ac1c-4630-ad1c-7dba1ed79d85",
-                  "name": "222",
-                  "description": "test",
-                  "cidr": "192.168.0.0/16",
-                  "status": "OK",
-                  "enterprise_project_id": "0635d733-c12d-4308-ba5a-4dc27ec21038",
-                  "routes": [],
-                  "enable_shared_snat": false
-              },
-              {
-                  "id": "99d9d709-8478-4b46-9f3f-2206b1023fd3",
-                  "name": "vpc",
-                  "description": "test",
-                  "cidr": "192.168.0.0/16",
-                  "status": "OK",
-                  "enterprise_project_id": "0",
-                  "routes": [],
-                  "enable_shared_snat": false
-              }
-          ]
-      }
+   {
+       "vpcs": [
+           {
+               "id": "13551d6b-755d-4757-b956-536f674975c0",
+               "name": "default",
+               "description": "test",
+               "cidr": "172.16.0.0/16",
+               "status": "OK",
+               "enterprise_project_id": "0",
+               "routes": [],
+               "enable_shared_snat": false
+           },
+           {
+               "id": "3ec3b33f-ac1c-4630-ad1c-7dba1ed79d85",
+               "name": "222",
+               "description": "test",
+               "cidr": "192.168.0.0/16",
+               "status": "OK",
+               "enterprise_project_id": "0635d733-c12d-4308-ba5a-4dc27ec21038",
+               "routes": [],
+               "enable_shared_snat": false
+           },
+           {
+               "id": "99d9d709-8478-4b46-9f3f-2206b1023fd3",
+               "name": "vpc",
+               "description": "test",
+               "cidr": "192.168.0.0/16",
+               "status": "OK",
+               "enterprise_project_id": "0",
+               "routes": [],
+               "enable_shared_snat": false
+           }
+       ]
+   }
 
 Status Code
 -----------

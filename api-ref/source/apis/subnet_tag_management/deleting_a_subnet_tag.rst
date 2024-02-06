@@ -33,27 +33,25 @@ DELETE /v2.0/{project_id}/subnets/{subnet_id}/tags/{key}
    | key                   | Yes                   | Specifies the tag key.                                                                      |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------+
 
-Request Message
----------------
-
-Request parameter
+Request Parameters
+------------------
 
 None
 
-Example request
+Example Request
+---------------
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/{project_id}/subnets/{subnet_id}/tags/{key}
 
-Response Message
-----------------
-
-Response parameter
+Response Parameters
+-------------------
 
 None
 
-Example response
+Example Response
+----------------
 
 None
 

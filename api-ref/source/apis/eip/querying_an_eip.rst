@@ -10,6 +10,20 @@ Function
 
 This API is used to query a specific EIP.
 
+.. note::
+
+   Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
+
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
+
+      -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
+      -  You can use APIs to bind EIPs to or unbind them from dedicated load balancers. For details, see `Binding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/binding_an_eip.html>`__ and `Unbinding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/unbinding_an_eip.html>`__.
+      -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
+      -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
+
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
+
 URI
 ---
 
@@ -72,15 +86,20 @@ Response Message
       |                       |                                                           |    -  **PENDING_DELETE** (Releasing)                                                                                                                                                  |
       |                       |                                                           |    -  **PENDING_CREATE** (Assigning)                                                                                                                                                  |
       |                       |                                                           |    -  **PENDING_UPDATE** (Updating)                                                                                                                                                   |
+      |                       |                                                           |    -  **NOTIFYING** (Assigning)                                                                                                                                                       |
+      |                       |                                                           |    -  **NOTIFY_DELETE** (Releasing)                                                                                                                                                   |
       |                       |                                                           |    -  **DOWN** (Unbound)                                                                                                                                                              |
       |                       |                                                           |    -  **ACTIVE** (Bound)                                                                                                                                                              |
       |                       |                                                           |    -  **ELB** (Bound to a load balancer)                                                                                                                                              |
+      |                       |                                                           |    -  **VPN** (Bound to a VPN)                                                                                                                                                        |
       |                       |                                                           |    -  **ERROR** (Exceptions)                                                                                                                                                          |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | profile               | :ref:`profile <vpc_eip_0002__table66651219193417>` object | Specifies the additional parameters, including the order ID and product ID. For details, see :ref:`Table 4 <vpc_eip_0002__table66651219193417>`.                                      |
+      |                       |                                                           |                                                                                                                                                                                       |
+      |                       |                                                           | This parameter is not supported currently.                                                                                                                                            |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | type                  | String                                                    | -  Specifies the EIP type.                                                                                                                                                            |
-      |                       |                                                           | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), or **5_gray** (Dedicated load balancer, shared load balancer).                                                 |
+      |                       |                                                           | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), or **5_gray** (Dedicated Load Balancer).                                                                       |
       |                       |                                                           | -  Constraints:                                                                                                                                                                       |
       |                       |                                                           |                                                                                                                                                                                       |
       |                       |                                                           |    -  The configured value must be supported by the system.                                                                                                                           |
@@ -98,18 +117,20 @@ Response Message
       |                       |                                                           |                                                                                                                                                                                       |
       |                       |                                                           | .. note::                                                                                                                                                                             |
       |                       |                                                           |                                                                                                                                                                                       |
-      |                       |                                                           |    The value of **private_ip_address** is **null** if the EIP is bound to a dedicated load balancer.                                                                                  |
+      |                       |                                                           |    This parameter is not displayed if the EIP is bound to a dedicated load balancer. This parameter is displayed if the EIP is bound to an ECS.                                       |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | port_id               | String                                                    | -  Specifies the port ID.                                                                                                                                                             |
       |                       |                                                           | -  This parameter is returned only when a port is associated with the EIP.                                                                                                            |
       |                       |                                                           |                                                                                                                                                                                       |
       |                       |                                                           | .. note::                                                                                                                                                                             |
       |                       |                                                           |                                                                                                                                                                                       |
-      |                       |                                                           |    The value of **port_id** is null if the EIP is bound to a dedicated load balancer.                                                                                                 |
+      |                       |                                                           |    This parameter is not displayed if the EIP is bound to a dedicated load balancer. This parameter is displayed if the EIP is bound to an ECS.                                       |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | tenant_id             | String                                                    | Specifies the project ID.                                                                                                                                                             |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | create_time           | String                                                    | Specifies the time (UTC) when the EIP is assigned.                                                                                                                                    |
+      |                       |                                                           |                                                                                                                                                                                       |
+      |                       |                                                           | Format: *yyyy-MM-dd HH:mm:ss*                                                                                                                                                         |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | bandwidth_id          | String                                                    | Specifies the ID of the EIP bandwidth.                                                                                                                                                |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -123,6 +144,8 @@ Response Message
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | bandwidth_name        | String                                                    | Specifies the bandwidth name.                                                                                                                                                         |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | alias                 | String                                                    | Specifies the EIP name.                                                                                                                                                               |
+      +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | enterprise_project_id | String                                                    | -  Specifies the enterprise project ID. The value is **0** or a string that contains a maximum of 36 characters in UUID format with hyphens (-).                                      |
       |                       |                                                           | -  When assigning an EIP, you need to associate an enterprise project ID with the EIP.                                                                                                |
       |                       |                                                           | -  If this parameter is not specified, the default value is **0**, which indicates that the default enterprise project is used.                                                       |
@@ -130,6 +153,15 @@ Response Message
       |                       |                                                           | .. note::                                                                                                                                                                             |
       |                       |                                                           |                                                                                                                                                                                       |
       |                       |                                                           |    This parameter is unsupported. Do not use it.                                                                                                                                      |
+      +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | public_border_group   | String                                                    | Specifies whether it is in a central site or an edge site.                                                                                                                            |
+      |                       |                                                           |                                                                                                                                                                                       |
+      |                       |                                                           | The value can be:                                                                                                                                                                     |
+      |                       |                                                           |                                                                                                                                                                                       |
+      |                       |                                                           | -  center                                                                                                                                                                             |
+      |                       |                                                           | -  *Edge site name*                                                                                                                                                                   |
+      |                       |                                                           |                                                                                                                                                                                       |
+      |                       |                                                           | An EIP can only be bound to a resource of the same region.                                                                                                                            |
       +-----------------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpc_eip_0002__table66651219193417:
@@ -153,6 +185,7 @@ Response Message
           "publicip": {
               "id": "2ec9b78d-9368-46f3-8f29-d1a95622a568",
               "status": "DOWN",
+              "alias": "tom",
               "profile": {},
               "type": "5_bgp",
               "public_ip_address": "161.xx.xx.12",

@@ -15,26 +15,25 @@ URI
 
 DELETE /v2.0/routers/{router_id}
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Response Parameters
+-------------------
+
+None
+
+Example Request
 ---------------
-
-None
-
-Response Message
-----------------
-
-None
-
-Example:
---------
-
-Example request
 
 .. code-block:: text
 
    DELETE https://{Endpoint}/v2.0/routers/0735a367-2caf-48fb-85aa-6082266f342e
 
-Example response
+Example Response
+----------------
 
 None
 

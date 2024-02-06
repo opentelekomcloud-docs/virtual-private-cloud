@@ -21,36 +21,34 @@ DELETE /v1/{project_id}/fl/flow_logs/{flowlog_id}
 
 .. table:: **Table 1** Parameter description
 
-   ========== ========= ====== ==============================
+   ========== ========= ====== ===========
    Name       Mandatory Type   Description
-   ========== ========= ====== ==============================
-   project_id Yes       String Specifies the project ID.
-   flowlog_id Yes       String Specifies the VPC flow log ID.
-   ========== ========= ====== ==============================
+   ========== ========= ====== ===========
+   project_id Yes       String Project ID.
+   flowlog_id Yes       String Flow log ID
+   ========== ========= ====== ===========
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v1/b2782e6708b8475c993e6064bc456bf8/fl/flow_logs/60c809cb-6731-45d0-ace8-3bf5626421a9
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v1/b2782e6708b8475c993e6064bc456bf8/fl/flow_logs/60c809cb-6731-45d0-ace8-3bf5626421a9
-
-Response Message
+Example Response
 ----------------
 
--  Request parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------

@@ -15,13 +15,20 @@ URI
 
 GET /v2.0/routers/{router_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Example Request
+---------------
+
+.. code-block:: text
+
+   GET https://{Endpoint}/v2.0/routers/01ab4be1-4447-45fb-94be-3ee787ed4ebe
+
+Response Parameters
+-------------------
 
 .. table:: **Table 1** Response parameter
 
@@ -95,16 +102,8 @@ Response Message
    | nexthop     | String | Specifies the next hop IP address. The IP address can only be one in the subnet associated with the router. |
    +-------------+--------+-------------------------------------------------------------------------------------------------------------+
 
-Example:
---------
-
-Example request
-
-.. code-block:: text
-
-   GET https://{Endpoint}/v2.0/routers/01ab4be1-4447-45fb-94be-3ee787ed4ebe
-
-Example response
+Example Response
+----------------
 
 .. code-block::
 

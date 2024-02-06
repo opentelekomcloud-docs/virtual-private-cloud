@@ -29,29 +29,27 @@ DELETE /v2.0/vpc/peerings/{peering_id}
    | peering_id | Yes       | String | Specifies the VPC peering connection ID, which uniquely identifies the VPC peering connection. |
    +------------+-----------+--------+------------------------------------------------------------------------------------------------+
 
-Request Message
+Request Parameters
+------------------
+
+None
+
+Example Request
 ---------------
 
--  Request parameter
+.. code-block:: text
 
-   None
+   DELETE https://{Endpoint}/v2.0/vpc/peerings/2b098395-046a-4071-b009-312bcee665cb
 
--  Example request
+Response Parameters
+-------------------
 
-   .. code-block:: text
+None
 
-      DELETE https://{Endpoint}/v2.0/vpc/peerings/2b098395-046a-4071-b009-312bcee665cb
-
-Response Message
+Example Response
 ----------------
 
--  Response parameter
-
-   None
-
--  Example response
-
-   None
+None
 
 Status Code
 -----------
