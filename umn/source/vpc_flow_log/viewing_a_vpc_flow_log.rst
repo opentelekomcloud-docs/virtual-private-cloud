@@ -32,13 +32,13 @@ Procedure
 5. Locate the target VPC flow log and click **View Log Record** in the **Operation** column to view information about the flow log record in LTS.
 
 
-   .. figure:: /_static/images/en-us_image_0191577030.png
+   .. figure:: /_static/images/en-us_image_0000001865663181.png
       :alt: **Figure 1** Viewing a log record
 
       **Figure 1** Viewing a log record
 
 
-   .. figure:: /_static/images/en-us_image_0191588554.png
+   .. figure:: /_static/images/en-us_image_0000001818823446.png
       :alt: **Figure 2** Flow log record
 
       **Figure 2** Flow log record
@@ -120,5 +120,5 @@ Procedure
 
 You can enter a keyword on the log topic details page on the LTS console to search for flow log records.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675256657.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582981.png

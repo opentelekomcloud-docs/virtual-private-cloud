@@ -33,5 +33,5 @@ Procedure
 
 6. Modify the VPC peering connection information and click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626576382.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582893.png

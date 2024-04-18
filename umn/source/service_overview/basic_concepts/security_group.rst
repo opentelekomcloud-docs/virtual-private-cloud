@@ -5,7 +5,7 @@
 Security Group
 ==============
 
-A security group is a collection of access control rules for cloud resources, such as cloud servers, containers, and databases, that have the same security protection requirements and that are mutually trusted. After a security group is created, you can create various access rules for the security group and these rules will apply to all cloud resources added to this security group.
+A security group is a collection of access control rules for cloud resources, such as cloud servers, containers, and databases, that have the same security protection requirements and that are mutually trusted. After a security group is created, you can configure access rules that will apply to all cloud resources added to this security group.
 
 Like whitelists, security group rules work as follows:
 
@@ -23,9 +23,9 @@ Like whitelists, security group rules work as follows:
 
    ::/0 represents all IPv6 addresses.
 
-:ref:`Table 1 <vpc_concepts_0005__en-us_topic_0073379079_table102261597217>` uses custom security group sg-AB as an example to describe its inbound and outbound rules in detail.
+:ref:`Table 1 <vpc_concepts_0005__en-us_topic_0118534002_table102261597217>` uses custom security group sg-AB as an example to describe its inbound and outbound rules in detail.
 
-.. _vpc_concepts_0005__en-us_topic_0073379079_table102261597217:
+.. _vpc_concepts_0005__en-us_topic_0118534002_table102261597217:
 
 .. table:: **Table 1** Rules in security group sg-AB
 

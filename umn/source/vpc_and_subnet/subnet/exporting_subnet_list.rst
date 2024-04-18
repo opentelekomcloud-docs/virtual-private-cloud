@@ -25,10 +25,9 @@ Procedure
 
    The **Subnets** page is displayed.
 
-#. In the upper right corner of the subnet list, click |image3|.
+#. In the subnet list, select one or more subnets you want to export and click **Export** in the upper left corner.
 
-   The system will automatically export information about all subnets under your account in the current region as an Excel file to a local directory.
+   The system will automatically export information about all of your subnets as an Excel file to a local directory.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675613941.png
-.. |image3| image:: /_static/images/en-us_image_0000001221842468.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865583297.png

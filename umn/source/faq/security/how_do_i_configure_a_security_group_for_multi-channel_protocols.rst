@@ -18,7 +18,7 @@ You can configure port 69 and configure data channel ports used by TFTP for the 
 The following figure provides an example of the security group rule configuration if the ports used by data channels range from 60001 to 60100.
 
 
-.. figure:: /_static/images/en-us_image_0000001796404809.png
+.. figure:: /_static/images/en-us_image_0000001818823770.png
    :alt: **Figure 1** Security group rules
 
    **Figure 1** Security group rules

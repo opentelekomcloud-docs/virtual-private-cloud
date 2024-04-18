@@ -23,10 +23,9 @@ Procedure
 
    The **Virtual Private Cloud** page is displayed.
 
-#. In the upper right corner of the VPC list, click |image3|.
+#. In the VPC list, select one or more VPCs you want to export and click **Export** in the upper left corner.
 
-   The system will automatically export information about all VPCs under your account in the current region as an Excel file to a local directory.
+   The system will automatically export information about all of your VPCs as an Excel file to a local directory.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626894098.png
-.. |image3| image:: /_static/images/en-us_image_0233469654.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818823378.png

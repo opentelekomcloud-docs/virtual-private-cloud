@@ -13,6 +13,10 @@ You can modify the following information about a VPC:
 -  :ref:`Modifying the Name and Description of a VPC <en-us_topic_0030969462__section495418425354>`
 -  :ref:`Modifying the CIDR Block of a VPC <en-us_topic_0030969462__section696206193617>`
 
+   .. note::
+
+      If the :ref:`secondary IPv4 CIDR block <vpc_vpc_0007>` function is available in a region, the CIDR block of a VPC in this region cannot be modified through the console. You can call an API to modify VPC CIDR block by referring to `Updating VPC Information <https://docs.otc.t-systems.com/virtual-private-cloud/api-ref/apis/virtual_private_cloud/updating_vpc_information.html#vpc-api01-0004>`__.
+
 .. _en-us_topic_0030969462__section495418425354:
 
 Modifying the Name and Description of a VPC
@@ -58,34 +62,14 @@ Modifying the CIDR Block of a VPC
 
    The **Edit CIDR Block** dialog box is displayed.
 
-5. Modify the VPC CIDR block as prompted.
+5. Click **Add Secondary IPv4 CIDR Block**.
 
-   .. important::
+6. Enter the secondary CIDR block and click **OK**.
 
-      A VPC CIDR block must be from 10.0.0.0/8-24, 172.16.0.0/12-24, or 192.168.0.0/16-24.
-
-   -  If a VPC has no subnets, you can change both its network address and subnet mask.
-
-
-      .. figure:: /_static/images/en-us_image_0000001627653972.png
-         :alt: **Figure 1** Modifying network address and subnet mask
-
-         **Figure 1** Modifying network address and subnet mask
-
-   -  If a VPC has subnets, you only can change its subnet mask.
-
-
-      .. figure:: /_static/images/en-us_image_0000001627493158.png
-         :alt: **Figure 2** Modifying subnet mask
-
-         **Figure 2** Modifying subnet mask
-
-6. Click **OK**.
-
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001676063997.png
-.. |image3| image:: /_static/images/en-us_image_0000001627174280.png
-.. |image4| image:: /_static/images/en-us_image_0000001675813933.png
-.. |image5| image:: /_static/images/en-us_image_0000001627334080.png
-.. |image6| image:: /_static/images/en-us_image_0141273034.png
-.. |image7| image:: /_static/images/en-us_image_0000001627744152.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818823402.png
+.. |image3| image:: /_static/images/en-us_image_0000001818823394.png
+.. |image4| image:: /_static/images/en-us_image_0000001865663133.png
+.. |image5| image:: /_static/images/en-us_image_0000001818983186.png
+.. |image6| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image7| image:: /_static/images/en-us_image_0000001865663129.png

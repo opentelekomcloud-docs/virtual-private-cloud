@@ -70,7 +70,7 @@ Only the account owner of a VPC in a VPC peering connection can view the routes 
 
 #. Log in to the management console using the account of the peer VPC and view the route of the peer VPC by referring to :ref:`1 <vpc_peering_0004__li4105938135810>`.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626576858.png
-.. |image3| image:: /_static/images/en-us_image_0141273034.png
-.. |image4| image:: /_static/images/en-us_image_0000001675256529.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865662765.png
+.. |image3| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image4| image:: /_static/images/en-us_image_0000001818982826.png

@@ -36,7 +36,7 @@ Procedure
 5. In the upper right corner, click **Create VPC Flow Log**. On the displayed page, configure parameters as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0191544038.png
+   .. figure:: /_static/images/en-us_image_0000001865582905.png
       :alt: **Figure 1** Create VPC Flow Log
 
       **Figure 1** Create VPC Flow Log
@@ -77,5 +77,5 @@ Procedure
 
 6. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675616561.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865663109.png

@@ -36,7 +36,7 @@ Procedure
 #. Configure the parameters as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0000001197426329.png
+   .. figure:: /_static/images/en-us_image_0000001865662885.png
       :alt: **Figure 1** Create Security Group
 
       **Figure 1** Create Security Group
@@ -79,5 +79,5 @@ Procedure
 
 #. Confirm the inbound and outbound rules of the template and click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001627054062.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582681.png

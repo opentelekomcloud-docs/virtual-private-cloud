@@ -32,5 +32,5 @@ Procedure
 
 #. In the virtual IP address list, select the virtual IP address to be bound and click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626578706.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582665.png

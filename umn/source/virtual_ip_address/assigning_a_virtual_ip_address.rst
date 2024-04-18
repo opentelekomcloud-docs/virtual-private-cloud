@@ -43,5 +43,5 @@ Procedure
 
 You can then query the assigned virtual IP address in the IP address list.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626897562.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865663157.png

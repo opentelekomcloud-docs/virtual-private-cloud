@@ -21,5 +21,5 @@ Procedure
 #. Click the IP address to view the NIC details.
 #. Check that **Source/Destination Check** is disabled.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001681512581.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818983486.png

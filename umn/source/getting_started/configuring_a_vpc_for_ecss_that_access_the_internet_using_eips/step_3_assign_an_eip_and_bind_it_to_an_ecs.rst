@@ -38,7 +38,7 @@ Assigning an EIP
 #. Set the parameters as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0000001117669274.png
+   .. figure:: /_static/images/en-us_image_0000001818823034.png
       :alt: **Figure 1** Assign EIP
 
       **Figure 1** Assign EIP
@@ -85,8 +85,8 @@ Assigning an EIP
       | Parameter             | Requirement                                                         | Example Value         |
       +=======================+=====================================================================+=======================+
       | Key                   | -  Cannot be left blank.                                            | Ipv4_key1             |
-      |                       | -  Must be unique for each EIP.                                     |                       |
-      |                       | -  Can contain a maximum of 36 characters.                          |                       |
+      |                       | -  The key value must be unique for the same EIP.                   |                       |
+      |                       | -  Can contain up to 36 characters.                                 |                       |
       |                       | -  Can contain only the following character types:                  |                       |
       |                       |                                                                     |                       |
       |                       |    -  Uppercase letters                                             |                       |
@@ -94,7 +94,7 @@ Assigning an EIP
       |                       |    -  Digits                                                        |                       |
       |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
       +-----------------------+---------------------------------------------------------------------+-----------------------+
-      | Value                 | -  Can contain a maximum of 43 characters.                          | 3005eip               |
+      | Value                 | -  Can contain up to 43 characters.                                 | 3005eip               |
       |                       | -  Can contain only the following character types:                  |                       |
       |                       |                                                                     |                       |
       |                       |    -  Uppercase letters                                             |                       |
@@ -115,7 +115,7 @@ Binding an EIP
 #. Select the instance that you want to bind the EIP to.
 
 
-   .. figure:: /_static/images/en-us_image_0000001166028070.png
+   .. figure:: /_static/images/en-us_image_0000001865662761.png
       :alt: **Figure 2** Bind EIP
 
       **Figure 2** Bind EIP
@@ -135,5 +135,5 @@ You can use any of the following commands to obtain the domain name of an EIP:
 -  nslookup [-qt=ptr] *EIP*
 -  dig -x *EIP*
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001454059512.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818982822.png

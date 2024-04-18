@@ -9,7 +9,7 @@ If your ECSs do not require Internet access or need to access the Internet using
 
 .. _vpc_qs_0004__fd87108563a6848bba1a0f0295fef3515:
 
-.. figure:: /_static/images/en-us_image_0162329244.png
+.. figure:: /_static/images/en-us_image_0000001818823762.png
    :alt: **Figure 1** Configuring the network
 
    **Figure 1** Configuring the network

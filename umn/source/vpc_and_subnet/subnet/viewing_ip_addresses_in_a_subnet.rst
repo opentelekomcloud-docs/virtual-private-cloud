@@ -49,7 +49,7 @@ Procedure
 Follow-up Operations
 --------------------
 
-If you want to view and delete the resources in a subnet, refer to :ref:`Why Can't I Delete My VPCs and Subnets? <vpc_faq_0075>`
+If you want to view and delete the resources in the subnet, refer to :ref:`Why Can't I Delete My VPCs and Subnets? <vpc_faq_0075>`
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675254017.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818983610.png

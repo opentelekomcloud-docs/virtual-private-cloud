@@ -46,7 +46,7 @@ Configuring a VPC for ECSs That Access the Internet Using EIPs
       +-------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
       | Basic Information/Advanced Settings | Tag                    | The VPC tag, which consists of a key and value pair. You can add a maximum of 20 tags to each VPC.                                                                                                                                                          | -  Key: vpc_key1    |
       |                                     |                        |                                                                                                                                                                                                                                                             | -  Value: vpc-01    |
-      |                                     |                        | The tag key and value must meet the requirements listed in :ref:`Table 2 <en-us_topic_0017816228__en-us_topic_0013935842_table248245914136>`.                                                                                                               |                     |
+      |                                     |                        | The tag key and value must meet the requirements listed in :ref:`Table 2 <en-us_topic_0017816228__en-us_topic_0118498861_table248245914136>`.                                                                                                               |                     |
       +-------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
       | Basic Information/Advanced Settings | Description            | Supplementary information about the VPC. This parameter is optional.                                                                                                                                                                                        | N/A                 |
       |                                     |                        |                                                                                                                                                                                                                                                             |                     |
@@ -76,14 +76,14 @@ Configuring a VPC for ECSs That Access the Internet Using EIPs
       +-------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
       | Default Subnet/Advanced Settings    | Tag                    | The subnet tag, which consists of a key and value pair. You can add a maximum of 20 tags to each subnet.                                                                                                                                                    | -  Key: subnet_key1 |
       |                                     |                        |                                                                                                                                                                                                                                                             | -  Value: subnet-01 |
-      |                                     |                        | The tag key and value must meet the requirements listed in :ref:`Table 3 <en-us_topic_0017816228__en-us_topic_0013935842_table6536185812515>`.                                                                                                              |                     |
+      |                                     |                        | The tag key and value must meet the requirements listed in :ref:`Table 3 <en-us_topic_0017816228__en-us_topic_0118498861_table6536185812515>`.                                                                                                              |                     |
       +-------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
       | Default Subnet/Advanced Settings    | Description            | Supplementary information about the subnet. This parameter is optional.                                                                                                                                                                                     | N/A                 |
       |                                     |                        |                                                                                                                                                                                                                                                             |                     |
       |                                     |                        | The subnet description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).                                                                                                                                                  |                     |
       +-------------------------------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
 
-   .. _en-us_topic_0017816228__en-us_topic_0013935842_table248245914136:
+   .. _en-us_topic_0017816228__en-us_topic_0118498861_table248245914136:
 
    .. table:: **Table 2** VPC tag key and value requirements
 
@@ -109,7 +109,7 @@ Configuring a VPC for ECSs That Access the Internet Using EIPs
       |                       |    -  Special characters, including hyphens (-) and underscores (_)    |                       |
       +-----------------------+------------------------------------------------------------------------+-----------------------+
 
-   .. _en-us_topic_0017816228__en-us_topic_0013935842_table6536185812515:
+   .. _en-us_topic_0017816228__en-us_topic_0118498861_table6536185812515:
 
    .. table:: **Table 3** Subnet tag key and value requirements
 
@@ -144,8 +144,8 @@ Configuring a VPC for ECSs That Access the Internet Using EIPs
 -  :ref:`Step 4: Create a Security Group <vpc_qs_0012>`
 -  :ref:`Step 5: Add a Security Group Rule <vpc_qs_0013>`
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001520717193.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865663089.png
 
 .. toctree::
    :maxdepth: 1

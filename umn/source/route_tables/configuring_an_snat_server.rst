@@ -93,7 +93,7 @@ Procedure
    **iptables -t nat -A POSTROUTING -o eth0 -s subnet -j SNAT --to nat-instance-ip**
 
 
-   .. figure:: /_static/images/en-us_image_0214585308.png
+   .. figure:: /_static/images/en-us_image_0000001818983066.png
       :alt: **Figure 1** Configuring SNAT
 
       **Figure 1** Configuring SNAT
@@ -122,7 +122,7 @@ Procedure
 
    .. _vpc_route_0004__en-us_topic_0212076959_fig8358771201535:
 
-   .. figure:: /_static/images/en-us_image_0214585309.png
+   .. figure:: /_static/images/en-us_image_0000001818823278.png
       :alt: **Figure 2** Verifying configuration
 
       **Figure 2** Verifying configuration
@@ -133,5 +133,5 @@ Procedure
 
 After these operations are complete, if the network communication still fails, check your security group and firewall configuration to see whether required traffic is allowed.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001490118666.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582817.png

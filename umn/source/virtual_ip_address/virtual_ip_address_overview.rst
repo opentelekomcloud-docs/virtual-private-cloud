@@ -24,7 +24,7 @@ Virtual IP addresses are used for high availability and can work together with K
    If you want to improve service availability and avoid single points of failure, you can deploy ECSs in the active/standby mode or deploy one active ECS and multiple standby ECSs. In this arrangement, the ECSs all use the same virtual IP address. If the active ECS becomes faulty, a standby ECS takes over services from the active ECS and services continue uninterrupted.
 
 
-   .. figure:: /_static/images/en-us_image_0209608153.png
+   .. figure:: /_static/images/en-us_image_0000001865663033.png
       :alt: **Figure 1** Networking diagram of the HA mode
 
       **Figure 1** Networking diagram of the HA mode
@@ -37,7 +37,7 @@ Virtual IP addresses are used for high availability and can work together with K
    If you want to build a high-availability load balancing cluster, use Keepalived and configure LVS nodes as direct routers.
 
 
-   .. figure:: /_static/images/en-us_image_0240332622.png
+   .. figure:: /_static/images/en-us_image_0000001865663537.png
       :alt: **Figure 2** HA load balancing cluster
 
       **Figure 2** HA load balancing cluster

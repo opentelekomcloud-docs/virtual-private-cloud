@@ -11,6 +11,7 @@ Shared Bandwidth
 -  :ref:`Removing EIPs from a Shared Bandwidth <vpc010007>`
 -  :ref:`Modifying a Shared Bandwidth <vpc010008>`
 -  :ref:`Deleting a Shared Bandwidth <vpc010009>`
+-  :ref:`Exporting Shared Bandwidths <vpc010010>`
 
 .. toctree::
    :maxdepth: 1
@@ -22,3 +23,4 @@ Shared Bandwidth
    removing_eips_from_a_shared_bandwidth
    modifying_a_shared_bandwidth
    deleting_a_shared_bandwidth
+   exporting_shared_bandwidths

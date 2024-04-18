@@ -31,6 +31,6 @@ Procedure
 
    Click |image3| next to ID to copy the VPC ID.
 
-.. |image1| image:: /_static/images/en-us_image_0000001515644737.png
-.. |image2| image:: /_static/images/en-us_image_0000001675613945.png
-.. |image3| image:: /_static/images/en-us_image_0000001465124712.png
+.. |image1| image:: /_static/images/en-us_image_0000001865582937.png
+.. |image2| image:: /_static/images/en-us_image_0000001818983198.png
+.. |image3| image:: /_static/images/en-us_image_0000001818983194.png

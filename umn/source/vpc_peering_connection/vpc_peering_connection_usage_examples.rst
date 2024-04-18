@@ -37,7 +37,7 @@ Peering Two or More VPCs
 
    .. _en-us_topic_0046809840__fig465519155457:
 
-   .. figure:: /_static/images/en-us_image_0000001207827554.png
+   .. figure:: /_static/images/en-us_image_0000001865662841.png
       :alt: **Figure 1** Networking diagram (IPv4)
 
       **Figure 1** Networking diagram (IPv4)
@@ -64,7 +64,7 @@ Peering Two or More VPCs
 
    .. _en-us_topic_0046809840__fig2032313286441:
 
-   .. figure:: /_static/images/en-us_image_0000001207699446.png
+   .. figure:: /_static/images/en-us_image_0000001818982906.png
       :alt: **Figure 2** Networking diagram (IPv4)
 
       **Figure 2** Networking diagram (IPv4)
@@ -106,7 +106,7 @@ Peering One Central VPC with Multiple VPCs
 
 .. _en-us_topic_0046809840__fig724664185:
 
-.. figure:: /_static/images/en-us_image_0000001208260576.png
+.. figure:: /_static/images/en-us_image_0000001818823110.png
    :alt: **Figure 3** Networking diagram (IPv4)
 
    **Figure 3** Networking diagram (IPv4)
@@ -163,7 +163,7 @@ As shown in :ref:`Figure 4 <en-us_topic_0046809840__fig06955277200>`, VPC-A and 
 
 .. _en-us_topic_0046809840__fig06955277200:
 
-.. figure:: /_static/images/en-us_image_0000001521533677.png
+.. figure:: /_static/images/en-us_image_0000001865662833.png
    :alt: **Figure 4** Networking diagram (IPv4)
 
    **Figure 4** Networking diagram (IPv4)
@@ -198,7 +198,7 @@ As shown in :ref:`Figure 5 <en-us_topic_0046809840__fig568511518481>`, VPC-B and
 
 .. _en-us_topic_0046809840__fig568511518481:
 
-.. figure:: /_static/images/en-us_image_0000001209442636.png
+.. figure:: /_static/images/en-us_image_0000001818823118.png
    :alt: **Figure 5** Networking diagram (IPv4)
 
    **Figure 5** Networking diagram (IPv4)
@@ -237,7 +237,7 @@ If VPCs with the same CIDR block also include subnets that overlap, VPC peering 
 In the rtb-VPC-A route table, the custom route for routing traffic from VPC-A to VPC-B and the local route have overlapping destinations. The local route has a higher priority and traffic will be forwarded within VPC-A and cannot reach VPC-B.
 
 
-.. figure:: /_static/images/en-us_image_0000001254335981.png
+.. figure:: /_static/images/en-us_image_0000001818982898.png
    :alt: **Figure 6** Networking diagram (IPv4)
 
    **Figure 6** Networking diagram (IPv4)

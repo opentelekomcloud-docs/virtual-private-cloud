@@ -11,7 +11,7 @@ A firewall is an optional layer of security for your subnets. After you associat
 
 .. _acl_0001__fig9582182315479:
 
-.. figure:: /_static/images/en-us_image_0000001699135873.png
+.. figure:: /_static/images/en-us_image_0000001818982946.png
    :alt: **Figure 1** Security groups and firewalls
 
    **Figure 1** Security groups and firewalls
@@ -24,8 +24,21 @@ Firewall Basics
 ---------------
 
 -  Your VPC does not come with a firewall, but you can create a firewall and associate it with a VPC subnet if required. By default, each firewall denies all inbound traffic to and outbound traffic from the associated subnet until you add rules.
+
 -  You can associate a firewall with multiple subnets. However, a subnet can only be associated with one firewall at a time.
+
 -  Each newly created firewall is in the **Inactive** state until you associate subnets with it.
+
+-  Firewalls use connection tracking to track traffic to and from instances. Changes to inbound and outbound rules do not take effect immediately for the existing traffic.
+
+   If you add, modify, or delete a firewall rule, or associate or disassociate a subnet with or from a firewall, all the inbound and outbound persistent connections will not be disconnected. New rules will only be applied for the new connections.
+
+.. important::
+
+   After a persistent connection is disconnected, new connections will not be established immediately until the timeout period of connection tracking expires. For example, after an ICMP persistent connection is disconnected, a new connection will be established and a new rule will apply when the timeout period (30s) expires.
+
+   -  The timeout period of connection tracking varies by protocol. The timeout period of a TCP connection in the established state is 600s, and that of an ICMP connection is 30s. For other protocols, if packets are received in both inbound and outbound directions, the connection tracking timeout period is 180s. If packets are received only in one direction, the connection tracking timeout period is 30s.
+   -  The timeout period of TCP connections varies by connection status. The timeout period of a TCP connection in the established state is 600s, and that of a TCP connection in the FIN-WAIT state is 30s.
 
 .. _acl_0001__section99541345213:
 
@@ -58,8 +71,8 @@ By default, each firewall has preset rules that allow the following packets:
       | Outbound  | \*       | Deny   | All      | 0.0.0.0/0 | 0.0.0.0/0   | Denies all outbound traffic. |
       +-----------+----------+--------+----------+-----------+-------------+------------------------------+
 
-Rule Priorities
----------------
+How Traffic Matches Firewall Rules
+----------------------------------
 
 -  Each firewall rule has a priority value where a smaller value corresponds to a higher priority. Any time two rules conflict, the rule with the higher priority is the one that gets applied. The rule whose priority value is an asterisk (*) has the lowest priority.
 -  If multiple firewall rules conflict, only the rule with the highest priority takes effect. If you need a rule to take effect before or after a specific rule, you can insert that rule before or after the specific rule.
@@ -90,7 +103,7 @@ Configuration Procedure
 
 .. _acl_0001__fig1643183218163:
 
-.. figure:: /_static/images/en-us_image_0162335382.png
+.. figure:: /_static/images/en-us_image_0000001818982962.png
    :alt: **Figure 2** firewall configuration procedure
 
    **Figure 2** firewall configuration procedure
