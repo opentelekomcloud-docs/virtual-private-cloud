@@ -22,7 +22,7 @@ If you want to release a virtual IP address that is being used by a resource, re
    +-----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
    | Prompts                                                                                                                           | Cause Analysis and Solution                                                                                                         |
    +===================================================================================================================================+=====================================================================================================================================+
-   | This operation cannot be performed because the IP address is bound to an instance or an EIP. Unbind the IP address and try again. | This virtual IP address is being by an EIP or an ECS.                                                                               |
+   | This operation cannot be performed because the IP address is bound to an instance or an EIP. Unbind the IP address and try again. | This virtual IP address is being used by an EIP or an ECS.                                                                          |
    |                                                                                                                                   |                                                                                                                                     |
    |                                                                                                                                   | Unbind the virtual IP address first.                                                                                                |
    |                                                                                                                                   |                                                                                                                                     |
@@ -55,5 +55,5 @@ Procedure
 
 #. Confirm the information and click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675378241.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818983414.png

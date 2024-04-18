@@ -30,12 +30,12 @@ Procedure
 5. Locate the row that contains the VPC flow log to be deleted and click **Delete** in the **Operation** column.
 
 
-   .. figure:: /_static/images/en-us_image_0191594527.png
+   .. figure:: /_static/images/en-us_image_0000001818983242.png
       :alt: **Figure 1** Deleting a VPC flow log
 
       **Figure 1** Deleting a VPC flow log
 
 6. Click **Yes** in the displayed dialog box.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626736794.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582989.png

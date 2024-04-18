@@ -12,6 +12,7 @@ Service Overview
 -  :ref:`VPC and Other Services <vpc_relationship_0001>`
 -  :ref:`Permissions <overview_permission>`
 -  :ref:`Basic Concepts <vpc_concepts_0001>`
+-  :ref:`Region and AZ <overview_region>`
 -  :ref:`Document Usage Instructions <vpc_use_0001>`
 
 .. toctree::
@@ -25,4 +26,5 @@ Service Overview
    vpc_and_other_services
    permissions
    basic_concepts/index
+   region_and_az
    document_usage_instructions

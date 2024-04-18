@@ -15,7 +15,7 @@ If you bind a virtual IP address to ECSs that work in active/standby pairs and b
 Notes and Constraints
 ---------------------
 
--  Each virtual IP address can be bound to only one EIP.
+-  A virtual IP address can only be bound to one EIP.
 
 Binding a Virtual IP Address to an EIP or ECS on the Console
 ------------------------------------------------------------
@@ -61,7 +61,7 @@ Configuring a Virtual IP Address for an ECS
 
 Manually configure the virtual IP address bound to an ECS.
 
-This following OSs are used as examples here. For other OSs, see the help documents on their official websites.
+The following OSs are used as examples here. For other OSs, see the help documents on their official websites.
 
 -  Linux: CentOS 7.2 64bit and Ubuntu 22.04 server 64bit
 -  Windows: Windows Server
@@ -138,7 +138,7 @@ This following OSs are used as examples here. For other OSs, see the help docume
 
 **Linux (Ubuntu 22.04 server 64bit is used as an example.)**
 
-If an ECS runs Ubuntu 22 or Ubuntu 20, perform the following operations:
+For Ubuntu 22 or Ubuntu 20 ECSs, perform the following operations:
 
 #. Obtain the NIC that the virtual IP address is to be bound:
 
@@ -251,7 +251,7 @@ If an ECS runs Ubuntu 22 or Ubuntu 20, perform the following operations:
 #. Select **Use the following IP address** and set **IP address** to the private IP address of the ECS, for example, 10.0.0.101.
 
 
-   .. figure:: /_static/images/en-us_image_0000001179761510.png
+   .. figure:: /_static/images/en-us_image_0000001818823142.png
       :alt: **Figure 1** Configuring private IP address
 
       **Figure 1** Configuring private IP address
@@ -263,7 +263,7 @@ If an ECS runs Ubuntu 22 or Ubuntu 20, perform the following operations:
    Add the virtual IP address, for example, 10.0.0.154.
 
 
-   .. figure:: /_static/images/en-us_image_0000001225081545.png
+   .. figure:: /_static/images/en-us_image_0000001818982934.png
       :alt: **Figure 2** Configuring virtual IP address
 
       **Figure 2** Configuring virtual IP address
@@ -276,8 +276,8 @@ If an ECS runs Ubuntu 22 or Ubuntu 20, perform the following operations:
 
    In the command output, **IPv4 Address** is the virtual IP address 10.0.0.154, indicating that the virtual IP address of the ECS NIC has been correctly configured.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626738526.png
-.. |image3| image:: /_static/images/en-us_image_0000001281210233.png
-.. |image4| image:: /_static/images/en-us_image_0000001237328110.png
-.. |image5| image:: /_static/images/en-us_image_0000001237013856.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865582673.png
+.. |image3| image:: /_static/images/en-us_image_0000001818982930.png
+.. |image4| image:: /_static/images/en-us_image_0000001865582677.png
+.. |image5| image:: /_static/images/en-us_image_0000001818823138.png

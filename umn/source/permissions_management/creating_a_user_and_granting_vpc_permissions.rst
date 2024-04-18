@@ -18,7 +18,7 @@ If your cloud account meets your permissions requirements, you can skip this sec
 Prerequisites
 -------------
 
-Learn about the permissions (see :ref:`Permissions <overview_permission>`) supported by VPC and choose policies or roles according to your requirements.
+Before granting permissions to user groups, learn about permissions (:ref:`Permissions <overview_permission>`) for VPC.
 
 To grant permissions for other services, learn about all `permissions <https://docs.otc.t-systems.com/permissions/index.html>`__ supported by IAM.
 
@@ -27,7 +27,7 @@ Process Flow
 
 .. _permission_0003__fig1447123814172:
 
-.. figure:: /_static/images/en-us_image_0171311823.png
+.. figure:: /_static/images/en-us_image_0000001818823522.png
    :alt: **Figure 1** Process for granting VPC permissions
 
    **Figure 1** Process for granting VPC permissions
@@ -40,5 +40,5 @@ Process Flow
 
    In the authorized region, perform the following operations:
 
-   -  Choose **Service List** > **Virtual Private Cloud**. Then click **Create VPC** on the VPC console. If a message appears indicating that you have insufficient permissions to perform the operation, the **VPCReadOnlyAccess** policy is in effect.
-   -  Choose another service from **Service List**. If a message appears indicating that you have insufficient permissions to access the service, the **VPCReadOnlyAccess** policy is in effect.
+   -  Choose **Service List** > **Virtual Private Cloud**. Then click **Create VPC** on the VPC console. If a message appears indicating that you have insufficient permissions to perform the operation, the **VPC ReadOnlyAccess** policy is in effect.
+   -  Choose another service from **Service List**. If a message appears indicating that you have insufficient permissions to access the service, the **VPC ReadOnlyAccess** policy is in effect.

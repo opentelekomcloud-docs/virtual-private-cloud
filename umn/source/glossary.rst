@@ -2,7 +2,7 @@
 
 .. _vpc_faq_0106:
 
-Glossary
-========
+**Glossary**
+============
 
-For details about the terms involved in this document, see `Glossary <https://docs.otc.t-systems.com/en-us/glossary/index.html>`__.
+For details about the glossaries in this document, see `Glossary <https://docs.otc.t-systems.com/en-us/glossary/index.html>`__.

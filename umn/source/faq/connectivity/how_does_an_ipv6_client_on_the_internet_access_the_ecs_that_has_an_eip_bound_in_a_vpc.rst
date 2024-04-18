@@ -13,7 +13,7 @@ After users who use IPv6 clients bind an IPv6 EIP to an ECS, the data flow is sh
 
 .. _vpc_faq_0076__fig1038524023539:
 
-.. figure:: /_static/images/en-us_image_0118499144.png
+.. figure:: /_static/images/en-us_image_0000001865662749.png
    :alt: **Figure 1** IPv6 data flow
 
    **Figure 1** IPv6 data flow

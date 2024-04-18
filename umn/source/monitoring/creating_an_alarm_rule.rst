@@ -29,7 +29,7 @@ Procedure
 
    .. note::
 
-      For more information about alarm rules, see the *Cloud Eye User Guide*.
+      For more information about alarm rules, see `Cloud Eye User Guide <https://docs.otc.t-systems.com/cloud-eye/umn/product_introduction/what_is_cloud_eye.html#en-us-topic-0015479882>`__.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675258889.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865663473.png

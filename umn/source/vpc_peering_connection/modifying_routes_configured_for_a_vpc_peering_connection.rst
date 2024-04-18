@@ -99,7 +99,7 @@ Only the account owner of a VPC can modify the routes added for the connection.
 
 #. Log in to the management console using the account of the peer VPC and modify the route of the peer VPC by referring to :ref:`1 <vpc_peering_0007__li4105938135810>`.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001627056574.png
-.. |image3| image:: /_static/images/en-us_image_0141273034.png
-.. |image4| image:: /_static/images/en-us_image_0000001626736678.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865662901.png
+.. |image3| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image4| image:: /_static/images/en-us_image_0000001818823166.png

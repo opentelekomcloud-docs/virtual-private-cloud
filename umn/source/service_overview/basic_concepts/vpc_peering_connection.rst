@@ -18,7 +18,7 @@ A VPC peering connection is a networking connection that connects two VPCs for t
 
 .. _vpc_concepts_0011__en-us_topic_0046655036_fig4721642193711:
 
-.. figure:: /_static/images/en-us_image_0000001512591549.png
+.. figure:: /_static/images/en-us_image_0000001818983018.png
    :alt: **Figure 1** VPC peering connection network diagram
 
    **Figure 1** VPC peering connection network diagram

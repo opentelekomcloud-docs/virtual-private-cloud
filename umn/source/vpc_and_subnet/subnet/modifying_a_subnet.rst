@@ -57,6 +57,6 @@ Procedure
 
 7. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626574370.png
-.. |image3| image:: /_static/images/en-us_image_0000001337710801.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818823766.png
+.. |image3| image:: /_static/images/en-us_image_0000001865583301.png

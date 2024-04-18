@@ -9,7 +9,7 @@ If your ECSs need to access the Internet (for example, the ECSs functioning as t
 
 .. _vpc_qs_0022__fe457c1ec47c84d6fa3b87210d5b284eb:
 
-.. figure:: /_static/images/en-us_image_0162332046.png
+.. figure:: /_static/images/en-us_image_0000001818823006.png
    :alt: **Figure 1** Configuring the network
 
    **Figure 1** Configuring the network

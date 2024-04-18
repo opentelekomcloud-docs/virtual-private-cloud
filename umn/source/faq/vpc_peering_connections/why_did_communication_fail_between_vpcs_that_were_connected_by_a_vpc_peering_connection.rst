@@ -35,7 +35,7 @@ The issues here are described in order of how likely they are to occur.
    |                       |                                                                                                        |                                                                                                            |
    |                       | -  The security group rules of the ECSs that need to communicate deny inbound traffic from each other. |                                                                                                            |
    |                       | -  The firewall of the ECS NIC blocks traffic.                                                         |                                                                                                            |
-   |                       | -  The network ACL rules of the subnets connected by the VPC peering connection deny inbound traffic.  |                                                                                                            |
+   |                       | -  The firewall rules of the subnets connected by the VPC peering connection deny inbound traffic.     |                                                                                                            |
    |                       | -  Check the policy-based routing configuration of an ECS with multiple NICs.                          |                                                                                                            |
    +-----------------------+--------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
    | 4                     | ECS network failure                                                                                    | Refer to :ref:`ECS Network Failure <vpc_faq_0069__section8357923710>`.                                     |
@@ -68,14 +68,14 @@ If the CIDR blocks of VPCs connected by a VPC peering connection overlap, the co
 
 .. _vpc_faq_0069__fig465519155457:
 
-.. figure:: /_static/images/en-us_image_0000001254335981.png
+.. figure:: /_static/images/en-us_image_0000001818982898.png
    :alt: **Figure 1** Networking diagram (IPv4)
 
    **Figure 1** Networking diagram (IPv4)
 
 .. _vpc_faq_0069__fig098452131910:
 
-.. figure:: /_static/images/en-us_image_0000001209777270.png
+.. figure:: /_static/images/en-us_image_0000001818983474.png
    :alt: **Figure 2** Networking diagram (IPv4)
 
    **Figure 2** Networking diagram (IPv4)
@@ -84,7 +84,7 @@ If CIDR blocks of VPCs overlap and some of their subnets overlap, you can create
 
 .. _vpc_faq_0069__fig920231311415:
 
-.. figure:: /_static/images/en-us_image_0000001209321492.png
+.. figure:: /_static/images/en-us_image_0000001818823702.png
    :alt: **Figure 3** Networking diagram (IPv4)
 
    **Figure 3** Networking diagram (IPv4)
@@ -106,7 +106,7 @@ If CIDR blocks of VPCs overlap and some of their subnets overlap, you can create
 Incorrect Route Configuration for Local and Peer VPCs
 -----------------------------------------------------
 
-Check the routes in the route tables of the local and peer VPCs by referring to :ref:`Viewing Routes Configured for a VPC Peering Connection <vpc_peering_0004>`. :ref:`Table 4 <vpc_faq_0069__table513212558272>` lists the items that you need to check.
+:ref:`Viewing Routes Configured for a VPC Peering Connection <vpc_peering_0004>`. :ref:`Table 4 <vpc_faq_0069__table513212558272>` lists the items that you need to check.
 
 .. _vpc_faq_0069__table513212558272:
 
@@ -119,7 +119,7 @@ Check the routes in the route tables of the local and peer VPCs by referring to 
    |                                                                                                                                                                  |                                                                                                                                                                                  |
    |                                                                                                                                                                  | -  :ref:`Creating a VPC Peering Connection with Another VPC in Your Account <en-us_topic_0046655037>`                                                                            |
    +------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Check the destinations of routes added to the route tables of the local and peer VPCs.                                                                           | If the route destination is incorrect, change it by referring to :ref:`Modifying Routes Configured for a VPC Peering Connection <vpc_peering_0007>`.                             |
+   | Check the destinations of routes added to the route tables of the local and peer VPCs.                                                                           | If the route destination is incorrect, modify it by referring to :ref:`Modifying Routes Configured for a VPC Peering Connection <vpc_peering_0007>`.                             |
    |                                                                                                                                                                  |                                                                                                                                                                                  |
    | -  In the route table of the local VPC, check whether the route destination is the CIDR block, subnet CIDR block, or related private IP address of the peer VPC. |                                                                                                                                                                                  |
    | -  In the route table of the peer VPC, check whether the route destination is the CIDR block, subnet CIDR block, or related private IP address of the local VPC. |                                                                                                                                                                                  |
@@ -134,18 +134,18 @@ Check the routes in the route tables of the local and peer VPCs by referring to 
 Incorrect Network Configuration
 -------------------------------
 
-#. Check whether security group rules of the ECSs that need to communicate allow inbound traffic from each other by referring to :ref:`Viewing the Security Group of an ECS <vpc_securitygroup_0011>`.
+#. Check whether the security group rules of the ECSs that need to communicate with each other are correctly configured. For details, see :ref:`Viewing the Security Group of an ECS <vpc_securitygroup_0011>`.
 
    -  If the ECSs are associated with the same security group, you do not need to check their rules.
-   -  If the ECSs are associated with different security groups, add an inbound rule to allow access from each other by referring to :ref:`Security Group Configuration Examples <en-us_topic_0081124350>`.
+   -  If the ECSs are in different security groups, you need to add inbound rules to allow access from the peer security group. For details, see :ref:`Security Group Configuration Examples <en-us_topic_0081124350>`.
 
 #. Check whether the firewall of the ECS NIC blocks traffic.
 
    If the firewall blocks traffic, configure the firewall to allow inbound traffic.
 
-#. Check whether network ACL rules of the subnets connected by the VPC peering connection deny inbound traffic.
+#. Check whether firewall rules of the subnets connected by the VPC peering connection deny inbound traffic.
 
-   If the network ACL rules deny inbound traffic, configure the rules to allow the traffic.
+   If the firewall rules deny inbound traffic, configure the rules to allow the traffic.
 
 #. If an ECS has more than one NIC, check whether correct policy-based routing has been configured for the ECS and packets with different source IP addresses match their own routes from each NIC.
 
@@ -172,13 +172,10 @@ ECS Network Failure
 -------------------
 
 #. Log in to the ECS.
-
 #. Check whether the ECS NIC has an IP address assigned.
 
    -  Linux ECS: Use the **ifconfig** or **ip address** command to view the IP address of the NIC.
    -  Windows ECS: In the search box, enter **cmd** and press **Enter**. In the displayed command prompt, run the **ipconfig** command.
-
-   If the ECS NIC has no IP address assigned, see
 
 #. Check whether the subnet gateway of the ECS can be pinged.
 

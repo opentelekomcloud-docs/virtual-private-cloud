@@ -40,7 +40,7 @@ Procedure
 
    .. important::
 
-      If a VPC cannot be deleted, a message will be displayed on the console. Delete the resources that are in the VPC by referring to :ref:`Why Can't I Delete My VPCs and Subnets? <vpc_faq_0075>`
+      If a subnet cannot be deleted, a message will be displayed on the console. Delete the resources that are in the subnet by referring to :ref:`Why Can't I Delete My VPCs and Subnets? <vpc_faq_0075>`
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001626574366.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865663521.png

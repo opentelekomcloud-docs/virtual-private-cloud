@@ -11,7 +11,7 @@ Route Tables
 A route table contains a set of routes that are used to determine where network traffic from your subnets in a VPC is directed. Each subnet must be associated with a route table. A subnet can only be associated with one route table, but you can associate multiple subnets with the same route table.
 
 
-.. figure:: /_static/images/en-us_image_0000001650535960.png
+.. figure:: /_static/images/en-us_image_0000001865662949.png
    :alt: **Figure 1** Route tables
 
    **Figure 1** Route tables
@@ -49,11 +49,11 @@ You can add routes to default and custom route tables and configure the destinat
 
 -  Custom routes: These are routes that you can add, modify, and delete. The destination of a custom route cannot overlap with that of a system route.
 
-   You can add a custom route and configure the destination, next hop type, and next hop in the route to determine where network traffic is directed. :ref:`Table 1 <vpc_route01_0001__en-us_topic_0038263963_route_0001_table1727714140542>` lists the supported types of next hops.
+   You can add a custom route and configure the destination, next hop type, and next hop in the route to determine where network traffic is directed. :ref:`Table 1 <vpc_route01_0001__en-us_topic_0118498988_en-us_topic_0121831807_table1727714140542>` lists the supported types of next hops.
 
    You cannot add two routes with the same destination to a VPC route table even if their next hop types are different. The route priority depends on the destination. According to the longest match routing rule, the destination with a higher matching degree is preferentially selected for packet forwarding.
 
-   .. _vpc_route01_0001__en-us_topic_0038263963_route_0001_table1727714140542:
+   .. _vpc_route01_0001__en-us_topic_0118498988_en-us_topic_0121831807_table1727714140542:
 
    .. table:: **Table 1** Next hop type
 
@@ -66,8 +66,7 @@ You can add routes to default and custom route tables and configure the destinat
       | Extension NIC            | Traffic intended for the destination is forwarded to the extension NIC of an ECS in the VPC.                                                                 | -  Default route table |
       |                          |                                                                                                                                                              | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-      | BMS user-defined network | Traffic intended for the destination is forwarded to a BMS user-defined network. Currently, this parameter is available only in eu-de.                       | -  Default route table |
-      |                          |                                                                                                                                                              | -  Custom route table  |
+      | BMS user-defined network | Traffic intended for the destination is forwarded to a BMS user-defined network. Currently, this parameter is available only in eu-de.                       | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | VPN connection           | Traffic intended for the destination is forwarded to a VPN gateway.                                                                                          | Custom route table     |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
@@ -96,7 +95,7 @@ Custom Route Table Configuration Process
 
 .. _vpc_route01_0001__en-us_topic_0212076956_fig16862186152219:
 
-.. figure:: /_static/images/en-us_image_0214585341.png
+.. figure:: /_static/images/en-us_image_0000001818823214.png
    :alt: **Figure 2** Route table configuration process
 
    **Figure 2** Route table configuration process

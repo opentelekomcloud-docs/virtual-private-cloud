@@ -34,5 +34,5 @@ Procedure
    -  Modify or delete a subnet.
    -  Add an ECS to a subnet, bind an EIP to the ECS, and change the security group of the ECS.
 
-.. |image1| image:: /_static/images/en-us_image_0000001221790501.png
-.. |image2| image:: /_static/images/en-us_image_0000001675413833.png
+.. |image1| image:: /_static/images/en-us_image_0000001865662737.png
+.. |image2| image:: /_static/images/en-us_image_0000001818982798.png

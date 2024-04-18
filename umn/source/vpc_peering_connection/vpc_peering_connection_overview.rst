@@ -21,7 +21,7 @@ A VPC peering connection is a networking connection that connects two VPCs for t
 
 .. _en-us_topic_0046655036__fig4721642193711:
 
-.. figure:: /_static/images/en-us_image_0000001512591549.png
+.. figure:: /_static/images/en-us_image_0000001818983018.png
    :alt: **Figure 1** VPC peering connection network diagram
 
    **Figure 1** VPC peering connection network diagram
@@ -37,7 +37,7 @@ A VPC peering connection can only connect VPCs in the same region.
 
    .. _en-us_topic_0046655036__en-us_topic_0000001154868962_fig10285152624918:
 
-   .. figure:: /_static/images/en-us_image_0000001512701025.png
+   .. figure:: /_static/images/en-us_image_0000001818823678.png
       :alt: **Figure 2** Process of creating a VPC peering connection between VPCs in the same account
 
       **Figure 2** Process of creating a VPC peering connection between VPCs in the same account
@@ -50,7 +50,7 @@ A VPC peering connection can only connect VPCs in the same region.
 
    .. _en-us_topic_0046655036__fig16137161191713:
 
-   .. figure:: /_static/images/en-us_image_0000001462622484.png
+   .. figure:: /_static/images/en-us_image_0000001865583217.png
       :alt: **Figure 3** Process of creating a VPC peering connection between VPCs in different accounts
 
       **Figure 3** Process of creating a VPC peering connection between VPCs in different accounts

@@ -28,7 +28,7 @@ Notes and Constraints
 
    To check which ECSs support IPv6:
 
-   -  On the ECS console, click **Buy ECS**. On the displayed page, view the ECS specifications.
+   -  On the ECS console: Click **Create ECS**. On the displayed page, view the ECS specifications.
 
       If there is the **IPv6** parameter with the value of **Yes**, the ECS specifications support IPv6.
 
@@ -41,24 +41,45 @@ If your ECS supports IPv6, you can use the IPv4/IPv6 dual-stack network. :ref:`T
 
 .. table:: **Table 1** Application scenarios of IPv4/IPv6 dual stack
 
-   +--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------------------------------------+
-   | Application Scenario                       | Description                                                                                                                                             | Subnet             | ECS                                                                       |
-   +============================================+=========================================================================================================================================================+====================+===========================================================================+
-   | Private communication using IPv6 addresses | Your applications deployed on ECSs need to communicate with other systems (such as databases) through private networks using IPv6 addresses.            | -  IPv4 CIDR block | -  Private IPv4 address: used for private communication                   |
-   |                                            |                                                                                                                                                         | -  IPv6 CIDR block | -  IPv6 address: used for private communication.                          |
-   +--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------------------------------------+
-   | Public communication using IPv6 addresses  | Your applications deployed on ECSs need to provide services accessible from the Internet using IPv6 addresses.                                          | -  IPv4 CIDR block | -  Private IPv4 address + IPv4 EIP: used for public network communication |
-   |                                            |                                                                                                                                                         | -  IPv6 CIDR block | -  IPv6 address + shared bandwidth: used for public network communication |
-   +--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------------------------------------+
-   |                                            | Your applications deployed on ECSs need to both provide services accessible from the Internet and analyze the access request data using IPv6 addresses. |                    |                                                                           |
-   +--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------------------------------------------------------------------------+
+   +----------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Application Scenario       | Description                                                                                                                         | Requirement                                                 | IPv4 or IPv6 Subnet | ECS                                                                                                                                              |
+   +============================+=====================================================================================================================================+=============================================================+=====================+==================================================================================================================================================+
+   | Private IPv4 communication | Your applications on ECSs need to communicate with other systems (such as databases) through private networks using IPv4 addresses. | -  IPv6 is not enabled for the VPC subnet.                  | IPv4 CIDR Block     | **Private IPv4 address**: used for private IPv4 communication.                                                                                   |
+   |                            |                                                                                                                                     | -  No EIPs have been bound to the ECSs.                     |                     |                                                                                                                                                  |
+   +----------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Public IPv4 communication  | Your applications on ECSs need to communicate with other systems (such as databases) through public IPv4 addresses.                 | -  IPv6 is not enabled for the VPC subnet.                  | IPv4 CIDR Block     | -  **Private IPv4 address**: used for private IPv4 communication.                                                                                |
+   |                            |                                                                                                                                     | -  EIPs have been bound to the ECSs.                        |                     | -  **Public IPv4 address**: used for public IPv4 communication.                                                                                  |
+   +----------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Private IPv6 communication | Your applications on ECSs need to communicate with other systems (such as databases) through private IPv6 addresses.                | -  IPv6 has been enabled for the VPC subnet.                | -  IPv4 CIDR Block  | -  **Private IPv4 address + IPv4 EIP**: Bind an IPv4 EIP to the instance to allow public IPv4 communication.                                     |
+   |                            |                                                                                                                                     | -  The network has been configured for the ECSs as follows: | -  IPv6 CIDR block  | -  **Private IPv4 address**: Do not bind any IPv4 EIP to the instance and use only the private IPv4 address to allow private IPv4 communication. |
+   |                            |                                                                                                                                     |                                                             |                     | -  **IPv6 address**: Do not configure shared bandwidth for the IPv6 address to allow private IPv6 communication.                                 |
+   |                            |                                                                                                                                     |    -  **VPC and Subnet**: IPv6-enabled subnet and VPC.      |                     |                                                                                                                                                  |
+   |                            |                                                                                                                                     |    -  **Shared Bandwidth**: Selected **Do not configure**.  |                     |                                                                                                                                                  |
+   +----------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Public IPv6 communication  | An IPv6 network is required for the ECS to access the IPv6 service on the Internet.                                                 | -  IPv6 has been enabled for the VPC subnet.                | -  IPv4 CIDR Block  | -  **Private IPv4 address + IPv4 EIP**: Bind an IPv4 EIP to the instance to allow public IPv4 communication.                                     |
+   |                            |                                                                                                                                     | -  The network has been configured for the ECSs as follows: | -  IPv6 CIDR block  | -  **Private IPv4 address**: Do not bind any IPv4 EIP to the instance and use only the private IPv4 address to allow private IPv4 communication. |
+   |                            |                                                                                                                                     |                                                             |                     |                                                                                                                                                  |
+   |                            |                                                                                                                                     |    -  **VPC and Subnet**: IPv6-enabled subnet and VPC.      |                     | -  **IPv6 address + shared bandwidth**: Allow both private IPv6 communication and public IPv6 communication.                                     |
+   |                            |                                                                                                                                     |    -  **Shared Bandwidth**: Selected a shared bandwidth.    |                     |                                                                                                                                                  |
+   +----------------------------+-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: **Table 2** Application scenarios of IPv6 EIPs
+
+   +-------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------+--------------------------------------------------------------------------------------------------+
+   | Application Scenario                      | Description                                                                                                    | Subnet          | ECS                                                                                              |
+   +===========================================+================================================================================================================+=================+==================================================================================================+
+   | Public communication using IPv6 addresses | Your applications deployed on ECSs need to provide services accessible from the Internet using IPv6 addresses. | IPv4 CIDR block | -  Private IPv4 address                                                                          |
+   |                                           |                                                                                                                |                 | -  IPv4 EIP (with IPv6 function enabled): used for public communication using IPv4 and IPv6 EIPs |
+   +-------------------------------------------+----------------------------------------------------------------------------------------------------------------+-----------------+--------------------------------------------------------------------------------------------------+
 
 Basic Operations
 ----------------
 
 **Creating an IPv6 Subnet**
 
-Create an IPv6 subnet by following the instructions in :ref:`Creating a Subnet for the VPC <en-us_topic_0013748726>`. Select **Enable** for **IPv6 CIDR Block**. An IPv6 CIDR block will be automatically assigned to the subnet. IPv6 cannot be disabled after the subnet is created. Currently, customizing IPv6 CIDR block is not supported.
+Create an IPv6 subnet by following the instructions in :ref:`Creating a Subnet for the VPC <en-us_topic_0013748726>`. Select **Enable** for **IPv6 CIDR Block**. An IPv6 CIDR block will be automatically assigned to the subnet. IPv6 cannot be disabled after the subnet is created.
+
+To disable this function, call the API by referring to `Updating Subnet Information <https://docs.otc.t-systems.com/virtual-private-cloud/api-ref/apis/subnet/updating_subnet_information.html#vpc-subnet01-0004>`__.
 
 **Viewing In-Use IPv6 Addresses**
 
@@ -68,9 +89,9 @@ In the subnet list, click the subnet name. On the displayed page, view in-use IP
 
 Add a security group rule with **Type** set to **IPv6** and **Source** or **Destination** set to an IPv6 address or IPv6 CIDR block.
 
-**Adding a Network ACL Rule (IPv6)**
+Adding an IPv6 Firewall Rule
 
-Add a network ACL rule with **Type** set to **IPv6** and **Source** or **Destination** set to an IPv6 address or IPv6 CIDR block.
+Add a firewall rule with **Type** set to **IPv6** and **Source** or **Destination** set to an IPv6 address or IPv6 CIDR block.
 
 **Adding a Route (IPv6)**
 

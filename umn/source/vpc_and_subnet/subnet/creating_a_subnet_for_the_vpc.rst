@@ -32,7 +32,7 @@ Procedure
 6. Set the parameters as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0000001197228903.png
+   .. figure:: /_static/images/en-us_image_0000001818823514.png
       :alt: **Figure 1** Create Subnet
 
       **Figure 1** Create Subnet
@@ -49,6 +49,8 @@ Procedure
       |                                      | The name can contain a maximum of 64 characters, which may consist of letters, digits, underscores (_), hyphens (-), and periods (.). The name cannot contain spaces.                                                                                       |                       |
       +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | IPv4 CIDR Block                      | The CIDR block for the subnet. This value must be within the VPC CIDR block.                                                                                                                                                                                | 192.168.0.0/24        |
+      |                                      |                                                                                                                                                                                                                                                             |                       |
+      |                                      | If the VPC has a secondary CIDR block, you can select the primary or the secondary CIDR block that the subnet will belong to based on service requirements.                                                                                                 |                       |
       +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | IPv6 CIDR Block                      | Specifies whether to set **IPv6 CIDR Block** to **Enable**.                                                                                                                                                                                                 | ``-``                 |
       |                                      |                                                                                                                                                                                                                                                             |                       |
@@ -68,14 +70,14 @@ Procedure
       +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Advanced Settings/Tag                | The subnet tag, which consists of a key and value pair. You can add a maximum of 20 tags to each subnet.                                                                                                                                                    | -  Key: subnet_key1   |
       |                                      |                                                                                                                                                                                                                                                             | -  Value: subnet-01   |
-      |                                      | The tag key and value must meet the requirements listed in :ref:`Table 2 <en-us_topic_0013748726__table42131827173915>`.                                                                                                                                    |                       |
+      |                                      | The tag key and value must meet the requirements listed in :ref:`Table 2 <en-us_topic_0013748726__table6536185812515>`.                                                                                                                                     |                       |
       +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Advanced Settings/Description        | Supplementary information about the subnet. This parameter is optional.                                                                                                                                                                                     | ``-``                 |
       |                                      |                                                                                                                                                                                                                                                             |                       |
       |                                      | The subnet description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).                                                                                                                                                  |                       |
       +--------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
-   .. _en-us_topic_0013748726__table42131827173915:
+   .. _en-us_topic_0013748726__table6536185812515:
 
    .. table:: **Table 2** Subnet tag key and value requirements
 
@@ -116,5 +118,5 @@ When a subnet is created, there are five reserved IP addresses, which cannot be 
 
 If you configured the default settings under **Advanced Settings** during subnet creation, the reserved IP addresses may be different from the default ones, but there will still be five of them. The specific addresses depend on your subnet settings.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675254021.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001818983298.png

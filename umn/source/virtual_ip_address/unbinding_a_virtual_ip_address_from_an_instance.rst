@@ -34,7 +34,7 @@ Procedure
    The virtual IP address list is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001570070841.png
+   .. figure:: /_static/images/en-us_image_0000001818982758.png
       :alt: **Figure 1** Virtual IP addresses
 
       **Figure 1** Virtual IP addresses
@@ -53,5 +53,5 @@ Procedure
 
    c. Confirm the information and click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675618277.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865662721.png

@@ -41,7 +41,7 @@ Procedure
    b. In the **Networking Components** area on the right of the page, view the NAT gateway, route table, and subnet.
 
 
-   .. figure:: /_static/images/en-us_image_0000001678437642.png
+   .. figure:: /_static/images/en-us_image_0000001818823010.png
       :alt: **Figure 1** Viewing resources in a subnet
 
       **Figure 1** Viewing resources in a subnet
@@ -88,6 +88,6 @@ Procedure
       |                                   | c. Locate the row that contains the NAT gateway and click **Delete** in the **Operation** column.                                                |
       +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001675413829.png
-.. |image3| image:: /_static/images/en-us_image_0000001461263993.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865662745.png
+.. |image3| image:: /_static/images/en-us_image_0000001818982794.png

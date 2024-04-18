@@ -93,7 +93,7 @@ Procedure
 
       Locate the row that contains the tag you want to delete, and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0141273034.png
-.. |image2| image:: /_static/images/en-us_image_0000001627052380.png
-.. |image3| image:: /_static/images/en-us_image_0141273034.png
-.. |image4| image:: /_static/images/en-us_image_0000001675373913.png
+.. |image1| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image2| image:: /_static/images/en-us_image_0000001865583185.png
+.. |image3| image:: /_static/images/en-us_image_0000001818982734.png
+.. |image4| image:: /_static/images/en-us_image_0000001818983426.png
