@@ -31,5 +31,11 @@ Procedure
 
    On the displayed page, view details about the VPC peering connection.
 
+
+   .. figure:: /_static/images/en-us_image_0000001865884494.png
+      :alt: **Figure 1** View VPC peering connections
+
+      **Figure 1** View VPC peering connections
+
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001865663213.png

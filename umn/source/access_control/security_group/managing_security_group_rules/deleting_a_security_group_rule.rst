@@ -13,10 +13,7 @@ If your security group rule is no longer required, you can delete it.
 Notes and Constraints
 ---------------------
 
-Security group rules use whitelists. Deleting a security group rule may result in ECS access failures. Security group rules work as follows:
-
--  Inbound rule: If an inbound request matches the source in an inbound security group rule with **Action** set to **Allow**, the request is allowed.
--  Outbound rule: If the destination of an outbound security group rule with **Action** set to **Allow** is 0.0.0.0/0, all outbound requests are allowed.
+Security group rules use whitelists. Deleting a security group rule may result in ECS access failures.
 
 Procedure
 ---------

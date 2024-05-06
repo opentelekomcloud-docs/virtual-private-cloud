@@ -8,7 +8,7 @@ Modifying a VPC Peering Connection
 Scenarios
 ---------
 
-This section describes how to modify the name of a VPC peering connection.
+This section describes how to modify the basic information about a VPC peering connection, including its name and description.
 
 Either owner of a VPC in a peering connection can modify the VPC peering connection in any state.
 

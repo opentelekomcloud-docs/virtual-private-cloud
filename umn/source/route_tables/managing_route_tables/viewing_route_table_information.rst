@@ -32,7 +32,20 @@ Procedure
    The route table details page is displayed.
 
    a. On the **Summary** tab page, view the basic information and routes of the route table.
+
+
+      .. figure:: /_static/images/en-us_image_0000001866063864.png
+         :alt: **Figure 1** View the basic information and routes of the route table
+
+         **Figure 1** View the basic information and routes of the route table
+
    b. On the **Associated Subnets** tab page, view the subnets associated with the route table.
+
+
+      .. figure:: /_static/images/en-us_image_0000001911853289.png
+         :alt: **Figure 2** View the subnets associated with the route table
+
+         **Figure 2** View the subnets associated with the route table
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001865582825.png

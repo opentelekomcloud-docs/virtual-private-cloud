@@ -29,7 +29,7 @@ A tag consists of a key and value pair. :ref:`Table 1 <vpc_vpc_0004__ted9687ca14
    |                       |    -  Uppercase letters                                                |                       |
    |                       |    -  Lowercase letters                                                |                       |
    |                       |    -  Digits                                                           |                       |
-   |                       |    -  Special characters, including hyphens (-) and underscores (_)    |                       |
+   |                       |    -  Only hyphens (-), underscores (_), and at signs (@) are allowed. |                       |
    +-----------------------+------------------------------------------------------------------------+-----------------------+
    | Value                 | -  Can contain a maximum of 43 characters.                             | vpc-01                |
    |                       | -  Can contain only the following character types:                     |                       |
@@ -37,7 +37,7 @@ A tag consists of a key and value pair. :ref:`Table 1 <vpc_vpc_0004__ted9687ca14
    |                       |    -  Uppercase letters                                                |                       |
    |                       |    -  Lowercase letters                                                |                       |
    |                       |    -  Digits                                                           |                       |
-   |                       |    -  Special characters, including hyphens (-) and underscores (_)    |                       |
+   |                       |    -  Only underscores (_), hyphens (-), and at signs (@) are allowed. |                       |
    +-----------------------+------------------------------------------------------------------------+-----------------------+
 
 Procedure
