@@ -16,27 +16,27 @@ A tag consists of a key and value pair. :ref:`Table 1 <en-us_topic_0068145818__t
 
 .. table:: **Table 1** EIP tag requirements
 
-   +-----------------------+---------------------------------------------------------------------+-----------------------+
-   | Parameter             | Requirement                                                         | Example Value         |
-   +=======================+=====================================================================+=======================+
-   | Key                   | -  Cannot be left blank.                                            | Ipv4_key1             |
-   |                       | -  Must be unique for each EIP.                                     |                       |
-   |                       | -  Can contain a maximum of 36 characters.                          |                       |
-   |                       | -  Can contain only the following character types:                  |                       |
-   |                       |                                                                     |                       |
-   |                       |    -  Uppercase letters                                             |                       |
-   |                       |    -  Lowercase letters                                             |                       |
-   |                       |    -  Digits                                                        |                       |
-   |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
-   +-----------------------+---------------------------------------------------------------------+-----------------------+
-   | Value                 | -  Can contain a maximum of 43 characters.                          | 3005eip               |
-   |                       | -  Can contain only the following character types:                  |                       |
-   |                       |                                                                     |                       |
-   |                       |    -  Uppercase letters                                             |                       |
-   |                       |    -  Lowercase letters                                             |                       |
-   |                       |    -  Digits                                                        |                       |
-   |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
-   +-----------------------+---------------------------------------------------------------------+-----------------------+
+   +-----------------------+------------------------------------------------------------------------+-----------------------+
+   | Parameter             | Requirement                                                            | Example Value         |
+   +=======================+========================================================================+=======================+
+   | Key                   | -  Cannot be left blank.                                               | Ipv4_key1             |
+   |                       | -  Must be unique for each EIP.                                        |                       |
+   |                       | -  Can contain a maximum of 36 characters.                             |                       |
+   |                       | -  Can contain only the following character types:                     |                       |
+   |                       |                                                                        |                       |
+   |                       |    -  Uppercase letters                                                |                       |
+   |                       |    -  Lowercase letters                                                |                       |
+   |                       |    -  Digits                                                           |                       |
+   |                       |    -  Only hyphens (-), underscores (_), and at signs (@) are allowed. |                       |
+   +-----------------------+------------------------------------------------------------------------+-----------------------+
+   | Value                 | -  Can contain a maximum of 43 characters.                             | 3005eip               |
+   |                       | -  Can contain only the following character types:                     |                       |
+   |                       |                                                                        |                       |
+   |                       |    -  Uppercase letters                                                |                       |
+   |                       |    -  Lowercase letters                                                |                       |
+   |                       |    -  Digits                                                           |                       |
+   |                       |    -  Only underscores (_), hyphens (-), and at signs (@) are allowed. |                       |
+   +-----------------------+------------------------------------------------------------------------+-----------------------+
 
 Procedure
 ---------

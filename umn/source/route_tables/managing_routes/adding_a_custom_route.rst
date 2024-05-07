@@ -35,7 +35,7 @@ Procedure
    You can click **+** to add more routes.
 
 
-   .. figure:: /_static/images/en-us_image_0000001818823258.png
+   .. figure:: /_static/images/en-us_image_0000001865582793.png
       :alt: **Figure 1** Add Route
 
       **Figure 1** Add Route
@@ -45,6 +45,12 @@ Procedure
       +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | Parameter             | Description                                                                                                                                                          | Example Value          |
       +=======================+======================================================================================================================================================================+========================+
+      | Destination Type      | Mandatory                                                                                                                                                            | IP address             |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | The destination can be:                                                                                                                                              |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | -  IP address: single IP address or IP address range                                                                                                                 |                        |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | Destination           | Mandatory                                                                                                                                                            | IPv4: 192.168.0.0/16   |
       |                       |                                                                                                                                                                      |                        |
       |                       | Enter the destination of the route. You can enter a single IP address or an IP address range in CIDR notation.                                                       |                        |

@@ -81,27 +81,27 @@ Assigning an EIP
 
    .. table:: **Table 2** EIP tag requirements
 
-      +-----------------------+---------------------------------------------------------------------+-----------------------+
-      | Parameter             | Requirement                                                         | Example Value         |
-      +=======================+=====================================================================+=======================+
-      | Key                   | -  Cannot be left blank.                                            | Ipv4_key1             |
-      |                       | -  The key value must be unique for the same EIP.                   |                       |
-      |                       | -  Can contain up to 36 characters.                                 |                       |
-      |                       | -  Can contain only the following character types:                  |                       |
-      |                       |                                                                     |                       |
-      |                       |    -  Uppercase letters                                             |                       |
-      |                       |    -  Lowercase letters                                             |                       |
-      |                       |    -  Digits                                                        |                       |
-      |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
-      +-----------------------+---------------------------------------------------------------------+-----------------------+
-      | Value                 | -  Can contain up to 43 characters.                                 | 3005eip               |
-      |                       | -  Can contain only the following character types:                  |                       |
-      |                       |                                                                     |                       |
-      |                       |    -  Uppercase letters                                             |                       |
-      |                       |    -  Lowercase letters                                             |                       |
-      |                       |    -  Digits                                                        |                       |
-      |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
-      +-----------------------+---------------------------------------------------------------------+-----------------------+
+      +-----------------------+------------------------------------------------------------------------+-----------------------+
+      | Parameter             | Requirement                                                            | Example Value         |
+      +=======================+========================================================================+=======================+
+      | Key                   | -  Cannot be left blank.                                               | Ipv4_key1             |
+      |                       | -  The key value must be unique for the same EIP.                      |                       |
+      |                       | -  Can contain up to 36 characters.                                    |                       |
+      |                       | -  Can contain only the following character types:                     |                       |
+      |                       |                                                                        |                       |
+      |                       |    -  Uppercase letters                                                |                       |
+      |                       |    -  Lowercase letters                                                |                       |
+      |                       |    -  Digits                                                           |                       |
+      |                       |    -  Only hyphens (-), underscores (_), and at signs (@) are allowed. |                       |
+      +-----------------------+------------------------------------------------------------------------+-----------------------+
+      | Value                 | -  Can contain up to 43 characters.                                    | 3005eip               |
+      |                       | -  Can contain only the following character types:                     |                       |
+      |                       |                                                                        |                       |
+      |                       |    -  Uppercase letters                                                |                       |
+      |                       |    -  Lowercase letters                                                |                       |
+      |                       |    -  Digits                                                           |                       |
+      |                       |    -  Only underscores (_), hyphens (-), and at signs (@) are allowed. |                       |
+      +-----------------------+------------------------------------------------------------------------+-----------------------+
 
 #. Click **Create Now**.
 
@@ -122,7 +122,7 @@ Binding an EIP
 
 #. Click **OK**.
 
-An IPv6 client on the Internet can access the ECS that has an EIP bound in a VPC. For details, see :ref:`How Does an IPv6 Client on the Internet Access the ECS That Has an EIP Bound in a VPC? <vpc_faq_0076>`
+An IPv6 client on the internet can access the ECS that has an EIP bound in a VPC. For details, see `How Does an IPv6 Client on the Internet Access the ECS That Has an EIP Bound in a VPC? <https://docs.otc.t-systems.com/virtual-private-cloud/umn/faq/connectivity/how_does_an_ipv6_client_on_the_internet_access_the_ecs_that_has_an_eip_bound_in_a_vpc.html#vpc-faq-0076>`__
 
 Follow-Up Procedure
 -------------------
@@ -131,7 +131,7 @@ After an ECS with an EIP bound is created, the system generates a domain name in
 
 You can use any of the following commands to obtain the domain name of an EIP:
 
--  ping -a *EIP*
+-  ping -an *EIP*
 -  nslookup [-qt=ptr] *EIP*
 -  dig -x *EIP*
 

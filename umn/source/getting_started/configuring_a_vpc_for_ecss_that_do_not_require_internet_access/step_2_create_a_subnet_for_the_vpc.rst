@@ -81,27 +81,27 @@ Procedure
 
    .. table:: **Table 2** Subnet tag key and value requirements
 
-      +-----------------------+---------------------------------------------------------------------+-----------------------+
-      | Parameter             | Requirements                                                        | Example Value         |
-      +=======================+=====================================================================+=======================+
-      | Key                   | -  Cannot be left blank.                                            | subnet_key1           |
-      |                       | -  Must be unique for each subnet.                                  |                       |
-      |                       | -  Can contain a maximum of 36 characters.                          |                       |
-      |                       | -  Can contain only the following character types:                  |                       |
-      |                       |                                                                     |                       |
-      |                       |    -  Uppercase letters                                             |                       |
-      |                       |    -  Lowercase letters                                             |                       |
-      |                       |    -  Digits                                                        |                       |
-      |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
-      +-----------------------+---------------------------------------------------------------------+-----------------------+
-      | Value                 | -  Can contain a maximum of 43 characters.                          | subnet-01             |
-      |                       | -  Can contain only the following character types:                  |                       |
-      |                       |                                                                     |                       |
-      |                       |    -  Uppercase letters                                             |                       |
-      |                       |    -  Lowercase letters                                             |                       |
-      |                       |    -  Digits                                                        |                       |
-      |                       |    -  Special characters, including hyphens (-) and underscores (_) |                       |
-      +-----------------------+---------------------------------------------------------------------+-----------------------+
+      +-----------------------+------------------------------------------------------------------------+-----------------------+
+      | Parameter             | Requirements                                                           | Example Value         |
+      +=======================+========================================================================+=======================+
+      | Key                   | -  Cannot be left blank.                                               | subnet_key1           |
+      |                       | -  Must be unique for each subnet.                                     |                       |
+      |                       | -  Can contain a maximum of 36 characters.                             |                       |
+      |                       | -  Can contain only the following character types:                     |                       |
+      |                       |                                                                        |                       |
+      |                       |    -  Uppercase letters                                                |                       |
+      |                       |    -  Lowercase letters                                                |                       |
+      |                       |    -  Digits                                                           |                       |
+      |                       |    -  Only hyphens (-), underscores (_), and at signs (@) are allowed. |                       |
+      +-----------------------+------------------------------------------------------------------------+-----------------------+
+      | Value                 | -  Can contain a maximum of 43 characters.                             | subnet-01             |
+      |                       | -  Can contain only the following character types:                     |                       |
+      |                       |                                                                        |                       |
+      |                       |    -  Uppercase letters                                                |                       |
+      |                       |    -  Lowercase letters                                                |                       |
+      |                       |    -  Digits                                                           |                       |
+      |                       |    -  Only underscores (_), hyphens (-), and at signs (@) are allowed. |                       |
+      +-----------------------+------------------------------------------------------------------------+-----------------------+
 
 7. Click **OK**.
 

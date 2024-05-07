@@ -31,9 +31,21 @@ Procedure
 
 6. In the right of the subnet details page, view the route table associated with the subnet.
 
+
+   .. figure:: /_static/images/en-us_image_0000001911849797.png
+      :alt: **Figure 1** View the route table associated with a subnet
+
+      **Figure 1** View the route table associated with a subnet
+
 7. Click the name of the route table.
 
    The route table details page is displayed. You can further view the route information.
+
+
+   .. figure:: /_static/images/en-us_image_0000001911771617.png
+      :alt: **Figure 2** View the basic information and routes of the route table
+
+      **Figure 2** View the basic information and routes of the route table
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001865582701.png

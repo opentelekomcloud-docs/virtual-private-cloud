@@ -29,5 +29,11 @@ Procedure
 
    You can view the security groups associated with the ECS and the inbound and outbound rules.
 
+
+   .. figure:: /_static/images/en-us_image_0000001911842313.png
+      :alt: **Figure 1** View the security group of an ECS
+
+      **Figure 1** View the security group of an ECS
+
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818982866.png

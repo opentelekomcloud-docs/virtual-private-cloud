@@ -34,29 +34,11 @@ Deleting Routes of a VPC Peering Connection Between VPCs in the Same Account
 
    The page showing the VPC peering connection details is displayed.
 
-#. Delete the route added to the route table of the local VPC:
+#. In the route list, locate the route and click **Delete** in the **Operation** column.
 
-   a. Click the **Local Routes** tab and then click the **Route Tables** hyperlink.
+   A confirmation dialog box is displayed.
 
-      The **Summary** tab of the default route table for the local VPC is displayed.
-
-   b. Locate the row that contains the route to be deleted and click **Delete** in the **Operation** column.
-
-      A confirmation dialog box is displayed.
-
-   c. Click **Yes**.
-
-#. Delete the route added to the route table of the peer VPC:
-
-   a. Click the **Peer Routes** tab and then click the **Route Tables** hyperlink.
-
-      The **Summary** tab of the default route table for the peer VPC is displayed.
-
-   b. Locate the row that contains the route to be deleted and click **Delete** in the **Operation** column.
-
-      A confirmation dialog box is displayed.
-
-   c. Click **Yes**.
+#. Confirm the information and click **OK**.
 
 .. _vpc_peering_0006__section47866392497:
 
@@ -83,17 +65,11 @@ Only the account owner of a VPC in a VPC peering connection can delete the route
 
       The page showing the VPC peering connection details is displayed.
 
-   e. Delete the route added to the route table of the local VPC:
+   e. In the route list, locate the route and click **Delete** in the **Operation** column.
 
-      #. Click the **Local Routes** tab and then click the **Route Tables** hyperlink.
+      A confirmation dialog box is displayed.
 
-         The **Summary** tab of the default route table for the local VPC is displayed.
-
-      #. Locate the row that contains the route to be deleted and click **Delete** in the **Operation** column.
-
-         A confirmation dialog box is displayed.
-
-      #. Click **Yes**.
+   f. Confirm the information and click **OK**.
 
 #. Log in to the management console using the account of the peer VPC and delete the route of the peer VPC by referring to :ref:`1 <vpc_peering_0006__li4105938135810>`.
 

@@ -31,7 +31,7 @@ Procedure
 5. In the upper right corner, click **Create Route Table**. On the displayed page, configure parameters as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0000001818983038.png
+   .. figure:: /_static/images/en-us_image_0000001865582789.png
       :alt: **Figure 1** Create Route Table
 
       **Figure 1** Create Route Table

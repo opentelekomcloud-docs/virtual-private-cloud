@@ -23,6 +23,12 @@ Procedure
 
 5. On the **Alarm Rules** page, click **Create Alarm Rule** and set required parameters, or modify an existing alarm rule.
 
+
+   .. figure:: /_static/images/en-us_image_0000001865898552.png
+      :alt: **Figure 1** Create an alarm rule
+
+      **Figure 1** Create an alarm rule
+
 6. After the parameters are set, click **Create**.
 
    After the alarm rule is created, the system automatically notifies you if an alarm is triggered for the VPC service.
