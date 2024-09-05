@@ -21,13 +21,13 @@ GET /v1/{project_id}/routetables/{routetable_id}
 
 .. table:: **Table 1** Parameter description
 
-   +---------------+-----------+--------+------------------------------------------------------------------------+
-   | Name          | Mandatory | Type   | Description                                                            |
-   +===============+===========+========+========================================================================+
-   | project_id    | Yes       | String | Specifies the project ID.                                              |
-   +---------------+-----------+--------+------------------------------------------------------------------------+
-   | routetable_id | Yes       | String | Specifies the route table ID, which uniquely identifies a route table. |
-   +---------------+-----------+--------+------------------------------------------------------------------------+
+   +---------------+-----------+--------+----------------------------------------------------------------------+
+   | Parameter     | Mandatory | Type   | Description                                                          |
+   +===============+===========+========+======================================================================+
+   | project_id    | Yes       | String | Specifies the project ID.                                            |
+   +---------------+-----------+--------+----------------------------------------------------------------------+
+   | routetable_id | Yes       | String | Specifies the route table ID that uniquely identifies a route table. |
+   +---------------+-----------+--------+----------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -47,7 +47,7 @@ Response Parameters
 .. table:: **Table 2** Response parameter
 
    +------------+--------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
-   | Name       | Type                                                               | Description                                                                                           |
+   | Parameter  | Type                                                               | Description                                                                                           |
    +============+====================================================================+=======================================================================================================+
    | routetable | :ref:`routetable <vpc_apiroutetab_0002__table884119412392>` object | Specifies the route table. For details, see :ref:`Table 3 <vpc_apiroutetab_0002__table884119412392>`. |
    +------------+--------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
@@ -57,13 +57,13 @@ Response Parameters
 .. table:: **Table 3** Description of the **routetable** field
 
    +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
-   | Name                  | Type                                                                       | Description                                                                                                                            |
+   | Parameter             | Type                                                                       | Description                                                                                                                            |
    +=======================+============================================================================+========================================================================================================================================+
-   | id                    | String                                                                     | -  Specifies the route table ID, which uniquely identifies the route table.                                                            |
+   | id                    | String                                                                     | -  Specifies the route table ID that uniquely identifies the route table.                                                              |
    |                       |                                                                            | -  The value must be in standard UUID format.                                                                                          |
    +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
    | name                  | String                                                                     | -  Specifies the route table name.                                                                                                     |
-   |                       |                                                                            | -  The value can contain no more than 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).         |
+   |                       |                                                                            | -  The value can contain up to 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).                |
    +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
    | default               | Boolean                                                                    | -  Specifies whether the route table is the default one.                                                                               |
    |                       |                                                                            | -  The value can be **true** (default route table) or **false** (custom route table).                                                  |
@@ -79,7 +79,7 @@ Response Parameters
    | vpc_id                | String                                                                     | -  Specifies the ID of the VPC associated with the route table.                                                                        |
    +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
    | description           | String                                                                     | -  Provides supplementary information about the route table.                                                                           |
-   |                       |                                                                            | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                                       |
+   |                       |                                                                            | -  The value can contain up to 255 characters and cannot contain angle brackets (< or >).                                              |
    +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
    | created_at            | String                                                                     | -  Specifies the time (UTC) when the route table is created.                                                                           |
    |                       |                                                                            | -  Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                       |
@@ -92,51 +92,54 @@ Response Parameters
 
 .. table:: **Table 4** Description of the **route** field
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-   | Name                  | Type                  | Description                                                                                      |
-   +=======================+=======================+==================================================================================================+
-   | type                  | String                | -  Specifies the route type.                                                                     |
-   |                       |                       | -  Values:                                                                                       |
-   |                       |                       |                                                                                                  |
-   |                       |                       |    -  **ecs** (ECS)                                                                              |
-   |                       |                       |    -  **eni** (NIC)                                                                              |
-   |                       |                       |    -  **vip** (Virtual IP address)                                                               |
-   |                       |                       |    -  **nat** (NAT gateway)                                                                      |
-   |                       |                       |    -  **peering** (VPC peering connection)                                                       |
-   |                       |                       |    -  **vpn** (VPN)                                                                              |
-   |                       |                       |    -  **dc** (Direct Connect connection)                                                         |
-   |                       |                       |    -  **egw**: VPC endpoint node                                                                 |
-   |                       |                       |    -  **er**: enterprise router                                                                  |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-   | destination           | String                | -  Specifies the destination CIDR block of a route.                                              |
-   |                       |                       | -  The value must be in the valid CIDR format.                                                   |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-   | nexthop               | String                | -  Specifies the ID of the next hop in the route.                                                |
-   |                       |                       | -  Values:                                                                                       |
-   |                       |                       |                                                                                                  |
-   |                       |                       |    -  When **type** is **ecs**, the value is the ECS ID.                                         |
-   |                       |                       |    -  When **type** is **eni**, the value is the extension NIC ID.                               |
-   |                       |                       |    -  When **type** is **vip**, the value is the virtual IP address.                             |
-   |                       |                       |    -  When **type** is **nat**, the value is NAT gateway ID.                                     |
-   |                       |                       |    -  When **type** is **peering**, the value is the VPC peering connection ID.                  |
-   |                       |                       |    -  When **type** is **vpn**, the value is the VPN ID.                                         |
-   |                       |                       |    -  When **type** is **dc**, the value is the Direct Connect connection ID.                    |
-   |                       |                       |    -  When **type** is set to **egw**, the value is the VPC endpoint ID.                         |
-   |                       |                       |    -  When **type** is set to **er**, the value is the ID of the enterprise router.              |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-   | description           | String                | -  Provides supplementary information about the route.                                           |
-   |                       |                       | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >). |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                                             |
+   +=======================+=======================+=========================================================================================================================================+
+   | type                  | String                | -  Specifies the route type.                                                                                                            |
+   |                       |                       | -  Values:                                                                                                                              |
+   |                       |                       |                                                                                                                                         |
+   |                       |                       |    -  **ecs** (ECS)                                                                                                                     |
+   |                       |                       |    -  **eni** (NIC)                                                                                                                     |
+   |                       |                       |    -  **vip** (Virtual IP address)                                                                                                      |
+   |                       |                       |    -  **nat** (NAT gateway)                                                                                                             |
+   |                       |                       |    -  **peering** (VPC peering connection)                                                                                              |
+   |                       |                       |    -  **vpn** (VPN)                                                                                                                     |
+   |                       |                       |    -  **dc** (Direct Connect connection)                                                                                                |
+   |                       |                       |    -  **egw**: VPC endpoint. This route type is not supported.                                                                          |
+   |                       |                       |    -  **er**: enterprise router                                                                                                         |
+   |                       |                       |    -  **subeni**: supplementary network interface. This type of route cannot be created or updated by users.                            |
+   |                       |                       |    -  **local**: reserved CIDR block. The destination CIDR block of the route configured cannot overlap with that defined by **local**. |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | destination           | String                | -  Specifies the destination CIDR block of a route.                                                                                     |
+   |                       |                       | -  Constraints: The value must be in valid IPv4 or IPv6 CIDR formats.                                                                   |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | nexthop               | String                | -  Specifies the ID of the next hop in the route.                                                                                       |
+   |                       |                       | -  Values:                                                                                                                              |
+   |                       |                       |                                                                                                                                         |
+   |                       |                       |    -  When **type** is **ecs**, the value is an ECS ID.                                                                                 |
+   |                       |                       |    -  When **type** is **eni**, the value is an extension NIC ID.                                                                       |
+   |                       |                       |    -  When **type** is **vip**, the value is a virtual IP address.                                                                      |
+   |                       |                       |    -  When **type** is **nat**, the value a NAT gateway ID.                                                                             |
+   |                       |                       |    -  When **type** is **peering**, the value is a VPC peering connection ID.                                                           |
+   |                       |                       |    -  When **type** is **vpn**, the value is a VPN ID.                                                                                  |
+   |                       |                       |    -  When **type** is **dc**, the value is a Direct Connect connection ID.                                                             |
+   |                       |                       |    -  When **type** is set to **egw**, the value is a VPC endpoint ID.                                                                  |
+   |                       |                       |    -  When **type** is set to **er**, the value is the ID of an enterprise router.                                                      |
+   |                       |                       |    -  When **type** is set to **subeni**, the value is the ID of a supplementary network interface.                                     |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | description           | String                | -  Provides supplementary information about the route.                                                                                  |
+   |                       |                       | -  The value can contain up to 255 characters and cannot contain angle brackets (< or >).                                               |
+   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _vpc_apiroutetab_0002__table17950204203919:
 
 .. table:: **Table 5** Description of the **subnet** field
 
-   +------+--------+-----------------------------------------------------------------+
-   | Name | Type   | Description                                                     |
-   +======+========+=================================================================+
-   | id   | String | Specifies the ID of the subnet associated with the route table. |
-   +------+--------+-----------------------------------------------------------------+
+   +-----------+--------+-----------------------------------------------------------------+
+   | Parameter | Type   | Description                                                     |
+   +===========+========+=================================================================+
+   | id        | String | Specifies the ID of the subnet associated with the route table. |
+   +-----------+--------+-----------------------------------------------------------------+
 
 Example Response
 ----------------

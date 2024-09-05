@@ -28,7 +28,7 @@ Example:
 .. table:: **Table 1** Parameter description
 
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------+
-   | Name            | Mandatory       | Type            | Description                                                                  |
+   | Parameter       | Mandatory       | Type            | Description                                                                  |
    +=================+=================+=================+==============================================================================+
    | project_id      | Yes             | String          | Specifies the project ID.                                                    |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------+
@@ -49,7 +49,6 @@ Example:
    |                 |                 |                 |    -  **firewall**: Firewall                                                 |
    |                 |                 |                 |    -  **shareBandwidthIP**: IP address added to a shared bandwidth           |
    |                 |                 |                 |    -  **shareBandwidth**: Shared bandwidth                                   |
-   |                 |                 |                 |    -  **address_group**: IP address group                                    |
    |                 |                 |                 |    -  **flow_log**: VPC fow log                                              |
    |                 |                 |                 |    -  **vpcContainRoutetable**: Number of route tables associated with a VPC |
    |                 |                 |                 |    -  **routetableContainRoutes**: Number of routes in a route table         |
@@ -72,18 +71,18 @@ Response Parameters
 
 .. table:: **Table 2** Response parameter
 
-   +--------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
-   | Name   | Type                                                       | Description                                                                                        |
-   +========+============================================================+====================================================================================================+
-   | quotas | :ref:`quotas <vpc_quota_0001__table11308015155544>` object | Specifies the quota object. For details, see :ref:`Table 3 <vpc_quota_0001__table11308015155544>`. |
-   +--------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+   +-----------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+   | Parameter | Type                                                       | Description                                                                                        |
+   +===========+============================================================+====================================================================================================+
+   | quotas    | :ref:`quotas <vpc_quota_0001__table11308015155544>` object | Specifies the quota object. For details, see :ref:`Table 3 <vpc_quota_0001__table11308015155544>`. |
+   +-----------+------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 
 .. _vpc_quota_0001__table11308015155544:
 
 .. table:: **Table 3** Description of the **quotas** field
 
    +-----------+-----------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-   | Name      | Type                                                            | Description                                                                                     |
+   | Parameter | Type                                                            | Description                                                                                     |
    +===========+=================================================================+=================================================================================================+
    | resources | Array of :ref:`resource <vpc_quota_0001__table8208684>` objects | Specifies the resource objects. For details, see :ref:`Table 4 <vpc_quota_0001__table8208684>`. |
    +-----------+-----------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
@@ -93,7 +92,7 @@ Response Parameters
 .. table:: **Table 4** Description of the **resource** field
 
    +-----------------------+-----------------------+------------------------------------------------------------------------------+
-   | Name                  | Type                  | Description                                                                  |
+   | Parameter             | Type                  | Description                                                                  |
    +=======================+=======================+==============================================================================+
    | type                  | String                | -  Specifies the resource type.                                              |
    |                       |                       | -  Values:                                                                   |
@@ -112,7 +111,6 @@ Response Parameters
    |                       |                       |    -  **firewall**: Firewall                                                 |
    |                       |                       |    -  **shareBandwidthIP**: IP address added to a shared bandwidth           |
    |                       |                       |    -  **shareBandwidth**: Shared bandwidth                                   |
-   |                       |                       |    -  **address_group**: IP address group                                    |
    |                       |                       |    -  **flow_log**: VPC fow log                                              |
    |                       |                       |    -  **vpcContainRoutetable**: Number of route tables associated with a VPC |
    |                       |                       |    -  **routetableContainRoutes**: Number of routes in a route table         |
@@ -181,6 +179,18 @@ Example Response
                    "min": 0
                },
                {
+                   "type":"physicalConnect",
+                   "used":0,
+                   "quota":10,
+                   "min":0
+               },
+               {
+                   "type":"virtualInterface",
+                   "used":0,
+                   "quota":50,
+                   "min":0
+               },
+               {
                    "type": "firewall",
                    "used": 0,
                    "quota": 200,
@@ -211,6 +221,12 @@ Example Response
                    "min": 0
                },
                {
+                   "type": "flow_log",
+                   "used": 0,
+                   "quota": 10,
+                   "min": 0
+               },
+               {
                    "type": "vpcContainRoutetable",
                    "used": 0,
                    "quota": 1,
@@ -221,13 +237,7 @@ Example Response
                    "used": 0,
                    "quota": 200,
                    "min": 0
-               },
-               {
-                    "type": "address_group",
-                    "used": 0,
-                    "quota": 50,
-                    "min": 0
-                }
+               }
            ]
        }
    }

@@ -2,13 +2,13 @@
 
 .. _vpc_tag_0003:
 
-Deleting a VPC Tag
-==================
+Deleting a Tag from a VPC
+=========================
 
 Function
 --------
 
-This API is used to delete a VPC tag.
+This API is used to delete a tag from a VPC.
 
 URI
 ---
@@ -22,7 +22,7 @@ DELETE /v2.0/{project_id}/vpcs/{vpc_id}/tags/{key}
 .. table:: **Table 1** Parameter description
 
    +------------+-----------+----------------------------------------------------------+
-   | Name       | Mandatory | Description                                              |
+   | Parameter  | Mandatory | Description                                              |
    +============+===========+==========================================================+
    | project_id | Yes       | Specifies the project ID.                                |
    +------------+-----------+----------------------------------------------------------+

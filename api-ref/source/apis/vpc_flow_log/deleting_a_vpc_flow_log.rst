@@ -22,7 +22,7 @@ DELETE /v1/{project_id}/fl/flow_logs/{flowlog_id}
 .. table:: **Table 1** Parameter description
 
    ========== ========= ====== ===========
-   Name       Mandatory Type   Description
+   Parameter  Mandatory Type   Description
    ========== ========= ====== ===========
    project_id Yes       String Project ID.
    flowlog_id Yes       String Flow log ID

@@ -21,13 +21,13 @@ GET /v2.0/{project_id}/vpcs/{vpc_id}/tags
 
 .. table:: **Table 1** Parameter description
 
-   +------------+-----------+----------------------------------------------------------+
-   | Name       | Mandatory | Description                                              |
-   +============+===========+==========================================================+
-   | project_id | Yes       | Specifies the project ID.                                |
-   +------------+-----------+----------------------------------------------------------+
-   | vpc_id     | Yes       | Specifies the VPC ID, which uniquely identifies the VPC. |
-   +------------+-----------+----------------------------------------------------------+
+   +------------+-----------+--------------------------------------------------------+
+   | Parameter  | Mandatory | Description                                            |
+   +============+===========+========================================================+
+   | project_id | Yes       | Specifies the project ID.                              |
+   +------------+-----------+--------------------------------------------------------+
+   | vpc_id     | Yes       | Specifies the VPC ID that uniquely identifies the VPC. |
+   +------------+-----------+--------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -56,30 +56,30 @@ Response Parameters
 
 .. table:: **Table 3** **tag** objects
 
-   +-----------------------+-----------------------+---------------------------------------------------------------------+
-   | Attribute             | Type                  | Description                                                         |
-   +=======================+=======================+=====================================================================+
-   | key                   | String                | -  Specifies the tag key.                                           |
-   |                       |                       | -  Cannot be left blank.                                            |
-   |                       |                       | -  Contain up to 128 characters (36 characters on the console).     |
-   |                       |                       | -  Can contain only the following character types:                  |
-   |                       |                       |                                                                     |
-   |                       |                       |    -  Uppercase letters                                             |
-   |                       |                       |    -  Lowercase letters                                             |
-   |                       |                       |    -  Digits                                                        |
-   |                       |                       |    -  Special characters, including hyphens (-) and underscores (_) |
-   |                       |                       |                                                                     |
-   |                       |                       | -  The tag key of a VPC must be unique.                             |
-   +-----------------------+-----------------------+---------------------------------------------------------------------+
-   | value                 | String                | -  Specifies the tag value.                                         |
-   |                       |                       | -  Contain up to 255 characters (43 characters on the console).     |
-   |                       |                       | -  Can contain only the following character types:                  |
-   |                       |                       |                                                                     |
-   |                       |                       |    -  Uppercase letters                                             |
-   |                       |                       |    -  Lowercase letters                                             |
-   |                       |                       |    -  Digits                                                        |
-   |                       |                       |    -  Special characters, including hyphens (-) and underscores (_) |
-   +-----------------------+-----------------------+---------------------------------------------------------------------+
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------+
+   | Attribute             | Type                  | Description                                                                        |
+   +=======================+=======================+====================================================================================+
+   | key                   | String                | -  Specifies the tag key.                                                          |
+   |                       |                       | -  Cannot be left blank.                                                           |
+   |                       |                       | -  Contain up to 128 characters (36 characters on the console).                    |
+   |                       |                       | -  Can contain only the following character types:                                 |
+   |                       |                       |                                                                                    |
+   |                       |                       |    -  Uppercase letters                                                            |
+   |                       |                       |    -  Lowercase letters                                                            |
+   |                       |                       |    -  Digits                                                                       |
+   |                       |                       |    -  Special characters, including hyphens (-), underscores (_), and at signs (@) |
+   |                       |                       |                                                                                    |
+   |                       |                       | -  The tag key of a VPC must be unique.                                            |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------+
+   | value                 | String                | -  Specifies the tag value.                                                        |
+   |                       |                       | -  Contain up to 255 characters (43 characters on the console).                    |
+   |                       |                       | -  Can contain only the following character types:                                 |
+   |                       |                       |                                                                                    |
+   |                       |                       |    -  Uppercase letters                                                            |
+   |                       |                       |    -  Lowercase letters                                                            |
+   |                       |                       |    -  Digits                                                                       |
+   |                       |                       |    -  Special characters, including hyphens (-), underscores (_), and at signs (@) |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------+
 
 Example Response
 ----------------

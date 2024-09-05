@@ -16,15 +16,15 @@ You can use **GET /v2.0/networks?router:external=True** or run the **neutron net
 
    Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
 
-   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
       -  You can use APIs to bind EIPs to or unbind them from dedicated load balancers. For details, see `Binding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/binding_an_eip.html>`__ and `Unbinding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/unbinding_an_eip.html>`__.
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
-      -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
+      -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
+   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
 
 URI
 ---
@@ -139,7 +139,6 @@ Normal response to POST requests
            "status": "DOWN",
            "router_id": null,
            "tenant_id": "bbfe8c41dd034a07bebd592bf03b4b0c",
-
            "floating_network_id": "0a2228f2-7f8a-45f1-8e09-9039e1d09975",
            "fixed_ip_address": null,
            "floating_ip_address": "88.88.215.205",

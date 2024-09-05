@@ -22,7 +22,7 @@ DELETE /v1/{project_id}/security-group-rules/{security_group_rule_id}
 .. table:: **Table 1** Parameter description
 
    +------------------------+-----------+------------------------------------------------------------------------------------------+
-   | Name                   | Mandatory | Description                                                                              |
+   | Parameter              | Mandatory | Description                                                                              |
    +========================+===========+==========================================================================================+
    | security_group_rule_id | Yes       | Specifies the security group rule ID, which uniquely identifies the security group rule. |
    +------------------------+-----------+------------------------------------------------------------------------------------------+

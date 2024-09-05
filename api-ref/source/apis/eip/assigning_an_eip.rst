@@ -10,21 +10,21 @@ Function
 
 This API is used to assign an EIP.
 
-The EIP service provides independent public IP addresses and bandwidth for Internet access. EIPs can be bound to or unbound from ECSs, BMSs, virtual IP addresses, NAT gateways, or load balancers.
+The EIP service provides independent public IP addresses and bandwidth for Internet access. EIPs can be bound to or unbound from ECSss, BMSs, virtual IP addresses, NAT gateways, or load balancers.
 
 .. note::
 
    Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
 
-   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
       -  You can use APIs to bind EIPs to or unbind them from dedicated load balancers. For details, see `Binding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/binding_an_eip.html>`__ and `Unbinding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/unbinding_an_eip.html>`__.
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
-      -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
+      -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
+   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
 
 URI
 ---
@@ -38,7 +38,7 @@ POST /v1/{project_id}/publicips
 .. table:: **Table 1** Parameter description
 
    ========== ========= =========================
-   Name       Mandatory Description
+   Parameter  Mandatory Description
    ========== ========= =========================
    project_id Yes       Specifies the project ID.
    ========== ========= =========================
@@ -49,7 +49,7 @@ Request Parameters
 .. table:: **Table 2** Request body parameter
 
    +-----------+-----------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-   | Name      | Mandatory | Type                                                            | Description                                                                                              |
+   | Parameter | Mandatory | Type                                                            | Description                                                                                              |
    +===========+===========+=================================================================+==========================================================================================================+
    | publicip  | Yes       | :ref:`publicip <en-us_topic_0020090596__table4491214>` object   | Specifies the EIP object. For details, see :ref:`Table 3 <en-us_topic_0020090596__table4491214>`.        |
    +-----------+-----------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
@@ -60,33 +60,33 @@ Request Parameters
 
 .. table:: **Table 3** Description of the **publicip** field
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
-   | Name            | Mandatory       | Type            | Description                                                                                                                   |
-   +=================+=================+=================+===============================================================================================================================+
-   | type            | Yes             | String          | -  Specifies the EIP type.                                                                                                    |
-   |                 |                 |                 | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), or **5_gray** (Dedicated Load Balancer).               |
-   |                 |                 |                 | -  Constraints:                                                                                                               |
-   |                 |                 |                 |                                                                                                                               |
-   |                 |                 |                 |    -  The configured value must be supported by the system.                                                                   |
-   |                 |                 |                 |    -  **publicip_id** is an IPv4 port. If **publicip_type** is not specified, the default value is **5_bgp**.                 |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
-   | ip_version      | No              | Integer         | -  Specifies the EIP version.                                                                                                 |
-   |                 |                 |                 | -  The value can be **4** and **6**, indicating IPv4 address and IPv6 address, respectively. IPv6 is not supported currently. |
-   |                 |                 |                 | -  Constraints:                                                                                                               |
-   |                 |                 |                 |                                                                                                                               |
-   |                 |                 |                 |    -  The configured value must be supported by the system.                                                                   |
-   |                 |                 |                 |    -  If this parameter is left blank or is an empty string, IPv4 address is created by default.                              |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
-   | alias           | No              | String          | -  Specifies the EIP name.                                                                                                    |
-   |                 |                 |                 | -  The value can contain 1 to 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).        |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                      |
+   +=================+=================+=================+==================================================================================================================================+
+   | type            | Yes             | String          | -  Specifies the EIP type.                                                                                                       |
+   |                 |                 |                 | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), or **5_dualStack**. |
+   |                 |                 |                 | -  Constraints:                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                  |
+   |                 |                 |                 |    -  The configured value must be supported by the system.                                                                      |
+   |                 |                 |                 |    -  **publicip_id** is an IPv4 port. If **publicip_type** is not specified, the default value is **5_bgp**.                    |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+   | ip_version      | No              | Integer         | -  Specifies the EIP version.                                                                                                    |
+   |                 |                 |                 | -  The value can be **4** and **6**, indicating IPv4 address and IPv6 address, respectively. IPv6 is not supported currently.    |
+   |                 |                 |                 | -  Constraints:                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                  |
+   |                 |                 |                 |    -  The configured value must be supported by the system.                                                                      |
+   |                 |                 |                 |    -  If this parameter is left blank or is an empty string, IPv4 address is created by default.                                 |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+   | alias           | No              | String          | -  Specifies the EIP name.                                                                                                       |
+   |                 |                 |                 | -  The value can contain 1 to 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).           |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 .. _en-us_topic_0020090596__table11041789:
 
 .. table:: **Table 4** Description of the **bandwidth** field
 
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Name            | Mandatory       | Type            | Description                                                                                                                                                                                                         |
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                         |
    +=================+=================+=================+=====================================================================================================================================================================================================================+
    | name            | Yes             | String          | -  Specifies the bandwidth name.                                                                                                                                                                                    |
    |                 |                 |                 | -  The value can contain 1 to 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.).                                                                                              |
@@ -112,7 +112,8 @@ Request Parameters
    |                 |                 |                 |                                                                                                                                                                                                                     |
    |                 |                 |                 | -  If this parameter is set to **WHOLE**, the bandwidth ID must be specified.                                                                                                                                       |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | charge_mode     | No              | String          | -  The value is **traffic**, indicating that the billing is based on traffic.                                                                                                                                       |
+   | charge_mode     | No              | String          | -  Specifies whether the bandwidth is billed by traffic or by bandwidth size.                                                                                                                                       |
+   |                 |                 |                 | -  The value is **traffic**, indicating that the billing is based on traffic.                                                                                                                                       |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Request
@@ -143,18 +144,18 @@ Response Message
 
    .. table:: **Table 5** Response parameter
 
-      +----------+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
-      | Name     | Type                                                           | Description                                                                                        |
-      +==========+================================================================+====================================================================================================+
-      | publicip | :ref:`publicip <en-us_topic_0020090596__table44471219>` object | Specifies the EIP object. For details, see :ref:`Table 6 <en-us_topic_0020090596__table44471219>`. |
-      +----------+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+      +-----------+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
+      | Parameter | Type                                                           | Description                                                                                        |
+      +===========+================================================================+====================================================================================================+
+      | publicip  | :ref:`publicip <en-us_topic_0020090596__table44471219>` object | Specifies the EIP object. For details, see :ref:`Table 6 <en-us_topic_0020090596__table44471219>`. |
+      +-----------+----------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0020090596__table44471219:
 
    .. table:: **Table 6** Description of the **publicip** field
 
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                                                                                                      |
+      | Parameter             | Type                  | Description                                                                                                                                      |
       +=======================+=======================+==================================================================================================================================================+
       | id                    | String                | Specifies the unique identifier of an EIP.                                                                                                       |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -176,7 +177,7 @@ Response Message
       |                       |                       |    -  **ERROR** (Exceptions)                                                                                                                     |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
       | type                  | String                | -  Specifies the EIP type.                                                                                                                       |
-      |                       |                       | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), or **5_gray** (Dedicated Load Balancer).                                  |
+      |                       |                       | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), or **5_dualStack**.                 |
       |                       |                       | -  Constraints:                                                                                                                                  |
       |                       |                       |                                                                                                                                                  |
       |                       |                       |    -  The configured value must be supported by the system.                                                                                      |

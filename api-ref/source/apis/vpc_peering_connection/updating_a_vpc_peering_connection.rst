@@ -22,7 +22,7 @@ PUT /v2.0/vpc/peerings/{peering_id}
 .. table:: **Table 1** Parameter description
 
    +------------+-----------+--------+------------------------------------------------------------------------------------------------+
-   | Name       | Mandatory | Type   | Description                                                                                    |
+   | Parameter  | Mandatory | Type   | Description                                                                                    |
    +============+===========+========+================================================================================================+
    | peering_id | Yes       | String | Specifies the VPC peering connection ID, which uniquely identifies the VPC peering connection. |
    +------------+-----------+--------+------------------------------------------------------------------------------------------------+

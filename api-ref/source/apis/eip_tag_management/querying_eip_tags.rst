@@ -22,7 +22,7 @@ GET /v2.0/{project_id}/publicips/{publicip_id}/tags
 .. table:: **Table 1** Parameter description
 
    =========== ========= ==========================================
-   Name        Mandatory Description
+   Parameter   Mandatory Description
    =========== ========= ==========================================
    project_id  Yes       Specifies the project ID.
    publicip_id Yes       Specifies the unique identifier of an EIP.
@@ -58,30 +58,30 @@ Response Message
 
    .. table:: **Table 3** **tag** objects
 
-      +-----------------------+-----------------------+---------------------------------------------------------------------+
-      | Attribute             | Type                  | Description                                                         |
-      +=======================+=======================+=====================================================================+
-      | key                   | String                | -  Specifies the tag key.                                           |
-      |                       |                       | -  Cannot be left blank.                                            |
-      |                       |                       | -  Can contain a maximum of 36 characters.                          |
-      |                       |                       | -  Can contain only the following character types:                  |
-      |                       |                       |                                                                     |
-      |                       |                       |    -  Uppercase letters                                             |
-      |                       |                       |    -  Lowercase letters                                             |
-      |                       |                       |    -  Digits                                                        |
-      |                       |                       |    -  Special characters, including hyphens (-) and underscores (_) |
-      |                       |                       |                                                                     |
-      |                       |                       | -  The tag key of a VPC must be unique.                             |
-      +-----------------------+-----------------------+---------------------------------------------------------------------+
-      | value                 | String                | -  Specifies the tag value.                                         |
-      |                       |                       | -  Can contain a maximum of 43 characters.                          |
-      |                       |                       | -  Can contain only the following character types:                  |
-      |                       |                       |                                                                     |
-      |                       |                       |    -  Uppercase letters                                             |
-      |                       |                       |    -  Lowercase letters                                             |
-      |                       |                       |    -  Digits                                                        |
-      |                       |                       |    -  Special characters, including hyphens (-) and underscores (_) |
-      +-----------------------+-----------------------+---------------------------------------------------------------------+
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------+
+      | Attribute             | Type                  | Description                                                                        |
+      +=======================+=======================+====================================================================================+
+      | key                   | String                | -  Specifies the tag key.                                                          |
+      |                       |                       | -  Cannot be left blank.                                                           |
+      |                       |                       | -  Can contain a maximum of 36 characters.                                         |
+      |                       |                       | -  Can contain only the following character types:                                 |
+      |                       |                       |                                                                                    |
+      |                       |                       |    -  Uppercase letters                                                            |
+      |                       |                       |    -  Lowercase letters                                                            |
+      |                       |                       |    -  Digits                                                                       |
+      |                       |                       |    -  Special characters, including hyphens (-), underscores (_), and at signs (@) |
+      |                       |                       |                                                                                    |
+      |                       |                       | -  The tag key of a VPC must be unique.                                            |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------+
+      | value                 | String                | -  Specifies the tag value.                                                        |
+      |                       |                       | -  Can contain a maximum of 43 characters.                                         |
+      |                       |                       | -  Can contain only the following character types:                                 |
+      |                       |                       |                                                                                    |
+      |                       |                       |    -  Uppercase letters                                                            |
+      |                       |                       |    -  Lowercase letters                                                            |
+      |                       |                       |    -  Digits                                                                       |
+      |                       |                       |    -  Special characters, including hyphens (-), underscores (_), and at signs (@) |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------+
 
 -  Example response
 
