@@ -2,13 +2,13 @@
 
 .. _eip_tag_0003:
 
-Deleting an EIP Tag
-===================
+Deleting a Tag from an EIP
+==========================
 
 Function
 --------
 
-This API is used to delete an EIP tag.
+This API is used to delete a tag from an EIP.
 
 URI
 ---
@@ -22,7 +22,7 @@ DELETE /v2.0/{project_id}/publicips/{publicip_id}/tags/{key}
 .. table:: **Table 1** Parameter description
 
    =========== ========= ==========================================
-   Name        Mandatory Description
+   Parameter   Mandatory Description
    =========== ========= ==========================================
    project_id  Yes       Specifies the project ID.
    publicip_id Yes       Specifies the unique identifier of an EIP.

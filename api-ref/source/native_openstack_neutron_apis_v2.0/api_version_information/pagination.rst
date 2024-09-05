@@ -12,12 +12,12 @@ Neutron APIs v2.0 provides the pagination function. You can set parameters **lim
 
 -  To access the next page of the request, perform the following configurations:
 
-   -  Replace the value of **marker** in the original access request URL. Replace the value of **marker** to the value of **marker** in the value of **herf** if the value of **rel** in the response is **next**.
+   -  Replace the value of **marker** in the original access request URL. Replace the value of **marker** to the value of **marker** in the value of **href** if the value of **rel** in the response is **next**.
    -  Set the value of **page_reverse** to **False**.
 
 -  To access the previous page of the request, perform the following configurations:
 
-   -  Replace the value of **marker** in the original access request URL. Replace the value of **marker** to the value of **marker** in the value of **herf** if the value of **rel** in the response is **previous**.
+   -  Replace the value of **marker** in the original access request URL. Replace the value of **marker** to the value of **marker** in the value of **href** if the value of **rel** in the response is **previous**.
    -  Set the value of **page_reverse** to **True**.
 
 Request Parameters

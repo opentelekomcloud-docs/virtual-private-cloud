@@ -14,15 +14,15 @@ This API is used to bind an EIP to a NIC, or unbind an EIP from a NIC.
 
    Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
 
-   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
       -  You can use APIs to bind EIPs to or unbind them from dedicated load balancers. For details, see `Binding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/binding_an_eip.html>`__ and `Unbinding an EIP <https://docs.otc.t-systems.com/elastic-ip/api-ref/api_v3/eips/unbinding_an_eip.html>`__.
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
-      -  You are advised to bind BGP EIPs to or unbind them from dedicated load balancers.
+      -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
+   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
 
 URI
 ---
@@ -36,7 +36,7 @@ PUT /v1/{project_id}/publicips/{publicip_id}
 .. table:: **Table 1** Parameter description
 
    =========== ========= ==========================================
-   Name        Mandatory Description
+   Parameter   Mandatory Description
    =========== ========= ==========================================
    project_id  Yes       Specifies the project ID.
    publicip_id Yes       Specifies the unique identifier of an EIP.
@@ -49,18 +49,18 @@ Request Message
 
    .. table:: **Table 2** Request parameter
 
-      +----------+-----------+------------------------------------------------------+------------------------------------------------------------------------------------------+
-      | Name     | Mandatory | Type                                                 | Description                                                                              |
-      +==========+===========+======================================================+==========================================================================================+
-      | publicip | Yes       | :ref:`publicip <vpc_eip_0004__table23403840>` object | Specifies the EIP object. For details, see :ref:`Table 3 <vpc_eip_0004__table23403840>`. |
-      +----------+-----------+------------------------------------------------------+------------------------------------------------------------------------------------------+
+      +-----------+-----------+------------------------------------------------------+------------------------------------------------------------------------------------------+
+      | Parameter | Mandatory | Type                                                 | Description                                                                              |
+      +===========+===========+======================================================+==========================================================================================+
+      | publicip  | Yes       | :ref:`publicip <vpc_eip_0004__table23403840>` object | Specifies the EIP object. For details, see :ref:`Table 3 <vpc_eip_0004__table23403840>`. |
+      +-----------+-----------+------------------------------------------------------+------------------------------------------------------------------------------------------+
 
    .. _vpc_eip_0004__table23403840:
 
    .. table:: **Table 3** Description of the **publicip** field
 
       +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                                                                                                                                                              |
+      | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                                              |
       +=================+=================+=================+==========================================================================================================================================================================================================================================================+
       | port_id         | No              | String          | -  Specifies the port ID.                                                                                                                                                                                                                                |
       |                 |                 |                 |                                                                                                                                                                                                                                                          |
@@ -91,18 +91,18 @@ Response Message
 
    .. table:: **Table 4** Response parameter
 
-      +----------+---------------------------------------------------------+---------------------------------------------------------------------------------------------+
-      | Name     | Type                                                    | Description                                                                                 |
-      +==========+=========================================================+=============================================================================================+
-      | publicip | :ref:`publicip <vpc_eip_0004__table83964341880>` object | Specifies the EIP object. For details, see :ref:`Table 5 <vpc_eip_0004__table83964341880>`. |
-      +----------+---------------------------------------------------------+---------------------------------------------------------------------------------------------+
+      +-----------+---------------------------------------------------------+---------------------------------------------------------------------------------------------+
+      | Parameter | Type                                                    | Description                                                                                 |
+      +===========+=========================================================+=============================================================================================+
+      | publicip  | :ref:`publicip <vpc_eip_0004__table83964341880>` object | Specifies the EIP object. For details, see :ref:`Table 5 <vpc_eip_0004__table83964341880>`. |
+      +-----------+---------------------------------------------------------+---------------------------------------------------------------------------------------------+
 
    .. _vpc_eip_0004__table83964341880:
 
    .. table:: **Table 5** Description of the **publicips** field
 
       +-----------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name                  | Type                                                      | Description                                                                                                                                      |
+      | Parameter             | Type                                                      | Description                                                                                                                                      |
       +=======================+===========================================================+==================================================================================================================================================+
       | id                    | String                                                    | Specifies the unique identifier of an EIP.                                                                                                       |
       +-----------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -128,7 +128,7 @@ Response Message
       |                       |                                                           | This parameter is not supported currently.                                                                                                       |
       +-----------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
       | type                  | String                                                    | -  Specifies the EIP type.                                                                                                                       |
-      |                       |                                                           | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), or **5_gray** (Dedicated Load Balancer).                                  |
+      |                       |                                                           | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), or **5_dualStack**.                 |
       |                       |                                                           | -  Constraints:                                                                                                                                  |
       |                       |                                                           |                                                                                                                                                  |
       |                       |                                                           |    -  The configured value must be supported by the system.                                                                                      |
@@ -196,7 +196,7 @@ Response Message
    .. table:: **Table 6** Description of the **profile** field
 
       ========== ====== =========================
-      Name       Type   Description
+      Parameter  Type   Description
       ========== ====== =========================
       order_id   String Specifies the order ID.
       product_id String Specifies the product ID.

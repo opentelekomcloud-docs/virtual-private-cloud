@@ -311,6 +311,12 @@ Response Parameters
    |                       |                       |                                                                               |
    |                       |                       | Maximum length: **36**                                                        |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------+
+   | port_vif_details      | String                | -  Details about the NIC virtual interface.                                   |
+   |                       |                       |                                                                               |
+   |                       |                       | Minimum length: **0**                                                         |
+   |                       |                       |                                                                               |
+   |                       |                       | Maximum length: **255**                                                       |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------+
 
 .. _disassociatepublicips__en-us_topic_0000001543223781_en-us_topic_0000001403701958_response_publicipbandwidthinfo:
 

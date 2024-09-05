@@ -2,13 +2,13 @@
 
 .. _subnet_tag_0003:
 
-Deleting a Subnet Tag
-=====================
+Deleting a Tag from a Subnet
+============================
 
 Function
 --------
 
-This API is used to delete a subnet tag.
+This API is used to delete a tag from subnet.
 
 URI
 ---
@@ -22,7 +22,7 @@ DELETE /v2.0/{project_id}/subnets/{subnet_id}/tags/{key}
 .. table:: **Table 1** Parameter description
 
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------+
-   | Name                  | Mandatory             | Description                                                                                 |
+   | Parameter             | Mandatory             | Description                                                                                 |
    +=======================+=======================+=============================================================================================+
    | project_id            | Yes                   | Specifies the project ID.                                                                   |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------+

@@ -384,6 +384,12 @@ Response Parameters
    |                       |                       |                                                                               |
    |                       |                       | Maximum length: **36**                                                        |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------+
+   | port_vif_details      | String                | -  Details about the NIC virtual interface.                                   |
+   |                       |                       |                                                                               |
+   |                       |                       | Minimum length: **0**                                                         |
+   |                       |                       |                                                                               |
+   |                       |                       | Maximum length: **255**                                                       |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------+
 
 .. _showpublicipv3__en-us_topic_0000001542903925_en-us_topic_0000001405460350_response_publicipbandwidthinfo:
 
@@ -595,7 +601,8 @@ Normal response to the GET operation
          "vni" : null,
          "instance_id" : "",
          "instance_type" : "",
-         "port_profile" : null
+         "port_profile" : null,
+         "port_vif_details": ""
        },
        "bandwidth" : {
          "id" : "149ff19b-5de4-4436-958f-2eca39952e93",

@@ -26,7 +26,7 @@ DELETE /v1/{project_id}/routetables/{routetable_id}
 .. table:: **Table 1** Parameter description
 
    +---------------+-----------+--------+------------------------------------------------------------------------+
-   | Name          | Mandatory | Type   | Description                                                            |
+   | Parameter     | Mandatory | Type   | Description                                                            |
    +===============+===========+========+========================================================================+
    | project_id    | Yes       | String | Specifies the project ID.                                              |
    +---------------+-----------+--------+------------------------------------------------------------------------+

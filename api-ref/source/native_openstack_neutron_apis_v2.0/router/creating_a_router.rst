@@ -57,10 +57,6 @@ Request Parameters
    |                 |                 |                 |                                                                                                                                                           |
    |                 |                 |                 | You can use **GET /v2.0/networks?router:external=True** or run the **neutron net-external-list** command to query information about the external network. |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | enable_snat     | No              | Boolean         | Specifies whether the SNAT function is enabled.                                                                                                           |
-   |                 |                 |                 |                                                                                                                                                           |
-   |                 |                 |                 | The default value is **false**.                                                                                                                           |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
