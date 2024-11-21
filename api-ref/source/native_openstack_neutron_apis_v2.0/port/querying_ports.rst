@@ -8,7 +8,7 @@ Querying Ports
 Function
 --------
 
-Queries all networks accessible to the tenant submitting the request.
+Queries all ports accessible to the tenant submitting the request.
 
 URI
 ---
@@ -67,7 +67,7 @@ Example of querying ports by page
    |                 |                 |                  | -  If parameters **marker** and **limit** are not passed, resource records on the first page will be returned.                                                                                                                                                                                                       |
    |                 |                 |                  | -  If the parameter **marker** is not passed and the value of parameter **limit** is set to **10**, the first 10 resource records will be returned.                                                                                                                                                                  |
    |                 |                 |                  | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the value of parameter **limit** is set to **10**, the 11th to 20th resource records will be returned.                                                                                                                  |
-   |                 |                 |                  | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, resource records starting from the 11th records (including 11th) will be returned.                                                                                               |
+   |                 |                 |                  | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, 11th to 2,000th resource records will be returned. The default value of **limit** is **2000**.                                                                                   |
    +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | limit           | No              | Integer          | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                                                                                                               |
    |                 |                 |                  |                                                                                                                                                                                                                                                                                                                      |

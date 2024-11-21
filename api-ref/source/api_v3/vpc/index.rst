@@ -1,14 +1,14 @@
-:original_name: vpc_apiv3_0001_0.html
+:original_name: vpc_apiv3_0001.html
 
-.. _vpc_apiv3_0001_0:
+.. _vpc_apiv3_0001:
 
 VPC
 ===
 
--  :ref:`Querying VPCs <vpc_apiv3_0003_0>`
--  :ref:`Querying the Details of a VPC <vpc_apiv3_0004_0>`
--  :ref:`Adding a Secondary CIDR Block to a VPC <vpc_apiv3_0007_0>`
--  :ref:`Removing a Secondary CIDR Block from a VPC <vpc_apiv3_0008_0>`
+-  :ref:`Querying VPCs <vpc_apiv3_0003>`
+-  :ref:`Querying the Details of a VPC <vpc_apiv3_0004>`
+-  :ref:`Adding a Secondary CIDR Block to a VPC <vpc_apiv3_0007>`
+-  :ref:`Removing a Secondary CIDR Block from a VPC <vpc_apiv3_0008>`
 
 .. toctree::
    :maxdepth: 1
