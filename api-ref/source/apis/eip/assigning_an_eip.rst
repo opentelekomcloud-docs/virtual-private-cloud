@@ -10,7 +10,7 @@ Function
 
 This API is used to assign an EIP.
 
-The EIP service provides independent public IP addresses and bandwidth for Internet access. EIPs can be bound to or unbound from ECSss, BMSs, virtual IP addresses, NAT gateways, or load balancers.
+The EIP service provides independent public IP addresses and bandwidth for Internet access. EIPs can be bound to or unbound from ECSs, BMSs, virtual IP addresses, NAT gateways, or load balancers.
 
 .. note::
 

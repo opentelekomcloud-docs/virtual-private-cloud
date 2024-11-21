@@ -49,7 +49,7 @@ Example:
    |                 |                 |                 |    -  **firewall**: Firewall                                                 |
    |                 |                 |                 |    -  **shareBandwidthIP**: IP address added to a shared bandwidth           |
    |                 |                 |                 |    -  **shareBandwidth**: Shared bandwidth                                   |
-   |                 |                 |                 |    -  **flow_log**: VPC fow log                                              |
+   |                 |                 |                 |    -  **flow_log**: VPC flow log                                             |
    |                 |                 |                 |    -  **vpcContainRoutetable**: Number of route tables associated with a VPC |
    |                 |                 |                 |    -  **routetableContainRoutes**: Number of routes in a route table         |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------+
@@ -111,7 +111,7 @@ Response Parameters
    |                       |                       |    -  **firewall**: Firewall                                                 |
    |                       |                       |    -  **shareBandwidthIP**: IP address added to a shared bandwidth           |
    |                       |                       |    -  **shareBandwidth**: Shared bandwidth                                   |
-   |                       |                       |    -  **flow_log**: VPC fow log                                              |
+   |                       |                       |    -  **flow_log**: VPC flow log                                             |
    |                       |                       |    -  **vpcContainRoutetable**: Number of route tables associated with a VPC |
    |                       |                       |    -  **routetableContainRoutes**: Number of routes in a route table         |
    +-----------------------+-----------------------+------------------------------------------------------------------------------+

@@ -9,7 +9,7 @@ Security Group
 -  :ref:`Querying Security Group Details <vpc_sg01_0002>`
 -  :ref:`Querying Security Groups <vpc_sg01_0003>`
 -  :ref:`Deleting a Security Group <vpc_sg01_0004>`
--  :ref:`Creating a Security Group Rule <vpc_sg01_0005>`
+-  :ref:`Adding a Security Group Rule <vpc_sg01_0005>`
 -  :ref:`Querying Security Group Rule Details <vpc_sg01_0006>`
 -  :ref:`Querying Security Group Rules <vpc_sg01_0007>`
 -  :ref:`Deleting a Security Group Rule <vpc_sg01_0008>`
@@ -23,7 +23,7 @@ Security Group
    querying_security_group_details
    querying_security_groups
    deleting_a_security_group
-   creating_a_security_group_rule
+   adding_a_security_group_rule
    querying_security_group_rule_details
    querying_security_group_rules
    deleting_a_security_group_rule

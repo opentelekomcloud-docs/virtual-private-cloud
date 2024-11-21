@@ -46,37 +46,37 @@ Request Parameters
 
 .. table:: **Table 3** Description of the **FlowLog** field
 
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                    |
-   +=================+=================+=================+================================================================================================================================+
-   | name            | No              | String          | -  Flow log name.                                                                                                              |
-   |                 |                 |                 | -  The value can contain no more than 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.). |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | description     | No              | String          | -  Flow log description                                                                                                        |
-   |                 |                 |                 | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                               |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | resource_type   | Yes             | String          | -  Type of the resource for which that the logs to be collected.                                                               |
-   |                 |                 |                 | -  The value can be:                                                                                                           |
-   |                 |                 |                 |                                                                                                                                |
-   |                 |                 |                 |    -  **port**: a single network interface.                                                                                    |
-   |                 |                 |                 |    -  **vpc**: All network interfaces in a VPC.                                                                                |
-   |                 |                 |                 |    -  **network**: All network interfaces in a subnet.                                                                         |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | resource_id     | Yes             | String          | -  ID of the resource for which that the logs to be collected.                                                                 |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | traffic_type    | Yes             | String          | -  Type of the traffic for which that the logs to be collected.                                                                |
-   |                 |                 |                 | -  The value can be:                                                                                                           |
-   |                 |                 |                 |                                                                                                                                |
-   |                 |                 |                 |    -  **all**: specifies that both accepted and rejected traffic of the specified resource will be logged.                     |
-   |                 |                 |                 |    -  **accept**: specifies that only accepted inbound and outbound traffic of the specified resource will be logged.          |
-   |                 |                 |                 |    -  **reject**: specifies that only rejected inbound and outbound traffic of the specified resource will be logged.          |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | log_group_id    | Yes             | String          | -  Log group ID                                                                                                                |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | log_topic_id    | Yes             | String          | -  Log topic ID                                                                                                                |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | index_enabled   | No              | Boolean         | Whether to enable the log index.                                                                                               |
-   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                             |
+   +=================+=================+=================+=========================================================================================================================+
+   | name            | No              | String          | -  Flow log name.                                                                                                       |
+   |                 |                 |                 | -  The value can contain up to 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.). |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | description     | No              | String          | -  Flow log description                                                                                                 |
+   |                 |                 |                 | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                        |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | resource_type   | Yes             | String          | -  Type of the resource for which that the logs to be collected.                                                        |
+   |                 |                 |                 | -  The value can be:                                                                                                    |
+   |                 |                 |                 |                                                                                                                         |
+   |                 |                 |                 |    -  **port**: a single network interface.                                                                             |
+   |                 |                 |                 |    -  **vpc**: All network interfaces in a VPC.                                                                         |
+   |                 |                 |                 |    -  **network**: All network interfaces in a subnet.                                                                  |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | resource_id     | Yes             | String          | -  ID of the resource for which that the logs to be collected.                                                          |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | traffic_type    | Yes             | String          | -  Type of the traffic for which that the logs to be collected.                                                         |
+   |                 |                 |                 | -  The value can be:                                                                                                    |
+   |                 |                 |                 |                                                                                                                         |
+   |                 |                 |                 |    -  **all**: specifies that both accepted and rejected traffic of the specified resource will be logged.              |
+   |                 |                 |                 |    -  **accept**: specifies that only accepted inbound and outbound traffic of the specified resource will be logged.   |
+   |                 |                 |                 |    -  **reject**: specifies that only rejected inbound and outbound traffic of the specified resource will be logged.   |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | log_group_id    | Yes             | String          | -  Log group ID                                                                                                         |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | log_topic_id    | Yes             | String          | -  Log topic ID                                                                                                         |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+   | index_enabled   | No              | Boolean         | Whether to enable the log index.                                                                                        |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -115,56 +115,56 @@ Response Parameters
 
 .. table:: **Table 5** Description of the **FlowLog** field
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                                                                    |
-   +=======================+=======================+================================================================================================================================+
-   | id                    | String                | -  Flow log ID                                                                                                                 |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | name                  | String                | -  Flow log name                                                                                                               |
-   |                       |                       | -  The value can contain no more than 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.). |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | tenant_id             | String                | -  Project ID                                                                                                                  |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | description           | String                | -  Flow log description                                                                                                        |
-   |                       |                       | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                               |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | resource_type         | String                | -  Type of the resource for which that the logs to be collected.                                                               |
-   |                       |                       | -  The value can be:                                                                                                           |
-   |                       |                       |                                                                                                                                |
-   |                       |                       |    -  **port**: a single network interface.                                                                                    |
-   |                       |                       |    -  **vpc**: All network interfaces in a VPC.                                                                                |
-   |                       |                       |    -  **network**: All network interfaces in a subnet.                                                                         |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | resource_id           | String                | -  ID of the resource for which that the logs to be collected.                                                                 |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | traffic_type          | String                | -  Type of the traffic for which that the logs to be collected.                                                                |
-   |                       |                       | -  The value can be:                                                                                                           |
-   |                       |                       |                                                                                                                                |
-   |                       |                       |    -  **all**: specifies that both accepted and rejected traffic of the specified resource will be logged.                     |
-   |                       |                       |    -  **accept**: specifies that only accepted inbound and outbound traffic of the specified resource will be logged.          |
-   |                       |                       |    -  **reject**: specifies that only rejected inbound and outbound traffic of the specified resource will be logged.          |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | log_group_id          | String                | -  Log group ID                                                                                                                |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | log_topic_id          | String                | -  Log topic ID                                                                                                                |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | index_enabled         | Boolean               | -  Whether to enable the log index function                                                                                    |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | admin_state           | Boolean               | -  Whether to enable the flow log function                                                                                     |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | status                | String                | -  Flow log status                                                                                                             |
-   |                       |                       | -  The value can be:                                                                                                           |
-   |                       |                       |                                                                                                                                |
-   |                       |                       |    -  **ACTIVE**: Enabled                                                                                                      |
-   |                       |                       |    -  **DOWN**: Disabled                                                                                                       |
-   |                       |                       |    -  **ERROR**: Abnormal                                                                                                      |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | created_at            | String                | -  Time when the flow log is created                                                                                           |
-   |                       |                       | -  UTC time in the format of yyyy-MM-ddTHH:mmss                                                                                |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
-   | updated_at            | String                | -  Time when the flow log is updated                                                                                           |
-   |                       |                       | -  UTC time in the format of yyyy-MM-ddTHH:mmss                                                                                |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                             |
+   +=======================+=======================+=========================================================================================================================+
+   | id                    | String                | -  Flow log ID                                                                                                          |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | name                  | String                | -  Flow log name                                                                                                        |
+   |                       |                       | -  The value can contain up to 64 characters, including letters, digits, underscores (_), hyphens (-), and periods (.). |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | tenant_id             | String                | -  Project ID                                                                                                           |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | description           | String                | -  Flow log description                                                                                                 |
+   |                       |                       | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                        |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | resource_type         | String                | -  Type of the resource for which that the logs to be collected.                                                        |
+   |                       |                       | -  The value can be:                                                                                                    |
+   |                       |                       |                                                                                                                         |
+   |                       |                       |    -  **port**: a single network interface.                                                                             |
+   |                       |                       |    -  **vpc**: All network interfaces in a VPC.                                                                         |
+   |                       |                       |    -  **network**: All network interfaces in a subnet.                                                                  |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | resource_id           | String                | -  ID of the resource for which that the logs to be collected.                                                          |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | traffic_type          | String                | -  Type of the traffic for which that the logs to be collected.                                                         |
+   |                       |                       | -  The value can be:                                                                                                    |
+   |                       |                       |                                                                                                                         |
+   |                       |                       |    -  **all**: specifies that both accepted and rejected traffic of the specified resource will be logged.              |
+   |                       |                       |    -  **accept**: specifies that only accepted inbound and outbound traffic of the specified resource will be logged.   |
+   |                       |                       |    -  **reject**: specifies that only rejected inbound and outbound traffic of the specified resource will be logged.   |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | log_group_id          | String                | -  Log group ID                                                                                                         |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | log_topic_id          | String                | -  Log topic ID                                                                                                         |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | index_enabled         | Boolean               | -  Whether to enable the log index function                                                                             |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | admin_state           | Boolean               | -  Whether to enable the flow log function                                                                              |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | status                | String                | -  Flow log status                                                                                                      |
+   |                       |                       | -  The value can be:                                                                                                    |
+   |                       |                       |                                                                                                                         |
+   |                       |                       |    -  **ACTIVE**: Enabled                                                                                               |
+   |                       |                       |    -  **DOWN**: Disabled                                                                                                |
+   |                       |                       |    -  **ERROR**: Abnormal                                                                                               |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | created_at            | String                | -  Time when the flow log is created                                                                                    |
+   |                       |                       | -  UTC time in the format of yyyy-MM-ddTHH:mm:ss                                                                        |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
+   | updated_at            | String                | -  Time when the flow log is updated                                                                                    |
+   |                       |                       | -  UTC time in the format of yyyy-MM-ddTHH:mm:ss                                                                        |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------+
 
 Example Response
 ----------------
