@@ -30,10 +30,20 @@ Procedure
 5. In the shared bandwidth list, locate the target shared bandwidth that you want to add EIPs to. In the **Operation** column, choose **Add Public IP Address**, and select the EIPs or IPv6 addresses to be added.
 
 
-   .. figure:: /_static/images/en-us_image_0000001832479012.png
-      :alt: **Figure 1** Adding EIPs or IPv6 addresses
+   .. figure:: /_static/images/en-us_image_0000002065101369.png
+      :alt: **Figure 1** Adding an EIP
 
-      **Figure 1** Adding EIPs or IPv6 addresses
+      **Figure 1** Adding an EIP
+
+
+   .. figure:: /_static/images/en-us_image_0000002065187445.png
+      :alt: **Figure 2** Adding an IPv6 address
+
+      **Figure 2** Adding an IPv6 address
+
+   .. note::
+
+      -  After an EIP is added to a shared bandwidth, the dedicated bandwidth used by the EIP will become invalid and the EIP will start to use the shared bandwidth. The EIP will be removed from the original dedicated bandwidth.
 
 6. Click **OK**.
 

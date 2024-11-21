@@ -46,7 +46,7 @@ Procedure
 #. Select the region and name of the new security group as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0000001865582513.png
+   .. figure:: /_static/images/en-us_image_0000002029014640.png
       :alt: **Figure 1** Clone Security Group
 
       **Figure 1** Clone Security Group

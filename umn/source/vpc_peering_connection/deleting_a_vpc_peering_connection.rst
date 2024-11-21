@@ -36,7 +36,7 @@ Procedure
 
    A confirmation dialog box is displayed.
 
-6. Click **Yes**.
+6. Enter **DELETE** as prompted and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818823798.png

@@ -32,7 +32,7 @@ Procedure
 
    A confirmation dialog box is displayed.
 
-#. Confirm the information and click **Yes**.
+#. Confirm the information and click **OK**.
 
    .. important::
 

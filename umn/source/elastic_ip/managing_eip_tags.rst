@@ -51,9 +51,9 @@ Procedure
 
 #. In the search box above the EIP list, click anywhere in the box to set filters.
 
-   Click the tag key and then the value as required. The system filters resources based on the tag you select.
+#. Click the tag key and then the value as required. The system filters resources based on the tag you select.
 
-   Click anywhere in the search box to add the next tag key and value.
+#. Click anywhere in the search box to add the next tag key and value.
 
    You can add multiple tag keys and values to refine your search results. If you add more than one tag to search for EIPs, the system will display only the EIPs that match all of the tags you specified.
 
@@ -81,7 +81,7 @@ Procedure
 
    -  Delete a tag.
 
-      Locate the row that contains the tag you want to delete, and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
+      Locate the row that contains the tag you want to delete, and click **Delete** in the **Operation** column. In the displayed dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818982822.png

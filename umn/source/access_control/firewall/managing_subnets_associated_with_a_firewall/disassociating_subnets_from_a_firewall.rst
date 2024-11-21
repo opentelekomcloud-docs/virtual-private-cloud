@@ -29,7 +29,7 @@ Procedure
 
 7. On the **Associated Subnets** page, locate the row that contains the target subnet and click **Disassociate** in the **Operation** column.
 
-8. Click **Yes** in the displayed dialog box.
+8. Click **OK**.
 
 **Disassociating subnets from a firewall**
 
