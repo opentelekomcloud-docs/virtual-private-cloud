@@ -25,7 +25,7 @@ Procedure
 
     The security group list is displayed.
 
-5.  Locate the row that contains the target security group and click **Manage Rule** in the **Operation** column.
+5.  Locate the row that contains the target security group and click **Manage Rules** in the **Operation** column.
 
     The page for configuring security group rules is displayed.
 
@@ -36,7 +36,7 @@ Procedure
 7.  Configure required parameters.
 
 
-    .. figure:: /_static/images/en-us_image_0000001818823074.png
+    .. figure:: /_static/images/en-us_image_0000002029168046.png
        :alt: **Figure 1** Fast-Add Inbound Rule
 
        **Figure 1** Fast-Add Inbound Rule
@@ -66,6 +66,17 @@ Procedure
        |                       |                                                                                                                                                                              |                       |
        |                       | If the source is a security group, this rule will apply to all instances associated with the selected security group.                                                        |                       |
        +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+       | Action                | Allow or Deny                                                                                                                                                                | Allow                 |
+       |                       |                                                                                                                                                                              |                       |
+       |                       | -  If the **Action** is set to **Allow**, access from the source is allowed to ECSs in the security group over specified ports.                                              |                       |
+       |                       | -  If the **Action** is set to **Deny**, access from the source is denied to ECSs in the security group over specified ports.                                                |                       |
+       |                       |                                                                                                                                                                              |                       |
+       |                       | Deny rules take precedence over allow rules of the same priority.                                                                                                            |                       |
+       +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+       | Priority              | Security group rule priority.                                                                                                                                                | 1                     |
+       |                       |                                                                                                                                                                              |                       |
+       |                       | The priority value is from 1 to 100. The default value is 1 and has the highest priority. The security group rule with a smaller value has a higher priority.                |                       |
+       +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
        | Description           | (Optional) Supplementary information about the security group rule.                                                                                                          | ``-``                 |
        |                       |                                                                                                                                                                              |                       |
        |                       | The description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).                                                                          |                       |
@@ -82,7 +93,7 @@ Procedure
 10. Configure required parameters.
 
 
-    .. figure:: /_static/images/en-us_image_0000001865582617.png
+    .. figure:: /_static/images/en-us_image_0000002065209133.png
        :alt: **Figure 2** Fast-Add Outbound Rule
 
        **Figure 2** Fast-Add Outbound Rule
@@ -109,6 +120,17 @@ Procedure
        |                       | -  xxx.xxx.xxx.0/24 (IPv4 address range)                                                                                                                                        |                       |
        |                       | -  0.0.0.0/0 (all IPv4 addresses)                                                                                                                                               |                       |
        |                       | -  sg-abc (security group)                                                                                                                                                      |                       |
+       +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+       | Priority              | Security group rule priority.                                                                                                                                                   | 1                     |
+       |                       |                                                                                                                                                                                 |                       |
+       |                       | The priority value is from 1 to 100. The default value is 1 and has the highest priority. The security group rule with a smaller value has a higher priority.                   |                       |
+       +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+       | Action                | Allow or Deny                                                                                                                                                                   | Allow                 |
+       |                       |                                                                                                                                                                                 |                       |
+       |                       | -  If the **Action** is set to **Allow**, access from ECSs in the security group is allowed to the destination over specified ports.                                            |                       |
+       |                       | -  If the **Action** is set to **Deny**, access from ECSs in the security group is denied to the destination over specified ports.                                              |                       |
+       |                       |                                                                                                                                                                                 |                       |
+       |                       | Deny rules take precedence over allow rules of the same priority.                                                                                                               |                       |
        +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
        | Description           | (Optional) Supplementary information about the security group rule.                                                                                                             | ``-``                 |
        |                       |                                                                                                                                                                                 |                       |
