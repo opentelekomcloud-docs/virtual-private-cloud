@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'vpc-api-ref.tex',
-     u'Virtual Private Cloud - API Reference',
+    u'Virtual Private Cloud - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 

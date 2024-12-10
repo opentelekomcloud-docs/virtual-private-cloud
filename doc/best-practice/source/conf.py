@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'vpc-best-practice.tex',
-     u'Virtual Private Cloud - Best Practice',
+    u'Virtual Private Cloud - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 
