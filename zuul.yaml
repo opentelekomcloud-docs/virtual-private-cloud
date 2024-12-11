@@ -4,6 +4,11 @@
     default-branch: main
     templates:
       - helpcenter-base-jobs
+    vars:
+      sphinx_pdf_files:
+        - vpc-api-ref.pdf
+        - vpc-best-practice.pdf
+        - vpc-umn.pdf
     check:
       jobs:
         - noop
