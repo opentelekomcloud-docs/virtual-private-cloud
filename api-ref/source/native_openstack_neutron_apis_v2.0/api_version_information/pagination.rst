@@ -8,7 +8,7 @@ Pagination
 Function
 --------
 
-Neutron APIs v2.0 provides the pagination function. You can set parameters **limit** and **marker** in the URL to enable the desired number of items to be returned. All returned items are displayed in the ascending order of ID.
+Neutron APIs v2.0 provides the pagination function. You can set parameters **limit** and **marker** in the URL of the list request to enable the desired number of items to be returned. All returned items are displayed in the ascending order of ID.
 
 -  To access the next page of the request, perform the following configurations:
 
