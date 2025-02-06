@@ -25,7 +25,7 @@ Procedure
 
 5. Locate the firewall, click **More** in the **Operation** column, and click **Delete**.
 
-6. Click **Yes**.
+6. Enter **DELETE** as prompted and click **OK**.
 
    .. note::
 

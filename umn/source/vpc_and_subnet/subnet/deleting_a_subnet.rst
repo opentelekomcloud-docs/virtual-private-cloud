@@ -36,7 +36,7 @@ Procedure
 
    A confirmation dialog box is displayed.
 
-#. Click **Yes**.
+#. Enter **DELETE** as prompted and click **OK**.
 
    .. important::
 

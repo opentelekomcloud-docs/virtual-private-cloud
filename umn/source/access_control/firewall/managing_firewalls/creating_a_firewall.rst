@@ -30,7 +30,7 @@ Procedure
 6. On the **Create Firewall** page, configure parameters as prompted.
 
 
-   .. figure:: /_static/images/en-us_image_0000001818823318.png
+   .. figure:: /_static/images/en-us_image_0000002065202201.png
       :alt: **Figure 1** Create Firewall
 
       **Figure 1** Create Firewall
