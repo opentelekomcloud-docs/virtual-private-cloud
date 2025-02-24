@@ -36,7 +36,7 @@ Procedure
    -  Locate the row that contains the firewall rule and click **Replicate** in the **Operation** column to replicate an existing rule.
 
 
-   .. figure:: /_static/images/en-us_image_0000001818823374.png
+   .. figure:: /_static/images/en-us_image_0000002065200717.png
       :alt: **Figure 1** Add Inbound Rule
 
       **Figure 1** Add Inbound Rule

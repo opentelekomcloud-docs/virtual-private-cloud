@@ -27,7 +27,7 @@ Procedure
 
 6. On the **Inbound Rules** or **Outbound Rules** tab, locate the row that contains the target rule, and click **More** and then **Enable** or **Disable** in the **Operation** column.
 
-7. Click **Yes** in the displayed dialog box.
+7. Click **OK** in the displayed dialog box.
 
    The rule is enabled or disabled. The procedure for enabling or disabling an outbound rule is the same as that for enabling or disabling an inbound rule.
 
