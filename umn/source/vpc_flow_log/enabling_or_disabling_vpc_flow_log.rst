@@ -29,7 +29,7 @@ Procedure
 
 4. In the navigation pane on the left, choose **VPC Flow Logs**.
 5. Locate the VPC flow log to be enabled or disabled, and choose **More** > **Enable** or **More** > **Disable** in the **Operation** column.
-6. Click **Yes**.
+6. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818983174.png

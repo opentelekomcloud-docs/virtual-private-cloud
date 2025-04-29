@@ -31,9 +31,9 @@ Procedure
 
 
    .. figure:: /_static/images/en-us_image_0000001865837676.png
-      :alt: **Figure 1** Create a VPC and subnet
+      :alt: **Figure 1** Creating a VPC and subnet
 
-      **Figure 1** Create a VPC and subnet
+      **Figure 1** Creating a VPC and subnet
 
    .. table:: **Table 1** VPC parameter descriptions
 

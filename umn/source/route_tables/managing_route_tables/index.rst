@@ -10,7 +10,7 @@ Managing Route Tables
 -  :ref:`Changing the Route Table Associated with a Subnet <vpc_route01_0008>`
 -  :ref:`Viewing the Route Table Associated with a Subnet <vpc_route01_0015>`
 -  :ref:`Viewing Route Table Information <vpc_route01_0009>`
--  :ref:`Exporting Route Table Information <vpc_route01_0014>`
+-  :ref:`Exporting Route Tables <vpc_route01_0014>`
 -  :ref:`Deleting a Route Table <vpc_route01_0010>`
 
 .. toctree::
@@ -22,5 +22,5 @@ Managing Route Tables
    changing_the_route_table_associated_with_a_subnet
    viewing_the_route_table_associated_with_a_subnet
    viewing_route_table_information
-   exporting_route_table_information
+   exporting_route_tables
    deleting_a_route_table

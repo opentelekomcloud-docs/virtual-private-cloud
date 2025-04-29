@@ -35,7 +35,7 @@ Procedure
    You can click **+** to add more routes.
 
 
-   .. figure:: /_static/images/en-us_image_0000001865582793.png
+   .. figure:: /_static/images/en-us_image_0000002065093369.png
       :alt: **Figure 1** Add Route
 
       **Figure 1** Add Route
