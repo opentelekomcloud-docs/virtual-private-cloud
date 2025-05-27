@@ -91,7 +91,7 @@ Procedure
 
    -  Delete a tag.
 
-      Locate the row that contains the tag you want to delete, and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
+      Locate the row that contains the tag you want to delete, and click **Delete** in the **Operation** column. In the displayed dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001865583185.png

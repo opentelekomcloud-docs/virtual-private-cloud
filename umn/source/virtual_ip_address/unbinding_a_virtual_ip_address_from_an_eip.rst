@@ -33,11 +33,11 @@ Procedure
 
    The virtual IP address list is displayed.
 
-#. Locate the row that contains the virtual IP address, click **More** in the **Operation** column, and select **Unbind from EIP**.
+#. Locate the row that contains the virtual IP address, click **Unbind from EIP** in the **Operation** column.
 
    A confirmation dialog box is displayed.
 
-#. Confirm the information and click **Yes**.
+#. Confirm the information and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818823302.png

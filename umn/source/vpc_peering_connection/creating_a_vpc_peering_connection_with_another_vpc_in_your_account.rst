@@ -65,7 +65,7 @@ Step 1: Create a VPC Peering Connection
    For details, see :ref:`Table 1 <en-us_topic_0046655037__table348414246354>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001865663453.png
+   .. figure:: /_static/images/en-us_image_0000002029083886.png
       :alt: **Figure 2** Create VPC Peering Connection
 
       **Figure 2** Create VPC Peering Connection
@@ -127,7 +127,7 @@ Step 2: Add Routes for the VPC Peering Connection
    The **Add Route** dialog box is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001865583269.png
+   .. figure:: /_static/images/en-us_image_0000002029103832.png
       :alt: **Figure 3** Add Route
 
       **Figure 3** Add Route
