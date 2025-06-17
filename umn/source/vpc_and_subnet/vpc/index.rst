@@ -11,7 +11,7 @@ VPC
 -  :ref:`Deleting a Secondary IPv4 CIDR Block from a VPC <vpc_vpc_0008>`
 -  :ref:`Deleting a VPC <vpc_vpc_0003>`
 -  :ref:`Managing VPC Tags <vpc_vpc_0004>`
--  :ref:`Exporting VPC List <vpc_vpc_0006>`
+-  :ref:`Exporting VPCs <vpc_vpc_0006>`
 -  :ref:`Obtaining a VPC ID <vpc_vpc_0013>`
 -  :ref:`Viewing a VPC Topology <vpc_vpc_0009>`
 
@@ -25,6 +25,6 @@ VPC
    deleting_a_secondary_ipv4_cidr_block_from_a_vpc
    deleting_a_vpc
    managing_vpc_tags
-   exporting_vpc_list
+   exporting_vpcs
    obtaining_a_vpc_id
    viewing_a_vpc_topology

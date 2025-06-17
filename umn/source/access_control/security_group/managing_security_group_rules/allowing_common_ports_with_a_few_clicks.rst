@@ -2,7 +2,7 @@
 
 .. _SecurityGroup_0005:
 
-Allowing Common Ports with A Few Clicks
+Allowing Common Ports with a Few Clicks
 =======================================
 
 Scenarios

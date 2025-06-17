@@ -7,7 +7,7 @@ Managing Security Group Rules
 
 -  :ref:`Adding a Security Group Rule <en-us_topic_0030969470>`
 -  :ref:`Fast-Adding Security Group Rules <securitygroup_0004>`
--  :ref:`Allowing Common Ports with A Few Clicks <securitygroup_0005>`
+-  :ref:`Allowing Common Ports with a Few Clicks <securitygroup_0005>`
 -  :ref:`Modifying a Security Group Rule <vpc_securitygroup_0005>`
 -  :ref:`Replicating a Security Group Rule <vpc_securitygroup_0004>`
 -  :ref:`Importing and Exporting Security Group Rules <vpc_securitygroup_0007>`

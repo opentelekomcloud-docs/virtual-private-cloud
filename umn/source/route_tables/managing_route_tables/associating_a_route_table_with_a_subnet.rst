@@ -40,7 +40,7 @@ Procedure
 6. Select the subnet to be associated.
 
 
-   .. figure:: /_static/images/en-us_image_0000001865662969.png
+   .. figure:: /_static/images/en-us_image_0000002065091841.png
       :alt: **Figure 1** Associate Subnet
 
       **Figure 1** Associate Subnet
