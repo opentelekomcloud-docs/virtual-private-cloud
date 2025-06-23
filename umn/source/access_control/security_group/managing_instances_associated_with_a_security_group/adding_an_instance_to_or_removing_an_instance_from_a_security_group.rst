@@ -40,7 +40,7 @@ Adding an Instance to a Security Group
 
    The **Add Server** dialog box is displayed.
 
-#. In the server list, select one or more servers and click OK to add them to the current security group.
+#. In the server list, select one or more servers and click **OK** to add them to the current security group.
 
 Removing an Instance from a Security Group
 ------------------------------------------
@@ -71,7 +71,7 @@ An instance must be added to at least one security group. If you want to remove 
 
    A confirmation dialog box is displayed.
 
-#. Confirm the information and click **Yes**.
+#. Confirm the information and click **OK**.
 
 Follow-Up Operations
 --------------------

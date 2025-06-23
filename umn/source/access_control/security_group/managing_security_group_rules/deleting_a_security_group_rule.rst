@@ -43,7 +43,7 @@ Procedure
    -  To delete a single security group rule, locate the row that contains the rule and click **Delete** in the **Operation** column.
    -  To delete multiple security group rules, select multiple security group rules and click **Delete** in the upper left corner of the rule list.
 
-8. Click **Yes**.
+8. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001865582633.png

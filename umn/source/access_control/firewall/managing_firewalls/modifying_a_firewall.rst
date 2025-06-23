@@ -27,13 +27,15 @@ Procedure
 
 6. On the displayed page, click |image3| on the right of **Name** and edit the firewall name.
 
-7. Click Y to save the new firewall name.
+7. Click |image4| to save the new firewall name.
 
-8. Click |image4| on the right of **Description** and edit the firewall description.
+8. Click |image5| on the right of **Description** and edit the firewall description.
 
-9. Click Y to save the new firewall description.
+9. Click |image6| to save the new firewall description.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818983494.png
 .. |image3| image:: /_static/images/en-us_image_0000001865583253.png
-.. |image4| image:: /_static/images/en-us_image_0000001865583253.png
+.. |image4| image:: /_static/images/en-us_image_0000002084336681.png
+.. |image5| image:: /_static/images/en-us_image_0000001865583253.png
+.. |image6| image:: /_static/images/en-us_image_0000002048296164.png

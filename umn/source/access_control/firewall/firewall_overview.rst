@@ -7,7 +7,7 @@ Firewall Overview
 
 A firewall is an optional layer of security for your subnets. After you associate one or more subnets with a firewall, you can control traffic in and out of the subnets.
 
-:ref:`Figure 1 <acl_0001__fig9582182315479>` shows how a firewall works.
+For details, see :ref:`Figure 1 <acl_0001__fig9582182315479>`.
 
 .. _acl_0001__fig9582182315479:
 
@@ -35,7 +35,7 @@ Firewall Basics
 
 .. important::
 
-   After a persistent connection is disconnected, new connections will not be established immediately until the timeout period of connection tracking expires. For example, after an ICMP persistent connection is disconnected, a new connection will be established and a new rule will apply when the timeout period (30s) expires.
+   After a persistent connection is disconnected, new connections will not be established immediately until the timeout period of connection tracking expires. For example, after an ICMP persistent connection is disconnected, a new connection will be established and a new rule will be applied when the timeout period (30s) expires.
 
    -  The timeout period of connection tracking varies by protocol. The timeout period of a TCP connection in the established state is 600s, and that of an ICMP connection is 30s. For other protocols, if packets are received in both inbound and outbound directions, the connection tracking timeout period is 180s. If packets are received only in one direction, the connection tracking timeout period is 30s.
    -  The timeout period of TCP connections varies by connection status. The timeout period of a TCP connection in the established state is 600s, and that of a TCP connection in the FIN-WAIT state is 30s.

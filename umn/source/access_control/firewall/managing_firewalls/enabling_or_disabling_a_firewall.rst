@@ -27,7 +27,7 @@ Procedure
 
 5. Locate the row that contains the firewall, click **More** in the **Operation** column, and click **Enable** or **Disable**.
 
-6. Click **Yes** in the displayed dialog box.
+6. Click **OK** in the displayed dialog box.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818823714.png

@@ -9,6 +9,7 @@ Managing Routes
 -  :ref:`Modifying a Route <vpc_route01_0011>`
 -  :ref:`Replicating a Route <vpc_route01_0013>`
 -  :ref:`Deleting a Route <vpc_route01_0012>`
+-  :ref:`Exporting Routes <vpc_route01_0018>`
 
 .. toctree::
    :maxdepth: 1
@@ -18,3 +19,4 @@ Managing Routes
    modifying_a_route
    replicating_a_route
    deleting_a_route
+   exporting_routes

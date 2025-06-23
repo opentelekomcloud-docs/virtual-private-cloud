@@ -28,10 +28,10 @@ Procedure
 #. Click the **IP Addresses** tab and click **Assign Virtual IP Address**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001866046474.png
-      :alt: **Figure 1** Assign a virtual IP address
+   .. figure:: /_static/images/en-us_image_0000002029118468.png
+      :alt: **Figure 1** Assign Virtual IP Address
 
-      **Figure 1** Assign a virtual IP address
+      **Figure 1** Assign Virtual IP Address
 
 #. Select an IP address type. This parameter is available only in regions supporting IPv6.
 

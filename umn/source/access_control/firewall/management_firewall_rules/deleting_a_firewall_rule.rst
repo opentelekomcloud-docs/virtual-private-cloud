@@ -27,7 +27,7 @@ Procedure
 
 6. On the **Inbound Rules** or **Outbound Rules** tab, locate the row that contains the target rule and click **Delete** in the **Operation** column.
 
-7. Click **Yes** in the displayed dialog box.
+7. Click **OK**.
 
 **Deleting Multiple Firewall Rules at a Time**
 
