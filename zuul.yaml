@@ -6,8 +6,9 @@
       - helpcenter-base-jobs
     vars:
       sphinx_pdf_files:
-        - vpc-umn.pdf
         - vpc-api-ref.pdf
+        - vpc-best-practice.pdf
+        - vpc-umn.pdf
     check:
       jobs:
         - noop
