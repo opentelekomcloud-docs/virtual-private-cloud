@@ -1,6 +1,6 @@
-:original_name: vpc_firewall_0012.html
+:original_name: vpc_firewall_0012xx.html
 
-.. _vpc_firewall_0012:
+.. _vpc_firewall_0012xx:
 
 Removing a Firewall Rule
 ========================

@@ -1,13 +1,13 @@
-:original_name: vpc_subnet02_0000.html
+:original_name: vpc_subnet02_0000xx.html
 
-.. _vpc_subnet02_0000:
+.. _vpc_subnet02_0000xx:
 
 Subnet
 ======
 
--  :ref:`Querying Subnets <vpc_subnet02_0001>`
+-  :ref:`Querying Subnets <vpc_subnet02_0001xx>`
 -  :ref:`Querying a Subnet <vpc_subnet02_0002>`
--  :ref:`Creating a Subnet <vpc_subnet02_0003>`
+-  :ref:`Creating a Subnet <vpc_subnet02_0003xx>`
 -  :ref:`Updating a Subnet <vpc_subnet02_0004>`
 -  :ref:`Deleting a Subnet <vpc_subnet02_0005>`
 

@@ -1,11 +1,11 @@
-:original_name: vpc_network_0000.html
+:original_name: vpc_network_0000xx.html
 
-.. _vpc_network_0000:
+.. _vpc_network_0000xx:
 
 Network
 =======
 
--  :ref:`Querying Networks <vpc_network_0001>`
+-  :ref:`Querying Networks <vpc_network_0001xx>`
 -  :ref:`Querying Network Details <vpc_network_0002>`
 -  :ref:`Creating a Network <vpc_network_0003>`
 -  :ref:`Updating a Network <vpc_network_0004>`

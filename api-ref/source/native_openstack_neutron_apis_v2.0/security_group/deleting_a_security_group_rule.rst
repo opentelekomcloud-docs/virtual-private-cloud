@@ -1,6 +1,6 @@
-:original_name: vpc_sg02_0009.html
+:original_name: vpc_sg02_0009xx.html
 
-.. _vpc_sg02_0009:
+.. _vpc_sg02_0009xx:
 
 Deleting a Security Group Rule
 ==============================

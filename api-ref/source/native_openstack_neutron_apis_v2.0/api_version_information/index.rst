@@ -1,13 +1,13 @@
-:original_name: vpc_version_0000.html
+:original_name: vpc_version_0000xx.html
 
-.. _vpc_version_0000:
+.. _vpc_version_0000xx:
 
 API Version Information
 =======================
 
 -  :ref:`Querying API Versions <vpc_version_0001>`
 -  :ref:`Querying a Specified API Version <vpc_version_0002>`
--  :ref:`Pagination <vpc_version_0003>`
+-  :ref:`Pagination <vpc_version_0003xx>`
 
 .. toctree::
    :maxdepth: 1

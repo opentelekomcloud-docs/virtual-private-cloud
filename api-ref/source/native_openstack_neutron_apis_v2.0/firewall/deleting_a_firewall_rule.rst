@@ -12,7 +12,7 @@ This API is used to delete a firewall rule.
 
 .. note::
 
-   Before deleting a rule, you need to remove the rule from the corresponding policy first. For details, see :ref:`Removing a Firewall Rule <vpc_firewall_0012>`.
+   Before deleting a rule, you need to remove the rule from the corresponding policy first. For details, see :ref:`Removing a Firewall Rule <vpc_firewall_0012xx>`.
 
 URI
 ---
