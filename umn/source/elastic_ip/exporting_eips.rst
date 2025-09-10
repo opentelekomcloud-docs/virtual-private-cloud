@@ -10,7 +10,7 @@ Scenarios
 
 The information of all EIPs under your account can be exported in an Excel file to a local directory.
 
-The file records the EIP, EIP ID, status, type, bandwidth name, bandwidth size, bandwidth id, Instance Type, Instance Name, Instance ID, Tags and Created.
+The file records the EIP, EIP ID, status, type, bandwidth name, bandwidth size, bandwidth ID, Instance Type, Instance Name, Instance ID, Tags ,and Created.
 
 Procedure
 ---------
@@ -29,4 +29,4 @@ Procedure
    The system automatically exports the information about the EIPs as an Excel file to a local directory.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
-.. |image2| image:: /_static/images/en-us_image_0000001649841616.png
+.. |image2| image:: /_static/images/en-us_image_0000001818982822.png

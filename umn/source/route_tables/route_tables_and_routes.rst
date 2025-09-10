@@ -23,16 +23,14 @@ A route table contains a set of routes that are used to determine where network 
 
 -  Custom route table: If you do not want to use the default route table, you can create a custom route table and associate it with the subnet. Custom route tables can be deleted if they are no longer required.
 
-   The custom route table associated with a subnet affects only the outbound traffic. The default route table of a subnet controls the inbound traffic.
-
 Route
 -----
 
-You can add routes to default and custom route tables and configure the destination, next hop type, and next hop in the routes to determine where network traffic is directed. Routes are classified into system routes and custom routes.
+You can add routes to default and custom route tables and configure the destination type, destination, next hop type, and next hop in the routes to determine where network traffic is directed. Routes are classified into system routes and custom routes.
 
 -  System routes: These routes are automatically added by the system and cannot be modified or deleted.
 
-   After a route table is created, the system automatically adds the following system routes to the route table, so that instances in a VPC can communicate with each other.
+   Each route table comes with the following system routes, so that instances in a VPC can communicate with each other.
 
    -  Routes whose destination is 100.64.0.0/10 or 198.19.128.0/20.
 
@@ -47,15 +45,15 @@ You can add routes to default and custom route tables and configure the destinat
 
          In addition to the preceding system routes, the system automatically adds a route whose destination is 127.0.0.0/8. This is the local loopback address.
 
--  Custom routes: These are routes that you can add, modify, and delete. The destination of a custom route cannot overlap with that of a system route.
+-  Custom routes: Routes that can be added, modified, and deleted. The destination of a custom route cannot overlap with that of a system route.
 
-   You can add a custom route and configure the destination, next hop type, and next hop in the route to determine where network traffic is directed. :ref:`Table 1 <vpc_route01_0001__en-us_topic_0118498988_en-us_topic_0121831807_table1727714140542>` lists the supported types of next hops.
+   You can add a custom route and configure the destination type, destination, next hop type, and next hop in the route to determine where network traffic is directed. :ref:`Table 1 <vpc_route01_0001__en-us_topic_0118498988_en-us_topic_0121831807_table1727714140542>` lists the supported types of next hops.
 
-   You cannot add two routes with the same destination to a VPC route table even if their next hop types are different. The route priority depends on the destination. According to the longest match routing rule, the destination with a higher matching degree is preferentially selected for packet forwarding.
+   You cannot add two routes with the same destination to a VPC route table even if their next hop types are different, because the destination determines the route priority. According to the longest match routing rule, the destination with a higher matching degree is preferentially selected for packet forwarding.
 
    .. _vpc_route01_0001__en-us_topic_0118498988_en-us_topic_0121831807_table1727714140542:
 
-   .. table:: **Table 1** Next hop type
+   .. table:: **Table 1** Next hop types
 
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | Next Hop Type            | Description                                                                                                                                                  | Supported Route Table  |
@@ -63,16 +61,16 @@ You can add routes to default and custom route tables and configure the destinat
       | Server                   | Traffic intended for the destination is forwarded to an ECS in the VPC.                                                                                      | -  Default route table |
       |                          |                                                                                                                                                              | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-      | Extension NIC            | Traffic intended for the destination is forwarded to the extension NIC of an ECS in the VPC.                                                                 | -  Default route table |
+      | Extension NIC            | Traffic intended for the destination is forwarded to the extended network interface of an ECS in the VPC.                                                    | -  Default route table |
       |                          |                                                                                                                                                              | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | BMS user-defined network | Traffic intended for the destination is forwarded to a BMS user-defined network. Currently, this parameter is available only in eu-de.                       | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-      | VPN connection           | Traffic intended for the destination is forwarded to a VPN gateway.                                                                                          | Custom route table     |
+      | VPN connection           | Traffic intended for the destination is forwarded to a VPN connection.                                                                                       | Custom route table     |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | Direct Connect gateway   | Traffic intended for the destination is forwarded to a Direct Connect gateway.                                                                               | Custom route table     |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-      | NAT gateway              | Traffic intended for the destination is forwarded to a NAT gateway.                                                                                          | -  Default route table |
+      | NAT Gateway              | Traffic intended for the destination is forwarded to a NAT gateway.                                                                                          | -  Default route table |
       |                          |                                                                                                                                                              | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | VPC peering connection   | Traffic intended for the destination is forwarded to a VPC peering connection.                                                                               | -  Default route table |
@@ -86,7 +84,7 @@ You can add routes to default and custom route tables and configure the destinat
 
       If you specify the destination when creating a resource, a system route is delivered. If you do not specify a destination when creating a resource, a custom route that can be modified or deleted is delivered.
 
-      For example, when you create a NAT gateway, the system automatically delivers a custom route without a specific destination (0.0.0.0/0 is used by default). In this case, you can change the destination. However, when you create a VPN connection or Direct Connect gateway, you need to specify the remote subnet, that is, the destination of a route. In this case, the system delivers this system route. Do not modify the route destination on the **Route Tables** page. If you do, the destination will be inconsistent with the configured remote subnet. To modify the route destination, go to the specific resource page and modify the remote subnet, then the route destination will be changed accordingly.
+      For example, when you create a NAT gateway, the system automatically delivers a custom route without a specific destination (0.0.0.0/0 is used by default). In this case, you can change the destination. However, when you create a VPN connection or Direct Connect gateway, you need to specify the remote subnet, that is, the destination of a route. In this case, the system delivers a system route. Do not modify the route destination on the **Route Tables** page. If you do, the destination will be inconsistent with the configured remote subnet. To modify the route destination, go to the specific resource page and modify the remote subnet, then the route destination will be changed accordingly.
 
 Custom Route Table Configuration Process
 ----------------------------------------

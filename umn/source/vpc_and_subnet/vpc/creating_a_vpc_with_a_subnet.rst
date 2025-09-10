@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0013935842:
 
-Creating a VPC
-==============
+Creating a VPC with a Subnet
+============================
 
 Scenarios
 ---------
