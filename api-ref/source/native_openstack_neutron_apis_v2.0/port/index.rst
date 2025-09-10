@@ -1,13 +1,13 @@
-:original_name: vpc_port02_0000.html
+:original_name: vpc_port02_0000xx.html
 
-.. _vpc_port02_0000:
+.. _vpc_port02_0000xx:
 
 Port
 ====
 
 -  :ref:`Querying Ports <vpc_port02_0001>`
 -  :ref:`Querying a Port <vpc_port02_0002>`
--  :ref:`Creating a Port <vpc_port02_0003>`
+-  :ref:`Creating a Port <vpc_port02_0003xx>`
 -  :ref:`Updating a Port <vpc_port02_0004>`
 -  :ref:`Deleting a Port <vpc_port02_0005>`
 
