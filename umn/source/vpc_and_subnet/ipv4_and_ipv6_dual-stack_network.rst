@@ -107,13 +107,13 @@ Assign a virtual IPv4 or IPv6 address by referring to :ref:`Assigning a Virtual 
 
 .. note::
 
-   Each virtual IPv6 address can only be bound to one dual-stack NIC.
+   Each virtual IPv6 address can only be bound to one dual-stack network interface.
 
 **Dynamically Assigning IPv6 Addresses**
 
 After an ECS is created successfully, you can view the assigned IPv6 address on the ECS details page. You can also log in to the ECS and run the **ifconfig** command to view the assigned IPv6 address.
 
-If an IPv6 address fails to be automatically assigned or the selected image does not support the function of automatic IPv6 address assignment, manually obtain the IPv6 address by referring to "Dynamically Assigning IPv6 Addresses" in *Elastic Cloud Server User Guide*.
+If an IPv6 address fails to be automatically assigned or the selected image does not support the function of automatic IPv6 address assignment, manually obtain the IPv6 address by referring to section "Dynamically Assigning IPv6 Addresses" in *Elastic Cloud Server User Guide*.
 
 .. note::
 

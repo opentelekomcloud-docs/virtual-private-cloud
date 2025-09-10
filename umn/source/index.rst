@@ -9,6 +9,7 @@ Virtual Private Cloud - User Guide
    getting_started/index
    vpc_and_subnet/index
    access_control/index
+   ip_address_group/index
    elastic_ip/index
    shared_bandwidth/index
    route_tables/index

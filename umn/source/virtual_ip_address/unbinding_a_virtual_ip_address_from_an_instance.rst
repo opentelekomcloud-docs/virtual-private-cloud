@@ -54,4 +54,4 @@ Procedure
    c. Confirm the information and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
-.. |image2| image:: /_static/images/en-us_image_0000001865662721.png
+.. |image2| image:: /_static/images/en-us_image_0000002456862761.png

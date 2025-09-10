@@ -2,10 +2,10 @@
 
 .. _vpc_faq_0060:
 
-Why Are Internet or Internal Domain Names in the Cloud Inaccessible Through Domain Names When My ECS Has Multiple NICs?
-=======================================================================================================================
+Why Are Internet or Internal Domain Names in the Cloud Inaccessible Through Domain Names When My ECS Has Multiple Network Interfaces?
+=====================================================================================================================================
 
-When an ECS has more than one NIC, if different DNS server addresses are configured for the subnets used by the NICs, the ECS cannot access public websites or internal domain names in the cloud.
+When an ECS has more than one network interface, if different DNS server addresses are configured for the subnets used by the network interfaces, the ECS cannot access public websites or internal domain names in the cloud.
 
 You can resolve this issue by configuring the same DNS server address for the subnets used by the same ECS. You can perform the following steps to modify DNS server addresses of subnets in a VPC:
 

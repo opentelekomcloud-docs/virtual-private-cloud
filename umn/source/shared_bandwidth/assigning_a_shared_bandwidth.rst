@@ -25,9 +25,9 @@ Procedure
 
 
    .. figure:: /_static/images/en-us_image_0000001865582577.png
-      :alt: **Figure 1** Assigning Shared Bandwidth
+      :alt: **Figure 1** Assigning a shared bandwidth
 
-      **Figure 1** Assigning Shared Bandwidth
+      **Figure 1** Assigning a shared bandwidth
 
    .. table:: **Table 1** Parameter descriptions
 
@@ -36,7 +36,7 @@ Procedure
       +=======================+=========================================================================================================================================================================================================================================================================================================+=======================+
       | Region                | Regions are geographic areas that are physically isolated from each other. The networks inside different regions are not connected to each other, so resources cannot be shared across different regions. For lower network latency and faster access to your resources, select the region nearest you. | eu-de                 |
       +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Bandwidth             | The bandwidth size in Mbit/s. The minimum value is 5 Mbit/s. The maximum bandwidth can be 1000 Mbit/s.                                                                                                                                                                                                  | 10                    |
+      | Bandwidth             | The shared bandwidth size in Mbit/s. It starts with 5 Mbit/s. The maximum value is 1,000 Mbit/s.                                                                                                                                                                                                        | 10                    |
       +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
       | Name                  | The name of the shared bandwidth.                                                                                                                                                                                                                                                                       | Bandwidth-001         |
       +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+

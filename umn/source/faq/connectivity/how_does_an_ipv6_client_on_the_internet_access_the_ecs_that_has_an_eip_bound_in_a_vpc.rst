@@ -23,7 +23,7 @@ The IPv6 service has the following restrictions:
 -  ECSs use IPv4 addresses and cannot directly access public IPv6 addresses. Therefore, only public IPv6 addresses can access ECSs. That means ECSs cannot use IPv4 EIPs that are converted from IPv6 address to access the Internet. To enable the ECSs to access the Internet, you must bind IPv4 EIPs to them.
 -  Data packets from an IPv6 network on the Internet are converted to IPv4 packets on the NAT64 gateway. Both the source IP address and port number will be converted. (The source IP address is invisible.)
 -  The IPv6 client can access only the EIP and the ELB service.
--  Only one EIP (IPv6 or IPv4) can be bound to each NIC.
+-  Only one EIP (IPv6 or IPv4) can be bound to each network interface.
 -  You can only make API calls to use an EIP to obtain the IPv6 address. The management console displays only IPv4 addresses.
 -  The security group function does not apply to IPv6 clients.
 -  Resources in internal networks on the cloud can access IPv4 addresses converted by NAT64 gateway.

@@ -2,8 +2,8 @@
 
 .. _en-us_topic_0046655037:
 
-Creating a VPC Peering Connection with Another VPC in Your Account
-==================================================================
+Creating a VPC Peering Connection to Connect Two VPCs in the Same Account
+=========================================================================
 
 Scenarios
 ---------
@@ -37,7 +37,7 @@ Notes and Constraints
 Prerequisites
 -------------
 
-You have two VPCs from the same account in the same region. If you want to create one, see :ref:`Creating a VPC <en-us_topic_0013935842>`.
+You have two VPCs from the same account in the same region. If you want to create one, see :ref:`Creating a VPC with a Subnet <en-us_topic_0013935842>`.
 
 .. _en-us_topic_0046655037__section143383585438:
 
@@ -91,8 +91,8 @@ Step 1: Create a VPC Peering Connection
       +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
       | Account                     | Mandatory                                                                                                                                                                                        | My account                           |
       |                             |                                                                                                                                                                                                  |                                      |
-      |                             | -  Options: **My account** and **Another account**                                                                                                                                               |                                      |
-      |                             | -  Select **My account**.                                                                                                                                                                        |                                      |
+      |                             | -  **My account**: The local and peer VPCs are from the same account.                                                                                                                            |                                      |
+      |                             | -  **Another account**: The local and peer VPCs are from different accounts.                                                                                                                     |                                      |
       +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
       | Peer Project                | The system fills in the corresponding project by default because **My account** is set to **Account**.                                                                                           | ab-cdef-1                            |
       |                             |                                                                                                                                                                                                  |                                      |
@@ -152,7 +152,7 @@ Step 2: Add Routes for the VPC Peering Connection
       |                               | -  If there is only the default route table in the drop-down list, select the default route table.                                                                                                                                                                                                           |                                 |
       |                               | -  If there are both default and custom route tables in drop-down list, select the route table associated with the subnet connected by the VPC peering connection.                                                                                                                                           |                                 |
       +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
-      | Destination                   | An IP address or address range in the other VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.              | VPC-B CIDR block: 172.17.0.0/16 |
+      | Destination                   | An IP address or address range in the peer VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.               | VPC-B CIDR block: 172.17.0.0/16 |
       +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
       | Next Hop                      | The default value is the current VPC peering connection. You do not need to specify this parameter.                                                                                                                                                                                                          | peering-AB                      |
       +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
@@ -173,7 +173,7 @@ Step 2: Add Routes for the VPC Peering Connection
       |                               | -  If there is only the default route table in the drop-down list, select the default route table.                                                                                                                                                                                                           |                                 |
       |                               | -  If there are both default and custom route tables in drop-down list, select the route table associated with the subnet connected by the VPC peering connection.                                                                                                                                           |                                 |
       +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
-      | Destination                   | An IP address or address range in the other VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.              | VPC-A CIDR block: 172.16.0.0/16 |
+      | Destination                   | An IP address or address range in the peer VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.               | VPC-A CIDR block: 172.16.0.0/16 |
       +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
       | Next Hop                      | The default value is the current VPC peering connection. You do not need to specify this parameter.                                                                                                                                                                                                          | peering-AB                      |
       +-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
@@ -219,7 +219,7 @@ After you add routes for the VPC peering connection, verify the communication be
    .. important::
 
       -  In this example, ECS-A01 and RDS-B01 are in the same security group. If the instances in different security groups, you need to add inbound rules to allow access from the peer security group. For details, see :ref:`Enabling ECSs In Different Security Groups to Communicate Through an Internal Network <en-us_topic_0081124350__section094514632817>`.
-      -  If VPCs connected by a VPC peering connection cannot communicate with each other, refer to :ref:`Why Did Communication Fail Between VPCs That Were Connected by a VPC Peering Connection? <vpc_faq_0069>`.
+      -  If VPCs connected by a VPC peering connection cannot communicate with each other, refer to :ref:`Why Did Communication Fail Between VPCs That Were Connected by a VPC Peering Connection? <vpc_faq_0069>`
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818983506.png

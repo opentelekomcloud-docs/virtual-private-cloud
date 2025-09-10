@@ -10,7 +10,7 @@ Scenarios
 
 You can export the information about the shared bandwidths as an Excel file to a local directory.
 
-The file records the Shared Bandwidth Name, Status, Shared bandwidthID, Bandwidth (Mbit/s),EIPs.
+The file records the shared bandwidth name, status, shared bandwidth ID, bandwidth (Mbit/s), and EIPs.
 
 Procedure
 ---------

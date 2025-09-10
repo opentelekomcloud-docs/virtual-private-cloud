@@ -10,7 +10,7 @@ Scenarios
 
 You can export the information about all the routes under your account as an Excel file to a local directory.
 
-This file records Destination,IP Addresses,Next Hop Type,Next Hop,Type,Description of the routes.
+This file records the destination, IP addresses, next hop type, next hop, type, description of the routes.
 
 Procedure
 ---------
