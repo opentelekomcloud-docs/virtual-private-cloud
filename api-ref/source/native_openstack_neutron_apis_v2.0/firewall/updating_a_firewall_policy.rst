@@ -31,7 +31,7 @@ Request Parameters
 .. table:: **Table 2** **Firewall Policy** objects
 
    +-----------------+-----------------+------------------+-----------------------------------------------------------------+
-   | Attribute       | Mandatory       | Type             | Description                                                     |
+   | Parameter       | Mandatory       | Type             | Description                                                     |
    +=================+=================+==================+=================================================================+
    | name            | No              | String           | Specifies the name of the firewall policy.                      |
    |                 |                 |                  |                                                                 |
@@ -81,7 +81,7 @@ Response Parameters
 .. table:: **Table 4** **Firewall Policy** objects
 
    +----------------+------------------+---------------------------------------------------------------------------+
-   | Attribute      | Type             | Description                                                               |
+   | Parameter      | Type             | Description                                                               |
    +================+==================+===========================================================================+
    | id             | String           | Specifies the UUID of the firewall policy.                                |
    +----------------+------------------+---------------------------------------------------------------------------+

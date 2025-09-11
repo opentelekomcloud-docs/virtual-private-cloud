@@ -82,7 +82,7 @@ Response Message
 .. table:: **Table 4** **floatingip** objects
 
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
-   | Attribute             | Type                  | Description                                                                                    |
+   | Parameter             | Type                  | Description                                                                                    |
    +=======================+=======================+================================================================================================+
    | status                | String                | Specifies the floating IP address status. The value can be **ACTIVE**, **DOWN**, or **ERROR**. |
    |                       |                       |                                                                                                |

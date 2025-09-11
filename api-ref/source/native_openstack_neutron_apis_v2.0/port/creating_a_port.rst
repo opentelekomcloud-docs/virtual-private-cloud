@@ -96,7 +96,7 @@ Request Parameters
 .. table:: **Table 3** **fixed_ip** objects
 
    +-----------------+-----------------+-----------------+-----------------------------------------------------------+
-   | Attribute       | Mandatory       | Type            | Description                                               |
+   | Parameter       | Mandatory       | Type            | Description                                               |
    +=================+=================+=================+===========================================================+
    | subnet_id       | No              | String          | Specifies the ID of the subnet to which the port belongs. |
    |                 |                 |                 |                                                           |
@@ -129,7 +129,7 @@ Request Parameters
 .. table:: **Table 5** **extra_dhcp_opt** objects
 
    ========= ========= ====== ===========================
-   Attribute Mandatory Type   Description
+   Parameter Mandatory Type   Description
    ========= ========= ====== ===========================
    opt_name  No        String Specifies the option name.
    opt_value No        String Specifies the option value.
@@ -276,7 +276,7 @@ Response Parameters
 .. table:: **Table 8** **fixed_ip** objects
 
    +-----------------------+-----------------------+-----------------------------------------------------------+
-   | Attribute             | Type                  | Description                                               |
+   | Parameter             | Type                  | Description                                               |
    +=======================+=======================+===========================================================+
    | subnet_id             | String                | Specifies the ID of the subnet to which the port belongs. |
    |                       |                       |                                                           |
@@ -306,7 +306,7 @@ Response Parameters
 .. table:: **Table 10** **extra_dhcp_opt** objects
 
    ========= ====== ===========================
-   Attribute Type   Description
+   Parameter Type   Description
    ========= ====== ===========================
    opt_name  String Specifies the option name.
    opt_value String Specifies the option value.
