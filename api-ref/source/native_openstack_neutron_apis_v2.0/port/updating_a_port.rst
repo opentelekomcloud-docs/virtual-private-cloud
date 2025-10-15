@@ -273,7 +273,7 @@ Response Parameters
 .. table:: **Table 9** **allowed_address_pairs** objects
 
    +-----------------------+-----------------------+---------------------------------+
-   | Attribute             | Type                  | Description                     |
+   | Parameter             | Type                  | Description                     |
    +=======================+=======================+=================================+
    | ip_address            | String                | Specifies the IP address.       |
    |                       |                       |                                 |
