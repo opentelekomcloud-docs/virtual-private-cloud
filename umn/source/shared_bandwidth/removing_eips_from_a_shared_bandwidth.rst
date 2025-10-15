@@ -32,4 +32,4 @@ Procedure
 6. Click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
-.. |image2| image:: /_static/images/en-us_image_0000001649841616.png
+.. |image2| image:: /_static/images/en-us_image_0000001818982822.png

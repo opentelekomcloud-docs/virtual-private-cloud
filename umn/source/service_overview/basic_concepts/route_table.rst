@@ -23,12 +23,10 @@ A route table contains a set of routes that are used to determine where network 
 
 -  Custom route table: If you do not want to use the default route table, you can create a custom route table and associate it with the subnet. Custom route tables can be deleted if they are no longer required.
 
-   The custom route table associated with a subnet affects only the outbound traffic. The default route table of a subnet controls the inbound traffic.
-
 Route
 -----
 
-You can add routes to default and custom route tables and configure the destination type destination, next hop type, and next hop in the routes to determine where network traffic is directed. Routes are classified into system routes and custom routes.
+You can add routes to default and custom route tables and configure the destination type, destination, next hop type, and next hop in the routes to determine where network traffic is directed. Routes are classified into system routes and custom routes.
 
 -  System routes: These routes are automatically added by the system and cannot be modified or deleted.
 
@@ -63,7 +61,7 @@ You can add routes to default and custom route tables and configure the destinat
       | Server                   | Traffic intended for the destination is forwarded to an ECS in the VPC.                                                                                      | -  Default route table |
       |                          |                                                                                                                                                              | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-      | Extension NIC            | Traffic intended for the destination is forwarded to the extension NIC of an ECS in the VPC.                                                                 | -  Default route table |
+      | Extension NIC            | Traffic intended for the destination is forwarded to the extended network interface of an ECS in the VPC.                                                    | -  Default route table |
       |                          |                                                                                                                                                              | -  Custom route table  |
       +--------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
       | BMS user-defined network | Traffic intended for the destination is forwarded to a BMS user-defined network. Currently, this parameter is available only in eu-de.                       | -  Custom route table  |
