@@ -1,6 +1,6 @@
-:original_name: vpc_sg02_0005.html
+:original_name: vpc_sg02_0005xx.html
 
-.. _vpc_sg02_0005:
+.. _vpc_sg02_0005xx:
 
 Deleting a Security Group
 =========================

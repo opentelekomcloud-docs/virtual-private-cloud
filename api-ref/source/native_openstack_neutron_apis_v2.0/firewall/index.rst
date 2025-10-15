@@ -1,6 +1,6 @@
-:original_name: vpc_firewall_0000.html
+:original_name: vpc_firewall_0000xx.html
 
-.. _vpc_firewall_0000:
+.. _vpc_firewall_0000xx:
 
 Firewall
 ========
@@ -16,7 +16,7 @@ Firewall
 -  :ref:`Updating a Firewall Policy <vpc_firewall_0009>`
 -  :ref:`Deleting a Firewall Policy <vpc_firewall_0010>`
 -  :ref:`Inserting a Firewall Rule <vpc_firewall_0011>`
--  :ref:`Removing a Firewall Rule <vpc_firewall_0012>`
+-  :ref:`Removing a Firewall Rule <vpc_firewall_0012xx>`
 -  :ref:`Querying Firewall Groups <vpc_firewall_0013>`
 -  :ref:`Querying a Firewall Group <vpc_firewall_0014>`
 -  :ref:`Creating a Firewall Group <vpc_firewall_0015>`

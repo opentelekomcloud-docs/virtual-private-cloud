@@ -7,7 +7,7 @@ Introduction
 
 By default, new IAM users do not have permissions assigned. You need to add them to one or more groups and attach policies or roles to these groups. The users then inherit permissions from the groups. This way, they can perform specified operations on cloud services based on the permissions.
 
-An account has all the permissions required to call all APIs, but IAM users must be assigned the required permissions. The permissions required for calling an API are determined by the actions supported by the API. Only users who have been granted permissions allowing the actions can call the API successfully. For example, if an IAM user wants to query VPCs using an API, the user must have been granted permissions that allow the **vpc:vpcs:list** action.
+An account has all the permissions required to call all APIs, but IAM users must be assigned the required permissions. The required permissions are determined by the actions supported by the API. Only users with the policies allowing for those actions can call the API successfully. For example, if an IAM user wants to query VPCs using an API, the user must have been granted permissions that allow the **vpc:vpcs:list** action.
 
 Supported Actions
 -----------------

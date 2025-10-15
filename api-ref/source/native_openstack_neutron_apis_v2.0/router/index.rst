@@ -1,13 +1,13 @@
-:original_name: vpc_router_0000.html
+:original_name: vpc_router_0000xx.html
 
-.. _vpc_router_0000:
+.. _vpc_router_0000xx:
 
 Router
 ======
 
 -  :ref:`Querying Routers <vpc_router_0001>`
--  :ref:`Querying a Router <vpc_router_0002>`
--  :ref:`Creating a Router <vpc_router_0003>`
+-  :ref:`Querying a Router <vpc_router_0002xx>`
+-  :ref:`Creating a Router <vpc_router_0003xx>`
 -  :ref:`Updating a Router <vpc_router_0004>`
 -  :ref:`Deleting a Router <vpc_router_0005>`
 -  :ref:`Adding an Interface to a Router <vpc_router_0006>`

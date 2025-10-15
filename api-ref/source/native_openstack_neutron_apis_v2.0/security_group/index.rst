@@ -1,19 +1,19 @@
-:original_name: vpc_sg02_0000.html
+:original_name: vpc_sg02_0000xx.html
 
-.. _vpc_sg02_0000:
+.. _vpc_sg02_0000xx:
 
 Security Group
 ==============
 
--  :ref:`Querying Security Groups <vpc_sg02_0001>`
--  :ref:`Querying a Security Group <vpc_sg02_0002>`
--  :ref:`Creating a Security Group <vpc_sg02_0003>`
--  :ref:`Updating a Security Group <vpc_sg02_0004>`
--  :ref:`Deleting a Security Group <vpc_sg02_0005>`
+-  :ref:`Querying Security Groups <vpc_sg02_0001xx>`
+-  :ref:`Querying a Security Group <vpc_sg02_0002xx>`
+-  :ref:`Creating a Security Group <vpc_sg02_0003xx>`
+-  :ref:`Updating a Security Group <vpc_sg02_0004xx>`
+-  :ref:`Deleting a Security Group <vpc_sg02_0005xx>`
 -  :ref:`Querying Security Group Rules <vpc_sg02_0006>`
 -  :ref:`Querying a Security Group Rule <vpc_sg02_0007>`
--  :ref:`Adding a Security Group Rule <vpc_sg02_0008>`
--  :ref:`Deleting a Security Group Rule <vpc_sg02_0009>`
+-  :ref:`Adding a Security Group Rule <vpc_sg02_0008xx>`
+-  :ref:`Deleting a Security Group Rule <vpc_sg02_0009xx>`
 
 .. toctree::
    :maxdepth: 1
