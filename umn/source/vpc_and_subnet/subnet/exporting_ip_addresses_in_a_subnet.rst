@@ -41,7 +41,7 @@ Procedure
 
       The system will automatically export information about the virtual IP addresses as an Excel file to a local directory.
 
-   b. In the upper left corner of above the private IP address list, click **Export**.
+   b. In the upper left corner of the private IP address list, click **Export**.
 
       -  **Export selected data to an XLSX file**: Select one or more private IP addresses and export information about the selected private IP addresses.
       -  **Export all data to an XLSX file**: Export information about all the private IP addresses in the current subnet.
