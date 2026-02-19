@@ -10,6 +10,7 @@ Managing Firewalls
 -  :ref:`Enabling or Disabling a Firewall <vpc_acl_0011>`
 -  :ref:`Viewing a Firewall <vpc_acl_0009>`
 -  :ref:`Deleting a Firewall <vpc_acl_0012>`
+-  :ref:`Managing Firewall Tags <vpc_acl_0013>`
 
 .. toctree::
    :maxdepth: 1
@@ -20,3 +21,4 @@ Managing Firewalls
    enabling_or_disabling_a_firewall
    viewing_a_firewall
    deleting_a_firewall
+   managing_firewall_tags
