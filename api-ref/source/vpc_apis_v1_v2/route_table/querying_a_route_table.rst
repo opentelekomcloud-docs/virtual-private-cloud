@@ -119,7 +119,7 @@ Response Parameters
    |                       |                       |    -  When **type** is **ecs**, the value is an ECS ID.                                                                                 |
    |                       |                       |    -  When **type** is **eni**, the value is an extension NIC ID.                                                                       |
    |                       |                       |    -  When **type** is **vip**, the value is a virtual IP address.                                                                      |
-   |                       |                       |    -  When **type** is **nat**, the value a NAT gateway ID.                                                                             |
+   |                       |                       |    -  When **type** is **nat**, the value is a NAT gateway ID.                                                                          |
    |                       |                       |    -  When **type** is **peering**, the value is a VPC peering connection ID.                                                           |
    |                       |                       |    -  When **type** is **vpn**, the value is a VPN ID.                                                                                  |
    |                       |                       |    -  When **type** is **dc**, the value is a Direct Connect connection ID.                                                             |

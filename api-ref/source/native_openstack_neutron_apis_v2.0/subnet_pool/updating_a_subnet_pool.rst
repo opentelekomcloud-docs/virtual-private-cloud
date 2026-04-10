@@ -15,8 +15,8 @@ URI
 
 PUT /v2.0/subnetpools/{subnetpool_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 1** Request parameter
 
@@ -62,8 +62,8 @@ Request Message
    | is_default        | No              | Boolean          | Specifies whether this is the default subnet pool.                                                                                                                                                                                                  |
    +-------------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameter
 

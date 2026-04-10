@@ -16,7 +16,7 @@ You can query the detailed information about a specified floating IP address usi
 
    Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
 
-   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
@@ -24,7 +24,7 @@ You can query the detailed information about a specified floating IP address usi
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
       -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
 
 URI
 ---
@@ -60,7 +60,7 @@ GET /v2.0/floatingips
    +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | tenant_id           | No              | String          | Specifies the project ID.                                                                                                                                                                                                          |
    +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit               | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                             |
+   | limit               | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to 2000. The default value is 2000.                                                                                                        |
    |                     |                 |                 |                                                                                                                                                                                                                                    |
    |                     |                 |                 | **limit** can be used together with **marker**. For details, see the parameter description of **marker**.                                                                                                                          |
    +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -82,13 +82,13 @@ Example:
 
    GET https://{Endpoint}/v2.0/floatingips?id={fip_id}&router_id={router_id}&floating_network_id={net_id}&floating_ip_address={floating_ip}&port_id={port_id}&fixed_ip_address={fixed_ip}&tenant_id={tenant_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 .. table:: **Table 2** Response parameter
 
@@ -102,51 +102,51 @@ Response Message
 
 .. table:: **Table 3** **floatingip** objects
 
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                                                                                     |
-   +=======================+=======================+=================================================================================================================================================+
-   | status                | String                | Specifies the floating IP address status. The value can be **ACTIVE**, **DOWN**, or **ERROR**.                                                  |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       | -  **DOWN** indicates that the floating IP address has not been bound.                                                                          |
-   |                       |                       | -  **ACTIVE** indicates that the floating IP address has been bound.                                                                            |
-   |                       |                       | -  **ERROR** indicates that the floating IP address is abnormal.                                                                                |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | id                    | String                | Specifies the floating IP address ID.                                                                                                           |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | project_id            | String                | Specifies the project ID.                                                                                                                       |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_ip_address   | String                | Specifies the floating IP address.                                                                                                              |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_network_id   | String                | Specifies the external network ID.                                                                                                              |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | router_id             | String                | Specifies the ID of the belonged router.                                                                                                        |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | port_id               | String                | Specifies the port ID.                                                                                                                          |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       | .. note::                                                                                                                                       |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       |    This parameter is not displayed if the EIP is bound to a dedicated load balancer. This parameter is displayed if the EIP is bound to an ECS. |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | fixed_ip_address      | String                | Specifies the private IP address of the associated port.                                                                                        |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | tenant_id             | String                | Specifies the project ID.                                                                                                                       |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | dns_name              | String                | Specifies the DNS name.                                                                                                                         |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | dns_domain            | String                | Specifies the DNS domain.                                                                                                                       |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | created_at            | String                | Specifies the time when the floating IP address was created.                                                                                    |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       | UTC time is used.                                                                                                                               |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                                   |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-   | updated_at            | String                | Specifies the time when the floating IP address was updated.                                                                                    |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       | UTC time is used.                                                                                                                               |
-   |                       |                       |                                                                                                                                                 |
-   |                       |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                                   |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                    |
+   +=======================+=======================+================================================================================================+
+   | status                | String                | Specifies the floating IP address status. The value can be **ACTIVE**, **DOWN**, or **ERROR**. |
+   |                       |                       |                                                                                                |
+   |                       |                       | -  **DOWN** indicates that the floating IP address has not been bound.                         |
+   |                       |                       | -  **ACTIVE** indicates that the floating IP address has been bound.                           |
+   |                       |                       | -  **ERROR** indicates that the floating IP address is abnormal.                               |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | id                    | String                | Specifies the floating IP address ID.                                                          |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | project_id            | String                | Specifies the project ID.                                                                      |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | floating_ip_address   | String                | Specifies the floating IP address.                                                             |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | floating_network_id   | String                | Specifies the external network ID.                                                             |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | router_id             | String                | Specifies the ID of the belonged router.                                                       |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | port_id               | String                | Specifies the port ID.                                                                         |
+   |                       |                       |                                                                                                |
+   |                       |                       | .. note::                                                                                      |
+   |                       |                       |                                                                                                |
+   |                       |                       |    The value of **port_id** is null if the EIP is bound to a dedicated load balancer.          |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | fixed_ip_address      | String                | Specifies the private IP address of the associated port.                                       |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | tenant_id             | String                | Specifies the project ID.                                                                      |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | dns_name              | String                | Specifies the DNS name.                                                                        |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | dns_domain            | String                | Specifies the DNS domain.                                                                      |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | created_at            | String                | Specifies the time when the floating IP address was created.                                   |
+   |                       |                       |                                                                                                |
+   |                       |                       | UTC time is used.                                                                              |
+   |                       |                       |                                                                                                |
+   |                       |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                  |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
+   | updated_at            | String                | Specifies the time when the floating IP address was updated.                                   |
+   |                       |                       |                                                                                                |
+   |                       |                       | UTC time is used.                                                                              |
+   |                       |                       |                                                                                                |
+   |                       |                       | Format: *yyyy-MM-ddTHH:mm:ss*                                                                  |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -180,13 +180,6 @@ Normal response to the GET operation
        "created_at" : "2017-10-19T12:21:28",
        "updated_at" : "2018-07-30T12:52:13"
      } ],
-     "floatingips_links" : [ {
-       "href" : "https://network.region.cn-test-2.clouds.com/v2.0/floatingips.json?limit=2000&marker=000a6144-5010-46f2-bf06-6a1c94477ea3&page_reverse=true",
-       "rel" : "previous"
-     }, {
-       "href" : "https://network.region.cn-test-2.clouds.com/v2.0/floatingips.json?limit=2000&marker=d445e537-bc81-4039-9c7b-f9c1f5c73c78",
-       "rel" : "next"
-     } ]
    }
 
 Status Code

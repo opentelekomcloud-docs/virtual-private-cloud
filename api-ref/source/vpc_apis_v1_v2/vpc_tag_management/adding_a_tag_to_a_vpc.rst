@@ -45,7 +45,7 @@ Request Parameters
 .. table:: **Table 3** **tag** objects
 
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------+
-   | Attribute       | Type            | Mandatory       | Description                                                                        |
+   | Parameter       | Type            | Mandatory       | Description                                                                        |
    +=================+=================+=================+====================================================================================+
    | key             | String          | Yes             | -  Specifies the tag key.                                                          |
    |                 |                 |                 | -  Cannot be left blank.                                                           |

@@ -28,8 +28,8 @@ GET /v2.0/{project_id}/publicips/{publicip_id}/tags
    publicip_id Yes       Specifies the unique identifier of an EIP.
    =========== ========= ==========================================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -41,8 +41,8 @@ Request Message
 
       GET https://{Endpoint}/v2.0/{project_id}/publicips/{publicip_id}/tags
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 
@@ -59,7 +59,7 @@ Response Message
    .. table:: **Table 3** **tag** objects
 
       +-----------------------+-----------------------+------------------------------------------------------------------------------------+
-      | Attribute             | Type                  | Description                                                                        |
+      | Parameter             | Type                  | Description                                                                        |
       +=======================+=======================+====================================================================================+
       | key                   | String                | -  Specifies the tag key.                                                          |
       |                       |                       | -  Cannot be left blank.                                                           |

@@ -63,7 +63,7 @@ Example of querying subnets by page
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the value of parameter **limit** is set to **10**, the 11th to 20th resource records will be returned.                                |
    |                 |                 |                 | -  If the value of the parameter **marker** is set to the resource ID of the 10th record and the parameter **limit** is not passed, 11th to 2,000th resource records will be returned. The default value of **limit** is **2000**. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to intmax (2^31-1). The default value is 2000.                                                                                             |
+   | limit           | No              | Integer         | Specifies the number of records that will be returned on each page. The value is from 0 to 2000. The default value is 2000.                                                                                                        |
    |                 |                 |                 |                                                                                                                                                                                                                                    |
    |                 |                 |                 | **limit** can be used together with **marker**. For details, see the parameter description of **marker**.                                                                                                                          |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -227,7 +227,7 @@ Example 1
    {
        "subnets": [
            {
-               "name": "kesmdemeet",
+               "name": "subnet-test",
                "cidr": "172.16.236.0/24",
                "id": "011fc878-5521-4654-a1ad-f5b0b5820302",
                "enable_dhcp": true,

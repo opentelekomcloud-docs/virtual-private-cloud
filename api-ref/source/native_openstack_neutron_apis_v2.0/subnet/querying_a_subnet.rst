@@ -145,7 +145,7 @@ Example Response
 
    {
        "subnet": {
-           "name": "kesmdemeet",
+           "name": "subnet-test",
            "cidr": "172.16.236.0/24",
            "id": "011fc878-5521-4654-a1ad-f5b0b5820302",
            "enable_dhcp": true,

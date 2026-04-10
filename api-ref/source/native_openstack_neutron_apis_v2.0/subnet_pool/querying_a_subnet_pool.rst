@@ -15,13 +15,13 @@ URI
 
 GET /v2.0/subnetpools/{subnetpool_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 .. table:: **Table 1** Response parameter
 

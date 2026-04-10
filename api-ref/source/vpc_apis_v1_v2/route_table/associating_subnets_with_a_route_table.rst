@@ -57,13 +57,17 @@ Request Parameters
 
 .. table:: **Table 4** Description of the **subnet** field
 
-   +--------------+-----------+------------------+----------------------------------------------------------------------------------+
-   | Parameter    | Mandatory | Type             | Description                                                                      |
-   +==============+===========+==================+==================================================================================+
-   | associate    | No        | Array of strings | Specifies a list of IDs of the subnets to be associated with the route table.    |
-   +--------------+-----------+------------------+----------------------------------------------------------------------------------+
-   | disassociate | No        | Array of strings | Specifies a list of IDs of the subnets to be disassociated from the route table. |
-   +--------------+-----------+------------------+----------------------------------------------------------------------------------+
+   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                      |
+   +=================+=================+==================+==================================================================================+
+   | associate       | No              | Array of strings | Specifies a list of IDs of the subnets to be associated with the route table.    |
+   |                 |                 |                  |                                                                                  |
+   |                 |                 |                  | By default, a route table can be associated with a maximum of 100 subnets.       |
+   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------+
+   | disassociate    | No              | Array of strings | Specifies a list of IDs of the subnets to be disassociated from the route table. |
+   |                 |                 |                  |                                                                                  |
+   |                 |                 |                  | By default, a route table can be disassociated from a maximum of 100 subnets.    |
+   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -124,6 +128,12 @@ Response Parameters
    | description           | String                                                                     | -  Provides supplementary information about the route table.                                                                           |
    |                       |                                                                            | -  The value can contain no more than 255 characters and cannot contain angle brackets (< or >).                                       |
    +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+   | created_at            | String                                                                     | -  Specifies the time (UTC) when the route table is created.                                                                           |
+   |                       |                                                                            | -  Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                       |
+   +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+   | updated_at            | String                                                                     | -  Specifies the time (UTC) when the route table is updated.                                                                           |
+   |                       |                                                                            | -  Format: *yyyy-MM-ddTHH:mm:ss*                                                                                                       |
+   +-----------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _vpc_apiroutetab_0005__table1687317463915:
 
@@ -156,7 +166,7 @@ Response Parameters
    |                       |                       |    -  When **type** is **ecs**, the value is an ECS ID.                                                                                 |
    |                       |                       |    -  When **type** is **eni**, the value is an extension NIC ID.                                                                       |
    |                       |                       |    -  When **type** is **vip**, the value is a virtual IP address.                                                                      |
-   |                       |                       |    -  When **type** is **nat**, the value a NAT gateway ID.                                                                             |
+   |                       |                       |    -  When **type** is **nat**, the value is a NAT gateway ID.                                                                          |
    |                       |                       |    -  When **type** is **peering**, the value is a VPC peering connection ID.                                                           |
    |                       |                       |    -  When **type** is **vpn**, the value is a VPN ID.                                                                                  |
    |                       |                       |    -  When **type** is **dc**, the value is a Direct Connect connection ID.                                                             |
