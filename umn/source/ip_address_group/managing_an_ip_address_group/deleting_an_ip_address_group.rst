@@ -13,7 +13,7 @@ This section describes how to delete an IP address group.
 Notes and Constraints
 ---------------------
 
-If you want to delete an IP address group with resources associated, you need to :ref:`disassociate the IP address group from the resources first <vpc_ipaddressgroup_0006>`.
+If you want to delete an IP address group with resources associated, you need to disassociate the IP address group from the resources first. For details, see :ref:`Disassociating an IP Address Group from Resources <vpc_ipaddressgroup_0006>`.
 
 Procedure
 ---------
@@ -49,7 +49,7 @@ Procedure
 
       c. Enter **DELETE** as prompted and click **OK**.
 
-         If a message indicating that IP address groups with associated resources cannot be deleted is displayed, go to the resource details page and :ref:`disassociate the IP address group from the resources first <vpc_ipaddressgroup_0006>`.
+         If a message indicating that IP address groups with associated resources cannot be deleted is displayed, go to the resource details page and disassociate the IP address group from the resources. For details, see :ref:`Disassociating an IP Address Group from Resources <vpc_ipaddressgroup_0006>`.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818983350.png

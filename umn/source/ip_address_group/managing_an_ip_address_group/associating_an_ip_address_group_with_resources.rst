@@ -15,7 +15,7 @@ An IP address group can be associated with security groups.
 Prerequisites
 -------------
 
--  You have created an IP address group has been created. For details, see :ref:`Creating an IP Address Group <vpc_ipaddressgroup_0003>`.
+-  You have created an IP address group. For details, see :ref:`Creating an IP Address Group <vpc_ipaddressgroup_0003>`.
 -  There are IP address entries in the IP address group. For details, see :ref:`Adding IP Address Entries to an IP Address Group <vpc_ipaddressgroup_0007>`.
 
 Procedure

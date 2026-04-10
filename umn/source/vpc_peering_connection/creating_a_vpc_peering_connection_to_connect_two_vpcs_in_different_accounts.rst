@@ -293,7 +293,7 @@ After you add routes for the VPC peering connection, verify the communication be
 
    .. important::
 
-      -  In this example, ECS-A01 and RDS-B01 are in the same security group. If the instances in different security groups, you need to add inbound rules to allow access from the peer security group. For details, see :ref:`Enabling ECSs In Different Security Groups to Communicate Through an Internal Network <en-us_topic_0081124350__section094514632817>`.
+      -  In this example, ECS-A01 and RDS-B01 are in the same security group. If the instances are associated with different security groups, you need to add inbound rules to allow access from instances of the peer security group. For details, see :ref:`Enabling ECSs In Different Security Groups to Communicate Through an Internal Network <en-us_topic_0081124350__section094514632817>`.
       -  If VPCs connected by a VPC peering connection cannot communicate with each other, refer to :ref:`Why Did Communication Fail Between VPCs That Were Connected by a VPC Peering Connection? <vpc_faq_0069>`
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
