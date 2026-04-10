@@ -27,13 +27,13 @@ Example of querying subnet pools by page
 
    GET https://{Endpoint}/v2.0/subnetpools?limit=2&marker=03f761e6-eee0-43fc-a921-8acf64c14988&page_reverse=False
 
-Request Message
----------------
+Request Parameters
+------------------
 
 None
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 .. table:: **Table 1** Response parameter
 

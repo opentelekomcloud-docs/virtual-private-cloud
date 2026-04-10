@@ -29,8 +29,8 @@ DELETE /v2.0/{project_id}/publicips/{publicip_id}/tags/{key}
    key         Yes       Specifies the tag key.
    =========== ========= ==========================================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -42,8 +42,8 @@ Request Message
 
       DELETE https://{Endpoint}/v2.0/{project_id}/publicips/{publicip_id}/tags/{key}
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 

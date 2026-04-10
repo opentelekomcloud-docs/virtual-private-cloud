@@ -53,8 +53,8 @@ Example:
    | project_id          | No              | String          | Specifies the project ID.                                                                                                                         |
    +---------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -64,8 +64,8 @@ Request Message
 
    None
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 

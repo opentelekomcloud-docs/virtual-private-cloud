@@ -12,9 +12,13 @@ EIP (V3)
 +-----------------------------------+-------------------------------------------------------------------------+----------------------+
 | Querying the details of an EIP    | GET /v3/{project_id}/eip/publicips/{publicip_id}                        | vpc:publicIps:get    |
 +-----------------------------------+-------------------------------------------------------------------------+----------------------+
+| Updating an EIP                   | PUT /v3/{project_id}/eip/publicips/{publicip_id}                        | eip:publicIps:update |
++-----------------------------------+-------------------------------------------------------------------------+----------------------+
 | Binding an EIP to an instance     | POST /v3/{project_id}/eip/publicips/{publicip_id}/associate-instance    | vpc:publicIps:update |
 +-----------------------------------+-------------------------------------------------------------------------+----------------------+
 | Unbinding an EIP from an instance | POST /v3/{project_id}/eip/publicips/{publicip_id}/disassociate-instance | vpc:publicIps:update |
++-----------------------------------+-------------------------------------------------------------------------+----------------------+
+| Adding EIPs to a shared bandwidth | POST /v3/{project_id}/eip/publicips/attach-share-bandwidth              | vpc:publicIps:update |
 +-----------------------------------+-------------------------------------------------------------------------+----------------------+
 | Querying common pools             | GET /v3/{project_id}/eip/publicip-pools/common-pools                    | ``-``                |
 +-----------------------------------+-------------------------------------------------------------------------+----------------------+

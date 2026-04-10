@@ -8,7 +8,7 @@ Deleting an IP Address Group
 Function
 --------
 
-This API is used to delete an IP address group. Before deleting an IP address group, ensure that no resource is using this group.
+This API can be used to delete an IP address group that is no longer used. This API does not forcibly delete an IP address group. Before deleting an IP address group, ensure that no resource is using this group.
 
 URI
 ---
@@ -17,13 +17,25 @@ DELETE /v3/{project_id}/vpc/address-groups/{address_group_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +------------------+-----------+--------+--------------------------------------------------------------------+
-   | Parameter        | Mandatory | Type   | Description                                                        |
-   +==================+===========+========+====================================================================+
-   | address_group_id | Yes       | String | IP address group ID that uniquely identifies the IP address group. |
-   +------------------+-----------+--------+--------------------------------------------------------------------+
-   | project_id       | Yes       | String | Project ID.                                                        |
-   +------------------+-----------+--------+--------------------------------------------------------------------+
+   +------------------+-----------------+-----------------+--------------------------------------------------------+
+   | Parameter        | Mandatory       | Type            | Description                                            |
+   +==================+=================+=================+========================================================+
+   | address_group_id | Yes             | String          | **Definition**:                                        |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | ID of an IP address group.                             |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | **Range**:                                             |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | N/A                                                    |
+   +------------------+-----------------+-----------------+--------------------------------------------------------+
+   | project_id       | Yes             | String          | **Definition**:                                        |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | ID of the project that an IP address group belongs to. |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | **Range**:                                             |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | N/A                                                    |
+   +------------------+-----------------+-----------------+--------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -42,7 +54,7 @@ None
 Example Requests
 ----------------
 
-Delete the address group whose ID is **dd18a501-fcd5-4adc-acfe-b0e2384baf08**.
+Delete the IP address group whose ID is **dd18a501-fcd5-4adc-acfe-b0e2384baf08**.
 
 .. code-block:: text
 

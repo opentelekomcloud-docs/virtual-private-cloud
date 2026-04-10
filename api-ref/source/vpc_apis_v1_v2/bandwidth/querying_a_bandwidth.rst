@@ -29,8 +29,8 @@ GET /v1/{project_id}/bandwidths/{bandwidth_id}
    | bandwidth_id | Yes       | Specifies the bandwidth ID, which uniquely identifies the bandwidth. |
    +--------------+-----------+----------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -40,10 +40,10 @@ Request Message
 
    .. code-block:: text
 
-      GET https://{Endpoint}//v1/{project_id}/bandwidths/{bandwidth_id}
+      GET https://{Endpoint}/v1/{project_id}/bandwidths/{bandwidth_id}
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 
@@ -122,26 +122,30 @@ Response Message
 
    .. table:: **Table 4** **publicip_info** object
 
-      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter             | Type                  | Description                                                                                                                      |
-      +=======================+=======================+==================================================================================================================================+
-      | publicip_id           | String                | Specifies the ID of the EIP that uses the bandwidth.                                                                             |
-      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------+
-      | publicip_address      | String                | Specifies the obtained EIP if only IPv4 EIPs are available.                                                                      |
-      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------+
-      | ip_version            | Integer               | -  Specifies the IP address version.                                                                                             |
-      |                       |                       | -  Range:                                                                                                                        |
-      |                       |                       |                                                                                                                                  |
-      |                       |                       |    -  **4**: IPv4                                                                                                                |
-      |                       |                       |    -  **6**: IPv6                                                                                                                |
-      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------+
-      | publicip_type         | String                | -  Specifies the EIP type.                                                                                                       |
-      |                       |                       | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), or **5_dualStack**. |
-      |                       |                       | -  Constraints:                                                                                                                  |
-      |                       |                       |                                                                                                                                  |
-      |                       |                       |    -  The configured value must be supported by the system.                                                                      |
-      |                       |                       |    -  **publicip_id** is an IPv4 port. If **publicip_type** is not specified, the default value is **5_bgp**.                    |
-      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Type                  | Description                                                                                                                               |
+      +=======================+=======================+===========================================================================================================================================+
+      | publicip_id           | String                | Specifies the ID of the EIP that uses the bandwidth.                                                                                      |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | publicip_address      | String                | Specifies the obtained EIP if only IPv4 EIPs are available.                                                                               |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | ip_version            | Integer               | -  Specifies the IP address version.                                                                                                      |
+      |                       |                       | -  Range:                                                                                                                                 |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       |    -  **4**: IPv4                                                                                                                         |
+      |                       |                       |    -  **6**: IPv6                                                                                                                         |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | publicip_type         | String                | -  Specifies the EIP type.                                                                                                                |
+      |                       |                       | -  Range:                                                                                                                                 |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       |    -  For region **eu-de**: **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), and **5_dualStack**. |
+      |                       |                       |    -  For region **eu-nl**: **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), and **5_dualStack**                                        |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | -  Constraints:                                                                                                                           |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       |    -  The configured value must be supported by the system.                                                                               |
+      |                       |                       |    -  **publicip_id** is an IPv4 port. If **publicip_type** is not specified, the default value is **5_bgp**.                             |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example response
 

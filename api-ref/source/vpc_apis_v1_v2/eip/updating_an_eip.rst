@@ -14,7 +14,7 @@ This API is used to bind an EIP to a NIC, or unbind an EIP from a NIC.
 
    Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
 
-   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
@@ -22,7 +22,7 @@ This API is used to bind an EIP to a NIC, or unbind an EIP from a NIC.
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
       -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
 
 URI
 ---
@@ -42,8 +42,8 @@ PUT /v1/{project_id}/publicips/{publicip_id}
    publicip_id Yes       Specifies the unique identifier of an EIP.
    =========== ========= ==========================================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -84,8 +84,8 @@ Request Message
           }
       }
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 
@@ -128,7 +128,11 @@ Response Message
       |                       |                                                           | This parameter is not supported currently.                                                                                                       |
       +-----------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
       | type                  | String                                                    | -  Specifies the EIP type.                                                                                                                       |
-      |                       |                                                           | -  The value can be **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), or **5_dualStack**.                 |
+      |                       |                                                           | -  Range:                                                                                                                                        |
+      |                       |                                                           |                                                                                                                                                  |
+      |                       |                                                           |    -  For region **eu-de**: **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), **5_gray** (Dedicated Load Balancer), and **5_dualStack**.        |
+      |                       |                                                           |    -  For region **eu-nl**: **5_bgp** (Dynamic BGP), **5_mailbgp** (Mail BGP), and **5_dualStack**                                               |
+      |                       |                                                           |                                                                                                                                                  |
       |                       |                                                           | -  Constraints:                                                                                                                                  |
       |                       |                                                           |                                                                                                                                                  |
       |                       |                                                           |    -  The configured value must be supported by the system.                                                                                      |
@@ -153,7 +157,7 @@ Response Message
       |                       |                                                           |                                                                                                                                                  |
       |                       |                                                           | .. note::                                                                                                                                        |
       |                       |                                                           |                                                                                                                                                  |
-      |                       |                                                           |    This parameter is not displayed if the EIP is bound to a dedicated load balancer. This parameter is displayed if the EIP is bound to an ECS.  |
+      |                       |                                                           |    The value of **port_id** is null if the EIP is bound to a dedicated load balancer.                                                            |
       +-----------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
       | tenant_id             | String                                                    | Specifies the project ID.                                                                                                                        |
       +-----------------------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+

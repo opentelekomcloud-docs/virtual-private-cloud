@@ -8,7 +8,7 @@ Querying All EIPs
 Function
 --------
 
-This API is used to query all EIPs. (This API is not supported in **eu-nl**.)
+This API is used to query all EIPs.
 
 URI
 ---
@@ -714,7 +714,7 @@ Response Parameters
    |                       |                                                                                                                                         | -  **FREEZED**                                                                                                                                                                    |
    |                       |                                                                                                                                         | -  **UNFREEZED**                                                                                                                                                                  |
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | bandwith_info         | :ref:`BandwidthInfoResp <listpublicipsv3__en-us_topic_0000001543023729_en-us_topic_0000001405620326_response_bandwidthinforesp>` object | -  Bandwidth bound to an EIP.                                                                                                                                                     |
+   | bandwidth_info        | :ref:`BandwidthInfoResp <listpublicipsv3__en-us_topic_0000001543023729_en-us_topic_0000001405620326_response_bandwidthinforesp>` object | -  Bandwidth bound to an EIP.                                                                                                                                                     |
    +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _listpublicipsv3__en-us_topic_0000001543023729_en-us_topic_0000001405620326_response_bandwidthinforesp:

@@ -15,8 +15,8 @@ URI
 
 GET /v2.0/eip/floatingips_v6/{floatingip_id}
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -28,8 +28,8 @@ Request Message
 
       GET https://{Endpoint}//v2.0/eip/floatingips_v6/2dedb5e7-cb70-4e78-b50f-d88c8321d161
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 

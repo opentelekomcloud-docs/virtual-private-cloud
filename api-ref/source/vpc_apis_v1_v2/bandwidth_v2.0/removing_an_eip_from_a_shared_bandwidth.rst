@@ -29,8 +29,8 @@ POST /v2.0/{project_id}/bandwidths/{bandwidth_id}/remove
    | bandwidth_id | Yes       | Specifies the bandwidth ID, which uniquely identifies the bandwidth. |
    +--------------+-----------+----------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -97,8 +97,8 @@ Request Message
           }
       }
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 
