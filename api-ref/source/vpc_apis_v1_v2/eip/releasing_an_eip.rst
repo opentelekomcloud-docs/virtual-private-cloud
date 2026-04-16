@@ -14,7 +14,7 @@ This API is used to release an EIP.
 
    Note the following when you use EIPs of the Dedicated Load Balancer (**5_gray**) type:
 
-   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
@@ -22,7 +22,7 @@ This API is used to release an EIP.
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
       -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
 
 URI
 ---
@@ -42,8 +42,8 @@ DELETE /v1/{project_id}/publicips/{publicip_id}
    publicip_id Yes       Specifies the unique identifier of an EIP.
    =========== ========= ==========================================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -55,8 +55,8 @@ Request Message
 
       DELETE https://{Endpoint}/v1/{project_id}/publicips/{publicip_id}
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 

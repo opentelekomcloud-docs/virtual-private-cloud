@@ -48,6 +48,8 @@ Request Parameters
    | Parameter       | Type                                                             | Mandatory       | Description                                                                                              |
    +=================+==================================================================+=================+==========================================================================================================+
    | tags            | Array of :ref:`tag <subnet_tag_0004__table244913515593>` objects | Yes             | Specifies the **tag** object list. For details, see :ref:`Table 3 <subnet_tag_0004__table244913515593>`. |
+   |                 |                                                                  |                 |                                                                                                          |
+   |                 |                                                                  |                 | Constraints: A maximum of 20 tag key-value pairs are supported.                                          |
    +-----------------+------------------------------------------------------------------+-----------------+----------------------------------------------------------------------------------------------------------+
    | action          | String                                                           | Yes             | Specifies the operation. Possible values are as follows:                                                 |
    |                 |                                                                  |                 |                                                                                                          |
@@ -60,7 +62,7 @@ Request Parameters
 .. table:: **Table 3** **tag** objects
 
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------+
-   | Attribute       | Type            | Mandatory       | Description                                                                        |
+   | Parameter       | Type            | Mandatory       | Description                                                                        |
    +=================+=================+=================+====================================================================================+
    | key             | String          | Yes             | -  Specifies the tag key.                                                          |
    |                 |                 |                 | -  Cannot be left blank.                                                           |

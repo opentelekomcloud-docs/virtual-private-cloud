@@ -34,8 +34,8 @@ POST /v2.0/{project_id}/security-groups/{security_group_id}/instance/action
    | security_group_id | Yes       | Specifies the security group ID, which uniquely identifies the security group. |
    +-------------------+-----------+--------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -77,8 +77,8 @@ Request Message
           "action": "add"
       }
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 

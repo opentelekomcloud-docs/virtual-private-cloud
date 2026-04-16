@@ -22,7 +22,7 @@ If **port_id** is left blank, the floating IP address has been unbound from the 
    -  Do not associate a port that has a floating IP address associated to another floating IP address. You must first disassociate the port from the IP address and then associate it with another IP address.
    -  This API cannot be used to bind an EIP to or unbind an EIP from a dedicated load balancer.
 
-   -  In **eu-de**, no more new EIPs of this type can be assigned. You can assign EIPs of the BGP (**5_bgp**) type.
+   -  In **eu-de**, EIPs of the Dedicated Load Balancer (**5_gray**) type cannot be assigned anymore. You can assign EIPs of the BGP (**5_bgp**) type.
    -  Existing EIPs of the Dedicated Load Balancer (**5_gray**) type can be bound to dedicated or shared load balancers.
 
       -  The EIP console cannot be used to bind EIPs to or unbind them from dedicated load balancers.
@@ -30,7 +30,7 @@ If **port_id** is left blank, the floating IP address has been unbound from the 
       -  EIPs of this type can be bound to or unbound from shared load balancers using the EIP console or APIs.
       -  You are advised to bind or unbind BGP EIPs to or from dedicated load balancers.
 
-   -  **5_gray** EIPs cannot be added to the same shared bandwidth as EIPs of other types. If they are in the same shared bandwidth, the bandwidth limit settings will not take effect.
+   -  Do not add EIPs of the dedicated load balancer type (**5_gray**) and other types to the same shared bandwidth. Otherwise, the bandwidth limit policy will not take effect.
 
 URI
 ---
@@ -51,8 +51,8 @@ PUT /v2.0/floatingips/{floatingip_id}
    |                 |                 |                 | This parameter is not required when you assign a floating IP address. This parameter is mandatory when you query, update, or delete a floating IP address. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Request Message
----------------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameter
 
@@ -74,8 +74,8 @@ Request Message
    |                 |                 |                 | Leaving this parameter blank does not unbind the EIP from the dedicated load balancer. |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------+
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameter
 
@@ -164,7 +164,9 @@ Example Response
            "floating_ip_address": "88.88.215.205",
            "port_id": null,
            "dns_name": "ecs-80-158-78-239",
-           "dns_domain": "reverse.domain-name.com"
+           "dns_domain": "reverse.domain-name.com",
+           "created_at": "2025-03-14T14:53:42",
+           "updated_at": "2026-03-23T20:47:41"
        }
    }
 
@@ -183,7 +185,9 @@ Example Response
            "floating_ip_address": "88.88.215.205",
            "port_id": "f91f5763-c5a2-4458-979d-61e48b3c3fac",
            "dns_name": "ecs-80-158-78-239",
-           "dns_domain": "reverse.domain-name.com"
+           "dns_domain": "reverse.domain-name.com",
+           "created_at": "2025-03-14T14:53:42",
+           "updated_at": "2026-03-23T20:47:41"
        }
    }
 

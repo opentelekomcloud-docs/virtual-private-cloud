@@ -8,7 +8,7 @@ Forcibly Deleting an IP Address Group
 Function
 --------
 
-This API is used to forcibly delete an IP address group. If the IP address group to be deleted has associated security group rules, the IP address group and its associated rules will be deleted together.
+You can call this API to delete an IP address group that is no longer used. This API is used to forcibly delete an IP address group. If the IP address group to be deleted is associated with security group rules or network ACL rules, the IP address group and its associated rules will be deleted together.
 
 URI
 ---
@@ -17,13 +17,25 @@ DELETE /v3/{project_id}/vpc/address-groups/{address_group_id}/force
 
 .. table:: **Table 1** Path Parameters
 
-   +------------------+-----------+--------+-------------------------------------------------------------------------------------------+
-   | Parameter        | Mandatory | Type   | Description                                                                               |
-   +==================+===========+========+===========================================================================================+
-   | address_group_id | Yes       | String | ID of the IP address group, which uniquely identifies the IP address group to be deleted. |
-   +------------------+-----------+--------+-------------------------------------------------------------------------------------------+
-   | project_id       | Yes       | String | Project ID.                                                                               |
-   +------------------+-----------+--------+-------------------------------------------------------------------------------------------+
+   +------------------+-----------------+-----------------+--------------------------------------------------------+
+   | Parameter        | Mandatory       | Type            | Description                                            |
+   +==================+=================+=================+========================================================+
+   | address_group_id | Yes             | String          | **Definition**:                                        |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | ID of an IP address group.                             |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | **Range**:                                             |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | N/A                                                    |
+   +------------------+-----------------+-----------------+--------------------------------------------------------+
+   | project_id       | Yes             | String          | **Definition**:                                        |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | ID of the project that an IP address group belongs to. |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | **Range**:                                             |
+   |                  |                 |                 |                                                        |
+   |                  |                 |                 | N/A                                                    |
+   +------------------+-----------------+-----------------+--------------------------------------------------------+
 
 Request Parameters
 ------------------

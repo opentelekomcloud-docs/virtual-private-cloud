@@ -225,39 +225,43 @@ Response Parameters
 
 .. table:: **Table 7** ResponseTag
 
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                      |
-   +=======================+=======================+==================================================================================+
-   | key                   | String                | -  Definition: Tag key.                                                          |
-   |                       |                       |                                                                                  |
-   |                       |                       | -  Range:                                                                        |
-   |                       |                       |                                                                                  |
-   |                       |                       |    -  Each key can contain up to 36 Unicode characters and cannot be left blank. |
-   |                       |                       |                                                                                  |
-   |                       |                       |    -  Each key value of a resource must be unique.                               |
-   |                       |                       |                                                                                  |
-   |                       |                       |    -  The value can contain:                                                     |
-   |                       |                       |                                                                                  |
-   |                       |                       |       -  Letters                                                                 |
-   |                       |                       |                                                                                  |
-   |                       |                       |       -  Digits                                                                  |
-   |                       |                       |                                                                                  |
-   |                       |                       |       -  Special characters: underscores (_) ,at signs (@), and hyphens (-)      |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------+
-   | value                 | String                | -  Definition: Tag value.                                                        |
-   |                       |                       |                                                                                  |
-   |                       |                       | -  Range:                                                                        |
-   |                       |                       |                                                                                  |
-   |                       |                       |    -  Each value can contain up to 43 Unicode characters and can be left blank.  |
-   |                       |                       |                                                                                  |
-   |                       |                       |    -  The value can contain:                                                     |
-   |                       |                       |                                                                                  |
-   |                       |                       |       -  Letters                                                                 |
-   |                       |                       |                                                                                  |
-   |                       |                       |       -  Digits                                                                  |
-   |                       |                       |                                                                                  |
-   |                       |                       |       -  Special characters: underscore (_), at signs (@), and hyphen (-)        |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                                        |
+   +=======================+=======================+====================================================================================================================================+
+   | key                   | String                | **Definition**:                                                                                                                    |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | Tag key.                                                                                                                           |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | **Range**:                                                                                                                         |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | -  A tag key can contain a maximum of 128 Unicode characters and cannot be left blank.                                             |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | -  Each tag key of a resource must be unique.                                                                                      |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | -  The value can contain:                                                                                                          |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       |    -  Letters                                                                                                                      |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       |    -  Digits                                                                                                                       |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       |    -  Special characters: underscores (_), periods (.), colons (:), plus signs (+), hyphens (-), at signs (@), and equal signs (=) |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | value                 | String                | **Definition**:                                                                                                                    |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | Tag value.                                                                                                                         |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | **Range**:                                                                                                                         |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | -  Each value can contain a maximum of 255 Unicode characters and can be left blank.                                               |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       | -  The value can contain:                                                                                                          |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       |    -  Letters                                                                                                                      |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       |    -  Digits                                                                                                                       |
+   |                       |                       |                                                                                                                                    |
+   |                       |                       |    -  Special characters: underscores (_), colons (:), plus signs (+), hyphens (-), at signs (@), and equal signs (=)              |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
 **Status code: 202**
 

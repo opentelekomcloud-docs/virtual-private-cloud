@@ -27,8 +27,8 @@ POST /v2.0/{project_id}/publicips/resource_instances/action
    project_id Yes       Specifies the project ID.
    ========== ========= =========================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -131,8 +131,8 @@ Request Message
           ]
       }
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 
@@ -182,8 +182,8 @@ Response Message
             "resources": [
                {
                   "resource_detail": null,
-                  "resource_id": "cdfs_cefs_wesas_12_dsad",
-                  "resource_name": "resouece1",
+                  "resource_id": "d6b4c05c-a38a-3f15-83cd-6b4b396f9813",
+                  "resource_name": "resource1",
                   "tags": [
                       {
                          "key": "key1",

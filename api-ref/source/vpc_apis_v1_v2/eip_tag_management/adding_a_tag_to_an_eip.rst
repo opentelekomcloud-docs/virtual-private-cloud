@@ -28,8 +28,8 @@ POST /v2.0/{project_id}/publicips/{publicip_id}/tags
    publicip_id Yes       Specifies the unique identifier of an EIP.
    =========== ========= ==========================================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -46,7 +46,7 @@ Request Message
    .. table:: **Table 3** **tag** objects
 
       +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------+
-      | Attribute       | Type            | Mandatory       | Description                                                                        |
+      | Parameter       | Type            | Mandatory       | Description                                                                        |
       +=================+=================+=================+====================================================================================+
       | key             | String          | Yes             | -  Specifies the tag key.                                                          |
       |                 |                 |                 | -  Cannot be left blank.                                                           |
@@ -83,8 +83,8 @@ Request Message
           }
       }
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 

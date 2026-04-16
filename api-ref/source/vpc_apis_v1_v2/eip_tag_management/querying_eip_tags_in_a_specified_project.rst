@@ -27,8 +27,8 @@ GET /v2.0/{project_id}/publicips/tags
    project_id Yes       Specifies the project ID.
    ========== ========= =========================
 
-Request Message
----------------
+Request Parameters
+------------------
 
 -  Request parameter
 
@@ -40,8 +40,8 @@ Request Message
 
       GET /v2.0/{project_id}/publicips/tags
 
-Response Message
-----------------
+Response Parameters
+-------------------
 
 -  Response parameter
 
