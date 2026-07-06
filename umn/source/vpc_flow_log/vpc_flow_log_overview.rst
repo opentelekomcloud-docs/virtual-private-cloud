@@ -22,9 +22,7 @@ VPC flow logs must be used together with the Log Tank Service (LTS). Before you 
 Notes and Constraints
 ---------------------
 
--  VPC flow logs ECS support for **EU-DE**: x2, x1, s7n, s3, s2, x2e, x1e, c9, c7t, 
-   c7n, c4, c3, m9, m7n, m4, m3, e3, d2, pi2, p3, p2v, p2s, g7v, g7, g6 specifications.
--  VPC flow logs ECS support for **EU-NL**: x2, s7n, s3, x2e, c9, c7n, c4, m9, m7n, 
-   m4, i3, pi2, p3, p2s, g7 specifications.
+-  Currently supported by ECS specifications: x2, x1, s7n, s3, s2, x2e, x1e, c9, c7t, c7n, 
+   c4, c3, m9, m7n, m4, m3, e3, d2, i3, pi2, p2v, p2s, g7v, g7, g6.
 -  Each account can have up to 10 VPC flow logs in a region.
 -  By default, a maximum of 400,000 flow log records are supported.
