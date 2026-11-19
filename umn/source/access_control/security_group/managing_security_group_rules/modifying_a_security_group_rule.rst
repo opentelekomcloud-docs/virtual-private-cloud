@@ -10,6 +10,17 @@ Scenarios
 
 You can modify the port, protocol, and IP address of your security group rules as required to ensure the security of your instances.
 
+.. caution::
+
+   **Before modifying a security group rule, assess its impact to avoid network disruptions or security risks.**
+
+   Do not modify in-use security group rules directly. Before you modify a security group rule that is in use, you can clone the security group and modify the rule in the test environment to ensure that the modified rule works. For details, see :ref:`Cloning a Security Group <vpc_securitygroup_0009>`.
+
+Constraints
+-----------
+
+Security group rules work like a whitelist. If there are no rules that explicitly allow or deny certain traffic, the security group denies such traffic to or from the instances in the security group.
+
 Procedure
 ---------
 
@@ -19,7 +30,7 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 #. In the navigation pane on the left, choose **Access Control** > **Security Groups**.
 

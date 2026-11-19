@@ -8,9 +8,9 @@ Enabling or Disabling a Firewall
 Scenarios
 ---------
 
-After a firewall is created, you may need to enable it based on network security requirements. You can also disable an enabled firewall if needed. Before enabling a firewall, ensure that subnets have been associated with the firewall and that inbound and outbound rules have been added to the firewall.
+After a firewall is created, you can enable or disable it based on network requirements. Before enabling a firewall, ensure that subnets have been associated with the firewall and that inbound and outbound rules have been added to the firewall.
 
-When a firewall is disabled, custom rules will become invalid while default rules still take effect. Disabling a firewall may interrupt network traffic. For information about the default firewall rules, see :ref:`Default Firewall Rules <acl_0001__section99541345213>`.
+When a firewall is disabled, custom rules will become invalid while default rules still take effect. Disabling a firewall may interrupt network traffic. For details about the default rules of a firewall, see :ref:`Firewall Rules <acl_0001__section31493412299>`.
 
 Procedure
 ---------
@@ -21,13 +21,27 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 4. In the navigation pane on the left, choose **Access Control** > **Firewalls**.
 
-5. Locate the row that contains the firewall, click **More** in the **Operation** column, and click **Enable** or **Disable**.
+5. In the firewall list, enable or disable the target firewall.
 
-6. Click **OK** in the displayed dialog box.
+   -  Enabling a Firewall
+
+      a. Locate the target firewall and choose **More** > **Enable** in the **Operation** column.
+
+         A confirmation dialog box is displayed.
+
+      b. Confirm the information and click **OK**.
+
+   -  Disabling a Firewall
+
+      a. Locate the target firewall and choose **More** > **Disable** in the **Operation** column.
+
+         A confirmation dialog box is displayed.
+
+      b. Confirm the information and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818823714.png

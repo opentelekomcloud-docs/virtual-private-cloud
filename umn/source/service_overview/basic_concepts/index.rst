@@ -14,6 +14,9 @@ Basic Concepts
 -  :ref:`VPC Peering Connection <vpc_concepts_0011>`
 -  :ref:`Firewall <en-us_topic_0051746676>`
 -  :ref:`Virtual IP Address <vpc_concepts_0012>`
+-  :ref:`Elastic Network Interface <vpc_concepts_0016>`
+-  :ref:`Supplementary Network Interface <vpc_concepts_0018>`
+-  :ref:`IP Address Group <vpc_concepts_0017>`
 
 .. toctree::
    :maxdepth: 1
@@ -28,3 +31,6 @@ Basic Concepts
    vpc_peering_connection
    firewall
    virtual_ip_address
+   elastic_network_interface
+   supplementary_network_interface
+   ip_address_group

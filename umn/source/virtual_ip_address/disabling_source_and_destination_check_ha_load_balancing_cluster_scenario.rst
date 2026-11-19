@@ -19,7 +19,7 @@ Procedure
 #. In the ECS list, click the ECS name.
 #. On the displayed ECS details page, click the **Network Interfaces** tab.
 #. Click the IP address to view the network interface details.
-#. Check that **Source/Destination Check** is disabled.
+#. Disable **Source/Destination Check**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818983486.png

@@ -64,7 +64,9 @@ Modifying the CIDR Block of a VPC
 
 5. Click **Add Secondary IPv4 CIDR Block**.
 
-6. Enter the secondary CIDR block and click **OK**.
+6. Enter a secondary IPv4 CIDR block in the text box and click **OK**.
+
+   Do not specify a secondary CIDR block listed in :ref:`Table 1 <vpc_vpc_0007__table1060431941314>`.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818823402.png

@@ -29,3 +29,13 @@ You can add IP address ranges and IP addresses that need to be managed in a unif
    :alt: **Figure 1** Using an IP address group
 
    **Figure 1** Using an IP address group
+
+Constraints
+-----------
+
+-  If a firewall rule uses an IP address group:
+
+   -  Either the source or the destination of an inbound rule can use the IP address group.
+   -  Either the source or the destination of an outbound rule can use the IP address group.
+
+   For example, if the source of an inbound firewall rule is set to an IP address group, the rule destination can only be an IP address.

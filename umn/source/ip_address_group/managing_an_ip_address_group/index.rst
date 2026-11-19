@@ -6,7 +6,7 @@ Managing an IP Address Group
 ============================
 
 -  :ref:`Creating an IP Address Group <vpc_ipaddressgroup_0003>`
--  :ref:`Associating an IP Address Group with Resources <vpc_ipaddressgroup_0004>`
+-  :ref:`Associating an IP Address Group with a Security Group or Firewall <vpc_ipaddressgroup_0004>`
 -  :ref:`Disassociating an IP Address Group from Resources <vpc_ipaddressgroup_0006>`
 -  :ref:`Modifying an IP Address Group <vpc_ipaddressgroup_0005>`
 -  :ref:`Exporting IP Address Group Details <vpc_ipaddressgroup_0012>`
@@ -18,7 +18,7 @@ Managing an IP Address Group
    :hidden: 
 
    creating_an_ip_address_group
-   associating_an_ip_address_group_with_resources
+   associating_an_ip_address_group_with_a_security_group_or_firewall
    disassociating_an_ip_address_group_from_resources
    modifying_an_ip_address_group
    exporting_ip_address_group_details

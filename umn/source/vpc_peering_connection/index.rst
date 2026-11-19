@@ -6,7 +6,7 @@ VPC Peering Connection
 ======================
 
 -  :ref:`VPC Peering Connection Overview <en-us_topic_0046655036>`
--  :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`
+-  :ref:`VPC Peering Connection Configuration Examples <vpc_peering_0008>`
 -  :ref:`Creating a VPC Peering Connection to Connect Two VPCs in the Same Account <en-us_topic_0046655037>`
 -  :ref:`Creating a VPC Peering Connection to Connect Two VPCs in Different Accounts <en-us_topic_0046655038>`
 -  :ref:`Obtaining the Peer Project ID of a VPC Peering Connection <vpc_peering_0005>`
@@ -22,7 +22,7 @@ VPC Peering Connection
    :hidden: 
 
    vpc_peering_connection_overview
-   vpc_peering_connection_usage_examples
+   vpc_peering_connection_configuration_examples/index
    creating_a_vpc_peering_connection_to_connect_two_vpcs_in_the_same_account
    creating_a_vpc_peering_connection_to_connect_two_vpcs_in_different_accounts
    obtaining_the_peer_project_id_of_a_vpc_peering_connection

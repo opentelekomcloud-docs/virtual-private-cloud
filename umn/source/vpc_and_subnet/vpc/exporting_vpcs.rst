@@ -10,7 +10,7 @@ Scenarios
 
 Information about all VPCs under your account can be exported as an Excel file to a local directory.
 
-This file records the names, IDs, statuses, IPv4 CIDR blocks, number of servers, number of route tables and the number of subnets of your VPCs.
+This file records the names, IDs, statuses, IPv4 CIDR blocks, the number of servers, the number of route tables, and the number of subnets of your VPCs.
 
 Procedure
 ---------

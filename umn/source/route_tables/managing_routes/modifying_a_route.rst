@@ -10,6 +10,8 @@ Scenarios
 
 This section describes how to modify a custom route in a route table.
 
+If a route table is associated with a subnet, modifying rules in the route table may affect how and where traffic is directed. Be careful with this operation as it may interrupt services.
+
 Notes and Constraints
 ---------------------
 
@@ -25,7 +27,7 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
 
@@ -37,37 +39,45 @@ Procedure
 
    .. table:: **Table 1** Parameter descriptions
 
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Item                  | Description                                                                                                                                                          | Example Value         |
-      +=======================+======================================================================================================================================================================+=======================+
-      | Destination Type      | Mandatory                                                                                                                                                            | IP address            |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | The destination can be:                                                                                                                                              |                       |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | -  **IP address**: Select this option if you want to enter an IP address or IP address range.                                                                        |                       |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Destination           | Mandatory                                                                                                                                                            | IPv4: 192.168.0.0/16  |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | Enter the destination of the route. You can enter a single IP address or an IP address range in CIDR notation.                                                       |                       |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | The destination of each route must be unique. The destination cannot overlap with any subnet CIDR block in the VPC.                                                  |                       |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Next Hop Type         | Mandatory                                                                                                                                                            | VPC peering           |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | Set the type of the next hop.                                                                                                                                        |                       |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | .. note::                                                                                                                                                            |                       |
-      |                       |                                                                                                                                                                      |                       |
-      |                       |    When you add or modify a custom route in a default route table, the next hop type of the route cannot be set to **VPN connection** or **Direct Connect gateway**. |                       |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Next Hop              | Mandatory                                                                                                                                                            | peer-AB               |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | Set the next hop. The resources in the drop-down list box are displayed based on the selected next hop type.                                                         |                       |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-      | Description           | Optional                                                                                                                                                             | ``-``                 |
-      |                       |                                                                                                                                                                      |                       |
-      |                       | Enter the description of the route in the text box as required.                                                                                                      |                       |
-      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+      | Parameter             | Description                                                                                                                                                          | Example Value          |
+      +=======================+======================================================================================================================================================================+========================+
+      | Destination Type      | Mandatory                                                                                                                                                            | IP address             |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | The destination can be:                                                                                                                                              |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | IP address: single IP address or IP address range                                                                                                                    |                        |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+      | Destination           | Mandatory                                                                                                                                                            | IPv4: 192.168.0.0/16   |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | Enter the destination of the route. You can enter a single IP address or an IP address range in CIDR notation.                                                       |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | The destination of the default route is 0.0.0.0/0, which indicates any traffic.                                                                                      |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | The destination of each route in a route table must be unique. The destination cannot overlap with any subnet in the VPC.                                            |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | .. note::                                                                                                                                                            |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       |    If there is an IP address range in the format of *Start IP address-End IP address*, it is not supported.                                                          |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       |    For example, you need to change 192.168.0.1-192.168.0.62 to 192.168.0.0/26.                                                                                       |                        |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+      | Next Hop Type         | Mandatory                                                                                                                                                            | VPC peering connection |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | Set the type of the next hop.                                                                                                                                        |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | .. note::                                                                                                                                                            |                        |
+      |                       |                                                                                                                                                                      |                        |
+      |                       |    When you add or modify a custom route in a default route table, the next hop type of the route cannot be set to **VPN connection** or **Direct Connect gateway**. |                        |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+      | Next Hop              | Mandatory                                                                                                                                                            | peer-AB                |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | Set the next hop. The resources in the drop-down list box are displayed based on the selected next hop type.                                                         |                        |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+      | Description           | Optional                                                                                                                                                             | ``-``                  |
+      |                       |                                                                                                                                                                      |                        |
+      |                       | Enter the description of the route in the text box as required.                                                                                                      |                        |
+      +-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
 
 8. Click **OK**.
 

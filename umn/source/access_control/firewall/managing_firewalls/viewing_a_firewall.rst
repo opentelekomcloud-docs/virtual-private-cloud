@@ -28,7 +28,7 @@ Procedure
 6. On the displayed page, click the **Inbound Rules**, **Outbound Rules**, and **Associated Subnets** tabs one by one to view details about inbound rules, outbound rules, and subnet associations.
 
 
-   .. figure:: /_static/images/en-us_image_0000001865684752.png
+   .. figure:: /_static/images/en-us_image_0000002524449334.png
       :alt: **Figure 1** Viewing a firewall
 
       **Figure 1** Viewing a firewall

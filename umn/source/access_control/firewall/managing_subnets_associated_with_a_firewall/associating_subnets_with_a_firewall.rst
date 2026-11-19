@@ -27,19 +27,48 @@ Procedure
 
    The **Virtual Private Cloud** page is displayed.
 
-4. In the navigation pane on the left, choose **Access Control** > **Firewalls**.
+4. Associate a subnet with a firewall using either of the following methods:
 
-5. Locate the target firewall and click its name to switch to the page showing details of that particular firewall.
+   -  Method 1
 
-6. On the displayed page, click the **Associated Subnets** tab.
+      a. In the navigation pane on the left, click **Subnets**.
 
-7. On the **Associated Subnets** tab, click **Associate**.
+         The **Subnets** page is displayed.
 
-8. On the displayed page, select the subnets to be associated with the firewall, and click **OK**.
+      b. In the subnet list, locate the row that contains the subnet and click **Associate** under the **Firewall** column.
 
-.. note::
+         The **Associate Firewall** page is displayed.
 
-   A subnet with a firewall associated will not be displayed on the page for you to select. If you want to associate such a subnet with another firewall, you must first disassociate the subnet from the original firewall. One-click subnet association and disassociation are not supported currently. A subnet can only be associated with one firewall.
+      c. Select a firewall from the drop-down list.
+
+         If there is no firewall, click |image3| in the drop-down list to create one.
+
+      d. Click **OK**.
+
+         The subnet list is displayed. You can view the associated firewall of the subnet.
+
+   -  Method 2
+
+      a. In the navigation pane on the left, choose **Access Control** > **Firewalls**.
+
+         The firewall list is displayed.
+
+      b. In the subnet list, locate the row that contains the firewall and click **Associate Subnet** in the **Operation** column.
+
+         The **Associated Subnets** tab is displayed.
+
+      c. On the **Associated Subnets** tab, click **Associate**.
+
+         The **Associate Subnet** dialog box is displayed.
+
+      d. In the **Associate Subnet** dialog box, select the subnet from the subnet list and click **OK**.
+
+         In the associated subnet list, you can view all subnets associated with the firewall.
+
+         .. note::
+
+            A subnet with a firewall associated will not be displayed in the subnet list of the **Associate Subnet** dialog box for you to select. If you want to associate such a subnet with another firewall, you must first disassociate the subnet from the original firewall.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
-.. |image2| image:: /_static/images/en-us_image_0000001818823450.png
+.. |image2| image:: /_static/images/en-us_image_0000001865663185.png
+.. |image3| image:: /_static/images/en-us_image_0000001865582985.png

@@ -21,19 +21,61 @@ Procedure
 
    The **Virtual Private Cloud** page is displayed.
 
-4. In the navigation pane on the left, choose **Access Control** > **Firewalls**.
+4. Disassociate a subnet with a Network using either of the following methods:
 
-5. Locate the target firewall and click its name to switch to the page showing details of that particular firewall.
+   -  Method 1
 
-6. On the displayed page, click the **Associated Subnets** tab.
+      a. In the navigation pane on the left, click **Subnets**.
 
-7. On the **Associated Subnets** page, locate the row that contains the target subnet and click **Disassociate** in the **Operation** column.
+         The **Subnets** page is displayed.
 
-8. Click **OK**.
+      b. In the subnet list, click the subnet name with a hyperlink.
 
-**Disassociating subnets from a firewall**
+         The subnet details page is displayed.
 
-Select multiple subnets and click **Disassociate** above the subnet list to disassociate the subnets from the firewall at a time.
+      c. In the upper right corner of the subnet details page, click **Disassociate** next to the firewall.
+
+         A confirmation dialog box is displayed.
+
+      d. Confirm the information and click **OK**.
+
+         On the subnet details page, you can see that no firewall is associated with the subnet.
+
+   -  Method 2
+
+      a. In the navigation pane on the left, click **Subnets**.
+
+         The **Subnets** page is displayed.
+
+      b. In the subnet list, locate the row that contains the subnet and click hyperlink under the **Firewall** column.
+
+         The firewall details page is displayed.
+
+      c. Click the **Associated Subnets** tab, select one or more subnets, and click **Disassociate**.
+
+         A confirmation dialog box is displayed.
+
+      d. Click **Yes** in the displayed dialog box.
+
+         On the **Associated Subnets** tab, you can see that the disassociated subnets are not displayed in the subnet list.
+
+   -  Method 3
+
+      a. In the navigation pane on the left, choose **Access Control** > **Firewalls**.
+
+         The firewall list is displayed.
+
+      b. Locate the row that contains the firewall and click **Associate Subnet** in the **Operation** column.
+
+         The **Associated Subnets** tab is displayed.
+
+      c. Select one or more subnets and click **Disassociate**.
+
+         A confirmation dialog box is displayed.
+
+      d. Click **OK**.
+
+         On the **Associated Subnets** tab, you can see that the disassociated subnets are not displayed in the subnet list.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
-.. |image2| image:: /_static/images/en-us_image_0000001818822962.png
+.. |image2| image:: /_static/images/en-us_image_0000001818822966.png

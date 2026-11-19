@@ -18,32 +18,23 @@ A tag consists of a key and value pair. :ref:`Table 1 <vpc_vpc_0005__ted9687ca14
 
 .. table:: **Table 1** Subnet tag key and value requirements
 
-   +-----------------------+------------------------------------------------------------------------+-----------------------+
-   | Parameter             | Requirements                                                           | Example Value         |
-   +=======================+========================================================================+=======================+
-   | Key                   | -  Cannot be left blank.                                               | subnet_key1           |
-   |                       | -  Must be unique for each subnet.                                     |                       |
-   |                       | -  Can contain a maximum of 36 characters.                             |                       |
-   |                       | -  Can contain only the following character types:                     |                       |
-   |                       |                                                                        |                       |
-   |                       |    -  Uppercase letters                                                |                       |
-   |                       |    -  Lowercase letters                                                |                       |
-   |                       |    -  Digits                                                           |                       |
-   |                       |    -  Only hyphens (-), underscores (_), and at signs (@) are allowed. |                       |
-   +-----------------------+------------------------------------------------------------------------+-----------------------+
-   | Value                 | -  Can contain a maximum of 43 characters.                             | subnet-01             |
-   |                       | -  Can contain only the following character types:                     |                       |
-   |                       |                                                                        |                       |
-   |                       |    -  Uppercase letters                                                |                       |
-   |                       |    -  Lowercase letters                                                |                       |
-   |                       |    -  Digits                                                           |                       |
-   |                       |    -  Only underscores (_), hyphens (-), and at signs (@) are allowed. |                       |
-   +-----------------------+------------------------------------------------------------------------+-----------------------+
+   +-----------------------+--------------------------------------------------------------------------------------------------+-----------------------+
+   | Parameter             | Requirements                                                                                     | Example Value         |
+   +=======================+==================================================================================================+=======================+
+   | Key                   | -  For each resource, each tag key must be unique, and each tag key can only have one tag value. | subnet_key1           |
+   |                       | -  Cannot be left blank.                                                                         |                       |
+   |                       | -  Can contain a maximum of 128 characters.                                                      |                       |
+   |                       | -  Cannot start or end with a space.                                                             |                       |
+   +-----------------------+--------------------------------------------------------------------------------------------------+-----------------------+
+   | Value                 | -  Can be left blank.                                                                            | subnet-01             |
+   |                       | -  Can contain a maximum of 255 characters.                                                      |                       |
+   |                       | -  Cannot start or end with a space.                                                             |                       |
+   +-----------------------+--------------------------------------------------------------------------------------------------+-----------------------+
 
 Procedure
 ---------
 
-**Search for subnets by tag key and value on the page showing the subnet list.**
+**Search for subnets by tag key or value on the subnet list page.**
 
 #. Log in to the management console.
 
@@ -51,13 +42,13 @@ Procedure
 
 #. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
-   The **Subnets** page is displayed.
+   The subnet list page is displayed.
 
-#. In the search box above the subnet list, click the search box.
+#. Click the search box above the subnet list.
 
    Click the tag key and then the value as required. The system filters resources based on the tag you select.
 
@@ -73,33 +64,27 @@ Procedure
 
 #. Click |image4| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 #. In the navigation pane on the left, choose **Virtual Private Cloud** > **Subnets**.
 
-   The **Subnets** page is displayed.
+   The subnet list page is displayed.
 
 #. In the subnet list, locate the target subnet and click its name.
 
-#. On the subnet details page, click the **Tags** tab and perform desired operations on tags.
+#. Click the **Tags** tab and then click **Edit Tag** in the upper left corner above the tag list.
 
-   -  View tags.
+   The **Edit Tag** page is displayed.
 
-      On the **Tags** tab, you can view details about tags added to the current subnet, including the number of tags and the key and value of each tag.
+#. Perform the following operations on the tags as required:
 
-   -  Add a tag.
-
-      Click **Add Tag** in the upper left corner. In the displayed **Add Tag** dialog box, enter the tag key and value, and click **OK**.
-
-   -  Edit a tag.
-
-      Locate the row that contains the tag you want to edit, and click **Edit** in the **Operation** column. Enter the new tag key and value, and click **OK**.
-
-   -  Delete a tag.
-
-      Locate the tag you want to delete and click **Delete** in the **Operation** column. In the displayed dialog box, click **OK**.
+   -  Adding a tag: Click |image5|, enter a tag key and value, and click **OK**.
+   -  Modifying a tag: Click |image6| next to the target tag key or value to delete the original value, enter a new value, and click **OK**.
+   -  Deleting a tag: Click **Delete** next to the target tag and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818983406.png
 .. |image3| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image4| image:: /_static/images/en-us_image_0000001865583165.png
+.. |image5| image:: /_static/images/en-us_image_0000002555651817.png
+.. |image6| image:: /_static/images/en-us_image_0000002555531839.png

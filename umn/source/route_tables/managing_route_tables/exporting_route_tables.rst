@@ -8,7 +8,7 @@ Exporting Route Tables
 Scenarios
 ---------
 
-Information about all route tables under your account can be exported as an Excel file to a local directory. This file records the name, ID, VPC, type, and number of associated subnets of the route tables.
+Information about all route tables under your account can be exported as an Excel file to a local directory. This file records the name, ID, VPC, type, and the number of associated subnets of each route table.
 
 Procedure
 ---------

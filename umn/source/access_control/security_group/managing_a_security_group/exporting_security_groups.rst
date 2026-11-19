@@ -8,18 +8,18 @@ Exporting Security Groups
 Scenarios
 ---------
 
-You can export the details about security groups, including:
+You can export the details about each security group, including:
 
--  Basic information about security groups, including the name, ID, and creation time.
--  Number of security group rules.
--  Number of the associated instances.
+-  Basic information about each security group, including the name, ID, and creation time.
+-  The number of security group rules.
+-  The number of the associated instances.
 
 Procedure
 ---------
 
 #. Log in to the management console.
 
-#. Click |image1| in the upper left corner and select the desired region and project.
+#. Click |image1| in the upper left corner and select the region and project.
 
 #. Click |image2| in the upper left corner to display the service list and choose **Network** > **Virtual Private Cloud**.
 
