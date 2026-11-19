@@ -10,7 +10,7 @@ Scenarios
 
 If two VPCs from the same region cannot communicate with each other, you can use a VPC peering connection. This section describes how to create a VPC peering connection between two VPCs in different accounts.
 
-This following describes how to create a VPC peering connection between VPC-A in account A and VPC-B in account B to enable communications between ECS-A01 and RDS-B01.
+The following describes how to create a VPC peering connection between VPC-A in account A and VPC-B in account B to enable communications between ECS-A01 and RDS-B01.
 
 Procedure:
 
@@ -18,7 +18,7 @@ Procedure:
 
 :ref:`Step 2: Peer Account Accepts the VPC Peering Connection Request <en-us_topic_0046655038__section497322311429>`
 
-:ref:`Step 3: Add Routes for the VPC Peering Connection <en-us_topic_0046655038__section2675929184617>`
+:ref:`Step 3: Add Routes for the VPC Peering Connection <en-us_topic_0046655038__section12291210103512>`
 
 :ref:`Step 4: Verify Network Connectivity <en-us_topic_0046655038__section920942154519>`
 
@@ -34,7 +34,7 @@ Notes and Constraints
 -  Only one VPC peering connection can be created between two VPCs at the same time.
 -  A VPC peering connection can only connect VPCs in the same region.
 
--  If the local and peer VPCs have overlapping CIDR blocks, the VPC peering connection may not take effect.
+-  If the local and peer VPCs have overlapping CIDR blocks, the VPC peering connection may not take effect. For example, if the CIDR block of a VPC is 192.168.0.0/16 and that of another VPC is 192.168.0.0/16 or 192.168.0.0/18, the CIDR blocks overlap.
 
 -  For a VPC peering connection between VPCs under different accounts:
 
@@ -81,40 +81,44 @@ Step 1: Create a VPC Peering Connection
 
    .. table:: **Table 1** Parameters for creating a VPC peering connection
 
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Parameter                   | Description                                                                                                                                                                                      | Example Value                        |
-      +=============================+==================================================================================================================================================================================================+======================================+
-      | VPC Peering Connection Name | Mandatory                                                                                                                                                                                        | peering-AB                           |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | Enter a name for the VPC peering connection.                                                                                                                                                     |                                      |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | The name can contain a maximum of 64 characters, including letters, digits, hyphens (-), and underscores (_).                                                                                    |                                      |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Local VPC                   | Mandatory                                                                                                                                                                                        | VPC-A                                |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | VPC at one end of the VPC peering connection. You can select one from the drop-down list.                                                                                                        |                                      |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Local VPC CIDR Block        | CIDR block of the selected local VPC                                                                                                                                                             | 172.16.0.0/16                        |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Account                     | Mandatory                                                                                                                                                                                        | Another account                      |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | -  Options: **My account** and **Another account**                                                                                                                                               |                                      |
-      |                             | -  Select **Another account**.                                                                                                                                                                   |                                      |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Peer Project ID             | This parameter is mandatory because **Account** is set to **Another account**.                                                                                                                   | Project ID of VPC-B in region A:     |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | The project ID of the region that the peer VPC resides. For details about how to obtain the project ID, see :ref:`Obtaining the Peer Project ID of a VPC Peering Connection <vpc_peering_0005>`. | 067cf8aecf3XXX08322f13b              |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Peer VPC ID                 | This parameter is mandatory because **Account** is set to **Another account**.                                                                                                                   | VPC-B ID:                            |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | ID of the VPC at the other end of the VPC peering connection. For details about how to obtain the ID, see :ref:`Obtaining a VPC ID <vpc_vpc_0013>`.                                              | 17cd7278-XXX-530c952dcf35            |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
-      | Description                 | Optional                                                                                                                                                                                         | peering-AB connects VPC-A and VPC-B. |
-      |                             |                                                                                                                                                                                                  |                                      |
-      |                             | Enter the description of the VPC peering connection in the text box as required. The description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).             |                                      |
-      +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Parameter                   | Description                                                                                                                                                                                       | Example Value                        |
+      +=============================+===================================================================================================================================================================================================+======================================+
+      | Region                      | Mandatory                                                                                                                                                                                         | ``-``                                |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | Resources in different regions cannot communicate with each other over an internal network. For low network latency and quick resource access, select the nearest region to your services.        |                                      |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | VPC Peering Connection Name | Mandatory                                                                                                                                                                                         | peering-AB                           |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | Enter a name for the VPC peering connection.                                                                                                                                                      |                                      |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | The name can contain a maximum of 64 characters, including letters, digits, hyphens (-), and underscores (_).                                                                                     |                                      |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Description                 | Optional                                                                                                                                                                                          | peering-AB connects VPC-A and VPC-B. |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | Enter the description of the VPC peering connection in the text box as required. The description can contain a maximum of 255 characters and cannot contain angle brackets (< or >).              |                                      |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Local VPC                   | Mandatory                                                                                                                                                                                         | VPC-A                                |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | VPC at one end of the VPC peering connection. You can select one from the drop-down list.                                                                                                         |                                      |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Local VPC CIDR Block        | CIDR block of the selected local VPC                                                                                                                                                              | 172.16.0.0/16                        |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Account                     | Mandatory                                                                                                                                                                                         | Another account                      |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | -  Options: **My account** and **Another account**                                                                                                                                                |                                      |
+      |                             | -  Select **Another account**.                                                                                                                                                                    |                                      |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Peer Project ID             | This parameter is mandatory because **Account** is set to **Another account**.                                                                                                                    | Project ID of VPC-B in region A:     |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | The project ID of the region where the peer VPC resides. For details about how to obtain the project ID, see :ref:`Obtaining the Peer Project ID of a VPC Peering Connection <vpc_peering_0005>`. | 067cf8aecf3XXX08322f13b              |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
+      | Peer VPC ID                 | This parameter is mandatory because **Account** is set to **Another account**.                                                                                                                    | VPC-B ID:                            |
+      |                             |                                                                                                                                                                                                   |                                      |
+      |                             | ID of the VPC at the other end of the VPC peering connection. For details about how to obtain the ID, see :ref:`Obtaining a VPC ID <vpc_vpc_0013>`.                                               | 17cd7278-XXX-530c952dcf35            |
+      +-----------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
 
-7. Click **OK**.
+7. Click **Create Now**.
 
    -  If the message "Invalid VPC ID and project ID." is displayed, check whether the project ID and VPC ID are correct.
 
@@ -152,14 +156,14 @@ After you create a VPC peering connection with a VPC in another account, you nee
 
    After the status of the VPC peering connection changes to **Accepted**, the VPC peering connection is created.
 
-#. Go to :ref:`Step 3: Add Routes for the VPC Peering Connection <en-us_topic_0046655038__section2675929184617>`.
+#. Go to :ref:`Step 3: Add Routes for the VPC Peering Connection <en-us_topic_0046655038__section12291210103512>`.
 
-.. _en-us_topic_0046655038__section2675929184617:
+.. _en-us_topic_0046655038__section12291210103512:
 
 Step 3: Add Routes for the VPC Peering Connection
 -------------------------------------------------
 
-To enable communications between VPCs connected by a VPC peering connection, you need to add forward and return routes to the route tables of the VPCs. For details, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.
+To enable communications between VPCs connected by a VPC peering connection, you need to add forward and return routes to the route tables of the VPCs. For details, see :ref:`VPC Peering Connection Configuration Suggestions <en-us_topic_0046809840>`.
 
 Both accounts need to add a route to the route table of their VPC. In this example, account A adds a route to the route table of VPC-A, and account B adds a route to the route table of VPC-B.
 
@@ -167,23 +171,17 @@ Both accounts need to add a route to the route table of their VPC. In this examp
 
    a. In the VPC peering connection list of the local account, click the name of the target VPC peering connection.
 
-      The page showing the VPC peering connection details is displayed.
+      The basic information page of the VPC peering connection is displayed.
 
-   b. In the lower part of the VPC peering connection details page, click **Add Route**.
+   b. On the **Local Routes** tab of the VPC peering connection, click the **Route Tables** hyperlink.
 
-      The **Add Route** dialog box is displayed.
+      The basic information page of the default route table for the local VPC is displayed.
 
+   c. Add routes as prompted.
 
-      .. figure:: /_static/images/en-us_image_0000002064973289.png
-         :alt: **Figure 4** Add Route
+      :ref:`Table 2 <en-us_topic_0046655038__table62293103350>` describes the parameters.
 
-         **Figure 4** Add Route
-
-   c. Add routes to the route tables as prompted.
-
-      :ref:`Table 2 <en-us_topic_0046655038__table124160361764>` describes the parameters.
-
-      .. _en-us_topic_0046655038__table124160361764:
+      .. _en-us_topic_0046655038__table62293103350:
 
       .. table:: **Table 2** Parameter description
 
@@ -199,7 +197,7 @@ Both accounts need to add a route to the route table of their VPC. In this examp
          |                       | -  If there is only the default route table in the drop-down list, select the default route table.                                                                                                                                                                                                           |                                 |
          |                       | -  If there are both default and custom route tables in drop-down list, select the route table associated with the subnet connected by the VPC peering connection.                                                                                                                                           |                                 |
          +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
-         | Destination           | An IP address or address range in the other VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.              | VPC-B CIDR block: 172.17.0.0/16 |
+         | Destination           | An IP address or address range in the other VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Configuration Suggestions <en-us_topic_0046809840>`.   | VPC-B CIDR block: 172.17.0.0/16 |
          +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
          | Next Hop              | The default value is the current VPC peering connection. You do not need to specify this parameter.                                                                                                                                                                                                          | peering-AB                      |
          +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
@@ -222,17 +220,11 @@ Both accounts need to add a route to the route table of their VPC. In this examp
 
       The **Add Route** dialog box is displayed.
 
+   c. Add routes as prompted.
 
-      .. figure:: /_static/images/en-us_image_0000002065222681.png
-         :alt: **Figure 5** Add Route
+      :ref:`Table 3 <en-us_topic_0046655038__table12451818113511>` describes the parameters.
 
-         **Figure 5** Add Route
-
-   c. Add routes to the route table as prompted.
-
-      :ref:`Table 3 <en-us_topic_0046655038__table563312179168>` describes the parameters.
-
-      .. _en-us_topic_0046655038__table563312179168:
+      .. _en-us_topic_0046655038__table12451818113511:
 
       .. table:: **Table 3** Parameter description
 
@@ -248,7 +240,7 @@ Both accounts need to add a route to the route table of their VPC. In this examp
          |                       | -  If there is only the default route table in the drop-down list, select the default route table.                                                                                                                                                                                                           |                                 |
          |                       | -  If there are both default and custom route tables in drop-down list, select the route table associated with the subnet connected by the VPC peering connection.                                                                                                                                           |                                 |
          +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
-         | Destination           | An IP address or address range in the other VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.              | VPC-A CIDR block: 172.16.0.0/16 |
+         | Destination           | An IP address or address range in the other VPC connected by the VPC peering connection. The value can be a VPC CIDR block, subnet CIDR block, or ECS IP address. For details about the route configuration example, see :ref:`VPC Peering Connection Configuration Suggestions <en-us_topic_0046809840>`.   | VPC-A CIDR block: 172.16.0.0/16 |
          +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
          | Next Hop              | The default value is the current VPC peering connection. You do not need to specify this parameter.                                                                                                                                                                                                          | peering-AB                      |
          +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+
@@ -259,7 +251,7 @@ Both accounts need to add a route to the route table of their VPC. In this examp
 
    d. Click **OK**.
 
-      You can view the route in the route list.
+      You can view the routes in the route list.
 
 .. _en-us_topic_0046655038__section920942154519:
 

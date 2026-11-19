@@ -14,7 +14,7 @@ You can view resources, including ECSs, BMSs, load balancers, and NAT gateways.
 
 .. important::
 
-   After you delete all resources in a subnet by referring to this section, the message "Delete the resource that is using the subnet and then delete the subnet." is displayed when you delete the subnet, you can refer to :ref:`Viewing IP Addresses in a Subnet <vpc_vpc_0012>`.
+   After you delete all resources in a subnet by referring to this section, if the message "Delete the resource that is using the subnet and then delete the subnet." still appears when you try to delete the subnet, you can refer to :ref:`Viewing IP Addresses in a Subnet <vpc_vpc_0012>`.
 
 Procedure
 ---------

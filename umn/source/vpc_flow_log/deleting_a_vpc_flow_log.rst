@@ -8,7 +8,7 @@ Deleting a VPC Flow Log
 Scenarios
 ---------
 
-Delete a VPC flow log that is not required. Deleting a VPC flow log will not delete the existing flow log records in LTS.
+You can delete a VPC flow log if you no longer need it. Deleting a VPC flow log will not delete the existing flow log records in LTS.
 
 .. note::
 
@@ -23,11 +23,13 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 4. In the navigation pane on the left, choose **VPC Flow Logs**.
 
-5. Locate the row that contains the VPC flow log to be deleted and click **Delete** in the **Operation** column.
+5. Locate the row that contains the VPC flow log to be deleted and choose **More** > **Delete** in the **Operation** column.
+
+   A confirmation dialog box is displayed.
 
 
    .. figure:: /_static/images/en-us_image_0000002033444204.png

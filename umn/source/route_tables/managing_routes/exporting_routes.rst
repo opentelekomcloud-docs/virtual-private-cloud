@@ -10,14 +10,14 @@ Scenarios
 
 You can export the information about all the routes under your account as an Excel file to a local directory.
 
-This file records the destination, IP addresses, next hop type, next hop, type, description of the routes.
+This file records the destination, IP addresses, next hop type, next hop, type, and description of each route.
 
 Procedure
 ---------
 
 #. Log in to the management console.
 
-2. Click |image1| in the upper left corner and select the desired region and project.
+2. Click |image1| in the upper left corner and select the region and project.
 
 3. In the upper left corner of the page, click |image2| to expand the service list and choose **Network** > **Virtual Private Cloud**.
 
@@ -39,7 +39,7 @@ Procedure
    The system will automatically export information about the routes as an Excel file to a local directory.
 
 
-   .. figure:: /_static/images/en-us_image_0000002064122133.png
+   .. figure:: /_static/images/en-us_image_0000002555953165.png
       :alt: **Figure 1** Exporting routes
 
       **Figure 1** Exporting routes

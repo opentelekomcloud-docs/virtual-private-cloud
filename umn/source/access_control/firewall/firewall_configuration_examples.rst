@@ -5,80 +5,133 @@
 Firewall Configuration Examples
 ===============================
 
-This section provides examples for configuring firewalls.
+You can use firewalls to control the traffic in and out of subnets. When both security groups and firewalls are configured, traffic matches firewall rules first and then security group rules. You can add security group rules as required and use firewalls as an additional layer of protection for your subnets. Here are some examples on how firewalls can be used.
 
--  :ref:`Denying Access from a Specific Port <acl_0002__section11312173319432>`
--  :ref:`Allowing Access from Specific Ports and Protocols <acl_0002__section61291659102216>`
+-  :ref:`Denying External Access to Instances in a Subnet over a Specific Port <acl_0002__section11312173319432>`
+-  :ref:`Denying Access from a Specific IP Address <acl_0002__section1431022694618>`
+-  :ref:`Allowing External Access to Instances in a Subnet over Specific Ports <acl_0002__section61291659102216>`
+
+Notes
+-----
+
+Note the following before configuring rules:
+
+-  Each firewall has default rules, as shown in :ref:`Table 1 <acl_0002__table206881417172215>`. If a firewall has no custom rules, the default inbound and outbound rules are applied, denying all traffic from entering or leaving a subnet.
+
+   .. _acl_0002__table206881417172215:
+
+   .. table:: **Table 1** Default firewall rules
+
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+
+      | Direction | Rule Number | Action | Protocol | Source    | Source Port Range | Destination | Destination Port Range |
+      +===========+=============+========+==========+===========+===================+=============+========================+
+      | Inbound   | \*          | Deny   | All      | 0.0.0.0/0 | All               | 0.0.0.0/0   | All                    |
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+
+      | Outbound  | \*          | Deny   | All      | 0.0.0.0/0 | All               | 0.0.0.0/0   | All                    |
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+
+
+-  You do not need to add rules to allow response traffic to requests. This is because firewalls are stateful and allow the responses to enter or leave the subnet without being controlled by rules.
+
+For more information about how firewall rules work, see :ref:`How Firewall Rules Work <acl_0001__section1952742625114>`.
 
 .. _acl_0002__section11312173319432:
 
-Denying Access from a Specific Port
------------------------------------
+Denying External Access to Instances in a Subnet over a Specific Port
+---------------------------------------------------------------------
 
-You might want to block TCP port 445 to protect against the WannaCry ransomware attacks. You can add a firewall rule to deny all incoming traffic from TCP port 445.
+If you want to block TCP port 445 to protect instances against WannaCry ransomware attacks, you can associate a firewall with the subnet and add inbound rules described in :ref:`Table 2 <acl_0002__table553618145582>` to protect the instances in 10.0.0.0/24.
 
-Firewall Configuration
-
-:ref:`Table 1 <acl_0002__table553618145582>` lists the inbound rules required.
+#. The default firewall rule denies any traffic to the subnet. You need to add custom rule 02 to allow inbound traffic.
+#. Add custom rule 01 to deny all inbound traffic to instances in the subnet over TCP port 445. Insert the deny rule above the allow rule to let the deny rule be applied first. For details, see :ref:`Adding a Firewall Rule <en-us_topic_0051746702>`.
 
 .. _acl_0002__table553618145582:
 
-.. table:: **Table 1** Firewall rules
+.. table:: **Table 2** Denying external access to instances in a subnet over a specific port
 
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------+
-   | Direction | Action | Protocol | Source    | Source Port Range | Destination | Destination Port Range | Description                                                      |
-   +===========+========+==========+===========+===================+=============+========================+==================================================================+
-   | Inbound   | Deny   | TCP      | 0.0.0.0/0 | 1-65535           | 0.0.0.0/0   | 445                    | Denies inbound traffic from any IP address through TCP port 445. |
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------+
-   | Inbound   | Allow  | All      | 0.0.0.0/0 | 1-65535           | 0.0.0.0/0   | All                    | Allows all inbound traffic.                                      |
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------+
+   +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+   | Direction | Rule Number | Action | Protocol | Source    | Source Port Range | Destination | Destination Port Range | Description    |
+   +===========+=============+========+==========+===========+===================+=============+========================+================+
+   | Inbound   | 1           | Deny   | TCP      | 0.0.0.0/0 | All               | 10.0.0.0/24 | 445                    | Custom rule 01 |
+   +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+   | Inbound   | 2           | Allow  | All      | 0.0.0.0/0 | All               | 10.0.0.0/24 | All                    | Custom rule 02 |
+   +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+   | Inbound   | \*          | Deny   | All      | 0.0.0.0/0 | All               | 0.0.0.0/0   | All                    | Default rule   |
+   +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
 
-.. note::
+.. _acl_0002__section1431022694618:
 
-   -  By default, a firewall denies all inbound traffic. You can add a rule to allow all inbound traffic if necessary.
-   -  If you want a deny rule to be matched first, insert the deny rule above the allow rule. For details, see :ref:`Changing the Sequence of a Firewall Rule <vpc_acl_0004>`.
+Denying Access from a Specific IP Address
+-----------------------------------------
+
+You can associate a firewall with a subnet and add inbound rules as described in :ref:`Table 3 <acl_0002__table2084994619493>` to deny the access from abnormal IP addresses, for example, 10.1.1.12/32, to protect the instances in 10.5.0.0/24.
+
+#. The default firewall rule denies any traffic to the subnet. You need to add custom rule 02 to allow inbound traffic.
+#. Add custom rule 01 to deny traffic from 10.1.1.12/32 to the subnet. Insert the deny rule above the allow rule to let the deny rule be applied first. For details, see :ref:`Adding a Firewall Rule <en-us_topic_0051746702>`.
+
+.. _acl_0002__table2084994619493:
+
+.. table:: **Table 3** Denying access from a specific IP address
+
+   +-----------+-------------+--------+----------+--------------+-------------------+-------------+------------------------+----------------+
+   | Direction | Rule Number | Action | Protocol | Source       | Source Port Range | Destination | Destination Port Range | Description    |
+   +===========+=============+========+==========+==============+===================+=============+========================+================+
+   | Inbound   | 1           | Deny   | TCP      | 10.1.1.12/32 | All               | 10.5.0.0/24 | All                    | Custom rule 01 |
+   +-----------+-------------+--------+----------+--------------+-------------------+-------------+------------------------+----------------+
+   | Inbound   | 2           | Allow  | All      | 0.0.0.0/0    | All               | 10.5.0.0/24 | All                    | Custom rule 02 |
+   +-----------+-------------+--------+----------+--------------+-------------------+-------------+------------------------+----------------+
+   | Inbound   | \*          | Deny   | All      | 0.0.0.0/0    | All               | 0.0.0.0/0   | All                    | Default rule   |
+   +-----------+-------------+--------+----------+--------------+-------------------+-------------+------------------------+----------------+
 
 .. _acl_0002__section61291659102216:
 
-Allowing Access from Specific Ports and Protocols
--------------------------------------------------
+Allowing External Access to Instances in a Subnet over Specific Ports
+---------------------------------------------------------------------
 
-In this example, an ECS in a subnet is used as the web server, and you need to allow inbound traffic from HTTP port 80 and HTTPS port 443 and allow all outbound traffic. You need to configure both the firewall rules and security group rules to allow the traffic.
+If you deploy web servers in a subnet and want these servers to be accessible from external networks, you need to add firewall and security group rules to allow traffic over port 80 (HTTP) and port 443 (HTTPS).
 
-Firewall Configuration
+#. Add firewall rules listed in :ref:`Table 4 <acl_0002__table389311581341>`.
 
-:ref:`Table 2 <acl_0002__table195634095313>` lists the inbound and outbound rules required.
+   -  Add custom rule A01 to allow any IP addresses to access the instances in the subnet over port 80 (HTTP).
+   -  Add custom rule A02 to allow any IP addresses to access the instances in the subnet over port 443 (HTTPS).
 
-.. _acl_0002__table195634095313:
+   **10.8.0.0/24 is the CIDR block of the subnet to be protected. If the destination of a rule is set to this CIDR block, all instances in the subnet can be protected.**
 
-.. table:: **Table 2** Firewall rules
+   .. _acl_0002__table389311581341:
 
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------------------------------+
-   | Direction | Action | Protocol | Source    | Source Port Range | Destination | Destination Port Range | Description                                                                              |
-   +===========+========+==========+===========+===================+=============+========================+==========================================================================================+
-   | Inbound   | Allow  | TCP      | 0.0.0.0/0 | 1-65535           | 0.0.0.0/0   | 80                     | Allows inbound HTTP traffic from any IP address to ECSs in the subnet through port 80.   |
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------------------------------+
-   | Inbound   | Allow  | TCP      | 0.0.0.0/0 | 1-65535           | 0.0.0.0/0   | 443                    | Allows inbound HTTPS traffic from any IP address to ECSs in the subnet through port 443. |
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------------------------------+
-   | Outbound  | Allow  | All      | 0.0.0.0/0 | All               | 0.0.0.0/0   | All                    | Allows all outbound traffic from the subnet.                                             |
-   +-----------+--------+----------+-----------+-------------------+-------------+------------------------+------------------------------------------------------------------------------------------+
+   .. table:: **Table 4** Firewall rules for allowing access to instances in a subnet over specific ports
 
-**Security group configuration**
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+      | Direction | Rule Number | Action | Protocol | Source    | Source Port Range | Destination | Destination Port Range | Description    |
+      +===========+=============+========+==========+===========+===================+=============+========================+================+
+      | Inbound   | 1           | Allow  | TCP      | 0.0.0.0/0 | All               | 10.8.0.0/24 | 80                     | Custom rule 01 |
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+      | Inbound   | 2           | Allow  | TCP      | 0.0.0.0/0 | All               | 10.8.0.0/24 | 443                    | Custom rule 02 |
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+      | Inbound   | \*          | Deny   | All      | 0.0.0.0/0 | All               | 0.0.0.0/0   | All                    | Default rule   |
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
+      | Outbound  | \*          | Deny   | All      | 0.0.0.0/0 | All               | 0.0.0.0/0   | All                    | Default rule   |
+      +-----------+-------------+--------+----------+-----------+-------------------+-------------+------------------------+----------------+
 
-:ref:`Table 3 <acl_0002__table30323767195135>` lists the inbound and outbound security group rules required.
+#. Add the rules listed in :ref:`Table 5 <acl_0002__table347342171117>` to all the security groups associated with the instances.
 
-.. _acl_0002__table30323767195135:
+   -  Add inbound rule 01 to allow any IP addresses to access the instances over port 80 (HTTP).
 
-.. table:: **Table 3** Security group rules
+   -  Add inbound rule 02 to allow any IP addresses to access the instances over port 443 (HTTPS).
 
-   +-----------+----------------------+------+------------------------+---------------------------------------------------------------------------------------------------------------+
-   | Direction | Protocol/Application | Port | Source/Destination     | Description                                                                                                   |
-   +===========+======================+======+========================+===============================================================================================================+
-   | Inbound   | TCP                  | 80   | Source: 0.0.0.0/0      | Allows inbound HTTP traffic from any IP address to ECSs associated with the security group through port 80.   |
-   +-----------+----------------------+------+------------------------+---------------------------------------------------------------------------------------------------------------+
-   | Inbound   | TCP                  | 443  | Source: 0.0.0.0/0      | Allows inbound HTTPS traffic from any IP address to ECSs associated with the security group through port 443. |
-   +-----------+----------------------+------+------------------------+---------------------------------------------------------------------------------------------------------------+
-   | Outbound  | All                  | All  | Destination: 0.0.0.0/0 | Allows all outbound traffic from the security group.                                                          |
-   +-----------+----------------------+------+------------------------+---------------------------------------------------------------------------------------------------------------+
+   -  Add outbound rule 03 to allow any traffic to leave the security group.
 
-A firewall adds an additional layer of security. Even if the security group rules allow more traffic than that actually required, the firewall rules allow only access from HTTP port 80 and HTTPS port 443 and deny other inbound traffic.
+      A firewall adds an additional layer of security. Even if the security group rules allow more traffic than that actually required, the firewall rules allow only access over HTTP port 80 and HTTPS port 443 and deny other inbound traffic.
+
+   .. _acl_0002__table347342171117:
+
+   .. table:: **Table 5** Security group rules for allowing access to instances in a subnet over specific ports
+
+      +-----------+-------------+------+-----------------+-----------------------+-------------+
+      | Direction | Rule Number | Type | Protocol & Port | Source or Destination | Description |
+      +===========+=============+======+=================+=======================+=============+
+      | Inbound   | 1           | IPv4 | TCP: 80         | IP address: 0.0.0.0/0 | Rule 01     |
+      +-----------+-------------+------+-----------------+-----------------------+-------------+
+      | Inbound   | 1           | IPv4 | TCP: 443        | IP address: 0.0.0.0/0 | Rule 02     |
+      +-----------+-------------+------+-----------------+-----------------------+-------------+
+      | Outbound  | 1           | IPv4 | All             | IP address: 0.0.0.0/0 | Rule 03     |
+      +-----------+-------------+------+-----------------+-----------------------+-------------+

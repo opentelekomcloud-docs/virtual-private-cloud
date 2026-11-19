@@ -23,7 +23,7 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
 
@@ -34,18 +34,18 @@ Procedure
    a. On the **Summary** tab page, view the basic information and routes of the route table.
 
 
-      .. figure:: /_static/images/en-us_image_0000001866063864.png
-         :alt: **Figure 1** View the basic information and routes of the route table
+      .. figure:: /_static/images/en-us_image_0000002524709740.png
+         :alt: **Figure 1** Viewing the basic information and routes of the route table
 
-         **Figure 1** View the basic information and routes of the route table
+         **Figure 1** Viewing the basic information and routes of the route table
 
    b. On the **Associated Subnets** tab page, view the subnets associated with the route table.
 
 
-      .. figure:: /_static/images/en-us_image_0000001911853289.png
-         :alt: **Figure 2** View the subnets associated with the route table
+      .. figure:: /_static/images/en-us_image_0000002555949609.png
+         :alt: **Figure 2** Viewing the subnets associated with the route table
 
-         **Figure 2** View the subnets associated with the route table
+         **Figure 2** Viewing the subnets associated with the route table
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001865582825.png

@@ -10,7 +10,7 @@ Scenarios
 
 This section describes how to view and obtain a VPC ID.
 
-If you create a VPC peering connection between two VPCs in different accounts, you need to obtain the project ID of the region that the peer VPC resides. You can recommend this section to the user of the peer VPC to obtain the project ID.
+If you create a VPC peering connection between two VPCs in different accounts, you need to obtain the project ID of the region where the peer VPC resides. You can recommend this section to the user of the peer VPC to obtain the project ID.
 
 Procedure
 ---------

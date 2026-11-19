@@ -5,4 +5,4 @@
 How Many Subnets Can I Create?
 ==============================
 
-Each account can have a maximum of 100 subnets. If the number of subnets cannot meet your service requirements, request a quota increase. For details, see :ref:`What Is a Quota? <vpc_faq_0051>`
+Each account can have a maximum of 100 subnets. If the number of subnets cannot meet your service requirements, request a quota increase. For details, see :ref:`Managing VPC Quotas <vpc_faq_0051>`

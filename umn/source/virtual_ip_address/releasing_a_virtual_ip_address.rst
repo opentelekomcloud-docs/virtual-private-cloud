@@ -24,10 +24,7 @@ If you want to release a virtual IP address that is being used by a resource, re
    +===================================================================================================================================+=====================================================================================================================================+
    | This operation cannot be performed because the IP address is bound to an instance or an EIP. Unbind the IP address and try again. | This virtual IP address is being used by an EIP or an ECS.                                                                          |
    |                                                                                                                                   |                                                                                                                                     |
-   |                                                                                                                                   | Unbind the virtual IP address first.                                                                                                |
-   |                                                                                                                                   |                                                                                                                                     |
-   |                                                                                                                                   | -  EIP: :ref:`Unbinding a Virtual IP Address from an EIP <vpc_vip_0011>`                                                            |
-   |                                                                                                                                   | -  ECS: :ref:`Unbinding a Virtual IP Address from an Instance <vpc_vip_0010>`                                                       |
+   |                                                                                                                                   | For details, see :ref:`Unbinding a Virtual IP Address from an Instance or EIP <vpc_vip_0010>`.                                      |
    |                                                                                                                                   |                                                                                                                                     |
    |                                                                                                                                   | Release the virtual IP address.                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
@@ -52,6 +49,12 @@ Procedure
 #. Click the **IP Addresses** tab, locate the row that contains the virtual IP address to be released, click **More** in the **Operation** column, and select **Release**.
 
    A confirmation dialog box is displayed.
+
+
+   .. figure:: /_static/images/en-us_image_0000002556163301.png
+      :alt: **Figure 1** Releasing a virtual IP address
+
+      **Figure 1** Releasing a virtual IP address
 
 #. Confirm the information and click **OK**.
 

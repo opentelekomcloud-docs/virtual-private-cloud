@@ -29,6 +29,12 @@ Procedure
 
 6. On the **Inbound Rules** or **Outbound Rules** tab, locate the target rule, click **More** in the **Operation** column, and select **Insert Rule Above** or **Insert Rule Below**.
 
+
+   .. figure:: /_static/images/en-us_image_0000002555537033.png
+      :alt: **Figure 1** Inserting a rule
+
+      **Figure 1** Inserting a rule
+
 7. In the displayed dialog box, configure required parameters and click **OK**.
 
    The rule is inserted. The procedure for inserting an outbound rule is the same as that for inserting an inbound rule.

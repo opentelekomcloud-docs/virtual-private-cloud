@@ -19,7 +19,7 @@ Procedure
 
 #. Click |image2| in the upper left corner, and choose **Network** > **Elastic IP**.
 
-#. In the navigation pane on the left, choose **Elastic IP and Bandwidth** > **Shared Bandwidths**.
+#. In the navigation pane on the left, choose **Internet Access** > **Shared Bandwidths**.
 
 #. In the upper right corner, click **Assign Shared Bandwidth**. On the displayed page, configure parameters as prompted.
 

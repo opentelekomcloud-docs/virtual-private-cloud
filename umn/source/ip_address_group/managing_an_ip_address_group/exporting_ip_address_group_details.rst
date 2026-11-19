@@ -10,7 +10,7 @@ Scenarios
 
 This section describes how to export details about IP address groups, including:
 
--  Name, ID, and creation time
+-  Names, IDs, and creation time
 -  Added IP address entries
 -  Associated resources
 

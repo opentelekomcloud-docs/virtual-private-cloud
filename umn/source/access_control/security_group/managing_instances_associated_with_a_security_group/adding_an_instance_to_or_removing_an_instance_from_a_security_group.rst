@@ -67,7 +67,7 @@ An instance must be added to at least one security group. If you want to remove 
 
    The following operations use **Servers** as an example.
 
-#. Click the **Servers** tab, select one or more servers, and click **Remove** in the upper left corner of the server list.
+#. Click the **Servers** tab, select one or more servers, and click **Remove** in the upper left corner above the server list.
 
    A confirmation dialog box is displayed.
 

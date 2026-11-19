@@ -7,7 +7,7 @@ VPC Peering Connection
 
 A VPC peering connection is a networking connection that connects two VPCs for them to communicate using private IP addresses. The VPCs to be peered can be in the same account or different accounts, but must be in the same region.
 
--  You can use VPC peering connections to build networks in different scenarios. For details, see :ref:`VPC Peering Connection Usage Examples <en-us_topic_0046809840>`.
+-  You can use VPC peering connections to build networks in different scenarios. For details, see :ref:`VPC Peering Connection Configuration Suggestions <en-us_topic_0046809840>`.
 
 :ref:`Figure 1 <vpc_concepts_0011__en-us_topic_0046655036_fig4721642193711>` shows an application scenario of VPC peering connections.
 

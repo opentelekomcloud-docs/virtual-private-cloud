@@ -10,8 +10,10 @@ Scenarios
 
 This section describes how to delete a custom route from a route table.
 
-Notes and Constraints
----------------------
+If a route table is associated with a subnet, deleting rules from the route table may affect how and where traffic is directed. Be careful with this operation as it may interrupt services.
+
+Constraints
+-----------
 
 -  System routes cannot be deleted.
 
@@ -31,7 +33,7 @@ Procedure
 
 3. Click |image2| in the upper left corner and choose **Network** > **Virtual Private Cloud**.
 
-   The **Virtual Private Cloud** page is displayed.
+   The VPC list page is displayed.
 
 4. In the navigation pane on the left, choose **Virtual Private Cloud** > **Route Tables**.
 

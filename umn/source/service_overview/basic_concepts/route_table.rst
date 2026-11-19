@@ -23,6 +23,8 @@ A route table contains a set of routes that are used to determine where network 
 
 -  Custom route table: If you do not want to use the default route table, you can create a custom route table and associate it with the subnet. Custom route tables can be deleted if they are no longer required.
 
+   The custom route table associated with a subnet affects only the outbound traffic. The default route table of a subnet controls the inbound traffic.
+
 Route
 -----
 

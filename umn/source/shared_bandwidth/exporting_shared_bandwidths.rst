@@ -10,7 +10,7 @@ Scenarios
 
 You can export the information about the shared bandwidths as an Excel file to a local directory.
 
-The file records the shared bandwidth name, status, shared bandwidth ID, bandwidth (Mbit/s), and EIPs.
+The file records the shared bandwidth name, status, shared bandwidth ID, bandwidth size (Mbit/s), and EIPs of each shared bandwidth.
 
 Procedure
 ---------
@@ -21,7 +21,7 @@ Procedure
 
 #. Click |image2| in the upper left corner, and choose **Network** > **Elastic IP**.
 
-#. In the navigation pane on the left, choose **Elastic IP and Bandwidth** > **Shared Bandwidths**.
+#. In the navigation pane on the left, choose **Internet Access** > **Shared Bandwidths**.
 
 #. In the upper left corner above the shared bandwidth list, click **Export**.
 

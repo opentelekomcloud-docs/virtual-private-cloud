@@ -10,7 +10,10 @@ Scenarios
 
 This section describes how to disassociate an IP address group from a resource.
 
-An IP address group can be associated with security groups.
+An IP address group can be associated with security groups and firewalls.
+
+-  In a security group, you can modify or delete the rules with source or destination set to an IP address group.
+-  In a firewall, you can modify or delete the rules with source or destination set to an IP address group.
 
 Notes and Constraints
 ---------------------
@@ -44,16 +47,23 @@ Procedure
 
    .. table:: **Table 1** Disassociating an IP address group from resources
 
-      +-----------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------+
-      | Resource              | Description                                                                      | Reference                                                          |
-      +=======================+==================================================================================+====================================================================+
-      | Security group        | Modify or delete inbound or outbound rules associated with the IP address group. | -  :ref:`Modifying a Security Group Rule <vpc_securitygroup_0005>` |
-      |                       |                                                                                  |                                                                    |
-      |                       |                                                                                  |    -  Inbound rule: Change the value of **Source**.                |
-      |                       |                                                                                  |    -  Outbound rule: Change the value of **Destination**.          |
-      |                       |                                                                                  |                                                                    |
-      |                       |                                                                                  | -  :ref:`Deleting a Security Group Rule <vpc_securitygroup_0006>`  |
-      +-----------------------+----------------------------------------------------------------------------------+--------------------------------------------------------------------+
+      +-----------------------+----------------------------------------------------------------------------------+-------------------------------------------------------------------------+
+      | Resource              | Description                                                                      | Reference                                                               |
+      +=======================+==================================================================================+=========================================================================+
+      | Security group        | Modify or delete inbound or outbound rules associated with the IP address group. | -  :ref:`Modifying a Security Group Rule <vpc_securitygroup_0005>`      |
+      |                       |                                                                                  |                                                                         |
+      |                       |                                                                                  |    -  Inbound rule: Change the value of **Source**.                     |
+      |                       |                                                                                  |    -  Outbound rule: Change the value of **Destination**.               |
+      |                       |                                                                                  |                                                                         |
+      |                       |                                                                                  | -  :ref:`Deleting a Security Group Rule <vpc_securitygroup_0006>`       |
+      +-----------------------+----------------------------------------------------------------------------------+-------------------------------------------------------------------------+
+      | firewall              | Modify or delete inbound or outbound rules associated with the IP address group. | -  :ref:`Modifying a Firewall Rule <vpc_acl_0005>`                      |
+      |                       |                                                                                  |                                                                         |
+      |                       |                                                                                  |    -  Inbound rule: Change the value of **Source** or **Destination**.  |
+      |                       |                                                                                  |    -  Outbound rule: Change the value of **Source** or **Destination**. |
+      |                       |                                                                                  |                                                                         |
+      |                       |                                                                                  | -  :ref:`Deleting Firewall Rules <vpc_acl_0007>`                        |
+      +-----------------------+----------------------------------------------------------------------------------+-------------------------------------------------------------------------+
 
 .. |image1| image:: /_static/images/en-us_image_0000001818982734.png
 .. |image2| image:: /_static/images/en-us_image_0000001818823746.png

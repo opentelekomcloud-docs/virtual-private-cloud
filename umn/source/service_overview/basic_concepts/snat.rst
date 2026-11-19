@@ -9,4 +9,4 @@ In addition to services provided by the system, some ECSs need to access the Int
 
 On a public cloud, an EIP can be assigned to an ECS that serves as the SNAT router or gateway for other ECSs from the same subnet or VPC.
 
-For details about how to configure SNAT, see :ref:`Configuring an SNAT Server <vpc_route_0004>`.
+For details about how to configure SNAT, see :ref:`Configuring an SNAT Server to Enable ECSs to Share an EIP to Access the Internet <vpc_route_0004>`.
